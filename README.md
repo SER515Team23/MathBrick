@@ -18,7 +18,7 @@ Team Members:
 #### Step 2
 
 ### Documentations
-OneDrive Location: shorturl.at/itAG4
+OneDrive Location: https://shorturl.at/itAG4
 
 ### History
 * 2019/09/10 Scrum Master --> Bingrui Feng
