@@ -1,7 +1,7 @@
 # MathBrick
-## Learning Simple Math in a fun and steady stages!!!
+## Learning simple math in a fun and steady stages!!!
 
-Instructor: **Dr. Michael J. Findler**
+Instructor: **Dr. Michael J. Findler** <br>
 TA/Grader: **Jahnavi Bantupalli**, **Naren Kumar Konchada**
 
 Team Members: 
@@ -15,10 +15,8 @@ Team Members:
 ### How to run?
 #### Step 1
 
-#### Step 2
-
 ### Documentations
-OneDrive Location: https://shorturl.at/itAG4
+OneDrive Location: https://reurl.cc/8lnnOy
 
 ### History
-* 2019/09/10 Scrum Master --> Bingrui Feng
+* 2019/09/10 First Sprint Scrum Master --> Bingrui Feng
