@@ -16,7 +16,9 @@ Team Members:
 #### Step 1
 
 ### Documentations
+Google Drive: https://reurl.cc/Zn7xAA
 OneDrive Location: https://reurl.cc/8lnnOy
 
 ### History
 * 2019/09/10 First Sprint Scrum Master --> Bingrui Feng
+* 2019/09/13 Initial user stories create
