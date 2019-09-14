@@ -16,7 +16,7 @@ Team Members:
 #### Step 1
 
 ### Documentations
-Google Drive: https://reurl.cc/Zn7xAA
+Google Drive: https://reurl.cc/Zn7xAA <br>
 OneDrive Location: https://reurl.cc/8lnnOy
 
 ### History
