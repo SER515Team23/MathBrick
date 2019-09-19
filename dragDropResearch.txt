@@ -1,0 +1,2 @@
+C#: https://docs.microsoft.com/en-us/dotnet/framework/wpf/advanced/drag-and-drop-overview
+Java: https://docs.oracle.com/javase/tutorial/uiswing/dnd/defaultsupport.html
