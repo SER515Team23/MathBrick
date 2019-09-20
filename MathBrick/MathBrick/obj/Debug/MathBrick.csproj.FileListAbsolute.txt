@@ -1,0 +1,12 @@
+D:\C# Workspace\MathBrick\MathBrick\bin\Debug\MathBrick.exe.config
+D:\C# Workspace\MathBrick\MathBrick\bin\Debug\MathBrick.exe
+D:\C# Workspace\MathBrick\MathBrick\bin\Debug\MathBrick.pdb
+D:\C# Workspace\MathBrick\MathBrick\obj\Debug\MathBrick.csprojAssemblyReference.cache
+D:\C# Workspace\MathBrick\MathBrick\obj\Debug\MathBrick.SignIn.resources
+D:\C# Workspace\MathBrick\MathBrick\obj\Debug\MathBrick.Properties.Resources.resources
+D:\C# Workspace\MathBrick\MathBrick\obj\Debug\MathBrick.csproj.GenerateResource.cache
+D:\C# Workspace\MathBrick\MathBrick\obj\Debug\MathBrick.csproj.CoreCompileInputs.cache
+D:\C# Workspace\MathBrick\MathBrick\obj\Debug\MathBrick.exe
+D:\C# Workspace\MathBrick\MathBrick\obj\Debug\MathBrick.pdb
+D:\C# Workspace\MathBrick\MathBrick\obj\Debug\MathBrick.Main.resources
+D:\C# Workspace\MathBrick\MathBrick\obj\Debug\MathBrick.SignUp.resources
