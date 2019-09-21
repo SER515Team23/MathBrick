@@ -30,5 +30,20 @@ namespace MathBrick
                 e.Cancel = true;
             }
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.ClickToDuplicate(this.button1.Text);
+        }
+
+        private void ClickToDuplicate(string text)
+        {
+            Button btn = new Button();
+            this.tabPage1.Controls.Add(btn);
+            btn.Location = new System.Drawing.Point(100, 100);
+            btn.Size = new System.Drawing.Size(61, 62);
+            btn.Text = text;
+            btn.UseVisualStyleBackColor = true;
+        }
     }
 }
