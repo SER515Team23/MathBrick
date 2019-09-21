@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MathBrick
@@ -17,12 +10,12 @@ namespace MathBrick
             InitializeComponent();
         }
 
-        string Init_username = "123";
-        string Init_password = "123";
+        string defaultUserName = "123";
+        string defaultPassword = "123";
 
-        private void Button_signIn_Click(object sender, EventArgs e)
+        private void SignInClick(object sender, EventArgs e)
         {
-            if (userNameTextBox.Text == Init_username && passwordTextBox.Text == Init_password)
+            if (userNameTextBox.Text == defaultUserName && passwordTextBox.Text == defaultPassword)
             {
                 Main main = new Main();
                 this.Hide();
@@ -34,10 +27,10 @@ namespace MathBrick
             }
         }
 
-        private void Label_signUp_Click(object sender, EventArgs e)
+        private void SignUpClick(object sender, EventArgs e)
         {
-            SignUp signup = new SignUp();
-            signup.Show();
+            SignUp signUpPage = new SignUp();
+            signUpPage.Show();
         }
     }
 }

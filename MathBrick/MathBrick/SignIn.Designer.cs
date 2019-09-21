@@ -49,31 +49,31 @@
             // forgotPasswordLabel
             // 
             this.forgotPasswordLabel.AutoSize = true;
-            this.forgotPasswordLabel.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.forgotPasswordLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forgotPasswordLabel.ForeColor = System.Drawing.SystemColors.Highlight;
             this.forgotPasswordLabel.Location = new System.Drawing.Point(535, 480);
             this.forgotPasswordLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.forgotPasswordLabel.Name = "forgotPasswordLabel";
-            this.forgotPasswordLabel.Size = new System.Drawing.Size(222, 28);
+            this.forgotPasswordLabel.Size = new System.Drawing.Size(237, 39);
             this.forgotPasswordLabel.TabIndex = 7;
             this.forgotPasswordLabel.Text = "Forgot Password";
             // 
             // signUpLabel
             // 
             this.signUpLabel.AutoSize = true;
-            this.signUpLabel.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.signUpLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.signUpLabel.Location = new System.Drawing.Point(247, 480);
+            this.signUpLabel.Location = new System.Drawing.Point(249, 480);
             this.signUpLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.signUpLabel.Name = "signUpLabel";
-            this.signUpLabel.Size = new System.Drawing.Size(110, 28);
+            this.signUpLabel.Size = new System.Drawing.Size(117, 39);
             this.signUpLabel.TabIndex = 6;
             this.signUpLabel.Text = "Sign Up";
-            this.signUpLabel.Click += new System.EventHandler(this.Label_signUp_Click);
+            this.signUpLabel.Click += new System.EventHandler(this.SignUpClick);
             // 
             // exitButton
             // 
-            this.exitButton.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.exitButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.Red;
             this.exitButton.Location = new System.Drawing.Point(535, 360);
             this.exitButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
@@ -85,7 +85,7 @@
             // 
             // signInButton
             // 
-            this.signInButton.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.signInButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInButton.ForeColor = System.Drawing.Color.LimeGreen;
             this.signInButton.Location = new System.Drawing.Point(184, 360);
             this.signInButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
@@ -94,7 +94,7 @@
             this.signInButton.TabIndex = 4;
             this.signInButton.Text = "Sign In";
             this.signInButton.UseVisualStyleBackColor = true;
-            this.signInButton.Click += new System.EventHandler(this.Button_signIn_Click);
+            this.signInButton.Click += new System.EventHandler(this.SignInClick);
             // 
             // passwordTextBox
             // 
@@ -117,22 +117,22 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.passwordLabel.Font = new System.Drawing.Font("Calibri", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(134, 214);
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(197, 38);
+            this.passwordLabel.Size = new System.Drawing.Size(178, 45);
             this.passwordLabel.TabIndex = 1;
             this.passwordLabel.Text = "Password:";
             // 
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.userNameLabel.Font = new System.Drawing.Font("Calibri", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.Location = new System.Drawing.Point(134, 116);
             this.userNameLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(197, 38);
+            this.userNameLabel.Size = new System.Drawing.Size(188, 45);
             this.userNameLabel.TabIndex = 0;
             this.userNameLabel.Text = "Username:";
             // 
