@@ -18,8 +18,7 @@
         private void InitializeComponent()
         {
             this.welcomePanel = new System.Windows.Forms.Panel();
-            this.forgotPasswordLabel = new System.Windows.Forms.Label();
-            this.signUpLabel = new System.Windows.Forms.Label();
+            this.forgotPasswordButton = new System.Windows.Forms.Button();
             this.signUpButton = new System.Windows.Forms.Button();
             this.signInButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
@@ -32,8 +31,7 @@
             // welcomePanel
             // 
             this.welcomePanel.BackColor = System.Drawing.Color.FloralWhite;
-            this.welcomePanel.Controls.Add(this.forgotPasswordLabel);
-            this.welcomePanel.Controls.Add(this.signUpLabel);
+            this.welcomePanel.Controls.Add(this.forgotPasswordButton);
             this.welcomePanel.Controls.Add(this.signUpButton);
             this.welcomePanel.Controls.Add(this.signInButton);
             this.welcomePanel.Controls.Add(this.passwordTextBox);
@@ -47,27 +45,27 @@
             this.welcomePanel.Size = new System.Drawing.Size(1010, 580);
             this.welcomePanel.TabIndex = 0;
             // 
-            // forgotPasswordLabel
+            // forgotPasswordButton
             // 
-            this.forgotPasswordLabel.AutoSize = true;
-            this.forgotPasswordLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotPasswordLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.forgotPasswordLabel.Location = new System.Drawing.Point(347, 500);
-            this.forgotPasswordLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.forgotPasswordLabel.Name = "forgotPasswordLabel";
-            this.forgotPasswordLabel.Size = new System.Drawing.Size(237, 39);
-            this.forgotPasswordLabel.TabIndex = 7;
-            this.forgotPasswordLabel.Text = "Forgot Password";
-            // 
-            // signUpLabel
-            // 
-            this.signUpLabel.Location = new System.Drawing.Point(0, 0);
-            this.signUpLabel.Name = "signUpLabel";
-            this.signUpLabel.Size = new System.Drawing.Size(100, 23);
-            this.signUpLabel.TabIndex = 8;
+            this.forgotPasswordButton.BackColor = System.Drawing.Color.Transparent;
+            this.forgotPasswordButton.FlatAppearance.BorderSize = 0;
+            this.forgotPasswordButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.forgotPasswordButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.forgotPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.forgotPasswordButton.Font = new System.Drawing.Font("Calibri", 10F);
+            this.forgotPasswordButton.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.forgotPasswordButton.Location = new System.Drawing.Point(236, 492);
+            this.forgotPasswordButton.Name = "forgotPasswordButton";
+            this.forgotPasswordButton.Size = new System.Drawing.Size(491, 49);
+            this.forgotPasswordButton.TabIndex = 6;
+            this.forgotPasswordButton.Text = "Forgot Password";
+            this.forgotPasswordButton.UseVisualStyleBackColor = false;
+            this.forgotPasswordButton.Click += new System.EventHandler(this.TestDataBase);
             // 
             // signUpButton
             // 
+            this.signUpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Linen;
+            this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signUpButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpButton.ForeColor = System.Drawing.Color.DarkOrange;
             this.signUpButton.Location = new System.Drawing.Point(142, 380);
@@ -81,6 +79,8 @@
             // 
             // signInButton
             // 
+            this.signInButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
+            this.signInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signInButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInButton.ForeColor = System.Drawing.Color.RoyalBlue;
             this.signInButton.Location = new System.Drawing.Point(142, 263);
@@ -157,8 +157,7 @@
         private System.Windows.Forms.TextBox userNameTextBox;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label userNameLabel;
-        private System.Windows.Forms.Label forgotPasswordLabel;
-        private System.Windows.Forms.Label signUpLabel;
+        private System.Windows.Forms.Button forgotPasswordButton;
     }
 }
 

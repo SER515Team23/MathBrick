@@ -32,5 +32,11 @@ namespace MathBrick
             SignUp signUpPage = new SignUp();
             signUpPage.Show();
         }
+
+        private void TestDataBase(object sender, EventArgs e)
+        {
+            bool hi = DataBase.Instance.IsOddNumber(101);
+            Console.WriteLine("是否為一個奇數? 答案:" + hi);
+        }
     }
 }
