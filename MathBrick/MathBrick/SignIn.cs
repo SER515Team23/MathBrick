@@ -22,7 +22,7 @@ namespace MathBrick
 
         private void Button_signIn_Click(object sender, EventArgs e)
         {
-            if (textBox_username.Text == Init_username && textBox_password.Text == Init_password)
+            if (userNameTextBox.Text == Init_username && passwordTextBox.Text == Init_password)
             {
                 Main main = new Main();
                 this.Hide();
