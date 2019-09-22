@@ -17,12 +17,12 @@ namespace MathBrick
             InitializeComponent();
         }
 
-        private void Button_signup_Click(object sender, EventArgs e)
+        private void SignUpClick(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Button_exit_Click(object sender, EventArgs e)
+        private void QuitClick(object sender, EventArgs e)
         {
             this.Close();
         }
