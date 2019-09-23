@@ -10,13 +10,24 @@ namespace MathBrick
             InitializeComponent();
         }
 
-        string defaultUserName = "123";
-        string defaultPassword = "123";
+        String defaultUserName = "123";
+        String defaultPassword = "123";
 
         private void SignInClick(object sender, EventArgs e)
         {
-            if (userNameTextBox.Text == defaultUserName && passwordTextBox.Text == defaultPassword)
+            String userName = userNameTextBox.Text;
+            String password = passwordTextBox.Text;
+
+            // This only exists during development stage.
+            if (userName == defaultUserName && password == defaultPassword)
             {
+                Main main = new Main();
+                this.Hide();
+                main.Show();
+            }
+            else if (DataBase.Instance.UserLogin(userName, password))
+            {
+                Console.WriteLine("U R GOOD TO LOGIN!!!");
                 Main main = new Main();
                 this.Hide();
                 main.Show();

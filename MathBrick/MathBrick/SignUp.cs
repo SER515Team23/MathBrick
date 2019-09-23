@@ -5,9 +5,9 @@ namespace MathBrick
 {
     public partial class SignUp : Form
     {
-        private String beginnerActivateCode = "0000";
-        private String intermediateActivateCode = "6666";
-        private String advancedActivateCode = "7777";
+        private string beginnerActivateCode = "0000";
+        private string intermediateActivateCode = "6666";
+        private string advancedActivateCode = "7777";
 
         public SignUp()
         {
@@ -16,9 +16,9 @@ namespace MathBrick
 
         private void SignUpClick(object sender, EventArgs e)
         {
-            String userName = this.usernameTextBox.Text;
-            String password = this.passwordTextBox.Text;
-            String activateCode = this.activateCodeTextBox.Text;
+            string userName = this.usernameTextBox.Text;
+            string password = this.passwordTextBox.Text;
+            string activateCode = this.activateCodeTextBox.Text;
 
             if (string.IsNullOrEmpty(userName) 
                 || string.IsNullOrEmpty(password)
@@ -53,8 +53,12 @@ namespace MathBrick
         private void AddUser(User user)
         {
             DataBase.Instance.WriteInDataBase(user);
-            MessageBox.Show("Success!", "Hint"
+            DialogResult result = MessageBox.Show("Success!", "Hint"
                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void QuitClick(object sender, EventArgs e)

@@ -7,12 +7,15 @@ namespace MathBrick
 {
     sealed class DataBase
     {
+        // If you need the current user information, access this instance.
+        public User activeUser = null;
+
         private static DataBase instance;
-        private static String userListFileName = "UsersList.txt";
-        private List<User> users { get; set; }
+        private static string userListFileName = "UsersList.txt";
+        private Dictionary<string, User> usersDic;
         private DataBase()
         {
-            users = ReadDataBase();
+            usersDic = ReadDataBase();
         }
         public static DataBase Instance
         {
@@ -25,20 +28,35 @@ namespace MathBrick
                 return instance;
             }
         }
-        private List<User> ReadDataBase()
+        private Dictionary<string ,User> ReadDataBase()
         {
-            var userList = new List<User>();
+            var booksDic = new Dictionary<string, User>();
             if (File.Exists(userListFileName)) {
-                userList = new JavaScriptSerializer()
-                        .Deserialize<List<User>>(File.ReadAllText(userListFileName));
+                booksDic = new JavaScriptSerializer()
+                        .Deserialize<Dictionary<string, User>>(File.ReadAllText(userListFileName));
             }
-            return userList;
+            return booksDic;
         }
 
         public void WriteInDataBase(User newComer)
         {
-            users.Add(newComer);
-            File.WriteAllText(userListFileName, new JavaScriptSerializer().Serialize(users));
+            usersDic.Add(newComer.userName, newComer);
+            File.WriteAllText(userListFileName, new JavaScriptSerializer().Serialize(usersDic));
+        }
+
+        public bool UserLogin(string userName, string inputPwd)
+        {
+            if (usersDic.ContainsKey(userName))
+            {
+                string correctPwd = usersDic[userName].password;
+                if (correctPwd == inputPwd)
+                {
+                    usersDic[userName].isLogin = true;
+                    activeUser = usersDic[userName];
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
