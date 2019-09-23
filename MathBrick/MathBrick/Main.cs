@@ -38,5 +38,11 @@ namespace MathBrick
             btn.Text = text;
             btn.UseVisualStyleBackColor = true;
         }
+
+        private void GradeButton_Click(object sender, EventArgs e)
+        {
+            Grade grade = new Grade();
+            grade.Show();
+        }
     }
 }
