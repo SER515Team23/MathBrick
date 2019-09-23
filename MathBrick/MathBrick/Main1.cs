@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin;
 
 namespace MathBrick
 {
-    public partial class Main1 : Form
+    public partial class Main1 : Skin_Color
     {
         public Main1()
         {
