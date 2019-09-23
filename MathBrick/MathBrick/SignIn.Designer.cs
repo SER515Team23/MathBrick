@@ -60,7 +60,6 @@
             this.forgotPasswordButton.TabIndex = 6;
             this.forgotPasswordButton.Text = "Forgot Password";
             this.forgotPasswordButton.UseVisualStyleBackColor = false;
-            this.forgotPasswordButton.Click += new System.EventHandler(this.TestDataBase);
             // 
             // signUpButton
             // 
@@ -94,16 +93,20 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.passwordTextBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.passwordTextBox.Location = new System.Drawing.Point(354, 160);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(462, 51);
             this.passwordTextBox.TabIndex = 3;
+            // The password character is an asterisk.
+            this.passwordTextBox.PasswordChar = '*';
+            // The control will allow no more than 14 characters.
+            this.passwordTextBox.MaxLength = 14;
             // 
             // userNameTextBox
             // 
-            this.userNameTextBox.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.userNameTextBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.userNameTextBox.Location = new System.Drawing.Point(354, 76);
             this.userNameTextBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.userNameTextBox.Name = "userNameTextBox";
