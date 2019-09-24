@@ -22,5 +22,23 @@ namespace MathBrick
         {
 
         }
+
+        private void Main1_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Quit？", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                Dispose();
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

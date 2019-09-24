@@ -38,5 +38,10 @@ namespace MathBrick
             btn.Text = text;
             btn.UseVisualStyleBackColor = true;
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
