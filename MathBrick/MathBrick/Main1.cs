@@ -1,17 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin;
 
 namespace MathBrick
 {
-    public partial class Main : Form
+    public partial class Main1 : Skin_Color
     {
         private static System.Drawing.Size mouseOffset;
-        public Main()
+        public Main1()
         {
             InitializeComponent();
             AddButtonClickEventForDragDrop();
         }
-
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to exit？", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -32,15 +39,15 @@ namespace MathBrick
         private void AddButtonClickEventForDragDrop()
         {
             // TODO: find better way to loop through all blocks
-            foreach (Button button in this.tabPage1.Controls)
-            {
-                button.Click += new EventHandler(ClickToDuplicate); 
-            }
-
-            foreach (Button button in this.tabPage2.Controls)
+            foreach (Button button in this.NumberBox.Controls)
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
+
+            /*foreach (Button button in this.tabPage2.Controls)
+            {
+                button.Click += new EventHandler(ClickToDuplicate);
+            }*/
         }
 
         /// <summary>
@@ -54,7 +61,7 @@ namespace MathBrick
 
             // Follow the same block design
             Button btn = new Button();
-            this.groupBox1.Controls.Add(btn);
+            this.skinGroupBox1.Controls.Add(btn);
             btn.Location = new System.Drawing.Point(100, 100);
             btn.Size = new System.Drawing.Size(61, 62);
             btn.Text = control.Text;
@@ -64,7 +71,7 @@ namespace MathBrick
              * https://www.codeproject.com/Tips/178587/Draggable-WinForms-Controls-2
              * https://social.msdn.microsoft.com/Forums/vstudio/en-US/3d23ad93-e70d-4076-bf50-3e17ec43d0e1/drag-and-drop-the-control-in-the-panel-in-c?forum=netfxbcl
              */
-            
+
             // this.groupBox1.AllowDrop = true;
             btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
             btn.MouseUp += new MouseEventHandler(DragBlockMouseUp);
@@ -101,7 +108,12 @@ namespace MathBrick
             return;
         }
 
-        private void GroupBox1_Enter(object sender, EventArgs e)
+        private void SkinPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SkinGroupBox2_Enter(object sender, EventArgs e)
         {
 
         }
