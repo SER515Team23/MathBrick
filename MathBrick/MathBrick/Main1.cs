@@ -63,7 +63,7 @@ namespace MathBrick
             Button btn = new Button();
             this.skinGroupBox1.Controls.Add(btn);
             btn.Location = new System.Drawing.Point(100, 100);
-            btn.Size = new System.Drawing.Size(61, 62);
+            btn.Size = new System.Drawing.Size(50, 50);
             btn.Text = control.Text;
             btn.UseVisualStyleBackColor = true;
 
