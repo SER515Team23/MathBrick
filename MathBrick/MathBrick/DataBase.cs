@@ -1,7 +1,7 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Collections.Generic;
 using System.Web.Script.Serialization;
+using System.Windows.Forms;
 
 namespace MathBrick
 {
@@ -38,10 +38,16 @@ namespace MathBrick
             return booksDic;
         }
 
-        public void WriteInDataBase(User newComer)
+        public bool WriteInDataBase(User newComer)
         {
+            if (usersDic.ContainsKey(newComer.userName)) {
+                MessageBox.Show("The username has been used. Please use another one.", "Oops"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
             usersDic.Add(newComer.userName, newComer);
             File.WriteAllText(userListFileName, new JavaScriptSerializer().Serialize(usersDic));
+            return true;
         }
 
         public bool UserLogin(string userName, string inputPwd)

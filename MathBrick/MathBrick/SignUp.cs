@@ -52,12 +52,13 @@ namespace MathBrick
 
         private void AddUser(User user)
         {
-            DataBase.Instance.WriteInDataBase(user);
-            DialogResult result = MessageBox.Show("Success!", "Hint"
+            if (DataBase.Instance.WriteInDataBase(user)) {
+                DialogResult result = MessageBox.Show("Success!", "Hint"
                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (result == DialogResult.OK)
-            {
-                this.Close();
+                if (result == DialogResult.OK)
+                {
+                    this.Close();
+                }
             }
         }
 

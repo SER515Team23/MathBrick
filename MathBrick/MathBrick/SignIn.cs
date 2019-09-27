@@ -9,15 +9,17 @@ namespace MathBrick
         public SignIn()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += PasswordTextBoxKeyDown;
         }
 
-        String defaultUserName = "123";
-        String defaultPassword = "123";
+        string defaultUserName = "123";
+        string defaultPassword = "123";
 
         private void SignInClick(object sender, EventArgs e)
         {
-            String userName = userNameTextBox.Text;
-            String password = passwordTextBox.Text;
+            string userName = userNameTextBox.Text;
+            string password = passwordTextBox.Text;
 
             // This only exists during development stage.
             if (userName == defaultUserName && password == defaultPassword)
@@ -46,46 +48,12 @@ namespace MathBrick
             signUpPage.Show();
         }
 
-        private void UserNameLabel_Click(object sender, EventArgs e)
+        private void PasswordTextBoxKeyDown(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void SkinButton1_Click(object sender, EventArgs e)
-        {
-            String userName = userNameTextBox.Text;
-            String password = passwordTextBox.Text;
-
-            // This only exists during development stage.
-            if (userName == defaultUserName && password == defaultPassword)
+            if (e.KeyCode == Keys.Enter)
             {
-                Main1 main = new Main1();
-                this.Hide();
-                main.Show();
+                signInButton.PerformClick();
             }
-            else if (DataBase.Instance.UserLogin(userName, password))
-            {
-                Console.WriteLine("U R GOOD TO LOGIN!!!");
-                Main1 main = new Main1();
-                this.Hide();
-                main.Show();
-            }
-            else
-            {
-                MessageBox.Show("Username or password error! Please try again.", "Oops"
-                    , MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void SignUpButton_Click(object sender, EventArgs e)
-        {
-            SignUp signUpPage = new SignUp();
-            signUpPage.Show();
-        }
-
-        private void UserNameTextBox_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
