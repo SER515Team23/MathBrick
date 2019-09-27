@@ -60,12 +60,8 @@ namespace MathBrick
             Control control = sender as Control;
 
             // Follow the same block design
-            Button btn = new Button();
+            CCWin.SkinControl.SkinButton btn = this.SetupButtonStyle(control.Location, control.Text);
             this.skinGroupBox1.Controls.Add(btn);
-            btn.Location = new System.Drawing.Point(100, 100);
-            btn.Size = new System.Drawing.Size(50, 50);
-            btn.Text = control.Text;
-            btn.UseVisualStyleBackColor = true;
 
             /* references that are used for the following code: 
              * https://www.codeproject.com/Tips/178587/Draggable-WinForms-Controls-2
@@ -108,14 +104,21 @@ namespace MathBrick
             return;
         }
 
-        private void SkinPanel1_Paint(object sender, PaintEventArgs e)
+        private CCWin.SkinControl.SkinButton SetupButtonStyle(System.Drawing.Point point, string text)
         {
+            var btn = new CCWin.SkinControl.SkinButton();
+            btn.BackColor = System.Drawing.Color.Transparent;
+            btn.BaseColor = System.Drawing.Color.LightGray;
+            btn.BorderColor = System.Drawing.Color.DimGray;
+            btn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            btn.Radius = 20;
+            btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            btn.Size = new System.Drawing.Size(50, 57);
+            btn.UseVisualStyleBackColor = false;
+            btn.Location = point;
+            btn.Text = text;
 
-        }
-
-        private void SkinGroupBox2_Enter(object sender, EventArgs e)
-        {
-
+            return btn;
         }
     }
 }
