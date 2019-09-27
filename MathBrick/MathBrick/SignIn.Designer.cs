@@ -223,6 +223,7 @@
             // 
             // SignIn
             // 
+            this.AcceptButton = this.signinButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
