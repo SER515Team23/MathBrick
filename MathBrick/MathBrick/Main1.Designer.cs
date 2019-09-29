@@ -455,6 +455,7 @@
             this.skinPanel1.ResumeLayout(false);
             this.NumberBox.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
 
         }
 

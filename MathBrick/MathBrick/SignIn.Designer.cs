@@ -231,8 +231,9 @@ namespace MathBrick
             this.userNameLabel.Text = "Username:";
             // 
             // SignIn
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            //
+            this.AcceptButton = this.signInButton;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;

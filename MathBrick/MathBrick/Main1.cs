@@ -108,6 +108,7 @@ namespace MathBrick
             return;
         }
 
+
         private void SkinPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -116,6 +117,24 @@ namespace MathBrick
         private void SkinGroupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// Funtion of calculate the equation and return result or error by string
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        private string CalculateEquation(string str)
+        {
+            try
+            {
+                var result = new System.Data.DataTable().Compute(str, "");
+                return result.ToString();
+            }
+            catch (Exception ex)
+            {
+                return "error";
+            }
         }
     }
 }
