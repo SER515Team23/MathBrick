@@ -14,6 +14,7 @@ namespace MathBrick
     public partial class Main1 : Skin_Color
     {
         private static System.Drawing.Size mouseOffset;
+        private static Boolean isDraggable = false;
         public Main1()
         {
             InitializeComponent();
@@ -37,17 +38,11 @@ namespace MathBrick
         /// This AddButtonClickEventForDragDrop function binds click event to all buttons in tabpage1 and 2 which are the numbers and operators
         /// </summary>
         private void AddButtonClickEventForDragDrop()
-        {
-            // TODO: find better way to loop through all blocks
+        {          
             foreach (Button button in this.NumberBox.Controls)
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
-
-            /*foreach (Button button in this.tabPage2.Controls)
-            {
-                button.Click += new EventHandler(ClickToDuplicate);
-            }*/
         }
 
         /// <summary>
@@ -66,11 +61,16 @@ namespace MathBrick
             /* references that are used for the following code: 
              * https://www.codeproject.com/Tips/178587/Draggable-WinForms-Controls-2
              * https://social.msdn.microsoft.com/Forums/vstudio/en-US/3d23ad93-e70d-4076-bf50-3e17ec43d0e1/drag-and-drop-the-control-in-the-panel-in-c?forum=netfxbcl
+             * https://stackoverflow.com/questions/3728870/drag-and-drop-windows-forms-button
              */
 
-            // this.groupBox1.AllowDrop = true;
+            this.skinGroupBox1.AllowDrop = true;
+
             btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
-            btn.MouseUp += new MouseEventHandler(DragBlockMouseUp);
+            //btn.MouseMove += new MouseEventHandler(DragBlockMouseMove);
+
+            this.skinGroupBox1.DragOver += new DragEventHandler(BoxDropOver);
+            this.skinGroupBox1.DragDrop += new DragEventHandler(BoxDragDrop);
         }
 
         /// <summary>
@@ -80,29 +80,74 @@ namespace MathBrick
         /// <param name="e"></param>
         private void DragBlockMouseDown(object sender, MouseEventArgs e)
         {
-            // TODO: Add Drag and drop effect to make it more user friendly
-            // Control c = sender as Control;
-            // c.DoDragDrop(c, DragDropEffects.Move);
-
+            Control control = sender as Control;
+            control.DoDragDrop(control, DragDropEffects.Move);
+            isDraggable = true;
             mouseOffset = new System.Drawing.Size(e.Location);
             return;
         }
 
         /// <summary>
-        /// This DragBlockMouseUp function calculates the new location and moves the button to the new location
+        /// This DragBlockMouseMove function mean to show block while dragging the block
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DragBlockMouseUp(object sender, MouseEventArgs e)
-        {
-            Control control = sender as Control;
-            // TODO: Limit boundary of the area where it can be dragged
+        //private void DragBlockMouseMove(object sender, MouseEventArgs e)
+        //{
+        //    if(isDraggable == true)
+        //    {
+        //        Control control = sender as Control;
+        //        control.Location = this.skinGroupBox1.PointToClient(new Point((e.Location - mouseOffset).X, (e.Location - mouseOffset).Y));
+        //        this.skinGroupBox1.Controls.Add(control);
+        //        //control.Left = (e.Location - mouseOffset).X;
+        //        //control.Top = (e.Location - mouseOffset).Y;
+        //    }
+        //}
 
-            //////////////////////////////////////////////////////////////
-            control.Left += (e.Location - mouseOffset).X;
-            control.Top += (e.Location - mouseOffset).Y;
-            return;
+        void BoxDragDrop(object sender, DragEventArgs e)
+        {
+            Control control = e.Data.GetData(e.Data.GetFormats()[0]) as Control;
+            if (control != null)
+            {
+                control.Location = this.skinGroupBox1.PointToClient(new Point(e.X, e.Y));
+                this.skinGroupBox1.Controls.Add(control);
+            }
+            isDraggable = false;
         }
+
+        void BoxDropOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+
+        ///// <summary>
+        ///// This DragBlockMouseUp function calculates the new location and moves the button to the new location
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void DragBlockMouseUp(object sender, MouseEventArgs e)
+        //{
+        //    Control control = sender as Control;
+        //    // TODO: Limit boundary of the area where it can be dragged
+
+        //    //////////////////////////////////////////////////////////////
+        //    var boundaryX = this.skinGroupBox1.Size.Width;
+        //    var boundaryY = this.skinGroupBox1.Size.Height;
+        //    control.Left = (control.Left + (e.Location - mouseOffset).X > boundaryX) ? boundaryX : control.Left + (e.Location - mouseOffset).X;
+        //    control.Top = (control.Top + (e.Location - mouseOffset).Y > boundaryY) ? boundaryY : control.Top + (e.Location - mouseOffset).Y;
+
+        //    return;
+        //}
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        //private void Btn_Cancel_Click(object sender, EventArgs e)
+        //{
+        //    this.Parent.Controls.Remove(this);
+        //}
 
         private CCWin.SkinControl.SkinButton SetupButtonStyle(System.Drawing.Point point, string text)
         {
@@ -119,6 +164,24 @@ namespace MathBrick
             btn.Text = text;
 
             return btn;
+        }
+
+        /// <summary>
+        /// Funtion of calculate the equation and return result or error by string
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        private string CalculateEquation(string str)
+        {
+            try
+            {
+                var result = new System.Data.DataTable().Compute(str, "");
+                return result.ToString();
+            }
+            catch (Exception ex)
+            {
+                return "error";
+            }
         }
     }
 }
