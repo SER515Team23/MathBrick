@@ -6,6 +6,7 @@ namespace MathBrick
 {
     public partial class SignIn : Skin_Color
     {
+        public static string nameToMain = null;
         public SignIn()
         {
             InitializeComponent();
@@ -67,6 +68,7 @@ namespace MathBrick
             {
                 Console.WriteLine("U R GOOD TO LOGIN!!!");
                 Main1 main = new Main1();
+                nameToMain = userName;
                 this.Hide();
                 main.Show();
             }
