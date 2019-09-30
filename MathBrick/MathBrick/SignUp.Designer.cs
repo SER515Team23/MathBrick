@@ -230,7 +230,7 @@
             this.signinButton.TabIndex = 7;
             this.signinButton.Text = "Sign Up";
             this.signinButton.UseVisualStyleBackColor = false;
-            this.signinButton.Click += new System.EventHandler(this.SigninButton_Click);
+            this.signinButton.Click += new System.EventHandler(this.SignUpClick);
             // 
             // quitButton
             // 
@@ -266,7 +266,6 @@
             this.skinPanel1.ResumeLayout(false);
             this.skinPanel1.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion

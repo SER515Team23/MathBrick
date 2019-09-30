@@ -30,8 +30,22 @@ namespace MathBrick
             }
             else if (DataBase.Instance.UserLogin(userName, password))
             {
-                Console.WriteLine("U R GOOD TO LOGIN!!!");
                 Main1 main = new Main1();
+                User nowUser = DataBase.Instance.activeUser;
+                switch (nowUser.authorizeLevel) {
+                    case 1:
+                        Console.Out.WriteLine("Login as: " + "初階學生");
+                        break;
+                    case 2:
+                        Console.Out.WriteLine("Login as: " + "中階學生");
+                        break;
+                    case 3:
+                        Console.Out.WriteLine("Login as: " + "高階學生");
+                        break;
+                    case 4:
+                        Console.Out.WriteLine("Login as: " + "老師");
+                        break;
+                }
                 this.Hide();
                 main.Show();
             }
