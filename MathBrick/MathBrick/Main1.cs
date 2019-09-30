@@ -109,8 +109,18 @@ namespace MathBrick
             Control control = e.Data.GetData(e.Data.GetFormats()[0]) as Control;
             if (control != null)
             {
-                control.Location = this.skinGroupBox1.PointToClient(new Point(e.X, e.Y));
-                this.skinGroupBox1.Controls.Add(control);
+                Point deleteLocation = this.skinButton16.PointToScreen(Point.Empty);
+                Point newLocation = control.PointToScreen(Point.Empty); // THIS needs to be re-calculated
+                // if in the delete area // TODO: improve delete area UI
+                if (newLocation.X >= deleteLocation.X && newLocation.Y >= deleteLocation.Y)
+                {
+                    this.skinGroupBox1.Controls.Remove(control);
+                }
+                else
+                {
+                    control.Location = this.skinGroupBox1.PointToClient(new Point(e.X, e.Y));
+                    this.skinGroupBox1.Controls.Add(control);
+                }
             }
             isDraggable = false;
         }
