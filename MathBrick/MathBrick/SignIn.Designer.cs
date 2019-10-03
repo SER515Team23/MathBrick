@@ -1,4 +1,6 @@
-﻿namespace MathBrick
+﻿using System.Windows.Forms;
+
+namespace MathBrick
 {
     partial class SignIn
     {
@@ -22,7 +24,7 @@
             this.welcomePanel = new CCWin.SkinControl.SkinPanel();
             this.fogetPasswordButton = new CCWin.SkinControl.SkinButton();
             this.signUpButton = new CCWin.SkinControl.SkinButton();
-            this.signinButton = new CCWin.SkinControl.SkinButton();
+            this.signInButton = new CCWin.SkinControl.SkinButton();
             this.passwordTextBox = new CCWin.SkinControl.SkinTextBox();
             this.userNameTextBox = new CCWin.SkinControl.SkinTextBox();
             this.passwordLabel = new CCWin.SkinControl.SkinLabel();
@@ -37,18 +39,19 @@
             this.welcomePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.welcomePanel.Controls.Add(this.fogetPasswordButton);
             this.welcomePanel.Controls.Add(this.signUpButton);
-            this.welcomePanel.Controls.Add(this.signinButton);
+            this.welcomePanel.Controls.Add(this.signInButton);
             this.welcomePanel.Controls.Add(this.passwordTextBox);
             this.welcomePanel.Controls.Add(this.userNameTextBox);
             this.welcomePanel.Controls.Add(this.passwordLabel);
             this.welcomePanel.Controls.Add(this.userNameLabel);
             this.welcomePanel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.welcomePanel.DownBack = null;
-            this.welcomePanel.Location = new System.Drawing.Point(0, 36);
+            this.welcomePanel.Location = new System.Drawing.Point(0, 72);
+            this.welcomePanel.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.welcomePanel.MouseBack = null;
             this.welcomePanel.Name = "welcomePanel";
             this.welcomePanel.NormlBack = null;
-            this.welcomePanel.Size = new System.Drawing.Size(465, 322);
+            this.welcomePanel.Size = new System.Drawing.Size(1008, 644);
             this.welcomePanel.TabIndex = 0;
             // 
             // fogetPasswordButton
@@ -59,13 +62,14 @@
             this.fogetPasswordButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.fogetPasswordButton.DownBack = null;
             this.fogetPasswordButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fogetPasswordButton.Location = new System.Drawing.Point(156, 272);
+            this.fogetPasswordButton.Location = new System.Drawing.Point(338, 544);
+            this.fogetPasswordButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.fogetPasswordButton.MouseBack = null;
             this.fogetPasswordButton.Name = "fogetPasswordButton";
             this.fogetPasswordButton.NormlBack = null;
             this.fogetPasswordButton.Radius = 15;
             this.fogetPasswordButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.fogetPasswordButton.Size = new System.Drawing.Size(151, 31);
+            this.fogetPasswordButton.Size = new System.Drawing.Size(327, 62);
             this.fogetPasswordButton.TabIndex = 7;
             this.fogetPasswordButton.Text = "Forgot Password";
             this.fogetPasswordButton.UseVisualStyleBackColor = false;
@@ -78,37 +82,39 @@
             this.signUpButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.signUpButton.DownBack = null;
             this.signUpButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpButton.Location = new System.Drawing.Point(280, 224);
+            this.signUpButton.Location = new System.Drawing.Point(607, 448);
+            this.signUpButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.signUpButton.MouseBack = null;
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.NormlBack = null;
             this.signUpButton.Radius = 15;
             this.signUpButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.signUpButton.Size = new System.Drawing.Size(97, 31);
+            this.signUpButton.Size = new System.Drawing.Size(210, 62);
             this.signUpButton.TabIndex = 6;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.UseVisualStyleBackColor = false;
-            this.signUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
+            this.signUpButton.Click += new System.EventHandler(this.SignUpClick);
             // 
-            // signinButton
+            // signInButton
             // 
-            this.signinButton.BackColor = System.Drawing.Color.Transparent;
-            this.signinButton.BaseColor = System.Drawing.Color.MistyRose;
-            this.signinButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.signinButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.signinButton.DownBack = null;
-            this.signinButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signinButton.Location = new System.Drawing.Point(83, 224);
-            this.signinButton.MouseBack = null;
-            this.signinButton.Name = "signinButton";
-            this.signinButton.NormlBack = null;
-            this.signinButton.Radius = 15;
-            this.signinButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.signinButton.Size = new System.Drawing.Size(97, 31);
-            this.signinButton.TabIndex = 5;
-            this.signinButton.Text = "Sign In";
-            this.signinButton.UseVisualStyleBackColor = false;
-            this.signinButton.Click += new System.EventHandler(this.SkinButton1_Click);
+            this.signInButton.BackColor = System.Drawing.Color.Transparent;
+            this.signInButton.BaseColor = System.Drawing.Color.MistyRose;
+            this.signInButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.signInButton.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.signInButton.DownBack = null;
+            this.signInButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signInButton.Location = new System.Drawing.Point(180, 448);
+            this.signInButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.signInButton.MouseBack = null;
+            this.signInButton.Name = "signInButton";
+            this.signInButton.NormlBack = null;
+            this.signInButton.Radius = 15;
+            this.signInButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.signInButton.Size = new System.Drawing.Size(210, 62);
+            this.signInButton.TabIndex = 5;
+            this.signInButton.Text = "Sign In";
+            this.signInButton.UseVisualStyleBackColor = false;
+            this.signInButton.Click += new System.EventHandler(this.SignInClick);
             // 
             // passwordTextBox
             // 
@@ -117,33 +123,34 @@
             this.passwordTextBox.Icon = null;
             this.passwordTextBox.IconIsButton = false;
             this.passwordTextBox.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.passwordTextBox.IsPasswordChat = '●';
+            this.passwordTextBox.IsPasswordChat = '\0';
             this.passwordTextBox.IsSystemPasswordChar = true;
             this.passwordTextBox.Lines = new string[0];
-            this.passwordTextBox.Location = new System.Drawing.Point(192, 74);
+            this.passwordTextBox.Location = new System.Drawing.Point(416, 148);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.passwordTextBox.MaxLength = 5;
-            this.passwordTextBox.MinimumSize = new System.Drawing.Size(28, 28);
+            this.passwordTextBox.MinimumSize = new System.Drawing.Size(61, 56);
             this.passwordTextBox.MouseBack = null;
             this.passwordTextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.passwordTextBox.Multiline = false;
+            this.passwordTextBox.Multiline = true;
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.NormlBack = null;
-            this.passwordTextBox.Padding = new System.Windows.Forms.Padding(5);
+            this.passwordTextBox.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.passwordTextBox.ReadOnly = false;
             this.passwordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.passwordTextBox.Size = new System.Drawing.Size(185, 28);
+            this.passwordTextBox.Size = new System.Drawing.Size(401, 56);
             // 
             // 
             // 
             this.passwordTextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passwordTextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
-            this.passwordTextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.passwordTextBox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.passwordTextBox.SkinTxt.Location = new System.Drawing.Point(11, 10);
+            this.passwordTextBox.SkinTxt.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.passwordTextBox.SkinTxt.MaxLength = 5;
+            this.passwordTextBox.SkinTxt.Multiline = true;
             this.passwordTextBox.SkinTxt.Name = "BaseText";
-            this.passwordTextBox.SkinTxt.PasswordChar = '●';
-            this.passwordTextBox.SkinTxt.Size = new System.Drawing.Size(175, 18);
+            this.passwordTextBox.SkinTxt.Size = new System.Drawing.Size(379, 36);
             this.passwordTextBox.SkinTxt.TabIndex = 0;
             this.passwordTextBox.SkinTxt.UseSystemPasswordChar = true;
             this.passwordTextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
@@ -164,28 +171,30 @@
             this.userNameTextBox.IsPasswordChat = '\0';
             this.userNameTextBox.IsSystemPasswordChar = false;
             this.userNameTextBox.Lines = new string[0];
-            this.userNameTextBox.Location = new System.Drawing.Point(192, 33);
+            this.userNameTextBox.Location = new System.Drawing.Point(416, 66);
             this.userNameTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.userNameTextBox.MaxLength = 32767;
-            this.userNameTextBox.MinimumSize = new System.Drawing.Size(28, 28);
+            this.userNameTextBox.MinimumSize = new System.Drawing.Size(61, 56);
             this.userNameTextBox.MouseBack = null;
             this.userNameTextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.userNameTextBox.Multiline = false;
+            this.userNameTextBox.Multiline = true;
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.NormlBack = null;
-            this.userNameTextBox.Padding = new System.Windows.Forms.Padding(5);
+            this.userNameTextBox.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.userNameTextBox.ReadOnly = false;
             this.userNameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.userNameTextBox.Size = new System.Drawing.Size(185, 28);
+            this.userNameTextBox.Size = new System.Drawing.Size(401, 56);
             // 
             // 
             // 
             this.userNameTextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userNameTextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userNameTextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
-            this.userNameTextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.userNameTextBox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.userNameTextBox.SkinTxt.Location = new System.Drawing.Point(11, 10);
+            this.userNameTextBox.SkinTxt.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.userNameTextBox.SkinTxt.Multiline = true;
             this.userNameTextBox.SkinTxt.Name = "BaseText";
-            this.userNameTextBox.SkinTxt.Size = new System.Drawing.Size(175, 18);
+            this.userNameTextBox.SkinTxt.Size = new System.Drawing.Size(379, 36);
             this.userNameTextBox.SkinTxt.TabIndex = 0;
             this.userNameTextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.userNameTextBox.SkinTxt.WaterText = "";
@@ -194,7 +203,6 @@
             this.userNameTextBox.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.userNameTextBox.WaterText = "";
             this.userNameTextBox.WordWrap = true;
-            this.userNameTextBox.Paint += new System.Windows.Forms.PaintEventHandler(this.UserNameTextBox_Paint);
             // 
             // passwordLabel
             // 
@@ -202,9 +210,10 @@
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordLabel.BorderColor = System.Drawing.Color.White;
             this.passwordLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(79, 74);
+            this.passwordLabel.Location = new System.Drawing.Point(171, 148);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(102, 24);
+            this.passwordLabel.Size = new System.Drawing.Size(201, 49);
             this.passwordLabel.TabIndex = 2;
             this.passwordLabel.Text = "Password :";
             // 
@@ -214,22 +223,23 @@
             this.userNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.userNameLabel.BorderColor = System.Drawing.Color.White;
             this.userNameLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameLabel.Location = new System.Drawing.Point(79, 33);
+            this.userNameLabel.Location = new System.Drawing.Point(171, 66);
+            this.userNameLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(101, 24);
+            this.userNameLabel.Size = new System.Drawing.Size(203, 49);
             this.userNameLabel.TabIndex = 0;
             this.userNameLabel.Text = "Username:";
-            this.userNameLabel.Click += new System.EventHandler(this.UserNameLabel_Click);
             // 
             // SignIn
-            // 
-            this.AcceptButton = this.signinButton;
+            //
+            this.AcceptButton = this.signInButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(466, 358);
+            this.ClientSize = new System.Drawing.Size(1010, 716);
             this.Controls.Add(this.welcomePanel);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "SignIn";
             this.Text = "MathBrick";
             this.welcomePanel.ResumeLayout(false);
@@ -247,7 +257,7 @@
         private CCWin.SkinControl.SkinTextBox passwordTextBox;
         private CCWin.SkinControl.SkinButton fogetPasswordButton;
         private CCWin.SkinControl.SkinButton signUpButton;
-        private CCWin.SkinControl.SkinButton signinButton;
+        private CCWin.SkinControl.SkinButton signInButton;
     }
 }
 
