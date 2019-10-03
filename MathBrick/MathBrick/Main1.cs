@@ -136,5 +136,27 @@ namespace MathBrick
                 return "error";
             }
         }
+
+        private void Main1_Load(object sender, EventArgs e)
+        {
+            if(SignIn.nameToMain != null)
+            {
+                int authorizeLevel = DataBase.Instance.CheckAuthorize(SignIn.nameToMain);
+                switch (authorizeLevel)
+                {
+                    case -1:
+                        break;
+                    case 1:
+                        skinButton13.Hide();
+                        skinButton14.Hide();
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                }
+                    
+            }
+        }
     }
 }

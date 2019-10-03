@@ -452,10 +452,11 @@
             this.Controls.Add(this.skinPanel1);
             this.Name = "Main1";
             this.Text = "MathBrick";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
+            this.Load += new System.EventHandler(this.Main1_Load);
             this.skinPanel1.ResumeLayout(false);
             this.NumberBox.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
 
         }
 

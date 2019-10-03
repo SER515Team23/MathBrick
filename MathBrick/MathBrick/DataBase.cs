@@ -64,5 +64,15 @@ namespace MathBrick
             }
             return false;
         }
+
+        public int CheckAuthorize(string userName)
+        {
+            if (usersDic.ContainsKey(userName))
+            {
+                return usersDic[userName].authorizeLevel;
+            }
+            else
+                return -1;
+        }
     }
 }
