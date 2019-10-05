@@ -13,12 +13,11 @@ namespace MathBrick
 {
     public partial class Main1 : Skin_Color
     {
-        private static System.Drawing.Size mouseOffset;
-        private static Boolean isDraggable = false;
+        //private static System.Drawing.Size mouseOffset;
         public Main1()
         {
             InitializeComponent();
-            AddButtonClickEventForDragDrop();
+            AddEventForDragDrop();         
         }
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -35,18 +34,20 @@ namespace MathBrick
         }
 
         /// <summary>
-        /// This AddButtonClickEventForDragDrop function binds click event to all buttons in tabpage1 and 2 which are the numbers and operators
+        /// The AddEventForDragDrop function binds click event to all buttons in tabpage1 and 2 which are the numbers and operators
         /// </summary>
-        private void AddButtonClickEventForDragDrop()
+        private void AddEventForDragDrop()
         {          
             foreach (Button button in this.NumberBox.Controls)
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
+            //this.skinGroupBox1.MouseHover += GroupBoxFocus;
+            //this.skinGroupBox1.KeyDown += GroupBoxKeyDown;
         }
 
         /// <summary>
-        /// This ClickToDuplicate function enables block to duplicate themselve into canvas section when click
+        /// The ClickToDuplicate function enables block to duplicate themselve into canvas section when click
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -67,62 +68,62 @@ namespace MathBrick
             this.skinGroupBox1.AllowDrop = true;
 
             btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
-            //btn.MouseMove += new MouseEventHandler(DragBlockMouseMove);
 
             this.skinGroupBox1.DragOver += new DragEventHandler(BoxDropOver);
             this.skinGroupBox1.DragDrop += new DragEventHandler(BoxDragDrop);
         }
 
         /// <summary>
-        /// This DragBlockMouseDown function saves the starting location of the button as offset for later calculation when mouse down
+        /// references that are used for this function: https://stackoverflow.com/questions/10262178/how-to-delete-a-button-run-time
+        /// The GroupBoxKeyDown function is mainly used for delete a button when mouse hover over a button and click delete key should be able to delete it
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        //private void GroupBoxKeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Delete)
+        //    {
+        //        // TODO: calculate the right position of the hover over button
+        //        var a = this.skinGroupBox1.GetChildAtPoint(this.PointToClient(Cursor.Position));
+        //        Button btn = (this.skinGroupBox1.GetChildAtPoint(this.PointToClient(Cursor.Position)) as Button); 
+        //        
+        //        if (this.skinGroupBox1.Controls.Contains(btn))
+        //        {
+        //            this.skinGroupBox1.Controls.Remove(btn);
+        //        }
+        //    }
+        //}
+
+        //private void GroupBoxFocus(object sender, EventArgs e)
+        //{
+        //    this.skinGroupBox1.Focus();
+        //}
+
+        /// <summary>
+        /// The DragBlockMouseDown function saves the starting location of the button as offset for later calculation when mouse down
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void DragBlockMouseDown(object sender, MouseEventArgs e)
         {
             Control control = sender as Control;
-            control.DoDragDrop(control, DragDropEffects.Move);
-            isDraggable = true;
-            mouseOffset = new System.Drawing.Size(e.Location);
+            control.DoDragDrop(control, DragDropEffects.Move);           
             return;
         }
 
         /// <summary>
-        /// This DragBlockMouseMove function mean to show block while dragging the block
+        /// The BoxDragDrop function displays the new location of the block after dragging is finished
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        //private void DragBlockMouseMove(object sender, MouseEventArgs e)
-        //{
-        //    if(isDraggable == true)
-        //    {
-        //        Control control = sender as Control;
-        //        control.Location = this.skinGroupBox1.PointToClient(new Point((e.Location - mouseOffset).X, (e.Location - mouseOffset).Y));
-        //        this.skinGroupBox1.Controls.Add(control);
-        //        //control.Left = (e.Location - mouseOffset).X;
-        //        //control.Top = (e.Location - mouseOffset).Y;
-        //    }
-        //}
-
         void BoxDragDrop(object sender, DragEventArgs e)
         {
             Control control = e.Data.GetData(e.Data.GetFormats()[0]) as Control;
             if (control != null)
             {
-                Point deleteLocation = this.skinButton16.PointToScreen(Point.Empty);
-                Point newLocation = control.PointToScreen(Point.Empty); // THIS needs to be re-calculated
-                // if in the delete area // TODO: improve delete area UI
-                if (newLocation.X >= deleteLocation.X && newLocation.Y >= deleteLocation.Y)
-                {
-                    this.skinGroupBox1.Controls.Remove(control);
-                }
-                else
-                {
-                    control.Location = this.skinGroupBox1.PointToClient(new Point(e.X, e.Y));
-                    this.skinGroupBox1.Controls.Add(control);
-                }
+                control.Location = this.skinGroupBox1.PointToClient(new Point(e.X, e.Y));
+                this.skinGroupBox1.Controls.Add(control);
             }
-            isDraggable = false;
         }
 
         void BoxDropOver(object sender, DragEventArgs e)
@@ -130,35 +131,12 @@ namespace MathBrick
             e.Effect = DragDropEffects.Move;
         }
 
-        ///// <summary>
-        ///// This DragBlockMouseUp function calculates the new location and moves the button to the new location
-        ///// </summary>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //private void DragBlockMouseUp(object sender, MouseEventArgs e)
-        //{
-        //    Control control = sender as Control;
-        //    // TODO: Limit boundary of the area where it can be dragged
-
-        //    //////////////////////////////////////////////////////////////
-        //    var boundaryX = this.skinGroupBox1.Size.Width;
-        //    var boundaryY = this.skinGroupBox1.Size.Height;
-        //    control.Left = (control.Left + (e.Location - mouseOffset).X > boundaryX) ? boundaryX : control.Left + (e.Location - mouseOffset).X;
-        //    control.Top = (control.Top + (e.Location - mouseOffset).Y > boundaryY) ? boundaryY : control.Top + (e.Location - mouseOffset).Y;
-
-        //    return;
-        //}
-
         /// <summary>
-        /// 
+        /// The SetupButtonStyle function is used to put reusable code when creating a new block
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //private void Btn_Cancel_Click(object sender, EventArgs e)
-        //{
-        //    this.Parent.Controls.Remove(this);
-        //}
-
+        /// <param name="point"></param>
+        /// <param name="text"></param>
+        /// <returns></returns>
         private CCWin.SkinControl.SkinButton SetupButtonStyle(System.Drawing.Point point, string text)
         {
             var btn = new CCWin.SkinControl.SkinButton();

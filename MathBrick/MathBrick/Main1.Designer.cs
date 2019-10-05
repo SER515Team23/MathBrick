@@ -51,9 +51,7 @@
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
-            this.skinButton16 = new CCWin.SkinControl.SkinButton();
             this.skinPanel1.SuspendLayout();
-            this.skinGroupBox1.SuspendLayout();
             this.NumberBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,7 +109,6 @@
             // 
             this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.skinGroupBox1.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox1.Controls.Add(this.skinButton16);
             this.skinGroupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinGroupBox1.ForeColor = System.Drawing.Color.Black;
             this.skinGroupBox1.Location = new System.Drawing.Point(251, 129);
@@ -443,24 +440,6 @@
             this.skinPanel2.Size = new System.Drawing.Size(873, 119);
             this.skinPanel2.TabIndex = 0;
             // 
-            // skinButton16
-            // 
-            this.skinButton16.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton16.BaseColor = System.Drawing.Color.LightGray;
-            this.skinButton16.BorderColor = System.Drawing.Color.DimGray;
-            this.skinButton16.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton16.DownBack = null;
-            this.skinButton16.Location = new System.Drawing.Point(353, 306);
-            this.skinButton16.MouseBack = null;
-            this.skinButton16.Name = "skinButton16";
-            this.skinButton16.NormlBack = null;
-            this.skinButton16.Radius = 20;
-            this.skinButton16.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton16.Size = new System.Drawing.Size(111, 36);
-            this.skinButton16.TabIndex = 1;
-            this.skinButton16.Text = "Delete";
-            this.skinButton16.UseVisualStyleBackColor = false;
-            // 
             // Main1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,7 +451,6 @@
             this.Name = "Main1";
             this.Text = "MathBrick";
             this.skinPanel1.ResumeLayout(false);
-            this.skinGroupBox1.ResumeLayout(false);
             this.NumberBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -501,6 +479,5 @@
         private CCWin.SkinControl.SkinButton skinButton4;
         private CCWin.SkinControl.SkinButton skinButton3;
         private CCWin.SkinControl.SkinButton skinButton2;
-        private CCWin.SkinControl.SkinButton skinButton16;
     }
 }
