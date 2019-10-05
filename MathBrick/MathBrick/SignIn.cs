@@ -25,13 +25,13 @@ namespace MathBrick
             // This only exists during development stage.
             if (userName == defaultUserName && password == defaultPassword)
             {
-                Main1 main = new Main1();
+                HomePage main = new HomePage();
                 this.Hide();
                 main.Show();
             }
             else if (DataBase.Instance.UserLogin(userName, password))
             {
-                Main1 main = new Main1();
+                HomePage main = new HomePage();
                 User nowUser = DataBase.Instance.activeUser;
                 switch (nowUser.authorizeLevel) {
                     case 1:

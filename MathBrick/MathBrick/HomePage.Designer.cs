@@ -1,6 +1,6 @@
 ﻿namespace MathBrick
 {
-    partial class Main1
+    partial class HomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.Resut_Listbox = new CCWin.SkinControl.SkinListBox();
             this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
@@ -71,7 +71,6 @@
             this.skinPanel1.NormlBack = null;
             this.skinPanel1.Size = new System.Drawing.Size(879, 525);
             this.skinPanel1.TabIndex = 0;
-            this.skinPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.SkinPanel1_Paint);
             // 
             // Resut_Listbox
             // 
@@ -105,7 +104,6 @@
             this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.DarkGray;
             this.skinGroupBox2.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
             this.skinGroupBox2.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox2.Enter += new System.EventHandler(this.SkinGroupBox2_Enter);
             // 
             // skinGroupBox1
             // 
@@ -442,7 +440,7 @@
             this.skinPanel2.Size = new System.Drawing.Size(873, 110);
             this.skinPanel2.TabIndex = 0;
             // 
-            // Main1
+            // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -450,7 +448,7 @@
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(881, 570);
             this.Controls.Add(this.skinPanel1);
-            this.Name = "Main1";
+            this.Name = "HomePage";
             this.Text = "MathBrick";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main1_Load);
