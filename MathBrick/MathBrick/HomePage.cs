@@ -147,5 +147,10 @@ namespace MathBrick
                     
             }
         }
+
+        private void skinGroupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
