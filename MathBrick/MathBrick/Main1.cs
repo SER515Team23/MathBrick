@@ -57,14 +57,17 @@ namespace MathBrick
 
             // Follow the same block design
             CCWin.SkinControl.SkinButton btn = this.SetupButtonStyle(control.Location, control.Text);
-            this.skinGroupBox1.Controls.Add(btn);
+            CCWin.SkinControl.SkinButton deleteIcon = this.SetupDeleteIcon();
+            btn.Controls.Add(deleteIcon);
+            deleteIcon.Click += new EventHandler(TriggerDeleteEvent);
+            this.skinGroupBox1.Controls.Add(btn);          
 
+            
             /* references that are used for the following code: 
              * https://www.codeproject.com/Tips/178587/Draggable-WinForms-Controls-2
              * https://social.msdn.microsoft.com/Forums/vstudio/en-US/3d23ad93-e70d-4076-bf50-3e17ec43d0e1/drag-and-drop-the-control-in-the-panel-in-c?forum=netfxbcl
              * https://stackoverflow.com/questions/3728870/drag-and-drop-windows-forms-button
              */
-
             this.skinGroupBox1.AllowDrop = true;
 
             btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
@@ -74,30 +77,15 @@ namespace MathBrick
         }
 
         /// <summary>
-        /// references that are used for this function: https://stackoverflow.com/questions/10262178/how-to-delete-a-button-run-time
-        /// The GroupBoxKeyDown function is mainly used for delete a button when mouse hover over a button and click delete key should be able to delete it
+        /// The TriggerDeleteEvent is used to delete unwanted block
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        //private void GroupBoxKeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyCode == Keys.Delete)
-        //    {
-        //        // TODO: calculate the right position of the hover over button
-        //        var a = this.skinGroupBox1.GetChildAtPoint(this.PointToClient(Cursor.Position));
-        //        Button btn = (this.skinGroupBox1.GetChildAtPoint(this.PointToClient(Cursor.Position)) as Button); 
-        //        
-        //        if (this.skinGroupBox1.Controls.Contains(btn))
-        //        {
-        //            this.skinGroupBox1.Controls.Remove(btn);
-        //        }
-        //    }
-        //}
+        private void TriggerDeleteEvent(object sender, EventArgs e)
+        {
 
-        //private void GroupBoxFocus(object sender, EventArgs e)
-        //{
-        //    this.skinGroupBox1.Focus();
-        //}
+        }
+
 
         /// <summary>
         /// The DragBlockMouseDown function saves the starting location of the button as offset for later calculation when mouse down
@@ -116,7 +104,7 @@ namespace MathBrick
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void BoxDragDrop(object sender, DragEventArgs e)
+        private void BoxDragDrop(object sender, DragEventArgs e)
         {
             Control control = e.Data.GetData(e.Data.GetFormats()[0]) as Control;
             if (control != null)
@@ -126,7 +114,7 @@ namespace MathBrick
             }
         }
 
-        void BoxDropOver(object sender, DragEventArgs e)
+        private void BoxDropOver(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Move;
         }
@@ -155,6 +143,25 @@ namespace MathBrick
         }
 
         /// <summary>
+        /// The SetupDeleteIcon function is to create a delete icon for button to delete itself
+        /// </summary>
+        /// <returns></returns>
+        private CCWin.SkinControl.SkinButton SetupDeleteIcon()
+        {
+            var btn = new CCWin.SkinControl.SkinButton();
+            btn.BackColor = System.Drawing.Color.Transparent;
+            btn.BorderColor = System.Drawing.Color.DimGray;
+            btn.BaseColor = System.Drawing.Color.Red;
+            btn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            btn.Size = new System.Drawing.Size(15, 15);           
+            btn.ForeColor = Color.White;
+            btn.Font = new Font(btn.Font.FontFamily, 5, FontStyle.Bold);
+            btn.Text = "x";
+            //btn.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+            return btn;
+        }
+
+        /// <summary>
         /// Funtion of calculate the equation and return result or error by string
         /// </summary>
         /// <param name="str"></param>
@@ -166,7 +173,7 @@ namespace MathBrick
                 var result = new System.Data.DataTable().Compute(str, "");
                 return result.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return "error";
             }
