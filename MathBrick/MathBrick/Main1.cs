@@ -56,24 +56,17 @@ namespace MathBrick
             Control control = sender as Control;
 
             // Follow the same block design
-            CCWin.SkinControl.SkinButton btn = this.SetupButtonStyle(control.Location, control.Text);
+            CCWin.SkinControl.SkinButton btn = this.SetupButtonStyle(control.Location, control.Text);          
             CCWin.SkinControl.SkinButton deleteIcon = this.SetupDeleteIcon();
+            
             btn.Controls.Add(deleteIcon);
             deleteIcon.Click += new EventHandler(TriggerDeleteEvent);
-            this.skinGroupBox1.Controls.Add(btn);          
-
-            
-            /* references that are used for the following code: 
-             * https://www.codeproject.com/Tips/178587/Draggable-WinForms-Controls-2
-             * https://social.msdn.microsoft.com/Forums/vstudio/en-US/3d23ad93-e70d-4076-bf50-3e17ec43d0e1/drag-and-drop-the-control-in-the-panel-in-c?forum=netfxbcl
-             * https://stackoverflow.com/questions/3728870/drag-and-drop-windows-forms-button
-             */
+            this.skinGroupBox1.Controls.Add(btn);                
             this.skinGroupBox1.AllowDrop = true;
 
             btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
-
-            this.skinGroupBox1.DragOver += new DragEventHandler(BoxDropOver);
-            this.skinGroupBox1.DragDrop += new DragEventHandler(BoxDragDrop);
+            this.skinGroupBox1.DragOver += new DragEventHandler(BlockDropOver);
+            this.skinGroupBox1.DragDrop += new DragEventHandler(BlockDragDrop);
         }
 
         /// <summary>
@@ -83,12 +76,20 @@ namespace MathBrick
         /// <param name="e"></param>
         private void TriggerDeleteEvent(object sender, EventArgs e)
         {
-
+            Control control = sender as Control;
+            DialogResult result = MessageBox.Show("Delete this block?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                if (this.skinGroupBox1.Controls.Contains(control.Parent))
+                {
+                    this.skinGroupBox1.Controls.Remove(control.Parent);
+                }
+            }
         }
 
-
         /// <summary>
-        /// The DragBlockMouseDown function saves the starting location of the button as offset for later calculation when mouse down
+        /// The DragBlockMouseDown function starts a dragdrop operation when mouse down
+        /// reference: Microsoft tutorial about drag drop
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -96,15 +97,15 @@ namespace MathBrick
         {
             Control control = sender as Control;
             control.DoDragDrop(control, DragDropEffects.Move);           
-            return;
         }
 
         /// <summary>
-        /// The BoxDragDrop function displays the new location of the block after dragging is finished
+        /// The BlockDragDrop function displays the new location of the block after dragging is finished
+        /// reference: https://social.msdn.microsoft.com/Forums/vstudio/en-US/3d23ad93-e70d-4076-bf50-3e17ec43d0e1/drag-and-drop-the-control-in-the-panel-in-c?forum=netfxbcl
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BoxDragDrop(object sender, DragEventArgs e)
+        private void BlockDragDrop(object sender, DragEventArgs e)
         {
             Control control = e.Data.GetData(e.Data.GetFormats()[0]) as Control;
             if (control != null)
@@ -114,7 +115,12 @@ namespace MathBrick
             }
         }
 
-        private void BoxDropOver(object sender, DragEventArgs e)
+        /// <summary>
+        /// The BlockDropOver function set the effect when drag over the bound
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BlockDropOver(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Move;
         }
@@ -156,8 +162,8 @@ namespace MathBrick
             btn.Size = new System.Drawing.Size(15, 15);           
             btn.ForeColor = Color.White;
             btn.Font = new Font(btn.Font.FontFamily, 5, FontStyle.Bold);
-            btn.Text = "x";
-            //btn.Anchor = (AnchorStyles.Top | AnchorStyles.Left);
+            btn.Text = "x";           
+            // TODO: change the position to top right instead
             return btn;
         }
 
