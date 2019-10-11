@@ -90,7 +90,7 @@
             this.Controls.Add(this.userNameDescriptionLabel);
             this.Controls.Add(this.quizListView);
             this.Name = "QuizList";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quiz List";
             this.ResumeLayout(false);
             this.PerformLayout();

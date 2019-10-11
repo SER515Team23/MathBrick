@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
+using System;
 
 namespace MathBrick
 {
@@ -73,6 +74,15 @@ namespace MathBrick
             }
             else
                 return -1;
+        }
+
+        public void UserLogout()
+        {
+            if (activeUser != null)
+            {
+                string userName = activeUser.userName;
+                Console.WriteLine(userName + " has been logout.");
+            }
         }
     }
 }

@@ -153,5 +153,13 @@ namespace MathBrick
             QuizList quizList = new QuizList();
             quizList.Show();
         }
+
+        private void Logout(object sender, EventArgs e)
+        {
+            DataBase.Instance.UserLogout();
+            this.Hide();
+            SignIn signIn = new SignIn();
+            signIn.Show();
+        }
     }
 }
