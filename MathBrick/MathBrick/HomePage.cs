@@ -147,5 +147,11 @@ namespace MathBrick
                     
             }
         }
+
+        private void SelectQuiz(object sender, EventArgs e)
+        {
+            QuizList quizList = new QuizList();
+            quizList.Show();
+        }
     }
 }
