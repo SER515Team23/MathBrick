@@ -35,7 +35,6 @@
             this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
             this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
             this.NumberBox = new CCWin.SkinControl.SkinGroupBox();
-            this.skinButton15 = new CCWin.SkinControl.SkinButton();
             this.skinButton14 = new CCWin.SkinControl.SkinButton();
             this.skinButton13 = new CCWin.SkinControl.SkinButton();
             this.skinButton12 = new CCWin.SkinControl.SkinButton();
@@ -51,7 +50,13 @@
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.skinButton15 = new CCWin.SkinControl.SkinButton();
             this.skinPanel1.SuspendLayout();
+            this.skinGroupBox1.SuspendLayout();
             this.NumberBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +114,11 @@
             // 
             this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.skinGroupBox1.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox1.Controls.Add(this.skinButton15);
+            this.skinGroupBox1.Controls.Add(this.panel4);
+            this.skinGroupBox1.Controls.Add(this.panel3);
+            this.skinGroupBox1.Controls.Add(this.panel2);
+            this.skinGroupBox1.Controls.Add(this.panel1);
             this.skinGroupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinGroupBox1.ForeColor = System.Drawing.Color.Black;
             this.skinGroupBox1.Location = new System.Drawing.Point(251, 129);
@@ -127,7 +137,6 @@
             // 
             this.NumberBox.BackColor = System.Drawing.Color.Transparent;
             this.NumberBox.BorderColor = System.Drawing.Color.DarkGray;
-            this.NumberBox.Controls.Add(this.skinButton15);
             this.NumberBox.Controls.Add(this.skinButton14);
             this.NumberBox.Controls.Add(this.skinButton13);
             this.NumberBox.Controls.Add(this.skinButton12);
@@ -155,24 +164,6 @@
             this.NumberBox.TitleBorderColor = System.Drawing.Color.DarkGray;
             this.NumberBox.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
             this.NumberBox.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
-            // skinButton15
-            // 
-            this.skinButton15.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton15.BaseColor = System.Drawing.Color.LightGray;
-            this.skinButton15.BorderColor = System.Drawing.Color.DimGray;
-            this.skinButton15.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton15.DownBack = null;
-            this.skinButton15.Location = new System.Drawing.Point(171, 361);
-            this.skinButton15.MouseBack = null;
-            this.skinButton15.Name = "skinButton15";
-            this.skinButton15.NormlBack = null;
-            this.skinButton15.Radius = 20;
-            this.skinButton15.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton15.Size = new System.Drawing.Size(50, 57);
-            this.skinButton15.TabIndex = 14;
-            this.skinButton15.Text = "=";
-            this.skinButton15.UseVisualStyleBackColor = false;
             // 
             // skinButton14
             // 
@@ -440,6 +431,52 @@
             this.skinPanel2.Size = new System.Drawing.Size(873, 119);
             this.skinPanel2.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(1, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(462, 56);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(1, 105);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(463, 56);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(1, 167);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(463, 56);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(1, 229);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(463, 56);
+            this.panel4.TabIndex = 3;
+            // 
+            // skinButton15
+            // 
+            this.skinButton15.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton15.BaseColor = System.Drawing.Color.LightGray;
+            this.skinButton15.BorderColor = System.Drawing.Color.DimGray;
+            this.skinButton15.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton15.DownBack = null;
+            this.skinButton15.Location = new System.Drawing.Point(408, 304);
+            this.skinButton15.MouseBack = null;
+            this.skinButton15.Name = "skinButton15";
+            this.skinButton15.NormlBack = null;
+            this.skinButton15.Radius = 20;
+            this.skinButton15.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton15.Size = new System.Drawing.Size(50, 32);
+            this.skinButton15.TabIndex = 14;
+            this.skinButton15.Text = "=";
+            this.skinButton15.UseVisualStyleBackColor = false;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,6 +490,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main1_Load);
             this.skinPanel1.ResumeLayout(false);
+            this.skinGroupBox1.ResumeLayout(false);
             this.NumberBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -467,7 +505,6 @@
         private CCWin.SkinControl.SkinGroupBox skinGroupBox1;
         private CCWin.SkinControl.SkinListBox Resut_Listbox;
         private CCWin.SkinControl.SkinButton skinButton1;
-        private CCWin.SkinControl.SkinButton skinButton15;
         private CCWin.SkinControl.SkinButton skinButton14;
         private CCWin.SkinControl.SkinButton skinButton13;
         private CCWin.SkinControl.SkinButton skinButton12;
@@ -481,5 +518,10 @@
         private CCWin.SkinControl.SkinButton skinButton4;
         private CCWin.SkinControl.SkinButton skinButton3;
         private CCWin.SkinControl.SkinButton skinButton2;
+        private CCWin.SkinControl.SkinButton skinButton15;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
