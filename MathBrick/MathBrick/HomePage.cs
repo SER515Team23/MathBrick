@@ -142,6 +142,7 @@ namespace MathBrick
             btn.UseVisualStyleBackColor = false;
             btn.Location = point;
             btn.Text = text;
+            btn.Dock = DockStyle.Top | DockStyle.Left;
 
             return btn;
         }
