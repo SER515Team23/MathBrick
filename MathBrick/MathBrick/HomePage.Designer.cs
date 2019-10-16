@@ -31,11 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.Resut_Listbox = new CCWin.SkinControl.SkinListBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.NumberOperator = new CCWin.SkinControl.SkinTabControl();
             this.NumberBox = new CCWin.SkinControl.SkinTabPage();
             this.skinButton10 = new CCWin.SkinControl.SkinButton();
@@ -56,14 +58,12 @@
             this.skinButton13 = new CCWin.SkinControl.SkinButton();
             this.skinButton12 = new CCWin.SkinControl.SkinButton();
             this.skinButton11 = new CCWin.SkinControl.SkinButton();
-            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
-            this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
-            this.Resut_Listbox = new CCWin.SkinControl.SkinListBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.NumberOperator.SuspendLayout();
             this.NumberBox.SuspendLayout();
             this.OperatorBox.SuspendLayout();
@@ -82,33 +82,33 @@
             this.panel1.Size = new System.Drawing.Size(865, 523);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panel6
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(865, 122);
-            this.panel2.TabIndex = 0;
+            this.panel6.Controls.Add(this.skinGroupBox1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(200, 122);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(465, 301);
+            this.panel6.TabIndex = 4;
             // 
-            // panel3
+            // skinGroupBox1
             // 
-            this.panel3.Controls.Add(this.NumberOperator);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 122);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 401);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.skinGroupBox2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(665, 122);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 401);
-            this.panel4.TabIndex = 2;
+            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinGroupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinGroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.skinGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.skinGroupBox1.Name = "skinGroupBox1";
+            this.skinGroupBox1.RectBackColor = System.Drawing.Color.White;
+            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox1.Size = new System.Drawing.Size(465, 301);
+            this.skinGroupBox1.TabIndex = 4;
+            this.skinGroupBox1.TabStop = false;
+            this.skinGroupBox1.Text = "Canvas";
+            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
             // 
             // panel5
             // 
@@ -119,14 +119,58 @@
             this.panel5.Size = new System.Drawing.Size(465, 100);
             this.panel5.TabIndex = 3;
             // 
-            // panel6
+            // Resut_Listbox
             // 
-            this.panel6.Controls.Add(this.skinGroupBox1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(200, 122);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(465, 301);
-            this.panel6.TabIndex = 4;
+            this.Resut_Listbox.Back = null;
+            this.Resut_Listbox.BackColor = System.Drawing.SystemColors.Menu;
+            this.Resut_Listbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Resut_Listbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Resut_Listbox.FormattingEnabled = true;
+            this.Resut_Listbox.Location = new System.Drawing.Point(0, 0);
+            this.Resut_Listbox.MouseColor = System.Drawing.Color.Black;
+            this.Resut_Listbox.Name = "Resut_Listbox";
+            this.Resut_Listbox.RowBackColor1 = System.Drawing.Color.Black;
+            this.Resut_Listbox.RowBackColor2 = System.Drawing.Color.Black;
+            this.Resut_Listbox.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Resut_Listbox.Size = new System.Drawing.Size(465, 100);
+            this.Resut_Listbox.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.skinGroupBox2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(665, 122);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 401);
+            this.panel4.TabIndex = 2;
+            // 
+            // skinGroupBox2
+            // 
+            this.skinGroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox2.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinGroupBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinGroupBox2.ForeColor = System.Drawing.Color.Black;
+            this.skinGroupBox2.Location = new System.Drawing.Point(0, 0);
+            this.skinGroupBox2.Name = "skinGroupBox2";
+            this.skinGroupBox2.RectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox2.Size = new System.Drawing.Size(200, 401);
+            this.skinGroupBox2.TabIndex = 5;
+            this.skinGroupBox2.TabStop = false;
+            this.skinGroupBox2.Text = "Message";
+            this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox2.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox2.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.NumberOperator);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 122);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 401);
+            this.panel3.TabIndex = 1;
             // 
             // NumberOperator
             // 
@@ -154,7 +198,7 @@
             this.NumberOperator.PageHover = ((System.Drawing.Image)(resources.GetObject("NumberOperator.PageHover")));
             this.NumberOperator.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.NumberOperator.PageNorml = null;
-            this.NumberOperator.SelectedIndex = 1;
+            this.NumberOperator.SelectedIndex = 0;
             this.NumberOperator.Size = new System.Drawing.Size(200, 401);
             this.NumberOperator.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.NumberOperator.TabIndex = 12;
@@ -176,7 +220,7 @@
             this.NumberBox.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumberBox.Location = new System.Drawing.Point(0, 36);
             this.NumberBox.Name = "NumberBox";
-            this.NumberBox.Size = new System.Drawing.Size(200, 367);
+            this.NumberBox.Size = new System.Drawing.Size(200, 365);
             this.NumberBox.TabIndex = 0;
             this.NumberBox.TabItemImage = null;
             this.NumberBox.Text = "Numbers";
@@ -196,7 +240,7 @@
             this.skinButton10.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.skinButton10.Size = new System.Drawing.Size(50, 53);
             this.skinButton10.TabIndex = 10;
-            this.skinButton10.Text = "10";
+            this.skinButton10.Text = "0";
             this.skinButton10.UseVisualStyleBackColor = false;
             // 
             // skinButton1
@@ -506,59 +550,15 @@
             this.skinButton11.Text = "+";
             this.skinButton11.UseVisualStyleBackColor = false;
             // 
-            // skinGroupBox1
+            // panel2
             // 
-            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox1.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinGroupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinGroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.skinGroupBox1.Name = "skinGroupBox1";
-            this.skinGroupBox1.RectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox1.Size = new System.Drawing.Size(465, 301);
-            this.skinGroupBox1.TabIndex = 4;
-            this.skinGroupBox1.TabStop = false;
-            this.skinGroupBox1.Text = "Canvas";
-            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
-            // skinGroupBox2
-            // 
-            this.skinGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox2.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinGroupBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinGroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox2.Location = new System.Drawing.Point(0, 0);
-            this.skinGroupBox2.Name = "skinGroupBox2";
-            this.skinGroupBox2.RectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox2.Size = new System.Drawing.Size(200, 401);
-            this.skinGroupBox2.TabIndex = 5;
-            this.skinGroupBox2.TabStop = false;
-            this.skinGroupBox2.Text = "Message";
-            this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox2.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox2.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
-            // Resut_Listbox
-            // 
-            this.Resut_Listbox.Back = null;
-            this.Resut_Listbox.BackColor = System.Drawing.SystemColors.Menu;
-            this.Resut_Listbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Resut_Listbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Resut_Listbox.FormattingEnabled = true;
-            this.Resut_Listbox.Location = new System.Drawing.Point(0, 0);
-            this.Resut_Listbox.MouseColor = System.Drawing.Color.Black;
-            this.Resut_Listbox.Name = "Resut_Listbox";
-            this.Resut_Listbox.RowBackColor1 = System.Drawing.Color.Black;
-            this.Resut_Listbox.RowBackColor2 = System.Drawing.Color.Black;
-            this.Resut_Listbox.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Resut_Listbox.Size = new System.Drawing.Size(465, 100);
-            this.Resut_Listbox.TabIndex = 6;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(865, 122);
+            this.panel2.TabIndex = 0;
             // 
             // HomePage
             // 
@@ -573,10 +573,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.NumberOperator.ResumeLayout(false);
             this.NumberBox.ResumeLayout(false);
             this.OperatorBox.ResumeLayout(false);
