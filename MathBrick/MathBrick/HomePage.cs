@@ -42,6 +42,10 @@ namespace MathBrick
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
+            foreach (Button button in this.OperatorBox.Controls)
+            {
+                button.Click += new EventHandler(ClickToDuplicate);
+            }
         }
 
         /// <summary>
