@@ -59,12 +59,22 @@ namespace MathBrick
 
             btn.Controls.Add(deleteIcon);
             deleteIcon.Click += new EventHandler(TriggerDeleteEvent);
-            this.skinGroupBox1.Controls.Add(btn);
-            this.skinGroupBox1.AllowDrop = true;
+            if (this.arrangePanel() != null)
+            {
+                var panel = this.arrangePanel();
+                panel.Controls.Add(btn);               
+                panel.AllowDrop = true;
 
-            btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
-            this.skinGroupBox1.DragOver += new DragEventHandler(BlockDropOver);
-            this.skinGroupBox1.DragDrop += new DragEventHandler(BlockDragDrop);
+                btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
+                panel.DragOver += new DragEventHandler(BlockDropOver);
+                panel.DragDrop += new DragEventHandler(BlockDragDrop);
+            }
+           
+        }
+
+        private CCWin.SkinControl.SkinPanel arrangePanel()
+        {
+            return this.panel1.Controls.Count < 9 ? this.panel1 : this.panel2.Controls.Count < 9 ? this.panel2 : this.panel3.Controls.Count < 9 ? this.panel3 : this.panel4.Controls.Count < 9 ? this.panel4 : null;
         }
 
         /// <summary>

@@ -34,6 +34,11 @@
             this.Resut_Listbox = new CCWin.SkinControl.SkinListBox();
             this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
             this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
+            this.skinButton15 = new CCWin.SkinControl.SkinButton();
+            this.panel4 = new CCWin.SkinControl.SkinPanel();
+            this.panel3 = new CCWin.SkinControl.SkinPanel();
+            this.panel2 = new CCWin.SkinControl.SkinPanel();
+            this.panel1 = new CCWin.SkinControl.SkinPanel();
             this.NumberBox = new CCWin.SkinControl.SkinGroupBox();
             this.skinButton14 = new CCWin.SkinControl.SkinButton();
             this.skinButton13 = new CCWin.SkinControl.SkinButton();
@@ -50,11 +55,6 @@
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.skinButton15 = new CCWin.SkinControl.SkinButton();
             this.skinPanel1.SuspendLayout();
             this.skinGroupBox1.SuspendLayout();
             this.NumberBox.SuspendLayout();
@@ -132,6 +132,72 @@
             this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.DarkGray;
             this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
             this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // skinButton15
+            // 
+            this.skinButton15.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton15.BaseColor = System.Drawing.Color.LightGray;
+            this.skinButton15.BorderColor = System.Drawing.Color.DimGray;
+            this.skinButton15.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton15.DownBack = null;
+            this.skinButton15.Location = new System.Drawing.Point(408, 304);
+            this.skinButton15.MouseBack = null;
+            this.skinButton15.Name = "skinButton15";
+            this.skinButton15.NormlBack = null;
+            this.skinButton15.Radius = 20;
+            this.skinButton15.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton15.Size = new System.Drawing.Size(50, 32);
+            this.skinButton15.TabIndex = 14;
+            this.skinButton15.Text = "=";
+            this.skinButton15.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.panel4.DownBack = null;
+            this.panel4.Location = new System.Drawing.Point(1, 229);
+            this.panel4.MouseBack = null;
+            this.panel4.Name = "panel4";
+            this.panel4.NormlBack = null;
+            this.panel4.Size = new System.Drawing.Size(463, 56);
+            this.panel4.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.panel3.DownBack = null;
+            this.panel3.Location = new System.Drawing.Point(1, 167);
+            this.panel3.MouseBack = null;
+            this.panel3.Name = "panel3";
+            this.panel3.NormlBack = null;
+            this.panel3.Size = new System.Drawing.Size(463, 56);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.panel2.DownBack = null;
+            this.panel2.Location = new System.Drawing.Point(1, 105);
+            this.panel2.MouseBack = null;
+            this.panel2.Name = "panel2";
+            this.panel2.NormlBack = null;
+            this.panel2.Size = new System.Drawing.Size(463, 56);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.panel1.DownBack = null;
+            this.panel1.Location = new System.Drawing.Point(1, 43);
+            this.panel1.MouseBack = null;
+            this.panel1.Name = "panel1";
+            this.panel1.NormlBack = null;
+            this.panel1.Size = new System.Drawing.Size(462, 56);
+            this.panel1.TabIndex = 0;
             // 
             // NumberBox
             // 
@@ -431,52 +497,6 @@
             this.skinPanel2.Size = new System.Drawing.Size(873, 119);
             this.skinPanel2.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(1, 43);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(462, 56);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(1, 105);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(463, 56);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(1, 167);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(463, 56);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(1, 229);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(463, 56);
-            this.panel4.TabIndex = 3;
-            // 
-            // skinButton15
-            // 
-            this.skinButton15.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton15.BaseColor = System.Drawing.Color.LightGray;
-            this.skinButton15.BorderColor = System.Drawing.Color.DimGray;
-            this.skinButton15.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton15.DownBack = null;
-            this.skinButton15.Location = new System.Drawing.Point(408, 304);
-            this.skinButton15.MouseBack = null;
-            this.skinButton15.Name = "skinButton15";
-            this.skinButton15.NormlBack = null;
-            this.skinButton15.Radius = 20;
-            this.skinButton15.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton15.Size = new System.Drawing.Size(50, 32);
-            this.skinButton15.TabIndex = 14;
-            this.skinButton15.Text = "=";
-            this.skinButton15.UseVisualStyleBackColor = false;
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,9 +539,9 @@
         private CCWin.SkinControl.SkinButton skinButton3;
         private CCWin.SkinControl.SkinButton skinButton2;
         private CCWin.SkinControl.SkinButton skinButton15;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
+        private CCWin.SkinControl.SkinPanel panel4;
+        private CCWin.SkinControl.SkinPanel panel3;
+        private CCWin.SkinControl.SkinPanel panel2;
+        private CCWin.SkinControl.SkinPanel panel1;
     }
 }
