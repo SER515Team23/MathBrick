@@ -161,5 +161,11 @@ namespace MathBrick
             SignIn signIn = new SignIn();
             signIn.Show();
         }
+
+        private void ManageButton_Click(object sender, EventArgs e)
+        {
+            ManagePage managePage = new ManagePage();
+            managePage.Show();
+        }
     }
 }

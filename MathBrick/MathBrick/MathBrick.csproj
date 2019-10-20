@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManagePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePage.Designer.cs">
+      <DependentUpon>ManagePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuizList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </Compile>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePage.resx">
+      <DependentUpon>ManagePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuizList.resx">
       <DependentUpon>QuizList.cs</DependentUpon>
