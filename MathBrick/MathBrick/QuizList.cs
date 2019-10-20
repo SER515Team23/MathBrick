@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace MathBrick
@@ -35,6 +36,22 @@ namespace MathBrick
                 quizListView.Items.Add(item);
             }
             this.Controls.Add(quizListView);
+        }
+
+        private void ConfirmButton_Click(object sender, System.EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection quizInfo =
+                this.quizListView.SelectedItems;
+
+            foreach (ListViewItem item in quizInfo)
+            {
+                Console.WriteLine("Chosen: " + item.SubItems[3].Text);
+            }
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

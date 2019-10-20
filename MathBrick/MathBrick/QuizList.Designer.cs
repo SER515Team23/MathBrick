@@ -33,13 +33,16 @@
             this.levelDescriptionLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.levelLabel = new System.Windows.Forms.Label();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.confirmButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // quizListView
             // 
+            this.quizListView.HideSelection = false;
             this.quizListView.Location = new System.Drawing.Point(3, 130);
             this.quizListView.Name = "quizListView";
-            this.quizListView.Size = new System.Drawing.Size(1190, 594);
+            this.quizListView.Size = new System.Drawing.Size(1190, 480);
             this.quizListView.TabIndex = 0;
             this.quizListView.UseCompatibleStateImageBehavior = false;
             // 
@@ -79,11 +82,33 @@
             this.levelLabel.TabIndex = 4;
             this.levelLabel.Text = "Advanced";
             // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(874, 632);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(147, 74);
+            this.cancelButton.TabIndex = 5;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // confirmButton
+            // 
+            this.confirmButton.Location = new System.Drawing.Point(1039, 632);
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.Size = new System.Drawing.Size(133, 74);
+            this.confirmButton.TabIndex = 6;
+            this.confirmButton.Text = "OK";
+            this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
+            // 
             // QuizList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1196, 736);
+            this.Controls.Add(this.confirmButton);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.levelLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.levelDescriptionLabel);
@@ -104,5 +129,7 @@
         private System.Windows.Forms.Label levelDescriptionLabel;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label levelLabel;
+        private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.Button confirmButton;
     }
 }
