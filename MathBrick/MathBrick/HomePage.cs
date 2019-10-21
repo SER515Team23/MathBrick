@@ -88,9 +88,21 @@ namespace MathBrick
             DialogResult result = MessageBox.Show("Delete this block?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
-                if (this.skinGroupBox1.Controls.Contains(control.Parent))
+                if (this.panel1.Controls.Contains(control.Parent))
                 {
-                    this.skinGroupBox1.Controls.Remove(control.Parent);
+                    this.panel1.Controls.Remove(control.Parent);
+                }
+                if (this.panel2.Controls.Contains(control.Parent))
+                {
+                    this.panel2.Controls.Remove(control.Parent);
+                }
+                if (this.panel3.Controls.Contains(control.Parent))
+                {
+                    this.panel3.Controls.Remove(control.Parent);
+                }
+                if (this.panel4.Controls.Contains(control.Parent))
+                {
+                    this.panel4.Controls.Remove(control.Parent);
                 }
             }
         }
