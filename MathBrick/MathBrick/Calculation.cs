@@ -220,9 +220,97 @@ namespace MathBrick
             }
             return sum;
         }
+
+        /// <summary>
+        /// if ax+by=m; cx+dy=n, then x=(bn-dm)/(bc-ad); y=(an-cm)/(ad-bc)
+        /// 可以支持的字符串格式基本同一元一次方程，如str1 = "3x+4y+7=9x-3y-9"; str2 = "8x-3=3y+5";
+        /// </summary>                             
+        /// <returns></returns>
         public string BinaryEquation()
         {
-            return "error";
+            try
+            {
+                int a = 0, b = 0, m = 0;
+                int c = 0, d = 0, n = 0;
+                string[] splitStringArray1 = inputString1.Split('=');
+                string[] splitStringArray2 = inputString2.Split('=');
+                int[] left1 = AddForCalculateBinary(splitStringArray1[0]);
+                int[] right1 = AddForCalculateBinary(splitStringArray1[1]);
+                int[] left2 = AddForCalculateBinary(splitStringArray2[0]);
+                int[] right2 = AddForCalculateBinary(splitStringArray2[1]);
+
+                a += left1[1];
+                b += left1[2];
+                m -= left1[0];
+
+                a -= right1[1];
+                b -= right1[2];
+                m += right1[0];
+
+                c += left2[1];
+                d += left2[2];
+                n -= left2[0];
+
+                c -= right2[1];
+                d -= right2[2];
+                n += right2[0];
+
+
+                return "x=" + ((b * n - d * m) + 0.0) / (b * c - a * d) + (" y=" + ((a * n - c * m) + 0.0) / (a * d - b * c));
+
+
+            }
+            catch (Exception ex)
+            {
+                return "error";
+            }
+        }
+
+        private static int[] AddForCalculateBinary(string s)
+        {
+            int[] sum = new int[3];   //sum[0]存常数，sum[1]存x前面的系数
+            int currentNum = 0, symbol = 1;   //symbol取符号，初始默认正数，currentNum取当前读到的数字
+            int firstNum = 0; //firstNum用于存放一个数
+            for (int i = 0; i < s.Length; i++)
+            {
+
+                char currentChar = s[i];   //currentChar取当前字符
+                if (currentChar == '+')
+                {
+                    sum[0] += symbol * firstNum; //读到“+”时，说明当前读到的是一个常数，存入常数数组
+                    symbol = 1;  //读取到“+”时，将符号置为1，代表加一个正数
+                    firstNum = 0; //存完一个数之后，记得将该变量置为0，以便存储后续的数
+                }
+                else if (currentChar == '-')
+                {
+                    sum[0] += symbol * firstNum;
+                    symbol = -1; //读取到“-”时，将符号置为-1，代表加一个负数	
+                    firstNum = 0;
+                }
+                else if (currentChar == 'x')
+                {
+
+                    if (firstNum == 0)
+                        firstNum = 1;
+                    sum[1] += symbol * firstNum; firstNum = 0;
+
+                }
+                else if (currentChar == 'y')
+                {
+                    if (firstNum == 0)
+                        firstNum = 1;
+                    sum[2] += symbol * firstNum; firstNum = 0;
+                }
+                else //不是‘+’，‘-’，‘x’, 'y'则说明当前字符是一个数字
+                {
+                    currentNum = Convert.ToInt32(currentChar) - 48;
+                    firstNum = firstNum * 10 + currentNum * symbol;
+                    symbol = 1;
+                    if (i == s.Length - 1)    //当读取到最后一位不是x,y且还未结束时，说明当前是一个常数，累积加到常数中
+                        sum[0] += symbol * firstNum;
+                }
+            }
+            return sum;
         }
     }
 }
