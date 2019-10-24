@@ -51,12 +51,8 @@
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
-            this.logoutButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.manageButton = new System.Windows.Forms.Button();
             this.skinPanel1.SuspendLayout();
             this.NumberBox.SuspendLayout();
-            this.skinPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinPanel1
@@ -458,9 +454,6 @@
             this.skinPanel2.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("skinPanel2.BackgroundImage")));
             this.skinPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.skinPanel2.Controls.Add(this.manageButton);
-            this.skinPanel2.Controls.Add(this.logoutButton);
-            this.skinPanel2.Controls.Add(this.button1);
             this.skinPanel2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel2.DownBack = null;
             this.skinPanel2.Location = new System.Drawing.Point(7, 6);
@@ -470,36 +463,6 @@
             this.skinPanel2.NormlBack = null;
             this.skinPanel2.Size = new System.Drawing.Size(1892, 220);
             this.skinPanel2.TabIndex = 0;
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.Location = new System.Drawing.Point(1757, 3);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(129, 77);
-            this.logoutButton.TabIndex = 1;
-            this.logoutButton.Text = "Logout";
-            this.logoutButton.UseVisualStyleBackColor = true;
-            this.logoutButton.Click += new System.EventHandler(this.Logout);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 77);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Quiz";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.SelectQuiz);
-            // 
-            // manageButton
-            // 
-            this.manageButton.Location = new System.Drawing.Point(1761, 138);
-            this.manageButton.Name = "manageButton";
-            this.manageButton.Size = new System.Drawing.Size(128, 79);
-            this.manageButton.TabIndex = 2;
-            this.manageButton.Text = "Manage Account";
-            this.manageButton.UseVisualStyleBackColor = true;
-            this.manageButton.Click += new System.EventHandler(this.ManageButton_Click);
             // 
             // HomePage
             // 
@@ -516,7 +479,6 @@
             this.Load += new System.EventHandler(this.Main1_Load);
             this.skinPanel1.ResumeLayout(false);
             this.NumberBox.ResumeLayout(false);
-            this.skinPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -544,8 +506,5 @@
         private CCWin.SkinControl.SkinButton skinButton4;
         private CCWin.SkinControl.SkinButton skinButton3;
         private CCWin.SkinControl.SkinButton skinButton2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button logoutButton;
-        private System.Windows.Forms.Button manageButton;
     }
 }
