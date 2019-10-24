@@ -13,12 +13,12 @@ namespace MathBrick
 {
     public partial class HomePage : Skin_Color
     {
-        private static System.Drawing.Size mouseOffset;
         public HomePage()
         {
             InitializeComponent();
-            AddButtonClickEventForDragDrop();
+            AddEventForDragDrop();         
         }
+
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to exit？", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -34,24 +34,22 @@ namespace MathBrick
         }
 
         /// <summary>
-        /// This AddButtonClickEventForDragDrop function binds click event to all buttons in tabpage1 and 2 which are the numbers and operators
+        /// The AddEventForDragDrop function binds click event to all buttons in tabpage1 and 2 which are the numbers and operators
         /// </summary>
-        private void AddButtonClickEventForDragDrop()
+        private void AddEventForDragDrop()
         {
-            // TODO: find better way to loop through all blocks
             foreach (Button button in this.NumberBox.Controls)
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
-
-            /*foreach (Button button in this.tabPage2.Controls)
+            foreach (Button button in this.OperatorBox.Controls)
             {
                 button.Click += new EventHandler(ClickToDuplicate);
-            }*/
+            }
         }
 
         /// <summary>
-        /// This ClickToDuplicate function enables block to duplicate themselve into canvas section when click
+        /// The ClickToDuplicate function enables block to duplicate themselve into canvas section when click
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -60,54 +58,116 @@ namespace MathBrick
             Control control = sender as Control;
 
             // Follow the same block design
-            Button btn = new Button();
+            CCWin.SkinControl.SkinButton btn = this.SetupButtonStyle(control.Location, control.Text);
+            CCWin.SkinControl.SkinButton deleteIcon = this.SetupDeleteIcon();
+
+            btn.Controls.Add(deleteIcon);
+            deleteIcon.Click += new EventHandler(TriggerDeleteEvent);
             this.skinGroupBox1.Controls.Add(btn);
-            btn.Location = new System.Drawing.Point(100, 100);
-            btn.Size = new System.Drawing.Size(50, 50);
-            btn.Text = control.Text;
-            btn.UseVisualStyleBackColor = true;
+            this.skinGroupBox1.AllowDrop = true;
 
-            /* references that are used for the following code: 
-             * https://www.codeproject.com/Tips/178587/Draggable-WinForms-Controls-2
-             * https://social.msdn.microsoft.com/Forums/vstudio/en-US/3d23ad93-e70d-4076-bf50-3e17ec43d0e1/drag-and-drop-the-control-in-the-panel-in-c?forum=netfxbcl
-             */
-
-            // this.groupBox1.AllowDrop = true;
             btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
-            btn.MouseUp += new MouseEventHandler(DragBlockMouseUp);
+            this.skinGroupBox1.DragOver += new DragEventHandler(BlockDropOver);
+            this.skinGroupBox1.DragDrop += new DragEventHandler(BlockDragDrop);
         }
 
         /// <summary>
-        /// This DragBlockMouseDown function saves the starting location of the button as offset for later calculation when mouse down
+        /// The TriggerDeleteEvent is used to delete unwanted block
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TriggerDeleteEvent(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+            DialogResult result = MessageBox.Show("Delete this block?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
+            {
+                if (this.skinGroupBox1.Controls.Contains(control.Parent))
+                {
+                    this.skinGroupBox1.Controls.Remove(control.Parent);
+                }
+            }
+        }
+
+        /// <summary>
+        /// The DragBlockMouseDown function starts a dragdrop operation when mouse down
+        /// reference: Microsoft tutorial about drag drop
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void DragBlockMouseDown(object sender, MouseEventArgs e)
         {
-            // TODO: Add Drag and drop effect to make it more user friendly
-            // Control c = sender as Control;
-            // c.DoDragDrop(c, DragDropEffects.Move);
-
-            mouseOffset = new System.Drawing.Size(e.Location);
-            return;
+            Control control = sender as Control;
+            control.DoDragDrop(control, DragDropEffects.Move);
         }
 
         /// <summary>
-        /// This DragBlockMouseUp function calculates the new location and moves the button to the new location
+        /// The BlockDragDrop function displays the new location of the block after dragging is finished
+        /// reference: https://social.msdn.microsoft.com/Forums/vstudio/en-US/3d23ad93-e70d-4076-bf50-3e17ec43d0e1/drag-and-drop-the-control-in-the-panel-in-c?forum=netfxbcl
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DragBlockMouseUp(object sender, MouseEventArgs e)
+        private void BlockDragDrop(object sender, DragEventArgs e)
         {
-            Control control = sender as Control;
-            // TODO: Limit boundary of the area where it can be dragged
-
-            //////////////////////////////////////////////////////////////
-            control.Left += (e.Location - mouseOffset).X;
-            control.Top += (e.Location - mouseOffset).Y;
-            return;
+            Control control = e.Data.GetData(e.Data.GetFormats()[0]) as Control;
+            if (control != null)
+            {
+                control.Location = this.skinGroupBox1.PointToClient(new Point(e.X, e.Y));
+                this.skinGroupBox1.Controls.Add(control);
+            }
         }
 
+        /// <summary>
+        /// The BlockDropOver function set the effect when drag over the bound
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BlockDropOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+
+        /// <summary>
+        /// The SetupButtonStyle function is used to put reusable code when creating a new block
+        /// </summary>
+        /// <param name="point"></param>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        private CCWin.SkinControl.SkinButton SetupButtonStyle(System.Drawing.Point point, string text)
+        {
+            var btn = new CCWin.SkinControl.SkinButton();
+            btn.BackColor = System.Drawing.Color.Transparent;
+            btn.BaseColor = System.Drawing.Color.LightGray;
+            btn.BorderColor = System.Drawing.Color.DimGray;
+            btn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            btn.Radius = 20;
+            btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            btn.Size = new System.Drawing.Size(50, 57);
+            btn.UseVisualStyleBackColor = false;
+            btn.Location = point;
+            btn.Text = text;
+
+            return btn;
+        }
+
+        /// <summary>
+        /// The SetupDeleteIcon function is to create a delete icon for button to delete itself
+        /// </summary>
+        /// <returns></returns>
+        private CCWin.SkinControl.SkinButton SetupDeleteIcon()
+        {
+            var btn = new CCWin.SkinControl.SkinButton();
+            btn.BackColor = System.Drawing.Color.Transparent;
+            btn.BorderColor = System.Drawing.Color.DimGray;
+            btn.BaseColor = System.Drawing.Color.Red;
+            btn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            btn.Size = new System.Drawing.Size(15, 15);
+            btn.ForeColor = Color.White;
+            btn.Font = new Font(btn.Font.FontFamily, 5, FontStyle.Bold);
+            btn.Text = "x";
+            // TODO: change the position to top right instead
+            return btn;
+        }
         /// <summary>
         /// Funtion of calculate the equation and return result or error by string
         /// </summary>
@@ -120,7 +180,7 @@ namespace MathBrick
                 var result = new System.Data.DataTable().Compute(str, "");
                 return result.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return "error";
             }
