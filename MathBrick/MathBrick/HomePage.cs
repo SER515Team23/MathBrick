@@ -168,23 +168,6 @@ namespace MathBrick
             // TODO: change the position to top right instead
             return btn;
         }
-        /// <summary>
-        /// Funtion of calculate the equation and return result or error by string
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        private string CalculateEquation(string str)
-        {
-            try
-            {
-                var result = new System.Data.DataTable().Compute(str, "");
-                return result.ToString();
-            }
-            catch (Exception)
-            {
-                return "error";
-            }
-        }
 
         private void Main1_Load(object sender, EventArgs e)
         {
