@@ -144,7 +144,7 @@ namespace MathBrick
             // 
             this.passwordTextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passwordTextBox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.passwordTextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
             this.passwordTextBox.SkinTxt.Location = new System.Drawing.Point(11, 10);
             this.passwordTextBox.SkinTxt.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.passwordTextBox.SkinTxt.MaxLength = 5;
@@ -189,7 +189,7 @@ namespace MathBrick
             // 
             this.userNameTextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userNameTextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userNameTextBox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.userNameTextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
             this.userNameTextBox.SkinTxt.Location = new System.Drawing.Point(11, 10);
             this.userNameTextBox.SkinTxt.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.userNameTextBox.SkinTxt.Multiline = true;
@@ -213,7 +213,7 @@ namespace MathBrick
             this.passwordLabel.Location = new System.Drawing.Point(171, 148);
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(201, 49);
+            this.passwordLabel.Size = new System.Drawing.Size(102, 24);
             this.passwordLabel.TabIndex = 2;
             this.passwordLabel.Text = "Password :";
             // 
@@ -226,12 +226,12 @@ namespace MathBrick
             this.userNameLabel.Location = new System.Drawing.Point(171, 66);
             this.userNameLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(203, 49);
+            this.userNameLabel.Size = new System.Drawing.Size(101, 24);
             this.userNameLabel.TabIndex = 0;
             this.userNameLabel.Text = "Username:";
             // 
             // SignIn
-            //
+            // 
             this.AcceptButton = this.signInButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
