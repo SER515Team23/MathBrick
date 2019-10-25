@@ -63,7 +63,7 @@ namespace MathBrick
             this.fogetPasswordButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.fogetPasswordButton.DownBack = null;
             this.fogetPasswordButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fogetPasswordButton.Location = new System.Drawing.Point(215, 267);
+            this.fogetPasswordButton.Location = new System.Drawing.Point(208, 269);
             this.fogetPasswordButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.fogetPasswordButton.MouseBack = null;
             this.fogetPasswordButton.Name = "fogetPasswordButton";
@@ -83,7 +83,7 @@ namespace MathBrick
             this.signUpButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.signUpButton.DownBack = null;
             this.signUpButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpButton.Location = new System.Drawing.Point(393, 211);
+            this.signUpButton.Location = new System.Drawing.Point(380, 211);
             this.signUpButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.signUpButton.MouseBack = null;
             this.signUpButton.Name = "signUpButton";
@@ -104,7 +104,7 @@ namespace MathBrick
             this.signInButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.signInButton.DownBack = null;
             this.signInButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signInButton.Location = new System.Drawing.Point(104, 211);
+            this.signInButton.Location = new System.Drawing.Point(125, 211);
             this.signInButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.signInButton.MouseBack = null;
             this.signInButton.Name = "signInButton";
