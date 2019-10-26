@@ -6,7 +6,6 @@ namespace MathBrick
 {
     public partial class SignIn : Skin_Color
     {
-        public static string nameToMain = null;
         public SignIn()
         {
             InitializeComponent();
@@ -14,40 +13,48 @@ namespace MathBrick
             this.KeyDown += PasswordTextBoxKeyDown;
         }
 
-        string defaultUserName = "123";
-        string defaultPassword = "123";
-
         private void SignInClick(object sender, EventArgs e)
         {
             string userName = userNameTextBox.Text;
             string password = passwordTextBox.Text;
 
-            // This only exists during development stage.
-            if (userName == defaultUserName && password == defaultPassword)
+            // ------------- This only exists during development stage. -------------
+            if (userName == "t01" && password == "123")
             {
+                User teacher = new User { userName = userName, password = password, authorizeLevel = 4, isLogin = false };
+                DataBase.Instance.activeUser = teacher;
+                HomePage main = new HomePage();
+                this.Hide();
+                main.Show();
+            } else if (userName == "b01" && password == "123")
+            {
+                User beginner = new User { userName = userName, password = password, authorizeLevel = 1, isLogin = false };
+                DataBase.Instance.activeUser = beginner;
+                DataBase.Instance.activeUser = new User();
                 HomePage main = new HomePage();
                 this.Hide();
                 main.Show();
             }
+            else if (userName == "i01" && password == "123")
+            {
+                User intermediate = new User { userName = userName, password = password, authorizeLevel = 2, isLogin = false };
+                DataBase.Instance.activeUser = intermediate;
+                HomePage main = new HomePage();
+                this.Hide();
+                main.Show();
+            }
+            else if (userName == "a01" && password == "123")
+            {
+                User advanced = new User { userName = userName, password = password, authorizeLevel = 3, isLogin = false };
+                DataBase.Instance.activeUser = advanced;
+                HomePage main = new HomePage();
+                this.Hide();
+                main.Show();
+            }
+            // ------------- This only exists during development stage. -------------
             else if (DataBase.Instance.UserLogin(userName, password))
             {
                 HomePage main = new HomePage();
-                User nowUser = DataBase.Instance.activeUser;
-                switch (nowUser.authorizeLevel) {
-                    case 1:
-                        Console.Out.WriteLine("Login as: " + "初階學生");
-                        break;
-                    case 2:
-                        Console.Out.WriteLine("Login as: " + "中階學生");
-                        break;
-                    case 3:
-                        Console.Out.WriteLine("Login as: " + "高階學生");
-                        break;
-                    case 4:
-                        Console.Out.WriteLine("Login as: " + "老師");
-                        break;
-                }
-                nameToMain = userName;
                 this.Hide();
                 main.Show();
             }

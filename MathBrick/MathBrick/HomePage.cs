@@ -186,25 +186,27 @@ namespace MathBrick
             }
         }
 
-        private void Main1_Load(object sender, EventArgs e)
+        private void HomePage_Load(object sender, EventArgs e)
         {
-            if(SignIn.nameToMain != null)
+            User nowUser = DataBase.Instance.activeUser;
+            switch (nowUser.authorizeLevel)
             {
-                int authorizeLevel = DataBase.Instance.CheckAuthorize(SignIn.nameToMain);
-                switch (authorizeLevel)
-                {
-                    case -1:
-                        break;
-                    case 1:
-                        skinButton13.Hide();
-                        skinButton14.Hide();
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                }
-                    
+                case -1:
+                    break;
+                case 1:
+                    Console.Out.WriteLine("Login as: " + "初階學生");
+                    multiplyButton.Hide();
+                    divideButton.Hide();
+                    break;
+                case 2:
+                    Console.Out.WriteLine("Login as: " + "中階學生");
+                    break;
+                case 3:
+                    Console.Out.WriteLine("Login as: " + "高階學生");
+                    break;
+                case 4:
+                    Console.Out.WriteLine("Login as: " + "老師");
+                    break;
             }
         }
 
