@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
 
@@ -16,7 +10,8 @@ namespace MathBrick
         public HomePage()
         {
             InitializeComponent();
-            AddEventForDragDrop();         
+            AddEventForDragDrop();    
+            CustomizeTabControl();
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -42,7 +37,7 @@ namespace MathBrick
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
-            foreach (Button button in this.OperatorBox.Controls)
+            foreach (Button button in this.BasicBox.Controls)
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
@@ -168,26 +163,69 @@ namespace MathBrick
             // TODO: change the position to top right instead
             return btn;
         }
-
-        private void Main1_Load(object sender, EventArgs e)
+        /// <summary>
+        /// Funtion of calculate the equation and return result or error by string
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        private string CalculateEquation(string str)
         {
-            if(SignIn.nameToMain != null)
+            try
             {
-                int authorizeLevel = DataBase.Instance.CheckAuthorize(SignIn.nameToMain);
-                switch (authorizeLevel)
-                {
-                    case -1:
-                        break;
-                    case 1:
-                        skinButton13.Hide();
-                        skinButton14.Hide();
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                }
-                    
+                var result = new System.Data.DataTable().Compute(str, "");
+                return result.ToString();
+            }
+            catch (Exception)
+            {
+                return "error";
+            }
+        }
+
+        private void SelectQuiz(object sender, EventArgs e)
+        {
+            QuizList quizList = new QuizList();
+            quizList.Show();
+        }
+
+        private void Logout(object sender, EventArgs e)
+        {
+            DataBase.Instance.UserLogout();
+            this.Hide();
+            SignIn signIn = new SignIn();
+            signIn.Show();
+        }
+
+        private void ManageAccounts(object sender, EventArgs e)
+        {
+            ManagePage managePage = new ManagePage();
+            managePage.Show();
+        }
+
+        private void CustomizeTabControl()
+        {
+            User nowUser = DataBase.Instance.activeUser;
+            switch (nowUser.authorizeLevel)
+            {
+                case -1:
+                    break;
+                case 1:
+                    Console.Out.WriteLine("Login as: " + "Beginner");
+                    sideTabControl.TabPages.RemoveByKey("IntermediateBox");
+                    sideTabControl.TabPages.RemoveByKey("AdvancedBox");
+                    manageButton.Hide();
+                    break;
+                case 2:
+                    Console.Out.WriteLine("Login as: " + "Intermediate");
+                    sideTabControl.TabPages.RemoveByKey("AdvancedBox");
+                    manageButton.Hide();
+                    break;
+                case 3:
+                    Console.Out.WriteLine("Login as: " + "Advanced");
+                    manageButton.Hide();
+                    break;
+                case 4:
+                    Console.Out.WriteLine("Login as: " + "Teacher");
+                    break;
             }
         }
     }
