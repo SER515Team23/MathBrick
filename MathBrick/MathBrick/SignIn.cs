@@ -21,23 +21,22 @@ namespace MathBrick
             // ------------- This only exists during development stage. -------------
             if (userName == "t01" && password == "123")
             {
-                User teacher = new User { userName = userName, password = password, authorizeLevel = 4, isLogin = false };
+                User teacher = new User { userName = userName, password = password, authorizeLevel = 4, isLogin = true };
                 DataBase.Instance.activeUser = teacher;
                 HomePage main = new HomePage();
                 this.Hide();
                 main.Show();
             } else if (userName == "b01" && password == "123")
             {
-                User beginner = new User { userName = userName, password = password, authorizeLevel = 1, isLogin = false };
+                User beginner = new User { userName = userName, password = password, authorizeLevel = 1, isLogin = true };
                 DataBase.Instance.activeUser = beginner;
-                DataBase.Instance.activeUser = new User();
                 HomePage main = new HomePage();
                 this.Hide();
                 main.Show();
             }
             else if (userName == "i01" && password == "123")
             {
-                User intermediate = new User { userName = userName, password = password, authorizeLevel = 2, isLogin = false };
+                User intermediate = new User { userName = userName, password = password, authorizeLevel = 2, isLogin = true };
                 DataBase.Instance.activeUser = intermediate;
                 HomePage main = new HomePage();
                 this.Hide();
@@ -45,7 +44,7 @@ namespace MathBrick
             }
             else if (userName == "a01" && password == "123")
             {
-                User advanced = new User { userName = userName, password = password, authorizeLevel = 3, isLogin = false };
+                User advanced = new User { userName = userName, password = password, authorizeLevel = 3, isLogin = true };
                 DataBase.Instance.activeUser = advanced;
                 HomePage main = new HomePage();
                 this.Hide();

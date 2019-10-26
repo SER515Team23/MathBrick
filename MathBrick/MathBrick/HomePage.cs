@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
 
@@ -16,7 +10,8 @@ namespace MathBrick
         public HomePage()
         {
             InitializeComponent();
-            AddEventForDragDrop();         
+            AddEventForDragDrop();    
+            CustomizeTabControl();
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -42,7 +37,7 @@ namespace MathBrick
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
-            foreach (Button button in this.OperatorBox.Controls)
+            foreach (Button button in this.BasicBox.Controls)
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
@@ -186,30 +181,6 @@ namespace MathBrick
             }
         }
 
-        private void HomePage_Load(object sender, EventArgs e)
-        {
-            User nowUser = DataBase.Instance.activeUser;
-            switch (nowUser.authorizeLevel)
-            {
-                case -1:
-                    break;
-                case 1:
-                    Console.Out.WriteLine("Login as: " + "初階學生");
-                    multiplyButton.Hide();
-                    divideButton.Hide();
-                    break;
-                case 2:
-                    Console.Out.WriteLine("Login as: " + "中階學生");
-                    break;
-                case 3:
-                    Console.Out.WriteLine("Login as: " + "高階學生");
-                    break;
-                case 4:
-                    Console.Out.WriteLine("Login as: " + "老師");
-                    break;
-            }
-        }
-
         private void SelectQuiz(object sender, EventArgs e)
         {
             QuizList quizList = new QuizList();
@@ -224,10 +195,38 @@ namespace MathBrick
             signIn.Show();
         }
 
-        private void ManageButton_Click(object sender, EventArgs e)
+        private void ManageAccounts(object sender, EventArgs e)
         {
             ManagePage managePage = new ManagePage();
             managePage.Show();
+        }
+
+        private void CustomizeTabControl()
+        {
+            User nowUser = DataBase.Instance.activeUser;
+            switch (nowUser.authorizeLevel)
+            {
+                case -1:
+                    break;
+                case 1:
+                    Console.Out.WriteLine("Login as: " + "Beginner");
+                    sideTabControl.TabPages.RemoveByKey("IntermediateBox");
+                    sideTabControl.TabPages.RemoveByKey("AdvancedBox");
+                    manageButton.Hide();
+                    break;
+                case 2:
+                    Console.Out.WriteLine("Login as: " + "Intermediate");
+                    sideTabControl.TabPages.RemoveByKey("AdvancedBox");
+                    manageButton.Hide();
+                    break;
+                case 3:
+                    Console.Out.WriteLine("Login as: " + "Advanced");
+                    manageButton.Hide();
+                    break;
+                case 4:
+                    Console.Out.WriteLine("Login as: " + "Teacher");
+                    break;
+            }
         }
     }
 }
