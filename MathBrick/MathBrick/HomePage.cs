@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
 
@@ -16,7 +10,8 @@ namespace MathBrick
         public HomePage()
         {
             InitializeComponent();
-            AddEventForDragDrop();         
+            AddEventForDragDrop();    
+            CustomizeTabControl();
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -42,6 +37,18 @@ namespace MathBrick
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
+            foreach (Button button in this.BasicBox.Controls)
+            {
+                button.Click += new EventHandler(ClickToDuplicate);
+            }
+            foreach (Button button in this.IntermediateBox.Controls)
+            {
+                button.Click += new EventHandler(ClickToDuplicate);
+            }
+            foreach (Button button in this.AdvancedBox.Controls)
+            {
+                button.Click += new EventHandler(ClickToDuplicate);
+            }
         }
 
         /// <summary>
@@ -59,22 +66,12 @@ namespace MathBrick
 
             btn.Controls.Add(deleteIcon);
             deleteIcon.Click += new EventHandler(TriggerDeleteEvent);
-            if (this.arrangePanel() != null)
-            {
-                var panel = this.arrangePanel();
-                panel.Controls.Add(btn);               
-                panel.AllowDrop = true;
+            this.skinGroupBox1.Controls.Add(btn);               
+            this.skinGroupBox1.AllowDrop = true;
 
-                btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
-                panel.DragOver += new DragEventHandler(BlockDropOver);
-                panel.DragDrop += new DragEventHandler(BlockDragDrop);
-            }
-           
-        }
-
-        private CCWin.SkinControl.SkinPanel arrangePanel()
-        {
-            return this.panel1.Controls.Count < 9 ? this.panel1 : this.panel2.Controls.Count < 9 ? this.panel2 : this.panel3.Controls.Count < 9 ? this.panel3 : this.panel4.Controls.Count < 9 ? this.panel4 : null;
+            btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
+            this.skinGroupBox1.DragOver += new DragEventHandler(BlockDropOver);
+            this.skinGroupBox1.DragDrop += new DragEventHandler(BlockDragDrop);        
         }
 
         /// <summary>
@@ -88,21 +85,9 @@ namespace MathBrick
             DialogResult result = MessageBox.Show("Delete this block?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
-                if (this.panel1.Controls.Contains(control.Parent))
+                if (this.skinGroupBox1.Controls.Contains(control.Parent))
                 {
-                    this.panel1.Controls.Remove(control.Parent);
-                }
-                if (this.panel2.Controls.Contains(control.Parent))
-                {
-                    this.panel2.Controls.Remove(control.Parent);
-                }
-                if (this.panel3.Controls.Contains(control.Parent))
-                {
-                    this.panel3.Controls.Remove(control.Parent);
-                }
-                if (this.panel4.Controls.Contains(control.Parent))
-                {
-                    this.panel4.Controls.Remove(control.Parent);
+                    this.skinGroupBox1.Controls.Remove(control.Parent);
                 }
             }
         }
@@ -205,25 +190,51 @@ namespace MathBrick
             }
         }
 
-        private void Main1_Load(object sender, EventArgs e)
+        private void SelectQuiz(object sender, EventArgs e)
         {
-            if(SignIn.nameToMain != null)
+            QuizList quizList = new QuizList();
+            quizList.Show();
+        }
+
+        private void Logout(object sender, EventArgs e)
+        {
+            DataBase.Instance.UserLogout();
+            this.Hide();
+            SignIn signIn = new SignIn();
+            signIn.Show();
+        }
+
+        private void ManageAccounts(object sender, EventArgs e)
+        {
+            ManagePage managePage = new ManagePage();
+            managePage.Show();
+        }
+
+        private void CustomizeTabControl()
+        {
+            User nowUser = DataBase.Instance.activeUser;
+            switch (nowUser.authorizeLevel)
             {
-                int authorizeLevel = DataBase.Instance.CheckAuthorize(SignIn.nameToMain);
-                switch (authorizeLevel)
-                {
-                    case -1:
-                        break;
-                    case 1:
-                        skinButton13.Hide();
-                        skinButton14.Hide();
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                }
-                    
+                case -1:
+                    break;
+                case 1:
+                    Console.Out.WriteLine("Login as: " + "Beginner");
+                    sideTabControl.TabPages.RemoveByKey("IntermediateBox");
+                    sideTabControl.TabPages.RemoveByKey("AdvancedBox");
+                    manageButton.Hide();
+                    break;
+                case 2:
+                    Console.Out.WriteLine("Login as: " + "Intermediate");
+                    sideTabControl.TabPages.RemoveByKey("AdvancedBox");
+                    manageButton.Hide();
+                    break;
+                case 3:
+                    Console.Out.WriteLine("Login as: " + "Advanced");
+                    manageButton.Hide();
+                    break;
+                case 4:
+                    Console.Out.WriteLine("Login as: " + "Teacher");
+                    break;
             }
         }
     }
