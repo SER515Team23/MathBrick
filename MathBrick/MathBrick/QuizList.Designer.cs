@@ -28,108 +28,186 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.quizListView = new System.Windows.Forms.ListView();
-            this.userNameDescriptionLabel = new System.Windows.Forms.Label();
-            this.levelDescriptionLabel = new System.Windows.Forms.Label();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.levelLabel = new System.Windows.Forms.Label();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.confirmButton = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
+            this.levelLabel = new CCWin.SkinControl.SkinLabel();
+            this.nameLabel = new CCWin.SkinControl.SkinLabel();
+            this.levelDescriptionLabel = new CCWin.SkinControl.SkinLabel();
+            this.userNameDescrictionLabel = new CCWin.SkinControl.SkinLabel();
+            this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
+            this.cancelButton = new CCWin.SkinControl.SkinButton();
+            this.conformButton = new CCWin.SkinControl.SkinButton();
+            this.quizListView = new CCWin.SkinControl.SkinListView();
+            this.skinPanel1.SuspendLayout();
+            this.skinPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // quizListView
+            // skinPanel1
             // 
-            this.quizListView.HideSelection = false;
-            this.quizListView.Location = new System.Drawing.Point(3, 130);
-            this.quizListView.Name = "quizListView";
-            this.quizListView.Size = new System.Drawing.Size(1190, 480);
-            this.quizListView.TabIndex = 0;
-            this.quizListView.UseCompatibleStateImageBehavior = false;
-            // 
-            // userNameDescriptionLabel
-            // 
-            this.userNameDescriptionLabel.AutoSize = true;
-            this.userNameDescriptionLabel.Location = new System.Drawing.Point(12, 18);
-            this.userNameDescriptionLabel.Name = "userNameDescriptionLabel";
-            this.userNameDescriptionLabel.Size = new System.Drawing.Size(119, 24);
-            this.userNameDescriptionLabel.TabIndex = 1;
-            this.userNameDescriptionLabel.Text = "User Name:";
-            // 
-            // levelDescriptionLabel
-            // 
-            this.levelDescriptionLabel.AutoSize = true;
-            this.levelDescriptionLabel.Location = new System.Drawing.Point(12, 80);
-            this.levelDescriptionLabel.Name = "levelDescriptionLabel";
-            this.levelDescriptionLabel.Size = new System.Drawing.Size(166, 24);
-            this.levelDescriptionLabel.TabIndex = 2;
-            this.levelDescriptionLabel.Text = "Level of Student:";
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(137, 18);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(185, 24);
-            this.nameLabel.TabIndex = 3;
-            this.nameLabel.Text = "Leonardo DiCaprio";
+            this.skinPanel1.BackColor = System.Drawing.Color.FloralWhite;
+            this.skinPanel1.Controls.Add(this.conformButton);
+            this.skinPanel1.Controls.Add(this.cancelButton);
+            this.skinPanel1.Controls.Add(this.skinPanel2);
+            this.skinPanel1.Controls.Add(this.levelLabel);
+            this.skinPanel1.Controls.Add(this.nameLabel);
+            this.skinPanel1.Controls.Add(this.levelDescriptionLabel);
+            this.skinPanel1.Controls.Add(this.userNameDescrictionLabel);
+            this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinPanel1.DownBack = null;
+            this.skinPanel1.Location = new System.Drawing.Point(8, 39);
+            this.skinPanel1.MouseBack = null;
+            this.skinPanel1.Name = "skinPanel1";
+            this.skinPanel1.NormlBack = null;
+            this.skinPanel1.Size = new System.Drawing.Size(536, 382);
+            this.skinPanel1.TabIndex = 0;
             // 
             // levelLabel
             // 
             this.levelLabel.AutoSize = true;
-            this.levelLabel.Location = new System.Drawing.Point(184, 80);
+            this.levelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.levelLabel.BorderColor = System.Drawing.Color.White;
+            this.levelLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.levelLabel.Location = new System.Drawing.Point(186, 58);
             this.levelLabel.Name = "levelLabel";
-            this.levelLabel.Size = new System.Drawing.Size(100, 24);
-            this.levelLabel.TabIndex = 4;
+            this.levelLabel.Size = new System.Drawing.Size(77, 19);
+            this.levelLabel.TabIndex = 3;
             this.levelLabel.Text = "Advanced";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nameLabel.BorderColor = System.Drawing.Color.White;
+            this.nameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(186, 26);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(136, 19);
+            this.nameLabel.TabIndex = 2;
+            this.nameLabel.Text = "Leonardo DiCaprio";
+            // 
+            // levelDescriptionLabel
+            // 
+            this.levelDescriptionLabel.AutoSize = true;
+            this.levelDescriptionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.levelDescriptionLabel.BorderColor = System.Drawing.Color.White;
+            this.levelDescriptionLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.levelDescriptionLabel.Location = new System.Drawing.Point(45, 58);
+            this.levelDescriptionLabel.Name = "levelDescriptionLabel";
+            this.levelDescriptionLabel.Size = new System.Drawing.Size(127, 19);
+            this.levelDescriptionLabel.TabIndex = 1;
+            this.levelDescriptionLabel.Text = "Level Of Student:";
+            // 
+            // userNameDescrictionLabel
+            // 
+            this.userNameDescrictionLabel.AutoSize = true;
+            this.userNameDescrictionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.userNameDescrictionLabel.BorderColor = System.Drawing.Color.White;
+            this.userNameDescrictionLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameDescrictionLabel.Location = new System.Drawing.Point(45, 26);
+            this.userNameDescrictionLabel.Name = "userNameDescrictionLabel";
+            this.userNameDescrictionLabel.Size = new System.Drawing.Size(87, 19);
+            this.userNameDescrictionLabel.TabIndex = 0;
+            this.userNameDescrictionLabel.Text = "User Name:";
+            // 
+            // skinPanel2
+            // 
+            this.skinPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel2.Controls.Add(this.quizListView);
+            this.skinPanel2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.skinPanel2.DownBack = null;
+            this.skinPanel2.Location = new System.Drawing.Point(0, 90);
+            this.skinPanel2.MouseBack = null;
+            this.skinPanel2.Name = "skinPanel2";
+            this.skinPanel2.NormlBack = null;
+            this.skinPanel2.Size = new System.Drawing.Size(536, 292);
+            this.skinPanel2.TabIndex = 5;
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(874, 632);
+            this.cancelButton.BackColor = System.Drawing.Color.Transparent;
+            this.cancelButton.BaseColor = System.Drawing.Color.Linen;
+            this.cancelButton.BorderColor = System.Drawing.Color.Silver;
+            this.cancelButton.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.cancelButton.DownBack = null;
+            this.cancelButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cancelButton.Location = new System.Drawing.Point(340, 45);
+            this.cancelButton.MouseBack = null;
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(147, 74);
-            this.cancelButton.TabIndex = 5;
+            this.cancelButton.NormlBack = null;
+            this.cancelButton.Radius = 10;
+            this.cancelButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.cancelButton.Size = new System.Drawing.Size(68, 32);
+            this.cancelButton.TabIndex = 16;
             this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click_1);
             // 
-            // confirmButton
+            // conformButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(1039, 632);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(133, 74);
-            this.confirmButton.TabIndex = 6;
-            this.confirmButton.Text = "OK";
-            this.confirmButton.UseVisualStyleBackColor = true;
-            this.confirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
+            this.conformButton.BackColor = System.Drawing.Color.Transparent;
+            this.conformButton.BaseColor = System.Drawing.Color.Linen;
+            this.conformButton.BorderColor = System.Drawing.Color.Silver;
+            this.conformButton.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.conformButton.DownBack = null;
+            this.conformButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conformButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.conformButton.Location = new System.Drawing.Point(442, 45);
+            this.conformButton.MouseBack = null;
+            this.conformButton.Name = "conformButton";
+            this.conformButton.NormlBack = null;
+            this.conformButton.Radius = 10;
+            this.conformButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.conformButton.Size = new System.Drawing.Size(68, 32);
+            this.conformButton.TabIndex = 17;
+            this.conformButton.Text = "OK";
+            this.conformButton.UseVisualStyleBackColor = false;
+            this.conformButton.Click += new System.EventHandler(this.conformButton_Click);
+            // 
+            // quizListView
+            // 
+            this.quizListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.quizListView.HideSelection = false;
+            this.quizListView.Location = new System.Drawing.Point(0, 0);
+            this.quizListView.Name = "quizListView";
+            this.quizListView.OwnerDraw = true;
+            this.quizListView.Size = new System.Drawing.Size(536, 292);
+            this.quizListView.TabIndex = 0;
+            this.quizListView.UseCompatibleStateImageBehavior = false;
+            this.quizListView.View = System.Windows.Forms.View.Details;
             // 
             // QuizList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1196, 736);
-            this.Controls.Add(this.confirmButton);
-            this.Controls.Add(this.cancelButton);
-            this.Controls.Add(this.levelLabel);
-            this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.levelDescriptionLabel);
-            this.Controls.Add(this.userNameDescriptionLabel);
-            this.Controls.Add(this.quizListView);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.CaptionBackColorBottom = System.Drawing.Color.Silver;
+            this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
+            this.ClientSize = new System.Drawing.Size(552, 429);
+            this.Controls.Add(this.skinPanel1);
+            this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.Name = "QuizList";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quiz List";
+            this.skinPanel1.ResumeLayout(false);
+            this.skinPanel1.PerformLayout();
+            this.skinPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView quizListView;
-        private System.Windows.Forms.Label userNameDescriptionLabel;
-        private System.Windows.Forms.Label levelDescriptionLabel;
-        private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.Label levelLabel;
-        private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button confirmButton;
+        private CCWin.SkinControl.SkinPanel skinPanel1;
+        private CCWin.SkinControl.SkinLabel userNameDescrictionLabel;
+        private CCWin.SkinControl.SkinLabel levelDescriptionLabel;
+        private CCWin.SkinControl.SkinLabel levelLabel;
+        private CCWin.SkinControl.SkinLabel nameLabel;
+        private CCWin.SkinControl.SkinPanel skinPanel2;
+        private CCWin.SkinControl.SkinButton conformButton;
+        private CCWin.SkinControl.SkinButton cancelButton;
+        private CCWin.SkinControl.SkinListView quizListView;
     }
 }

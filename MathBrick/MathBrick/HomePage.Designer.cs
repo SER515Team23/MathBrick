@@ -676,7 +676,7 @@ namespace MathBrick
             this.quizButton.DownBack = null;
             this.quizButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quizButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.quizButton.Location = new System.Drawing.Point(27, 18);
+            this.quizButton.Location = new System.Drawing.Point(27, 75);
             this.quizButton.MouseBack = null;
             this.quizButton.Name = "quizButton";
             this.quizButton.NormlBack = null;
