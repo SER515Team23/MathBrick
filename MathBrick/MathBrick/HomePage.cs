@@ -7,11 +7,13 @@ namespace MathBrick
 {
     public partial class HomePage : Skin_Color
     {
+        Control moveBtn;
         public HomePage()
         {
             InitializeComponent();
             AddEventForDragDrop();    
             CustomizeTabControl();
+            sideTabControl.SelectedTab = this.NumberBox;
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -101,6 +103,8 @@ namespace MathBrick
         private void DragBlockMouseDown(object sender, MouseEventArgs e)
         {
             Control control = sender as Control;
+            moveBtn = control;
+            blockMoveTimer.Enabled = true;
             control.DoDragDrop(control, DragDropEffects.Move);
         }
 
@@ -115,8 +119,9 @@ namespace MathBrick
             Control control = e.Data.GetData(e.Data.GetFormats()[0]) as Control;
             if (control != null)
             {
-                control.Location = this.skinGroupBox1.PointToClient(new Point(e.X, e.Y));
+                control.Location = this.skinGroupBox1.PointToClient(new Point(e.X - control.Size.Width/2, e.Y - control.Size.Height/2));
                 this.skinGroupBox1.Controls.Add(control);
+                blockMoveTimer.Enabled = false;
             }
         }
 
@@ -145,7 +150,7 @@ namespace MathBrick
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
             btn.Radius = 20;
             btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            btn.Size = new System.Drawing.Size(50, 57);
+            btn.Size = new System.Drawing.Size(32, 35);
             btn.UseVisualStyleBackColor = false;
             btn.Location = point;
             btn.Text = text;
@@ -164,7 +169,7 @@ namespace MathBrick
             btn.BorderColor = System.Drawing.Color.DimGray;
             btn.BaseColor = System.Drawing.Color.Red;
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            btn.Size = new System.Drawing.Size(15, 15);
+            btn.Size = new System.Drawing.Size(10, 10);
             btn.ForeColor = Color.White;
             btn.Font = new Font(btn.Font.FontFamily, 5, FontStyle.Bold);
             btn.Text = "x";
@@ -225,5 +230,11 @@ namespace MathBrick
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void BlockMoveTimer_Tick(object sender, EventArgs e)
+        {
+            moveBtn.Location = this.skinGroupBox1.PointToClient(new Point(MousePosition.X - moveBtn.Size.Width / 2, MousePosition.Y - moveBtn.Size.Height / 2));
+        }
+
     }
 }

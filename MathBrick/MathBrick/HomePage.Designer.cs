@@ -51,6 +51,7 @@ namespace MathBrick
             this.divideButton = new CCWin.SkinControl.SkinButton();
             this.multiplyButton = new CCWin.SkinControl.SkinButton();
             this.AdvancedBox = new CCWin.SkinControl.SkinTabPage();
+            this.squareButton = new CCWin.SkinControl.SkinButton();
             this.yButton = new CCWin.SkinControl.SkinButton();
             this.xButton = new CCWin.SkinControl.SkinButton();
             this.equationButton = new CCWin.SkinControl.SkinButton();
@@ -58,7 +59,7 @@ namespace MathBrick
             this.quizButton = new System.Windows.Forms.Button();
             this.logoutButton = new System.Windows.Forms.Button();
             this.manageButton = new System.Windows.Forms.Button();
-            this.squareButton = new CCWin.SkinControl.SkinButton();
+            this.blockMoveTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -183,9 +184,9 @@ namespace MathBrick
             this.sideTabControl.ArrowColor = System.Drawing.Color.DarkGray;
             this.sideTabControl.BackColor = System.Drawing.Color.Silver;
             this.sideTabControl.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
+            this.sideTabControl.Controls.Add(this.IntermediateBox);
             this.sideTabControl.Controls.Add(this.NumberBox);
             this.sideTabControl.Controls.Add(this.BasicBox);
-            this.sideTabControl.Controls.Add(this.IntermediateBox);
             this.sideTabControl.Controls.Add(this.AdvancedBox);
             this.sideTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideTabControl.HeadBack = null;
@@ -225,7 +226,7 @@ namespace MathBrick
             this.NumberBox.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumberBox.Location = new System.Drawing.Point(0, 36);
             this.NumberBox.Name = "NumberBox";
-            this.NumberBox.Size = new System.Drawing.Size(200, 388);
+            this.NumberBox.Size = new System.Drawing.Size(200, 424);
             this.NumberBox.TabIndex = 0;
             this.NumberBox.TabItemImage = null;
             this.NumberBox.Text = "Numbers";
@@ -420,7 +421,7 @@ namespace MathBrick
             this.BasicBox.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BasicBox.Location = new System.Drawing.Point(0, 36);
             this.BasicBox.Name = "BasicBox";
-            this.BasicBox.Size = new System.Drawing.Size(200, 388);
+            this.BasicBox.Size = new System.Drawing.Size(200, 424);
             this.BasicBox.TabIndex = 1;
             this.BasicBox.TabItemImage = null;
             this.BasicBox.Text = "Basic";
@@ -580,10 +581,28 @@ namespace MathBrick
             this.AdvancedBox.Location = new System.Drawing.Point(0, 36);
             this.AdvancedBox.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.AdvancedBox.Name = "AdvancedBox";
-            this.AdvancedBox.Size = new System.Drawing.Size(200, 315);
+            this.AdvancedBox.Size = new System.Drawing.Size(200, 424);
             this.AdvancedBox.TabIndex = 3;
             this.AdvancedBox.TabItemImage = null;
             this.AdvancedBox.Text = "Advanced";
+            // 
+            // squareButton
+            // 
+            this.squareButton.BackColor = System.Drawing.Color.Transparent;
+            this.squareButton.BaseColor = System.Drawing.Color.LightGray;
+            this.squareButton.BorderColor = System.Drawing.Color.DimGray;
+            this.squareButton.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.squareButton.DownBack = null;
+            this.squareButton.Location = new System.Drawing.Point(43, 52);
+            this.squareButton.MouseBack = null;
+            this.squareButton.Name = "squareButton";
+            this.squareButton.NormlBack = null;
+            this.squareButton.Radius = 20;
+            this.squareButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.squareButton.Size = new System.Drawing.Size(32, 35);
+            this.squareButton.TabIndex = 19;
+            this.squareButton.Text = "^2";
+            this.squareButton.UseVisualStyleBackColor = false;
             // 
             // yButton
             // 
@@ -688,23 +707,10 @@ namespace MathBrick
             this.manageButton.UseVisualStyleBackColor = true;
             this.manageButton.Click += new System.EventHandler(this.ManageAccounts);
             // 
-            // squareButton
+            // blockMoveTimer
             // 
-            this.squareButton.BackColor = System.Drawing.Color.Transparent;
-            this.squareButton.BaseColor = System.Drawing.Color.LightGray;
-            this.squareButton.BorderColor = System.Drawing.Color.DimGray;
-            this.squareButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.squareButton.DownBack = null;
-            this.squareButton.Location = new System.Drawing.Point(43, 52);
-            this.squareButton.MouseBack = null;
-            this.squareButton.Name = "squareButton";
-            this.squareButton.NormlBack = null;
-            this.squareButton.Radius = 20;
-            this.squareButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.squareButton.Size = new System.Drawing.Size(32, 35);
-            this.squareButton.TabIndex = 19;
-            this.squareButton.Text = "^2";
-            this.squareButton.UseVisualStyleBackColor = false;
+            this.blockMoveTimer.Interval = 10;
+            this.blockMoveTimer.Tick += new System.EventHandler(this.BlockMoveTimer_Tick);
             // 
             // HomePage
             // 
@@ -773,5 +779,6 @@ namespace MathBrick
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button manageButton;
         private CCWin.SkinControl.SkinButton squareButton;
+        private System.Windows.Forms.Timer blockMoveTimer;
     }
 }
