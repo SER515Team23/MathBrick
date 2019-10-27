@@ -7,20 +7,27 @@ using System.Threading.Tasks;
 namespace MathBrick
 {
     /// <summary>
-    /// 在新建实例时传参
+    /// Pass arguments when creating an instance
     /// </summary>
     class Calculation
     {
-        private string inputString1;
-        private string inputString2;
+        private string inputString1 = "";
+        private string inputString2 = "";
 
-        //此构造函数用于解普通计算、一元一次方程和一元二次方程
+        private bool checkInputForEquation(string str)
+        {
+            if (str.Contains("*") || str.Contains("/") || str.Contains("(") || str.Contains(")") || !str.Contains("="))
+                return false;
+            return true;
+        }
+
+        //This constructor is used to solve ordinary computations, linear equations and quadratic equations
         public Calculation(string str)
         {
             inputString1 = str;
         }
 
-        //此构造函数用于解二元一次方程组
+        //This constructor is used to solve binary equations
         public Calculation(string str1, string str2)
         {
             inputString1 = str1;
@@ -28,7 +35,7 @@ namespace MathBrick
         }
 
         /// <summary>
-        /// 可以处理字符串形式的算式，如"3*(6+7)-73/5"，不能有空格和等号
+        /// You can work with strings like "3*(6+7)-73/5" without Spaces or equal signs
         /// </summary>
         /// <returns></returns>
         public string Calculate()
@@ -47,13 +54,15 @@ namespace MathBrick
 
         /// <summary>
         /// if bx+a=0, then x=-a/b
-        /// 现在可以处理如"-3x-6=7x+11"这种形式的以字符串传入的方程，不能有空格、乘除号和括号
+        /// You can now deal with equations passed in as a string in the form of "-3x-6=7x+11" without Spaces, multiplication and division signs, and parentheses
         /// </summary>
         /// <returns></returns>
         public string LinearEquation()
         {
             try
             {
+                if (!checkInputForEquation(inputString1))
+                    return "error";
                 int a = 0;
                 int b = 0;
                 string[] splitStringArray = inputString1.Split('=');
@@ -85,23 +94,23 @@ namespace MathBrick
 
         private static int[] AddForCalculateLinear(string s)
         {
-            int[] sum = new int[2];   //sum[0]存常数，sum[1]存x前面的系数
-            int currentNum = 0, symbol = 1;   //symbol取符号，初始默认正数，currentNum取当前读到的数字
-            int firstNum = 0; //firstNum用于存放一个数
+            int[] sum = new int[2];  
+            int currentNum = 0, symbol = 1;   
+            int firstNum = 0; 
             for (int i = 0; i < s.Length; i++)
             {
 
-                char currentChar = s[i];   //currentChar取当前字符
+                char currentChar = s[i];  
                 if (currentChar == '+')
                 {
-                    sum[0] += symbol * firstNum; //读到“+”时，说明当前读到的是一个常数，存入常数数组
-                    symbol = 1;  //读取到“+”时，将符号置为1，代表加一个正数
-                    firstNum = 0; //存完一个数之后，记得将该变量置为0，以便存储后续的数
+                    sum[0] += symbol * firstNum; 
+                    symbol = 1;  
+                    firstNum = 0; 
                 }
                 else if (currentChar == '-')
                 {
                     sum[0] += symbol * firstNum;
-                    symbol = -1; //读取到“-”时，将符号置为-1，代表加一个负数	
+                    symbol = -1;
                     firstNum = 0;
                 }
                 else if (currentChar == 'x')
@@ -110,12 +119,12 @@ namespace MathBrick
                         firstNum = 1;
                     sum[1] += symbol * firstNum; firstNum = 0;
                 }
-                else //不是‘+’，‘-’，‘x’则说明当前字符是一个数字
+                else
                 {
                     currentNum = Convert.ToInt32(currentChar) - 48;
                     firstNum = firstNum * 10 + currentNum * symbol;
                     symbol = 1;
-                    if (i == s.Length - 1)    //当读取到最后一位不是x且还未结束时，说明当前是一个常数，累积加到常数中
+                    if (i == s.Length - 1)    
                         sum[0] += symbol * firstNum;
                 }
             }
@@ -125,13 +134,15 @@ namespace MathBrick
 
         /// <summary>
         /// ax^2 + bx + c = 0, if b^2-4ac<0 , no solution, else x1 = (-b + sqrt(b^2 - 4ac))/2a , x2 = (-b - sqrt(b^2 - 4ac))/2a
-        /// 可以支持的字符串格式基本同一元一次方程，如"x^2+4x-6=2x^2+x-5"
+        /// The string format that can be supported is basically the same primitive primary equation, such as "x^2+4x-6=2x^2+x-5".
         /// </summary>
         /// <returns></returns>
         public string QuadraticEquation()
         {
             try
             {
+                if (!checkInputForEquation(inputString1))
+                    return "error";
                 int a = 0;
                 int b = 0;
                 int c = 0;
@@ -164,23 +175,23 @@ namespace MathBrick
 
         private static int[] AddForCalculateQuadratic(string s)
         {
-            int[] sum = new int[3];   //sum[0]存常数，sum[1]存x前面的系数
-            int currentNum = 0, symbol = 1;   //symbol取符号，初始默认正数，currentNum取当前读到的数字
-            int firstNum = 0; //firstNum用于存放一个数
+            int[] sum = new int[3];  
+            int currentNum = 0, symbol = 1;   
+            int firstNum = 0; 
             for (int i = 0; i < s.Length; i++)
             {
 
-                char currentChar = s[i];   //currentChar取当前字符
+                char currentChar = s[i]; 
                 if (currentChar == '+')
                 {
-                    sum[0] += symbol * firstNum; //读到“+”时，说明当前读到的是一个常数，存入常数数组
-                    symbol = 1;  //读取到“+”时，将符号置为1，代表加一个正数
-                    firstNum = 0; //存完一个数之后，记得将该变量置为0，以便存储后续的数
+                    sum[0] += symbol * firstNum; 
+                    symbol = 1;  
+                    firstNum = 0;
                 }
                 else if (currentChar == '-')
                 {
                     sum[0] += symbol * firstNum;
-                    symbol = -1; //读取到“-”时，将符号置为-1，代表加一个负数	
+                    symbol = -1; 
                     firstNum = 0;
                 }
                 else if (currentChar == 'x')
@@ -189,7 +200,7 @@ namespace MathBrick
                     if (firstNum == 0)
                         firstNum = 1;
 
-                    if (i != s.Length - 1)  //如果此x不在最后一位，则检查其下一位有没有‘^’
+                    if (i != s.Length - 1)  
                     {
                         if(s[i+1] == '^')   
                         {
@@ -205,16 +216,16 @@ namespace MathBrick
                         sum[1] += symbol * firstNum; firstNum = 0;
                     }
                 }
-                else if (currentChar == '^') //读取到“^”时，i多加一次，忽略掉后面的2；
+                else if (currentChar == '^') 
                 {
                     i++;
                 }
-                else //不是‘+’，‘-’，‘x’则说明当前字符是一个数字
+                else 
                 {
                     currentNum = Convert.ToInt32(currentChar) - 48;
                     firstNum = firstNum * 10 + currentNum * symbol;
                     symbol = 1;
-                    if (i == s.Length - 1)    //当读取到最后一位不是x且还未结束时，说明当前是一个常数，累积加到常数中
+                    if (i == s.Length - 1)    
                         sum[0] += symbol * firstNum;
                 }
             }
@@ -223,13 +234,17 @@ namespace MathBrick
 
         /// <summary>
         /// if ax+by=m; cx+dy=n, then x=(bn-dm)/(bc-ad); y=(an-cm)/(ad-bc)
-        /// 可以支持的字符串格式基本同一元一次方程，如str1 = "3x+4y+7=9x-3y-9"; str2 = "8x-3=3y+5";
+        /// The string format that can be supported is basically the same primitive primary equation, such as str1 = "3x+4y+7=9x-3y-9"; str2 = "8x-3=3y+5";
         /// </summary>                             
         /// <returns></returns>
         public string BinaryEquation()
         {
             try
             {
+                if (!checkInputForEquation(inputString1))
+                    return "error";
+                if (!checkInputForEquation(inputString2))
+                    return "error";
                 int a = 0, b = 0, m = 0;
                 int c = 0, d = 0, n = 0;
                 string[] splitStringArray1 = inputString1.Split('=');
@@ -268,23 +283,23 @@ namespace MathBrick
 
         private static int[] AddForCalculateBinary(string s)
         {
-            int[] sum = new int[3];   //sum[0]存常数，sum[1]存x前面的系数
-            int currentNum = 0, symbol = 1;   //symbol取符号，初始默认正数，currentNum取当前读到的数字
-            int firstNum = 0; //firstNum用于存放一个数
+            int[] sum = new int[3];  
+            int currentNum = 0, symbol = 1;   
+            int firstNum = 0; 
             for (int i = 0; i < s.Length; i++)
             {
 
-                char currentChar = s[i];   //currentChar取当前字符
+                char currentChar = s[i];   
                 if (currentChar == '+')
                 {
-                    sum[0] += symbol * firstNum; //读到“+”时，说明当前读到的是一个常数，存入常数数组
-                    symbol = 1;  //读取到“+”时，将符号置为1，代表加一个正数
-                    firstNum = 0; //存完一个数之后，记得将该变量置为0，以便存储后续的数
+                    sum[0] += symbol * firstNum; 
+                    symbol = 1;  
+                    firstNum = 0; 
                 }
                 else if (currentChar == '-')
                 {
                     sum[0] += symbol * firstNum;
-                    symbol = -1; //读取到“-”时，将符号置为-1，代表加一个负数	
+                    symbol = -1; 	
                     firstNum = 0;
                 }
                 else if (currentChar == 'x')
@@ -301,12 +316,12 @@ namespace MathBrick
                         firstNum = 1;
                     sum[2] += symbol * firstNum; firstNum = 0;
                 }
-                else //不是‘+’，‘-’，‘x’, 'y'则说明当前字符是一个数字
+                else 
                 {
                     currentNum = Convert.ToInt32(currentChar) - 48;
                     firstNum = firstNum * 10 + currentNum * symbol;
                     symbol = 1;
-                    if (i == s.Length - 1)    //当读取到最后一位不是x,y且还未结束时，说明当前是一个常数，累积加到常数中
+                    if (i == s.Length - 1)    
                         sum[0] += symbol * firstNum;
                 }
             }
