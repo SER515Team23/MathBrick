@@ -41,6 +41,14 @@ namespace MathBrick
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
+            foreach (Button button in this.IntermediateBox.Controls)
+            {
+                button.Click += new EventHandler(ClickToDuplicate);
+            }
+            foreach (Button button in this.AdvancedBox.Controls)
+            {
+                button.Click += new EventHandler(ClickToDuplicate);
+            }
         }
 
         /// <summary>
@@ -163,23 +171,6 @@ namespace MathBrick
             // TODO: change the position to top right instead
             return btn;
         }
-        /// <summary>
-        /// Funtion of calculate the equation and return result or error by string
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        private string CalculateEquation(string str)
-        {
-            try
-            {
-                var result = new System.Data.DataTable().Compute(str, "");
-                return result.ToString();
-            }
-            catch (Exception)
-            {
-                return "error";
-            }
-        }
 
         private void SelectQuiz(object sender, EventArgs e)
         {
@@ -227,6 +218,12 @@ namespace MathBrick
                     Console.Out.WriteLine("Login as: " + "Teacher");
                     break;
             }
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }
