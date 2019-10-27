@@ -7,20 +7,27 @@ using System.Threading.Tasks;
 namespace MathBrick
 {
     /// <summary>
-    /// 在新建实例时传参
+    /// Pass arguments when creating an instance
     /// </summary>
     class Calculation
     {
-        private string inputString1;
-        private string inputString2;
+        private string inputString1 = "";
+        private string inputString2 = "";
 
-        //此构造函数用于解普通计算、一元一次方程和一元二次方程
+        private bool checkInputForEquation(string str)
+        {
+            if (str.Contains("*") || str.Contains("/") || str.Contains("(") || str.Contains(")") || !str.Contains("="))
+                return false;
+            return true;
+        }
+
+        //This constructor is used to solve ordinary computations, linear equations and quadratic equations
         public Calculation(string str)
         {
             inputString1 = str;
         }
 
-        //此构造函数用于解二元一次方程组
+        //This constructor is used to solve binary equations
         public Calculation(string str1, string str2)
         {
             inputString1 = str1;
@@ -54,6 +61,8 @@ namespace MathBrick
         {
             try
             {
+                if (!checkInputForEquation(inputString1))
+                    return "error";
                 int a = 0;
                 int b = 0;
                 string[] splitStringArray = inputString1.Split('=');
@@ -132,6 +141,8 @@ namespace MathBrick
         {
             try
             {
+                if (!checkInputForEquation(inputString1))
+                    return "error";
                 int a = 0;
                 int b = 0;
                 int c = 0;
@@ -230,6 +241,10 @@ namespace MathBrick
         {
             try
             {
+                if (!checkInputForEquation(inputString1))
+                    return "error";
+                if (!checkInputForEquation(inputString2))
+                    return "error";
                 int a = 0, b = 0, m = 0;
                 int c = 0, d = 0, n = 0;
                 string[] splitStringArray1 = inputString1.Split('=');
