@@ -135,9 +135,9 @@ namespace MathBrick
             btn.BaseColor = System.Drawing.Color.LightGray;
             btn.BorderColor = System.Drawing.Color.DimGray;
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            btn.Radius = 20;
+            btn.Radius = 10;
             btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            btn.Size = new System.Drawing.Size(50, 57);
+            btn.Size = new System.Drawing.Size(40, 40);
             btn.UseVisualStyleBackColor = false;
             btn.Location = point;
             btn.Text = text;
