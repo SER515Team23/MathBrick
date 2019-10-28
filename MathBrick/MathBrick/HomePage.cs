@@ -8,6 +8,7 @@ namespace MathBrick
     public partial class HomePage : Skin_Color
     {
         Control moveBtn;
+        public static Point startingPoint = new Point(50, 50);
         public HomePage()
         {
             InitializeComponent();
@@ -151,11 +152,13 @@ namespace MathBrick
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
             btn.Radius = 20;
             btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            btn.Size = new System.Drawing.Size(32, 35);
+            // Update to the new size of block
+            btn.Size = new System.Drawing.Size(32, 38);
             btn.UseVisualStyleBackColor = false;
-            btn.Location = point;
+            btn.Location = startingPoint;
             btn.Text = text;
-            btn.Dock = DockStyle.Top | DockStyle.Left;
+            btn.Anchor = AnchorStyles.Left | AnchorStyles.Top; 
+            startingPoint.X += 40;
 
             return btn;
         }
@@ -236,6 +239,21 @@ namespace MathBrick
         private void BlockMoveTimer_Tick(object sender, EventArgs e)
         {
             moveBtn.Location = this.skinGroupBox1.PointToClient(new Point(MousePosition.X - moveBtn.Size.Width / 2, MousePosition.Y - moveBtn.Size.Height / 2));
+        }
+
+        private void SortButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {          
+
+        }
+
+        private void ResultButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
