@@ -11,9 +11,10 @@ namespace MathBrick
         public HomePage()
         {
             InitializeComponent();
-            AddEventForDragDrop();    
+            AddEventForDragDrop();
+            sideTabControl.SelectedIndex = 0;
             CustomizeTabControl();
-            sideTabControl.SelectedTab = this.NumberBox;
+            
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -235,6 +236,5 @@ namespace MathBrick
         {
             moveBtn.Location = this.skinGroupBox1.PointToClient(new Point(MousePosition.X - moveBtn.Size.Width / 2, MousePosition.Y - moveBtn.Size.Height / 2));
         }
-
     }
 }
