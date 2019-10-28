@@ -137,22 +137,6 @@ namespace MathBrick
             this.Resut_Listbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Resut_Listbox.FormattingEnabled = true;
             this.Resut_Listbox.ItemHeight = 18;
-            this.Resut_Listbox.Items.AddRange(new CCWin.SkinControl.SkinListBoxItem[] {
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items1"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items2"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items3"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items4"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items5"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items6"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items7"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items8"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items9"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items10"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items11"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items12"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items13"))),
-            ((CCWin.SkinControl.SkinListBoxItem)(resources.GetObject("Resut_Listbox.Items14")))});
             this.Resut_Listbox.Location = new System.Drawing.Point(3, 23);
             this.Resut_Listbox.Margin = new System.Windows.Forms.Padding(0);
             this.Resut_Listbox.MouseColor = System.Drawing.Color.White;
