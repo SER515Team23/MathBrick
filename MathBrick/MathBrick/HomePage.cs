@@ -135,9 +135,9 @@ namespace MathBrick
             btn.BaseColor = System.Drawing.Color.LightGray;
             btn.BorderColor = System.Drawing.Color.DimGray;
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            btn.Radius = 20;
+            btn.Radius = 10;
             btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            btn.Size = new System.Drawing.Size(50, 57);
+            btn.Size = new System.Drawing.Size(40, 40);
             btn.UseVisualStyleBackColor = false;
             btn.Location = point;
             btn.Text = text;
@@ -181,26 +181,6 @@ namespace MathBrick
             }
         }
 
-        private void SelectQuiz(object sender, EventArgs e)
-        {
-            QuizList quizList = new QuizList();
-            quizList.Show();
-        }
-
-        private void Logout(object sender, EventArgs e)
-        {
-            DataBase.Instance.UserLogout();
-            this.Hide();
-            SignIn signIn = new SignIn();
-            signIn.Show();
-        }
-
-        private void ManageAccounts(object sender, EventArgs e)
-        {
-            ManagePage managePage = new ManagePage();
-            managePage.Show();
-        }
-
         private void CustomizeTabControl()
         {
             User nowUser = DataBase.Instance.activeUser;
@@ -227,6 +207,26 @@ namespace MathBrick
                     Console.Out.WriteLine("Login as: " + "Teacher");
                     break;
             }
+        }
+
+        private void quizButton_Click(object sender, EventArgs e)
+        {
+            QuizList quizList = new QuizList();
+            quizList.Show();
+        }
+
+        private void manageButton_Click(object sender, EventArgs e)
+        {
+            ManagePage managePage = new ManagePage();
+            managePage.Show();
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            DataBase.Instance.UserLogout();
+            this.Hide();
+            SignIn signIn = new SignIn();
+            signIn.Show();
         }
     }
 }

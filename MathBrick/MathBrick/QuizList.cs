@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using CCWin;
 
 namespace MathBrick
 {
-    public partial class QuizList : Form
+    public partial class QuizList : Skin_Color
     {
         private string[] headerTitle = { "Date", "No.", "Teacher ID", "Subject"};
         private string[] date = { "8/3", "8/15", "9/1", "10/5"};
@@ -38,7 +39,12 @@ namespace MathBrick
             this.Controls.Add(quizListView);
         }
 
-        private void ConfirmButton_Click(object sender, System.EventArgs e)
+        private void cancelButton_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void conformButton_Click(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection quizInfo =
                 this.quizListView.SelectedItems;
@@ -47,11 +53,6 @@ namespace MathBrick
             {
                 Console.WriteLine("Chosen: " + item.SubItems[3].Text);
             }
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

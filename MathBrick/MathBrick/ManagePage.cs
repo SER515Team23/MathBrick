@@ -16,5 +16,10 @@ namespace MathBrick
         {
             InitializeComponent();
         }
+
+        private void returnButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
