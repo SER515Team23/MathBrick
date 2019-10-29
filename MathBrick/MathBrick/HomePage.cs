@@ -236,5 +236,10 @@ namespace MathBrick
         {
             moveBtn.Location = this.skinGroupBox1.PointToClient(new Point(MousePosition.X - moveBtn.Size.Width / 2, MousePosition.Y - moveBtn.Size.Height / 2));
         }
+
+        private void quizButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
