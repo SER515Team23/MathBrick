@@ -47,14 +47,13 @@ namespace MathBrick
             this.welcomePanel.Controls.Add(this.passwordLabel);
             this.welcomePanel.Controls.Add(this.userNameLabel);
             this.welcomePanel.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.welcomePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.welcomePanel.DownBack = null;
-            this.welcomePanel.Location = new System.Drawing.Point(8, 39);
+            this.welcomePanel.Location = new System.Drawing.Point(4, 39);
             this.welcomePanel.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.welcomePanel.MouseBack = null;
             this.welcomePanel.Name = "welcomePanel";
             this.welcomePanel.NormlBack = null;
-            this.welcomePanel.Size = new System.Drawing.Size(584, 344);
+            this.welcomePanel.Size = new System.Drawing.Size(586, 351);
             this.welcomePanel.TabIndex = 0;
             // 
             // fooLabel
@@ -252,7 +251,7 @@ namespace MathBrick
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(600, 391);
+            this.ClientSize = new System.Drawing.Size(594, 392);
             this.Controls.Add(this.welcomePanel);
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.MaximizeBox = false;
