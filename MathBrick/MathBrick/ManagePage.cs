@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CCWin;
+﻿using CCWin;
+
+/* 
+ * Author: Yu-Ting Tsao
+ * Description: Administrator role only page. Manage all accounts authorization here.
+*/
 
 namespace MathBrick
 {

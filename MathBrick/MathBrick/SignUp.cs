@@ -2,6 +2,11 @@
 using System.Windows.Forms;
 using CCWin;
 
+/* 
+ * Author: Bingrui Feng, Xinkai Wang, Yu-Ting Tsao
+ * Description: Sign up with unique code for different roles.
+*/
+
 namespace MathBrick
 {
     public partial class SignUp : Skin_Color

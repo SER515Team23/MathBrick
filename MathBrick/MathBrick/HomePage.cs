@@ -3,6 +3,12 @@ using System.Drawing;
 using System.Windows.Forms;
 using CCWin;
 
+/* 
+ * Author: Bingrui Feng, Liang Huijing, Xinkai Wang, Yu-Ting Tsao
+ * Description: The main screen for users, the facade to other functionalities.
+ * Also the playground canvas locates here.
+*/
+
 namespace MathBrick
 {
     public partial class HomePage : Skin_Color
