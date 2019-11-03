@@ -223,7 +223,7 @@ namespace MathBrick
             this.clearButton.BorderColor = System.Drawing.Color.DimGray;
             this.clearButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.clearButton.DownBack = null;
-            this.clearButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.Location = new System.Drawing.Point(112, 36);
             this.clearButton.MouseBack = null;
             this.clearButton.Name = "clearButton";
@@ -232,7 +232,7 @@ namespace MathBrick
             this.clearButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.clearButton.Size = new System.Drawing.Size(70, 35);
             this.clearButton.TabIndex = 12;
-            this.clearButton.Text = "clear";
+            this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click_1);
             // 
@@ -243,7 +243,7 @@ namespace MathBrick
             this.resultButton.BorderColor = System.Drawing.Color.DimGray;
             this.resultButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.resultButton.DownBack = null;
-            this.resultButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultButton.Location = new System.Drawing.Point(16, 36);
             this.resultButton.MouseBack = null;
             this.resultButton.Name = "resultButton";
@@ -252,7 +252,7 @@ namespace MathBrick
             this.resultButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.resultButton.Size = new System.Drawing.Size(70, 35);
             this.resultButton.TabIndex = 14;
-            this.resultButton.Text = "result";
+            this.resultButton.Text = "Result";
             this.resultButton.UseVisualStyleBackColor = false;
             this.resultButton.Click += new System.EventHandler(this.resultButton_Click_1);
             // 
@@ -313,7 +313,7 @@ namespace MathBrick
             this.sideTabControl.PageHover = ((System.Drawing.Image)(resources.GetObject("sideTabControl.PageHover")));
             this.sideTabControl.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.sideTabControl.PageNorml = null;
-            this.sideTabControl.SelectedIndex = 0;
+            this.sideTabControl.SelectedIndex = 3;
             this.sideTabControl.Size = new System.Drawing.Size(169, 460);
             this.sideTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.sideTabControl.TabIndex = 18;
@@ -437,7 +437,7 @@ namespace MathBrick
             this.skinButton10.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton10.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton10.DownBack = null;
-            this.skinButton10.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton10.Location = new System.Drawing.Point(106, 293);
             this.skinButton10.MouseBack = null;
             this.skinButton10.Name = "skinButton10";
@@ -456,7 +456,7 @@ namespace MathBrick
             this.skinButton1.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton1.DownBack = null;
-            this.skinButton1.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton1.Location = new System.Drawing.Point(16, 33);
             this.skinButton1.MouseBack = null;
             this.skinButton1.Name = "skinButton1";
@@ -475,7 +475,7 @@ namespace MathBrick
             this.skinButton2.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton2.DownBack = null;
-            this.skinButton2.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton2.Location = new System.Drawing.Point(106, 33);
             this.skinButton2.MouseBack = null;
             this.skinButton2.Name = "skinButton2";
@@ -494,7 +494,7 @@ namespace MathBrick
             this.skinButton9.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton9.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton9.DownBack = null;
-            this.skinButton9.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton9.Location = new System.Drawing.Point(16, 293);
             this.skinButton9.MouseBack = null;
             this.skinButton9.Name = "skinButton9";
@@ -513,7 +513,7 @@ namespace MathBrick
             this.skinButton3.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton3.DownBack = null;
-            this.skinButton3.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton3.Location = new System.Drawing.Point(16, 101);
             this.skinButton3.MouseBack = null;
             this.skinButton3.Name = "skinButton3";
@@ -532,7 +532,7 @@ namespace MathBrick
             this.skinButton8.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton8.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton8.DownBack = null;
-            this.skinButton8.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton8.Location = new System.Drawing.Point(106, 227);
             this.skinButton8.MouseBack = null;
             this.skinButton8.Name = "skinButton8";
@@ -551,7 +551,7 @@ namespace MathBrick
             this.skinButton4.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton4.DownBack = null;
-            this.skinButton4.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton4.Location = new System.Drawing.Point(106, 101);
             this.skinButton4.MouseBack = null;
             this.skinButton4.Name = "skinButton4";
@@ -570,7 +570,7 @@ namespace MathBrick
             this.skinButton7.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton7.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton7.DownBack = null;
-            this.skinButton7.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton7.Location = new System.Drawing.Point(16, 227);
             this.skinButton7.MouseBack = null;
             this.skinButton7.Name = "skinButton7";
@@ -589,7 +589,7 @@ namespace MathBrick
             this.skinButton6.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton6.DownBack = null;
-            this.skinButton6.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton6.Location = new System.Drawing.Point(106, 166);
             this.skinButton6.MouseBack = null;
             this.skinButton6.Name = "skinButton6";
@@ -608,7 +608,7 @@ namespace MathBrick
             this.skinButton5.BorderColor = System.Drawing.Color.DimGray;
             this.skinButton5.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton5.DownBack = null;
-            this.skinButton5.Font = new System.Drawing.Font("Calibri Light", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinButton5.Location = new System.Drawing.Point(16, 166);
             this.skinButton5.MouseBack = null;
             this.skinButton5.Name = "skinButton5";
@@ -732,7 +732,7 @@ namespace MathBrick
             this.minusButton.BorderColor = System.Drawing.Color.DimGray;
             this.minusButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.minusButton.DownBack = null;
-            this.minusButton.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minusButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minusButton.Location = new System.Drawing.Point(106, 33);
             this.minusButton.MouseBack = null;
             this.minusButton.Name = "minusButton";
@@ -751,7 +751,7 @@ namespace MathBrick
             this.plusButton.BorderColor = System.Drawing.Color.DimGray;
             this.plusButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.plusButton.DownBack = null;
-            this.plusButton.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plusButton.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plusButton.Location = new System.Drawing.Point(16, 33);
             this.plusButton.MouseBack = null;
             this.plusButton.Name = "plusButton";
