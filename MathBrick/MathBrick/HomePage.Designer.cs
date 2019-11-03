@@ -57,7 +57,6 @@ namespace MathBrick
             this.divideButton = new CCWin.SkinControl.SkinButton();
             this.openParenthesisButton = new CCWin.SkinControl.SkinButton();
             this.BasicBox = new CCWin.SkinControl.SkinTabPage();
-            this.equalButton = new CCWin.SkinControl.SkinButton();
             this.minusButton = new CCWin.SkinControl.SkinButton();
             this.plusButton = new CCWin.SkinControl.SkinButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -298,7 +297,7 @@ namespace MathBrick
             this.sideTabControl.Controls.Add(this.IntermediateBox);
             this.sideTabControl.Controls.Add(this.BasicBox);
             this.sideTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideTabControl.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sideTabControl.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sideTabControl.HeadBack = null;
             this.sideTabControl.ImgTxtOffset = new System.Drawing.Point(0, 0);
             this.sideTabControl.ItemSize = new System.Drawing.Size(70, 36);
@@ -629,7 +628,7 @@ namespace MathBrick
             this.IntermediateBox.Controls.Add(this.divideButton);
             this.IntermediateBox.Controls.Add(this.openParenthesisButton);
             this.IntermediateBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IntermediateBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IntermediateBox.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IntermediateBox.Location = new System.Drawing.Point(0, 36);
             this.IntermediateBox.Name = "IntermediateBox";
             this.IntermediateBox.Size = new System.Drawing.Size(169, 424);
@@ -652,7 +651,7 @@ namespace MathBrick
             this.closeParenthesisButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.closeParenthesisButton.Size = new System.Drawing.Size(40, 40);
             this.closeParenthesisButton.TabIndex = 17;
-            this.closeParenthesisButton.Text = "£©";
+            this.closeParenthesisButton.Text = ")";
             this.closeParenthesisButton.UseVisualStyleBackColor = false;
             // 
             // multiplyButton
@@ -662,7 +661,7 @@ namespace MathBrick
             this.multiplyButton.BorderColor = System.Drawing.Color.DimGray;
             this.multiplyButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.multiplyButton.DownBack = null;
-            this.multiplyButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.multiplyButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.multiplyButton.Location = new System.Drawing.Point(16, 33);
             this.multiplyButton.MouseBack = null;
             this.multiplyButton.Name = "multiplyButton";
@@ -671,7 +670,7 @@ namespace MathBrick
             this.multiplyButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.multiplyButton.Size = new System.Drawing.Size(40, 40);
             this.multiplyButton.TabIndex = 13;
-            this.multiplyButton.Text = "¡Á";
+            this.multiplyButton.Text = "*";
             this.multiplyButton.UseVisualStyleBackColor = false;
             // 
             // divideButton
@@ -681,7 +680,7 @@ namespace MathBrick
             this.divideButton.BorderColor = System.Drawing.Color.DimGray;
             this.divideButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.divideButton.DownBack = null;
-            this.divideButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.divideButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.divideButton.Location = new System.Drawing.Point(106, 33);
             this.divideButton.MouseBack = null;
             this.divideButton.Name = "divideButton";
@@ -690,7 +689,7 @@ namespace MathBrick
             this.divideButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.divideButton.Size = new System.Drawing.Size(40, 40);
             this.divideButton.TabIndex = 14;
-            this.divideButton.Text = "¡Â";
+            this.divideButton.Text = "/";
             this.divideButton.UseVisualStyleBackColor = false;
             // 
             // openParenthesisButton
@@ -709,13 +708,12 @@ namespace MathBrick
             this.openParenthesisButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.openParenthesisButton.Size = new System.Drawing.Size(40, 40);
             this.openParenthesisButton.TabIndex = 16;
-            this.openParenthesisButton.Text = "£¨";
+            this.openParenthesisButton.Text = "(";
             this.openParenthesisButton.UseVisualStyleBackColor = false;
             // 
             // BasicBox
             // 
             this.BasicBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BasicBox.Controls.Add(this.equalButton);
             this.BasicBox.Controls.Add(this.minusButton);
             this.BasicBox.Controls.Add(this.plusButton);
             this.BasicBox.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -726,25 +724,6 @@ namespace MathBrick
             this.BasicBox.TabIndex = 1;
             this.BasicBox.TabItemImage = null;
             this.BasicBox.Text = "Basic";
-            // 
-            // equalButton
-            // 
-            this.equalButton.BackColor = System.Drawing.Color.Transparent;
-            this.equalButton.BaseColor = System.Drawing.Color.LightGray;
-            this.equalButton.BorderColor = System.Drawing.Color.DimGray;
-            this.equalButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.equalButton.DownBack = null;
-            this.equalButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equalButton.Location = new System.Drawing.Point(16, 116);
-            this.equalButton.MouseBack = null;
-            this.equalButton.Name = "equalButton";
-            this.equalButton.NormlBack = null;
-            this.equalButton.Radius = 10;
-            this.equalButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.equalButton.Size = new System.Drawing.Size(40, 40);
-            this.equalButton.TabIndex = 17;
-            this.equalButton.Text = "=";
-            this.equalButton.UseVisualStyleBackColor = false;
             // 
             // minusButton
             // 
@@ -969,7 +948,6 @@ namespace MathBrick
         private CCWin.SkinControl.SkinButton divideButton;
         private CCWin.SkinControl.SkinButton openParenthesisButton;
         private CCWin.SkinControl.SkinTabPage BasicBox;
-        private CCWin.SkinControl.SkinButton equalButton;
         private CCWin.SkinControl.SkinButton minusButton;
         private CCWin.SkinControl.SkinButton plusButton;
         private CCWin.SkinControl.SkinButton quizButton;
