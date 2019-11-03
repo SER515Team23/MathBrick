@@ -30,6 +30,7 @@ namespace MathBrick
             this.Resut_Listbox = new CCWin.SkinControl.SkinListBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
+            this.skinGroupBox4 = new CCWin.SkinControl.SkinGroupBox();
             this.clearButton = new CCWin.SkinControl.SkinButton();
             this.resultButton = new CCWin.SkinControl.SkinButton();
             this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
@@ -65,7 +66,6 @@ namespace MathBrick
             this.manageButton = new CCWin.SkinControl.SkinButton();
             this.quizButton = new CCWin.SkinControl.SkinButton();
             this.blockMoveTimer = new System.Windows.Forms.Timer(this.components);
-            this.skinGroupBox4 = new CCWin.SkinControl.SkinGroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -76,6 +76,7 @@ namespace MathBrick
             this.skinGroupBox3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.skinPanel2.SuspendLayout();
+            this.skinGroupBox4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.sideTabControl.SuspendLayout();
             this.AdvancedBox.SuspendLayout();
@@ -83,7 +84,6 @@ namespace MathBrick
             this.IntermediateBox.SuspendLayout();
             this.BasicBox.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.skinGroupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -216,6 +216,27 @@ namespace MathBrick
             this.skinPanel2.Size = new System.Drawing.Size(188, 80);
             this.skinPanel2.TabIndex = 15;
             // 
+            // skinGroupBox4
+            // 
+            this.skinGroupBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox4.BorderColor = System.Drawing.Color.Silver;
+            this.skinGroupBox4.Controls.Add(this.clearButton);
+            this.skinGroupBox4.Controls.Add(this.resultButton);
+            this.skinGroupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinGroupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinGroupBox4.ForeColor = System.Drawing.Color.Black;
+            this.skinGroupBox4.Location = new System.Drawing.Point(0, 0);
+            this.skinGroupBox4.Name = "skinGroupBox4";
+            this.skinGroupBox4.RectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox4.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox4.Size = new System.Drawing.Size(188, 80);
+            this.skinGroupBox4.TabIndex = 6;
+            this.skinGroupBox4.TabStop = false;
+            this.skinGroupBox4.Text = "Canvas Control";
+            this.skinGroupBox4.TitleBorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox4.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox4.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
             // clearButton
             // 
             this.clearButton.BackColor = System.Drawing.Color.Transparent;
@@ -292,10 +313,10 @@ namespace MathBrick
             this.sideTabControl.ArrowColor = System.Drawing.Color.DarkGray;
             this.sideTabControl.BackColor = System.Drawing.Color.Silver;
             this.sideTabControl.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
+            this.sideTabControl.Controls.Add(this.BasicBox);
             this.sideTabControl.Controls.Add(this.AdvancedBox);
             this.sideTabControl.Controls.Add(this.NumberBox);
             this.sideTabControl.Controls.Add(this.IntermediateBox);
-            this.sideTabControl.Controls.Add(this.BasicBox);
             this.sideTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sideTabControl.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sideTabControl.HeadBack = null;
@@ -313,7 +334,7 @@ namespace MathBrick
             this.sideTabControl.PageHover = ((System.Drawing.Image)(resources.GetObject("sideTabControl.PageHover")));
             this.sideTabControl.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
             this.sideTabControl.PageNorml = null;
-            this.sideTabControl.SelectedIndex = 3;
+            this.sideTabControl.SelectedIndex = 0;
             this.sideTabControl.Size = new System.Drawing.Size(169, 460);
             this.sideTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.sideTabControl.TabIndex = 18;
@@ -386,7 +407,7 @@ namespace MathBrick
             this.bButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.bButton.Size = new System.Drawing.Size(40, 40);
             this.bButton.TabIndex = 15;
-            this.bButton.Text = "B";
+            this.bButton.Text = "y";
             this.bButton.UseVisualStyleBackColor = false;
             // 
             // aButton
@@ -405,7 +426,7 @@ namespace MathBrick
             this.aButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.aButton.Size = new System.Drawing.Size(40, 40);
             this.aButton.TabIndex = 14;
-            this.aButton.Text = "A";
+            this.aButton.Text = "x";
             this.aButton.UseVisualStyleBackColor = false;
             // 
             // NumberBox
@@ -859,27 +880,6 @@ namespace MathBrick
             this.blockMoveTimer.Interval = 10;
             this.blockMoveTimer.Tick += new System.EventHandler(this.BlockMoveTimer_Tick);
             // 
-            // skinGroupBox4
-            // 
-            this.skinGroupBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox4.BorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox4.Controls.Add(this.clearButton);
-            this.skinGroupBox4.Controls.Add(this.resultButton);
-            this.skinGroupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinGroupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinGroupBox4.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox4.Location = new System.Drawing.Point(0, 0);
-            this.skinGroupBox4.Name = "skinGroupBox4";
-            this.skinGroupBox4.RectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox4.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox4.Size = new System.Drawing.Size(188, 80);
-            this.skinGroupBox4.TabIndex = 6;
-            this.skinGroupBox4.TabStop = false;
-            this.skinGroupBox4.Text = "Canvas Control";
-            this.skinGroupBox4.TitleBorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox4.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox4.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -902,6 +902,7 @@ namespace MathBrick
             this.skinGroupBox3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.skinPanel2.ResumeLayout(false);
+            this.skinGroupBox4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.sideTabControl.ResumeLayout(false);
             this.AdvancedBox.ResumeLayout(false);
@@ -909,7 +910,6 @@ namespace MathBrick
             this.IntermediateBox.ResumeLayout(false);
             this.BasicBox.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.skinGroupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
