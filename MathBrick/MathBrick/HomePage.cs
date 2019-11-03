@@ -250,11 +250,6 @@ namespace MathBrick
             moveBtn.Location = this.skinGroupBox1.PointToClient(new Point(MousePosition.X - moveBtn.Size.Width / 2, MousePosition.Y - moveBtn.Size.Height / 2));
         }
 
-        private void SortButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ClearButton_Click(object sender, EventArgs e)
         {
             this.skinGroupBox1.Controls.Clear();

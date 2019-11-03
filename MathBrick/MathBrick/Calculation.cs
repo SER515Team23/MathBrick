@@ -172,7 +172,7 @@ namespace MathBrick
                     return "No Solution!";
                 }
             }
-            catch(Exception ex)
+            catch (Exception)
             {
                 return "error";
             }
@@ -280,7 +280,7 @@ namespace MathBrick
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return "error";
             }
