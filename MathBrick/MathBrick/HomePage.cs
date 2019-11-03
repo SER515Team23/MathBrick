@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using CCWin;
 
@@ -158,7 +160,7 @@ namespace MathBrick
             btn.Location = startingPoint;
             btn.Text = text;
             btn.Anchor = AnchorStyles.Left | AnchorStyles.Top; 
-            startingPoint.X += 40;
+            startingPoint.X += 35;
 
             return btn;
         }
@@ -174,7 +176,7 @@ namespace MathBrick
             btn.BorderColor = System.Drawing.Color.DimGray;
             btn.BaseColor = System.Drawing.Color.Red;
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            btn.Size = new System.Drawing.Size(10, 10);
+            btn.Size = new System.Drawing.Size(13, 13);
             btn.ForeColor = Color.White;
             btn.Font = new Font(btn.Font.FontFamily, 5, FontStyle.Bold);
             btn.Text = "x";
@@ -233,7 +235,7 @@ namespace MathBrick
         private void HomePage_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void BlockMoveTimer_Tick(object sender, EventArgs e)
@@ -247,13 +249,34 @@ namespace MathBrick
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
-        {          
+        {
 
         }
 
         private void ResultButton_Click(object sender, EventArgs e)
         {
+            if (this.skinGroupBox1.Controls.Count > 0)
+            {
+                SortedList<int, string> sortedList = new SortedList<int, string>();
+                foreach (Control control in this.skinGroupBox1.Controls)
+                {
+                    if (control.GetType().BaseType == typeof(Button))
+                    {
+                        sortedList.Add(control.Location.X, control.Text);
+                    }
+                }
+                string str = string.Empty;
+                foreach (var item in sortedList)
+                {
+                    str += item.Value;
+                }
 
+                Calculation calculation = new Calculation(str);
+                Label label = new Label();
+                label.Text = calculation.Calculate().ToString();
+                label.Dock = DockStyle.Top;
+                this.Resut_Listbox.Controls.Add(label);
+            }
         }
     }
 }

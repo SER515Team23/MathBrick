@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculation.cs" />
     <Compile Include="ManagePage.cs">
       <SubType>Form</SubType>
     </Compile>
