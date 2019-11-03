@@ -155,17 +155,17 @@ namespace MathBrick
                 int[] left = AddForCalculateQuadratic(splitStringArray[0]);
                 int[] right = AddForCalculateQuadratic(splitStringArray[1]);
 
-                a += left[0];
+                a += left[2];
                 b += left[1];
-                c += left[2];
+                c += left[0];
 
-                a -= right[0];
+                a -= right[2];
                 b -= right[1];
-                c -= right[2];
+                c -= right[0];
 
                 if (Math.Pow(b, 2) - 4 * a * c >= 0)
                 {
-                    return ("x1=" + (-b + Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a) + (" x2=" + (-b - Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a);
+                    return ("x1=" + (-b + Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a) + ("    x2=" + (-b - Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a);
                 }
                 else
                 {
@@ -276,7 +276,7 @@ namespace MathBrick
                 n += right2[0];
 
 
-                return "x=" + ((b * n - d * m) + 0.0) / (b * c - a * d) + (" y=" + ((a * n - c * m) + 0.0) / (a * d - b * c));
+                return "x=" + ((b * n - d * m) + 0.0) / (b * c - a * d) + ("    y=" + ((a * n - c * m) + 0.0) / (a * d - b * c));
 
 
             }
