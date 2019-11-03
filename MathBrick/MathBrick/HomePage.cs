@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using CCWin;
 
@@ -14,6 +16,7 @@ namespace MathBrick
     public partial class HomePage : Skin_Color
     {
         Control moveBtn;
+        public static Point startingPoint = new Point(50, 50);
         public HomePage()
         {
             InitializeComponent();
@@ -75,12 +78,12 @@ namespace MathBrick
 
             btn.Controls.Add(deleteIcon);
             deleteIcon.Click += new EventHandler(TriggerDeleteEvent);
-            this.skinGroupBox1.Controls.Add(btn);
+            this.skinGroupBox1.Controls.Add(btn);               
             this.skinGroupBox1.AllowDrop = true;
 
             btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
             this.skinGroupBox1.DragOver += new DragEventHandler(BlockDropOver);
-            this.skinGroupBox1.DragDrop += new DragEventHandler(BlockDragDrop);
+            this.skinGroupBox1.DragDrop += new DragEventHandler(BlockDragDrop);        
         }
 
         /// <summary>
@@ -158,10 +161,14 @@ namespace MathBrick
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
             btn.Radius = 10;
             btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            btn.Size = new System.Drawing.Size(40, 40);
+
+            // Update to the new size of block
+            btn.Size = new System.Drawing.Size(32, 38);
             btn.UseVisualStyleBackColor = false;
-            btn.Location = point;
+            btn.Location = startingPoint;
             btn.Text = text;
+            btn.Anchor = AnchorStyles.Left | AnchorStyles.Top; 
+            startingPoint.X += 35;
 
             return btn;
         }
@@ -177,7 +184,7 @@ namespace MathBrick
             btn.BorderColor = System.Drawing.Color.DimGray;
             btn.BaseColor = System.Drawing.Color.Red;
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            btn.Size = new System.Drawing.Size(10, 10);
+            btn.Size = new System.Drawing.Size(13, 13);
             btn.ForeColor = Color.White;
             btn.Font = new Font(btn.Font.FontFamily, 5, FontStyle.Bold);
             btn.Text = "x";
@@ -203,8 +210,6 @@ namespace MathBrick
             QuizList quizList = new QuizList();
             quizList.Show();
         }
-
-
 
         private void CustomizeTabControl()
         {
@@ -237,7 +242,7 @@ namespace MathBrick
         private void HomePage_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void BlockMoveTimer_Tick(object sender, EventArgs e)
@@ -245,6 +250,40 @@ namespace MathBrick
             moveBtn.Location = this.skinGroupBox1.PointToClient(new Point(MousePosition.X - moveBtn.Size.Width / 2, MousePosition.Y - moveBtn.Size.Height / 2));
         }
 
-       
+        private void SortButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            this.skinGroupBox1.Controls.Clear();
+        }
+
+        private void ResultButton_Click(object sender, EventArgs e)
+        {
+            if (this.skinGroupBox1.Controls.Count > 0)
+            {
+                SortedList<int, string> sortedList = new SortedList<int, string>();
+                foreach (Control control in this.skinGroupBox1.Controls)
+                {
+                    if (control.GetType().BaseType == typeof(Button))
+                    {
+                        sortedList.Add(control.Location.X, control.Text);
+                    }
+                }
+                string str = string.Empty;
+                foreach (var item in sortedList)
+                {
+                    str += item.Value;
+                }
+
+                Calculation calculation = new Calculation(str);
+                Label label = new Label();
+                label.Text = calculation.Calculate().ToString();
+                label.Dock = DockStyle.Top;
+                this.Resut_Listbox.Controls.Add(label);
+            }
+        }
     }
 }
