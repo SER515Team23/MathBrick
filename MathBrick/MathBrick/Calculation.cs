@@ -165,7 +165,7 @@ namespace MathBrick
 
                 if (Math.Pow(b, 2) - 4 * a * c >= 0)
                 {
-                    return ("x1=" + (-b + Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a) + ("x2=" + (-b - Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a);
+                    return ("x1=" + (-b + Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a) + (" x2=" + (-b - Math.Sqrt(Math.Pow(b, 2) - 4 * a * c)) / 2 * a);
                 }
                 else
                 {

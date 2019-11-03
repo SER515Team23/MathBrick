@@ -275,9 +275,14 @@ namespace MathBrick
 
                 Calculation calculation = new Calculation(str);
                 Label label = new Label();
-                label.Text = calculation.Calculate().ToString();
+                if(str.Contains("^2"))
+                    label.Text += calculation.QuadraticEquation();
+                else if(str.Contains("x"))
+                    label.Text += calculation.LinearEquation();
+                else
+                    label.Text += calculation.Calculate();
                 label.Dock = DockStyle.Top;
-                this.Resut_Listbox.Controls.Add(label);
+                Resut_Listbox.Controls.Add(label);
             }
         }
     }
