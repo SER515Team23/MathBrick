@@ -2,6 +2,11 @@
 using System.Windows.Forms;
 using CCWin;
 
+/* 
+ * Author: Liang Huijing, Yu-Ting Tsao
+ * Description: Entry page for users. Need to sign up or sign in first.
+*/
+
 namespace MathBrick
 {
     public partial class SignIn : Skin_Color

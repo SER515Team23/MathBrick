@@ -1,6 +1,10 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
+
+/* 
+ * Author: Yu-Ting Tsao
+ * Description: Students can see and choose their suitable quizzes here.
+*/
 
 namespace MathBrick
 {

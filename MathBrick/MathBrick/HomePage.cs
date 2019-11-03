@@ -5,6 +5,12 @@ using System.Linq;
 using System.Windows.Forms;
 using CCWin;
 
+/* 
+ * Author: Bingrui Feng, Liang Huijing, Xinkai Wang, Yu-Ting Tsao
+ * Description: The main screen for users, the facade to other functionalities.
+ * Also the playground canvas locates here.
+*/
+
 namespace MathBrick
 {
     public partial class HomePage : Skin_Color
@@ -110,6 +116,7 @@ namespace MathBrick
             moveBtn = control;
             blockMoveTimer.Enabled = true;
             control.DoDragDrop(control, DragDropEffects.Move);
+            blockMoveTimer.Enabled = false;
         }
 
         /// <summary>
@@ -152,8 +159,9 @@ namespace MathBrick
             btn.BaseColor = System.Drawing.Color.LightGray;
             btn.BorderColor = System.Drawing.Color.DimGray;
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            btn.Radius = 20;
+            btn.Radius = 10;
             btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+
             // Update to the new size of block
             btn.Size = new System.Drawing.Size(32, 38);
             btn.UseVisualStyleBackColor = false;
@@ -183,14 +191,13 @@ namespace MathBrick
             // TODO: change the position to top right instead
             return btn;
         }
-
-        private void SelectQuiz(object sender, EventArgs e)
+        private void manageButton_Click(object sender, EventArgs e)
         {
-            QuizList quizList = new QuizList();
-            quizList.Show();
+            ManagePage managePage = new ManagePage();
+            managePage.Show();
         }
 
-        private void Logout(object sender, EventArgs e)
+        private void logoutButton_Click(object sender, EventArgs e)
         {
             DataBase.Instance.UserLogout();
             this.Hide();
@@ -198,10 +205,10 @@ namespace MathBrick
             signIn.Show();
         }
 
-        private void ManageAccounts(object sender, EventArgs e)
+        private void quizButton_Click_1(object sender, EventArgs e)
         {
-            ManagePage managePage = new ManagePage();
-            managePage.Show();
+            QuizList quizList = new QuizList();
+            quizList.Show();
         }
 
         private void CustomizeTabControl()

@@ -48,19 +48,19 @@ namespace MathBrick
             this.welcomePanel.Controls.Add(this.userNameLabel);
             this.welcomePanel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.welcomePanel.DownBack = null;
-            this.welcomePanel.Location = new System.Drawing.Point(1, 37);
+            this.welcomePanel.Location = new System.Drawing.Point(4, 39);
             this.welcomePanel.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.welcomePanel.MouseBack = null;
             this.welcomePanel.Name = "welcomePanel";
             this.welcomePanel.NormlBack = null;
-            this.welcomePanel.Size = new System.Drawing.Size(721, 402);
+            this.welcomePanel.Size = new System.Drawing.Size(586, 351);
             this.welcomePanel.TabIndex = 0;
             // 
             // fooLabel
             // 
             this.fooLabel.AutoSize = true;
             this.fooLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fooLabel.Location = new System.Drawing.Point(55, 313);
+            this.fooLabel.Location = new System.Drawing.Point(1, 256);
             this.fooLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.fooLabel.Name = "fooLabel";
             this.fooLabel.Size = new System.Drawing.Size(192, 80);
@@ -96,14 +96,14 @@ namespace MathBrick
             this.signUpButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.signUpButton.DownBack = null;
             this.signUpButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpButton.Location = new System.Drawing.Point(407, 237);
+            this.signUpButton.Location = new System.Drawing.Point(357, 211);
             this.signUpButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.signUpButton.MouseBack = null;
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.NormlBack = null;
             this.signUpButton.Radius = 15;
             this.signUpButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.signUpButton.Size = new System.Drawing.Size(210, 50);
+            this.signUpButton.Size = new System.Drawing.Size(97, 39);
             this.signUpButton.TabIndex = 6;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.UseVisualStyleBackColor = false;
@@ -117,14 +117,14 @@ namespace MathBrick
             this.signInButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.signInButton.DownBack = null;
             this.signInButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signInButton.Location = new System.Drawing.Point(58, 237);
+            this.signInButton.Location = new System.Drawing.Point(126, 211);
             this.signInButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.signInButton.MouseBack = null;
             this.signInButton.Name = "signInButton";
             this.signInButton.NormlBack = null;
             this.signInButton.Radius = 15;
             this.signInButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.signInButton.Size = new System.Drawing.Size(210, 50);
+            this.signInButton.Size = new System.Drawing.Size(97, 39);
             this.signInButton.TabIndex = 5;
             this.signInButton.Text = "Sign In";
             this.signInButton.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@ namespace MathBrick
             this.passwordTextBox.IsPasswordChat = '\0';
             this.passwordTextBox.IsSystemPasswordChar = true;
             this.passwordTextBox.Lines = new string[0];
-            this.passwordTextBox.Location = new System.Drawing.Point(216, 119);
+            this.passwordTextBox.Location = new System.Drawing.Point(260, 82);
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.passwordTextBox.MaxLength = 5;
             this.passwordTextBox.MinimumSize = new System.Drawing.Size(61, 35);
@@ -152,7 +152,7 @@ namespace MathBrick
             this.passwordTextBox.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.passwordTextBox.ReadOnly = false;
             this.passwordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.passwordTextBox.Size = new System.Drawing.Size(401, 35);
+            this.passwordTextBox.Size = new System.Drawing.Size(194, 35);
             // 
             // 
             // 
@@ -164,7 +164,7 @@ namespace MathBrick
             this.passwordTextBox.SkinTxt.MaxLength = 5;
             this.passwordTextBox.SkinTxt.Multiline = true;
             this.passwordTextBox.SkinTxt.Name = "BaseText";
-            this.passwordTextBox.SkinTxt.Size = new System.Drawing.Size(379, 15);
+            this.passwordTextBox.SkinTxt.Size = new System.Drawing.Size(172, 15);
             this.passwordTextBox.SkinTxt.TabIndex = 0;
             this.passwordTextBox.SkinTxt.UseSystemPasswordChar = true;
             this.passwordTextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
@@ -185,7 +185,7 @@ namespace MathBrick
             this.userNameTextBox.IsPasswordChat = '\0';
             this.userNameTextBox.IsSystemPasswordChar = false;
             this.userNameTextBox.Lines = new string[0];
-            this.userNameTextBox.Location = new System.Drawing.Point(216, 63);
+            this.userNameTextBox.Location = new System.Drawing.Point(260, 25);
             this.userNameTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.userNameTextBox.MaxLength = 32767;
             this.userNameTextBox.MinimumSize = new System.Drawing.Size(61, 35);
@@ -197,7 +197,7 @@ namespace MathBrick
             this.userNameTextBox.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.userNameTextBox.ReadOnly = false;
             this.userNameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.userNameTextBox.Size = new System.Drawing.Size(405, 35);
+            this.userNameTextBox.Size = new System.Drawing.Size(194, 35);
             // 
             // 
             // 
@@ -208,7 +208,7 @@ namespace MathBrick
             this.userNameTextBox.SkinTxt.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.userNameTextBox.SkinTxt.Multiline = true;
             this.userNameTextBox.SkinTxt.Name = "BaseText";
-            this.userNameTextBox.SkinTxt.Size = new System.Drawing.Size(383, 15);
+            this.userNameTextBox.SkinTxt.Size = new System.Drawing.Size(172, 15);
             this.userNameTextBox.SkinTxt.TabIndex = 0;
             this.userNameTextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.userNameTextBox.SkinTxt.WaterText = "";
@@ -224,7 +224,7 @@ namespace MathBrick
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordLabel.BorderColor = System.Drawing.Color.White;
             this.passwordLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(54, 124);
+            this.passwordLabel.Location = new System.Drawing.Point(121, 93);
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(102, 24);
@@ -237,7 +237,7 @@ namespace MathBrick
             this.userNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.userNameLabel.BorderColor = System.Drawing.Color.White;
             this.userNameLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameLabel.Location = new System.Drawing.Point(53, 69);
+            this.userNameLabel.Location = new System.Drawing.Point(122, 25);
             this.userNameLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.userNameLabel.Name = "userNameLabel";
             this.userNameLabel.Size = new System.Drawing.Size(101, 24);
@@ -251,12 +251,12 @@ namespace MathBrick
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(723, 439);
+            this.ClientSize = new System.Drawing.Size(594, 392);
             this.Controls.Add(this.welcomePanel);
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(723, 439);
-            this.MinimumSize = new System.Drawing.Size(723, 439);
+            this.MaximumSize = new System.Drawing.Size(600, 80000);
+            this.MinimumSize = new System.Drawing.Size(500, 100);
             this.Name = "SignIn";
             this.Text = "MathBrick";
             this.welcomePanel.ResumeLayout(false);

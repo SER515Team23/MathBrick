@@ -4,6 +4,12 @@ using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using System;
 
+/* 
+ * Author: Yu-Ting Tsao
+ * Description: Contains users data information and API for 
+ * current user's status.
+*/
+
 namespace MathBrick
 {
     sealed class DataBase

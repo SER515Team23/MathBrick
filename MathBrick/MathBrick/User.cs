@@ -1,5 +1,10 @@
 ﻿using System;
 
+/* 
+ * Author: Yu-Ting Tsao
+ * Description: A User object class.
+*/
+
 namespace MathBrick
 {
     class User: IEquatable<User>

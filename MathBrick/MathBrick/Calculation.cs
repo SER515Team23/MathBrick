@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* 
+ * Author: Xinkai Wang
+ * Description: Do normal calculation and solve equation
+*/
+
 namespace MathBrick
 {
     /// <summary>
