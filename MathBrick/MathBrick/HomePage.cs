@@ -191,13 +191,13 @@ namespace MathBrick
             // TODO: change the position to top right instead
             return btn;
         }
-        private void manageButton_Click(object sender, EventArgs e)
+        private void ManageAccounts(object sender, EventArgs e)
         {
             ManagePage managePage = new ManagePage();
             managePage.Show();
         }
 
-        private void logoutButton_Click(object sender, EventArgs e)
+        private void Logout(object sender, EventArgs e)
         {
             DataBase.Instance.UserLogout();
             this.Hide();
@@ -205,7 +205,7 @@ namespace MathBrick
             signIn.Show();
         }
 
-        private void quizButton_Click_1(object sender, EventArgs e)
+        private void SelectQuiz(object sender, EventArgs e)
         {
             QuizList quizList = new QuizList();
             quizList.Show();
