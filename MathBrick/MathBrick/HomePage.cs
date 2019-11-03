@@ -250,7 +250,7 @@ namespace MathBrick
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-
+            this.skinGroupBox1.Controls.Clear();
         }
 
         private void ResultButton_Click(object sender, EventArgs e)
