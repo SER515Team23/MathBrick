@@ -113,6 +113,7 @@ namespace MathBrick
             moveBtn = control;
             blockMoveTimer.Enabled = true;
             control.DoDragDrop(control, DragDropEffects.Move);
+            blockMoveTimer.Enabled = false;
         }
 
         /// <summary>
