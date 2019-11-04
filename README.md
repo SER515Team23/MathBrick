@@ -11,8 +11,9 @@ Team Members:
 * **Huijing Liang**(MollyLiang)
 * **Xinkai Wang**(w546296781)
 
-### YouTube Presentation & Tutorial
-Delievery 2: https://www.youtube.com/watch?v=cGctr-Yv5n8&feature=youtu.be&fbclid=IwAR3MeBqhUdzHqlQpYms1LKu3Ktea4PBBo1xyyPaUTarkYNmgO03eq6Zgpck
+### YouTube Tutorial & Presentation
+Delievery 2: https://youtu.be/cGctr-Yv5n8 <br>
+Delievery 3: https://youtu.be/uzDzU8iHArg
 
 ### How to run?
 * Platform: Windows Forms Application
