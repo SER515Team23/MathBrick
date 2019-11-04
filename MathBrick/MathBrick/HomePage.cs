@@ -15,6 +15,8 @@ namespace MathBrick
 {
     public partial class HomePage : Skin_Color
     {
+        private bool isLogOut = false;
+
         Control moveBtn;
         public static Point startingPoint = new Point(50, 50);
         public HomePage()
@@ -23,20 +25,23 @@ namespace MathBrick
             AddEventForDragDrop();
             sideTabControl.SelectedIndex = 0;
             CustomizeTabControl();
-            
+            isLogOut = false;
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit？", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if (result == DialogResult.OK)
+            if (!isLogOut)
             {
-                Dispose();
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;
+                DialogResult result = MessageBox.Show("Are you sure you want to exit？", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
+                {
+                    Dispose();
+                    Application.Exit();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
         }
 
@@ -205,8 +210,9 @@ namespace MathBrick
 
         private void logoutButton_Click(object sender, EventArgs e)
         {
+            isLogOut = true;
             DataBase.Instance.UserLogout();
-            this.Hide();
+            this.Close();
             SignIn signIn = new SignIn();
             signIn.Show();
         }
