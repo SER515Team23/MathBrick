@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using System;
+using System.Linq;
 
 /* 
  * Author: Yu-Ting Tsao
@@ -89,6 +90,11 @@ namespace MathBrick
                 string userName = activeUser.userName;
                 Console.WriteLine(userName + " has been logout.");
             }
+        }
+
+        public User[] SeeAllUsers()
+        {
+            return usersDic.Values.ToArray();
         }
     }
 }
