@@ -234,14 +234,19 @@ namespace MathBrick
                 case 2:
                     Console.Out.WriteLine("Login as: " + "Intermediate");
                     sideTabControl.TabPages.RemoveByKey("AdvancedBox");
+                    sideTabControl.TabPages.RemoveByKey("BasicBox");
                     manageButton.Hide();
                     break;
                 case 3:
                     Console.Out.WriteLine("Login as: " + "Advanced");
+                    sideTabControl.TabPages.RemoveByKey("IntermediateBox");
+                    sideTabControl.TabPages.RemoveByKey("BasicBox");
                     manageButton.Hide();
                     break;
                 case 4:
                     Console.Out.WriteLine("Login as: " + "Teacher");
+                    sideTabControl.TabPages.RemoveByKey("IntermediateBox");
+                    sideTabControl.TabPages.RemoveByKey("BasicBox");
                     break;
             }
         }
