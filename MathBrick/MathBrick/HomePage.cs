@@ -298,5 +298,11 @@ namespace MathBrick
                 Resut_Listbox.Controls.Add(label);
             }
         }
+
+        private void VeiwGradeButton_Click(object sender, EventArgs e)
+        {
+            TeacherManagePage teacherManagePage = new TeacherManagePage();
+            teacherManagePage.Show();
+        }
     }
 }

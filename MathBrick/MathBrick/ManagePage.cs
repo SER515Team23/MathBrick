@@ -9,7 +9,8 @@ namespace MathBrick
 {
     public partial class ManagePage : Skin_Color
     {
-        public ManagePage()
+       
+            public ManagePage()
         {
             InitializeComponent();
         }
