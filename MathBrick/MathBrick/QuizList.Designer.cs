@@ -45,6 +45,7 @@
             this.quizListView.HideSelection = false;
             this.quizListView.Location = new System.Drawing.Point(1, 65);
             this.quizListView.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.quizListView.MultiSelect = false;
             this.quizListView.Name = "quizListView";
             this.quizListView.Size = new System.Drawing.Size(551, 242);
             this.quizListView.TabIndex = 0;
