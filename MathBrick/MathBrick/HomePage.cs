@@ -19,6 +19,9 @@ namespace MathBrick
 
         Control moveBtn;
         public static Point startingPoint = new Point(50, 50);
+
+        public object ViewGradeButton { get; private set; }
+
         public HomePage()
         {
             InitializeComponent();
@@ -230,18 +233,21 @@ namespace MathBrick
                     sideTabControl.TabPages.RemoveByKey("IntermediateBox");
                     sideTabControl.TabPages.RemoveByKey("AdvancedBox");
                     manageButton.Hide();
+                    VeiwGradeButton.Hide();
                     break;
                 case 2:
                     Console.Out.WriteLine("Login as: " + "Intermediate");
                     sideTabControl.TabPages.RemoveByKey("AdvancedBox");
                     sideTabControl.TabPages.RemoveByKey("BasicBox");
                     manageButton.Hide();
+                    VeiwGradeButton.Hide();
                     break;
                 case 3:
                     Console.Out.WriteLine("Login as: " + "Advanced");
                     sideTabControl.TabPages.RemoveByKey("IntermediateBox");
                     sideTabControl.TabPages.RemoveByKey("BasicBox");
                     manageButton.Hide();
+                    VeiwGradeButton.Hide();
                     break;
                 case 4:
                     Console.Out.WriteLine("Login as: " + "Teacher");
