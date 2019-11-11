@@ -40,53 +40,59 @@
             // quizListView
             // 
             this.quizListView.HideSelection = false;
-            this.quizListView.Location = new System.Drawing.Point(3, 130);
+            this.quizListView.Location = new System.Drawing.Point(1, 70);
+            this.quizListView.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.quizListView.Name = "quizListView";
-            this.quizListView.Size = new System.Drawing.Size(1190, 480);
+            this.quizListView.Size = new System.Drawing.Size(551, 262);
             this.quizListView.TabIndex = 0;
             this.quizListView.UseCompatibleStateImageBehavior = false;
             // 
             // userNameDescriptionLabel
             // 
             this.userNameDescriptionLabel.AutoSize = true;
-            this.userNameDescriptionLabel.Location = new System.Drawing.Point(12, 18);
+            this.userNameDescriptionLabel.Location = new System.Drawing.Point(6, 10);
+            this.userNameDescriptionLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.userNameDescriptionLabel.Name = "userNameDescriptionLabel";
-            this.userNameDescriptionLabel.Size = new System.Drawing.Size(119, 24);
+            this.userNameDescriptionLabel.Size = new System.Drawing.Size(61, 13);
             this.userNameDescriptionLabel.TabIndex = 1;
-            this.userNameDescriptionLabel.Text = "User Name:";
+            this.userNameDescriptionLabel.Text = "Username: ";
             // 
             // levelDescriptionLabel
             // 
             this.levelDescriptionLabel.AutoSize = true;
-            this.levelDescriptionLabel.Location = new System.Drawing.Point(12, 80);
+            this.levelDescriptionLabel.Location = new System.Drawing.Point(6, 43);
+            this.levelDescriptionLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.levelDescriptionLabel.Name = "levelDescriptionLabel";
-            this.levelDescriptionLabel.Size = new System.Drawing.Size(166, 24);
+            this.levelDescriptionLabel.Size = new System.Drawing.Size(76, 13);
             this.levelDescriptionLabel.TabIndex = 2;
-            this.levelDescriptionLabel.Text = "Level of Student:";
+            this.levelDescriptionLabel.Text = "Student Level:";
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(137, 18);
+            this.nameLabel.Location = new System.Drawing.Point(63, 10);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(185, 24);
+            this.nameLabel.Size = new System.Drawing.Size(95, 13);
             this.nameLabel.TabIndex = 3;
-            this.nameLabel.Text = "Leonardo DiCaprio";
+            this.nameLabel.Text = "";
             // 
             // levelLabel
             // 
             this.levelLabel.AutoSize = true;
-            this.levelLabel.Location = new System.Drawing.Point(184, 80);
+            this.levelLabel.Location = new System.Drawing.Point(85, 43);
+            this.levelLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.levelLabel.Name = "levelLabel";
-            this.levelLabel.Size = new System.Drawing.Size(100, 24);
+            this.levelLabel.Size = new System.Drawing.Size(56, 13);
             this.levelLabel.TabIndex = 4;
-            this.levelLabel.Text = "Advanced";
+            this.levelLabel.Text = "";
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(874, 632);
+            this.cancelButton.Location = new System.Drawing.Point(403, 342);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(147, 74);
+            this.cancelButton.Size = new System.Drawing.Size(68, 40);
             this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -94,19 +100,20 @@
             // 
             // confirmButton
             // 
-            this.confirmButton.Location = new System.Drawing.Point(1039, 632);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(133, 74);
+            this.confirmButton.Location = new System.Drawing.Point(480, 342);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.confirmButton.Name = "viewButton";
+            this.confirmButton.Size = new System.Drawing.Size(61, 40);
             this.confirmButton.TabIndex = 6;
-            this.confirmButton.Text = "OK";
+            this.confirmButton.Text = "View";
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
             // QuizList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1196, 736);
+            this.ClientSize = new System.Drawing.Size(552, 399);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.levelLabel);
@@ -114,6 +121,7 @@
             this.Controls.Add(this.levelDescriptionLabel);
             this.Controls.Add(this.userNameDescriptionLabel);
             this.Controls.Add(this.quizListView);
+            this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.Name = "QuizList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quiz List";
