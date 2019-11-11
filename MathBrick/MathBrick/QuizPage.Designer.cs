@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_subject = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker_dueDate = new System.Windows.Forms.DateTimePicker();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -45,7 +45,7 @@
             this.timer_question = new System.Windows.Forms.Timer(this.components);
             this.btn_edit = new CCWin.SkinControl.SkinButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_level = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -76,14 +76,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Due:";
             // 
-            // dateTimePicker1
+            // dateTimePicker_dueDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(694, 83);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker_dueDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_dueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_dueDate.Location = new System.Drawing.Point(694, 83);
+            this.dateTimePicker_dueDate.Name = "dateTimePicker_dueDate";
+            this.dateTimePicker_dueDate.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePicker_dueDate.TabIndex = 3;
             // 
             // listView1
             // 
@@ -234,25 +234,25 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Level:";
             // 
-            // comboBox1
+            // comboBox_level
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Basic",
+            this.comboBox_level.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_level.FormattingEnabled = true;
+            this.comboBox_level.Items.AddRange(new object[] {
+            "Beginner",
             "Intermediate",
             "Advanced"});
-            this.comboBox1.Location = new System.Drawing.Point(694, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 32);
-            this.comboBox1.TabIndex = 13;
+            this.comboBox_level.Location = new System.Drawing.Point(694, 35);
+            this.comboBox_level.Name = "comboBox_level";
+            this.comboBox_level.Size = new System.Drawing.Size(200, 32);
+            this.comboBox_level.TabIndex = 13;
             // 
             // QuizPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 573);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_level);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.label3);
@@ -261,13 +261,14 @@
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker_dueDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_subject);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "QuizPage";
             this.Text = "QuizPage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuizPage_FormClosed);
             this.Load += new System.EventHandler(this.QuizPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -279,7 +280,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_subject;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_dueDate;
         private System.Windows.Forms.ListView listView1;
         private CCWin.SkinControl.SkinButton btn_add;
         private CCWin.SkinControl.SkinButton btn_delete;
@@ -292,6 +293,6 @@
         private System.Windows.Forms.Timer timer_question;
         private CCWin.SkinControl.SkinButton btn_edit;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_level;
     }
 }
