@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
-            this.conformButton = new CCWin.SkinControl.SkinButton();
+            this.confirmButton = new CCWin.SkinControl.SkinButton();
             this.returnButton = new CCWin.SkinControl.SkinButton();
             this.actComboBox = new CCWin.SkinControl.SkinComboBox();
             this.accoutListView = new System.Windows.Forms.ListView();
@@ -41,7 +41,7 @@
             // skinPanel1
             // 
             this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel1.Controls.Add(this.conformButton);
+            this.skinPanel1.Controls.Add(this.confirmButton);
             this.skinPanel1.Controls.Add(this.returnButton);
             this.skinPanel1.Controls.Add(this.actComboBox);
             this.skinPanel1.Controls.Add(this.accoutListView);
@@ -57,25 +57,26 @@
             this.skinPanel1.Size = new System.Drawing.Size(1208, 703);
             this.skinPanel1.TabIndex = 0;
             // 
-            // conformButton
+            // confirmButton
             // 
-            this.conformButton.BackColor = System.Drawing.Color.Transparent;
-            this.conformButton.BaseColor = System.Drawing.Color.PeachPuff;
-            this.conformButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.conformButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.conformButton.DownBack = null;
-            this.conformButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.conformButton.Location = new System.Drawing.Point(873, 542);
-            this.conformButton.Margin = new System.Windows.Forms.Padding(15, 12, 15, 12);
-            this.conformButton.MouseBack = null;
-            this.conformButton.Name = "conformButton";
-            this.conformButton.NormlBack = null;
-            this.conformButton.Radius = 15;
-            this.conformButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.conformButton.Size = new System.Drawing.Size(221, 78);
-            this.conformButton.TabIndex = 7;
-            this.conformButton.Text = "Confirm";
-            this.conformButton.UseVisualStyleBackColor = false;
+            this.confirmButton.BackColor = System.Drawing.Color.Transparent;
+            this.confirmButton.BaseColor = System.Drawing.Color.PeachPuff;
+            this.confirmButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.confirmButton.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.confirmButton.DownBack = null;
+            this.confirmButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmButton.Location = new System.Drawing.Point(873, 542);
+            this.confirmButton.Margin = new System.Windows.Forms.Padding(15, 12, 15, 12);
+            this.confirmButton.MouseBack = null;
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.NormlBack = null;
+            this.confirmButton.Radius = 15;
+            this.confirmButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.confirmButton.Size = new System.Drawing.Size(221, 78);
+            this.confirmButton.TabIndex = 7;
+            this.confirmButton.Text = "Confirm";
+            this.confirmButton.UseVisualStyleBackColor = false;
+            this.confirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
             // returnButton
             // 
@@ -94,14 +95,16 @@
             this.returnButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
             this.returnButton.Size = new System.Drawing.Size(221, 78);
             this.returnButton.TabIndex = 6;
-            this.returnButton.Text = "Retutn";
+            this.returnButton.Text = "Return";
             this.returnButton.UseVisualStyleBackColor = false;
+            this.returnButton.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
             // actComboBox
             // 
             this.actComboBox.BaseColor = System.Drawing.Color.PeachPuff;
             this.actComboBox.BorderColor = System.Drawing.Color.Silver;
             this.actComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.actComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.actComboBox.FormattingEnabled = true;
             this.actComboBox.Location = new System.Drawing.Point(37, 566);
             this.actComboBox.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
@@ -156,7 +159,7 @@
         private CCWin.SkinControl.SkinComboBox actComboBox;
         private System.Windows.Forms.ListView accoutListView;
         private CCWin.SkinControl.SkinLabel titleLabel;
-        private CCWin.SkinControl.SkinButton conformButton;
+        private CCWin.SkinControl.SkinButton confirmButton;
         private CCWin.SkinControl.SkinButton returnButton;
     }
 }

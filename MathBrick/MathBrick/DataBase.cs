@@ -96,5 +96,26 @@ namespace MathBrick
         {
             return usersDic.Values.ToArray();
         }
+
+        public bool ChangeAuthorizeLevel(string userName, int level)
+        {
+            if (usersDic.ContainsKey(userName))
+            {
+                if (level == -1)
+                {
+                    usersDic.Remove(userName);
+                }
+                else
+                {
+                    usersDic[userName].authorizeLevel = level;
+                }
+                File.WriteAllText(userListFileName, new JavaScriptSerializer().Serialize(usersDic));
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
