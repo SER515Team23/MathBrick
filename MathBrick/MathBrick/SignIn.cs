@@ -17,8 +17,6 @@ namespace MathBrick
             InitializeComponent();
             this.KeyPreview = true;
             this.KeyDown += PasswordTextBoxKeyDown;
-
-            QuizUtils.Instance.ShowExampleForThisClass();
         }
 
         private void SignInClick(object sender, EventArgs e)

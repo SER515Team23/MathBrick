@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MathBrick.Model;
 
 /* 
  * Author: Xinkai Wang
@@ -67,13 +68,15 @@ namespace MathBrick
         {
             if(CheckValid())
             {
-                QuizList.dueDate = dateTimePicker_dueDate.Text;
-                QuizList.subject = textBox_subject.Text;
-                QuizList.level = comboBox_level.Text;
-                if(isNew)
-                    QuizList.returnType = "add";
-                else
-                    QuizList.returnType = "edit";
+
+//                QuizList.dueDate = dateTimePicker_dueDate.Text;
+//                QuizList.subject = textBox_subject.Text;
+//                QuizList.level = comboBox_level.Text;
+//                if(isNew)
+//                    QuizList.returnType = "add";
+//                else
+//                    QuizList.returnType = "edit";
+                SaveQuizToDatabase();
                 Close();
             }
         }
@@ -170,6 +173,39 @@ namespace MathBrick
             answer = "";
             returnType = "";
             isTakeQuiz = false;
+        }
+
+        private void SaveQuizToDatabase()
+        {
+            List<Question> questionsList = new List<Question>();
+            foreach (ListViewItem lv in listView1.SelectedItems)
+            {
+                Question ques = new Question(lv.SubItems[1].Text, lv.SubItems[2].Text);
+                questionsList.Add(ques);
+            }
+            Quiz quiz = new Quiz(textBox_subject.Text, ChangeLevelToInt(comboBox_level.Text), dateTimePicker_dueDate.Text, DataBase.Instance.activeUser.userName, questionsList.ToArray());
+            QuizUtils.Instance.StoreQuiz(quiz);
+        }
+
+        private int ChangeLevelToInt(string levelString)
+        {
+            int levelInt;
+            switch(levelString)
+            {
+                case "Beginner":
+                    levelInt = 1;
+                    break;
+                case "Intermediate":
+                    levelInt = 2;
+                    break;
+                case "Advanced":
+                    levelInt = 3;
+                    break;
+                default:
+                    levelInt = -1;
+                    break;
+            }
+            return levelInt;
         }
     }
 }

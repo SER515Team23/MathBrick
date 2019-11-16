@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using MathBrick.Model;
 
 /* 
  * Author: Yu-Ting Tsao, Xinkai Wang
@@ -71,6 +72,7 @@ namespace MathBrick
                     break;
             }
             levelLabel.Text = userLevel;
+            ShowQuiz();
         }
 
         private void reOrder()
@@ -152,6 +154,48 @@ namespace MathBrick
             level = "";
             subject = "";
             returnType = "";
+        }
+
+        private void ShowQuiz()
+        {
+            int userLevel = DataBase.Instance.activeUser.authorizeLevel;
+            Quiz[] Quizzes;
+            if (userLevel == 4)
+                Quizzes = QuizUtils.Instance.RetrieveQuizzes();
+            else
+                Quizzes = QuizUtils.Instance.RetrieveQuizzes(userLevel);
+            foreach(Quiz quiz in Quizzes)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = "";
+                lvi.SubItems.Add(quiz.date);
+                lvi.SubItems.Add(quiz.subject);
+                lvi.SubItems.Add(ChangeLevelToString(quiz.level));
+                lvi.SubItems.Add(quiz.teacherID);
+                quizListView.Items.Add(lvi);
+            }
+            reOrder();
+        }
+
+        private string ChangeLevelToString(int levelInt)
+        {
+            string levelString;
+            switch(levelInt)
+            {
+                case 1:
+                    levelString = "Beginner";
+                    break;
+                case 2:
+                    levelString = "Intermediate";
+                    break;
+                case 3:
+                    levelString = "Advanced";
+                    break;
+                default:
+                    levelString = "Error";
+                    break;
+            }
+            return levelString;
         }
     }
 }
