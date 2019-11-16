@@ -106,9 +106,9 @@
             this.levelDescriptionLabel.Location = new System.Drawing.Point(6, 40);
             this.levelDescriptionLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.levelDescriptionLabel.Name = "levelDescriptionLabel";
-            this.levelDescriptionLabel.Size = new System.Drawing.Size(107, 12);
+            this.levelDescriptionLabel.Size = new System.Drawing.Size(89, 12);
             this.levelDescriptionLabel.TabIndex = 2;
-            this.levelDescriptionLabel.Text = "Level of Student:";
+            this.levelDescriptionLabel.Text = "Level of User:";
             // 
             // nameLabel
             // 
@@ -196,7 +196,7 @@
             this.btn_takeQuiz.TabIndex = 10;
             this.btn_takeQuiz.Text = "Take Quiz";
             this.btn_takeQuiz.UseVisualStyleBackColor = false;
-            this.btn_takeQuiz.Click += new System.EventHandler(this.ConfirmButton_Click);
+            this.btn_takeQuiz.Click += new System.EventHandler(this.Btn_takeQuiz_Click);
             // 
             // timer_quiz
             // 

@@ -27,7 +27,6 @@ namespace MathBrick
             question = inputQues;
             answer = inputAns;
             InitializeComponent();
-
         }
 
         private void Question_Load(object sender, EventArgs e)
