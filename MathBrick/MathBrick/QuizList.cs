@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using CCWin;
 using MathBrick.Model;
 
 /* 
@@ -10,7 +11,7 @@ using MathBrick.Model;
 
 namespace MathBrick
 {
-    public partial class QuizList : Form
+    public partial class QuizList : Skin_Color
     {
         public static bool hasReturn = false;
 

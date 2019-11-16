@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin;
 using MathBrick.Model;
+
 
 /* 
  * Author: Xinkai Wang
@@ -16,7 +18,7 @@ using MathBrick.Model;
 
 namespace MathBrick
 {
-    public partial class QuizPage : Form
+    public partial class QuizPage : Skin_Color
     {
         public static string question = "";
         public static string answer = "";
