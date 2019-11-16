@@ -5,6 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Web.Script.Serialization;
 
+/* 
+ * Author: Yu-Ting Tsao
+ * Description: Manipulate quiz related database.
+*/
+
 namespace MathBrick
 {
     class QuizUtils
@@ -28,6 +33,8 @@ namespace MathBrick
                 return instance;
             }
         }
+
+        // -----------------------EXAMPLE-----------------------
 
         /* Only demo in developing stage. Do not use in the release version. 
          Call this method by QuizUtils.Instance.ShowExampleForThisClass() */
@@ -60,17 +67,7 @@ namespace MathBrick
             PrintOutOneQuiz(specificQuiz);
         }
 
-        private Dictionary<string, Quiz> ReadQuizzes()
-        {
-            var quizDic = new Dictionary<string, Quiz>();
-            if (File.Exists(quizFileName))
-            {
-                quizzesDic = new JavaScriptSerializer()
-                        .Deserialize<Dictionary<string, Quiz>>(File.ReadAllText(quizFileName));
-            }
-            Console.WriteLine("Cannot find any quizzes in database.");
-            return quizDic;
-        }
+        // -----------------------EXAMPLE-----------------------
 
         public void StoreQuiz(Quiz myQuiz)
         {
@@ -97,8 +94,15 @@ namespace MathBrick
             return selectedQuizzes.ToArray();
         }
 
-        public Quiz RetrieveOneQuiz(string uniqueID) {
+        public Quiz RetrieveOneQuiz(string uniqueID)
+        {
             return quizzesDic[uniqueID];
+        }
+
+        public void DeleteAQuiz(string uniqueID)
+        {
+            quizzesDic.Remove(uniqueID);
+            File.WriteAllText(quizFileName, new JavaScriptSerializer().Serialize(quizzesDic));
         }
 
         private void PrintOutQuizDictionary()
@@ -114,6 +118,20 @@ namespace MathBrick
                 }
             }
         }
+
+        private Dictionary<string, Quiz> ReadQuizzes()
+        {
+            var storedDic = new Dictionary<string, Quiz>();
+            if (File.Exists(quizFileName))
+            {
+                storedDic = new JavaScriptSerializer()
+                        .Deserialize<Dictionary<string, Quiz>>(File.ReadAllText(quizFileName));
+            }
+            Console.WriteLine("Cannot find any quizzes in database.");
+            return storedDic;
+        }
+
+        // -----------------------EXAMPLE-----------------------
 
         private void PrintOutQuizArray(Quiz[] q)
         {
@@ -137,5 +155,7 @@ namespace MathBrick
                 Console.WriteLine("Answer: " + s.answer);
             }
         }
+
+        // -----------------------EXAMPLE-----------------------
     }
 }
