@@ -1,6 +1,6 @@
 ﻿namespace MathBrick
 {
-    partial class Question
+    partial class QuestionPopUp
     {
         /// <summary>
         /// Required designer variable.
