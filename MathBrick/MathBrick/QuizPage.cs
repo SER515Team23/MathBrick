@@ -81,7 +81,7 @@ namespace MathBrick
         private void Btn_add_Click(object sender, EventArgs e)
         {
             timer_question.Enabled = true;
-            Question newQues = new Question("", "", true);
+            QuestionPopUp newQues = new QuestionPopUp("", "", true);
             newQues.Show();
         }
 
@@ -144,7 +144,7 @@ namespace MathBrick
             foreach (ListViewItem lv in listView1.SelectedItems)
             {
                 editItem = lv;
-                Question selectedQues = new Question(lv.SubItems[1].Text, lv.SubItems[2].Text, false);
+                QuestionPopUp selectedQues = new QuestionPopUp(lv.SubItems[1].Text, lv.SubItems[2].Text, false);
                 selectedQues.Show();
             }
         }

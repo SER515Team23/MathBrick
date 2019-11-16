@@ -15,13 +15,13 @@ using System.Windows.Forms;
 
 namespace MathBrick
 {
-    public partial class Question : Form
+    public partial class QuestionPopUp : Form
     {
         private string question = "";
         private string answer = "";
         private bool isNew = true;
 
-        public Question(string inputQues, string inputAns, bool inputIsNew)
+        public QuestionPopUp(string inputQues, string inputAns, bool inputIsNew)
         {
             isNew = inputIsNew;
             question = inputQues;
