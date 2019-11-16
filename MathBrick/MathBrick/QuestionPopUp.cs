@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin;
 
 /* 
  * Author: Xinkai Wang
@@ -15,7 +16,7 @@ using System.Windows.Forms;
 
 namespace MathBrick
 {
-    public partial class QuestionPopUp : Form
+    public partial class QuestionPopUp : Skin_Color
     {
         private string question = "";
         private string answer = "";
@@ -29,21 +30,14 @@ namespace MathBrick
             InitializeComponent();
 
         }
-
-        private void Question_Load(object sender, EventArgs e)
-        {
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            textBox_question.Text = question;
-            textBox_answer.Text = answer;
-        }
-
-        private void Btn_cancel_Click(object sender, EventArgs e)
+        
+        private void btn_cancel_Click_1(object sender, EventArgs e)
         {
             QuizPage.returnType = "cancel";
             Close();
         }
 
-        private void Btn_save_Click(object sender, EventArgs e)
+        private void btn_save_Click_1(object sender, EventArgs e)
         {
             if (CheckValid())
             {
@@ -57,6 +51,12 @@ namespace MathBrick
             }
         }
 
+        private void Question_Load(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            textBox_question.Text = question;
+            textBox_answer.Text = answer;
+        }
         private bool CheckValid()
         {
             if (textBox_question.Text == "")
@@ -67,5 +67,6 @@ namespace MathBrick
                 return true;
             return false;
         }
+
     }
 }
