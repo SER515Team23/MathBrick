@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using CCWin;
 
 /* 
  * Author: Yu-Ting Tsao, Xinkai Wang
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 
 namespace MathBrick
 {
-    public partial class QuizList : Form
+    public partial class QuizList : Skin_Color
     {
         private string userID = "";
         private string userLevel = "";
