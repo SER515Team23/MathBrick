@@ -45,6 +45,7 @@
             this.btn_takeQuiz = new CCWin.SkinControl.SkinButton();
             this.timer_quiz = new System.Windows.Forms.Timer(this.components);
             this.btn_delete = new CCWin.SkinControl.SkinButton();
+            this.btn_viewgrade = new CCWin.SkinControl.SkinButton();
             this.SuspendLayout();
             // 
             // quizListView
@@ -165,7 +166,7 @@
             this.editButton.DownBack = null;
             this.editButton.DownBaseColor = System.Drawing.Color.Gainsboro;
             this.editButton.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.Location = new System.Drawing.Point(100, 324);
+            this.editButton.Location = new System.Drawing.Point(91, 324);
             this.editButton.MouseBack = null;
             this.editButton.Name = "editButton";
             this.editButton.NormlBack = null;
@@ -232,7 +233,7 @@
             this.btn_delete.DownBack = null;
             this.btn_delete.DownBaseColor = System.Drawing.SystemColors.ControlDark;
             this.btn_delete.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(187, 324);
+            this.btn_delete.Location = new System.Drawing.Point(174, 324);
             this.btn_delete.MouseBack = null;
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.NormlBack = null;
@@ -244,6 +245,28 @@
             this.btn_delete.UseVisualStyleBackColor = false;
             this.btn_delete.Click += new System.EventHandler(this.Btn_delete_Click);
             // 
+            // btn_viewgrade
+            // 
+            this.btn_viewgrade.BackColor = System.Drawing.Color.Transparent;
+            this.btn_viewgrade.BaseColor = System.Drawing.Color.Gainsboro;
+            this.btn_viewgrade.BorderColor = System.Drawing.Color.Silver;
+            this.btn_viewgrade.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_viewgrade.DownBack = null;
+            this.btn_viewgrade.DownBaseColor = System.Drawing.SystemColors.Control;
+            this.btn_viewgrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_viewgrade.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_viewgrade.Location = new System.Drawing.Point(262, 324);
+            this.btn_viewgrade.MouseBack = null;
+            this.btn_viewgrade.Name = "btn_viewgrade";
+            this.btn_viewgrade.NormlBack = null;
+            this.btn_viewgrade.Radius = 10;
+            this.btn_viewgrade.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_viewgrade.Size = new System.Drawing.Size(94, 29);
+            this.btn_viewgrade.TabIndex = 15;
+            this.btn_viewgrade.Text = "View Grade";
+            this.btn_viewgrade.UseVisualStyleBackColor = false;
+            this.btn_viewgrade.Click += new System.EventHandler(this.btn_viewgrade_Click);
+            // 
             // QuizList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -252,6 +275,7 @@
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(552, 368);
+            this.Controls.Add(this.btn_viewgrade);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_takeQuiz);
             this.Controls.Add(this.btn_cancel);
@@ -291,5 +315,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Timer timer_quiz;
         private CCWin.SkinControl.SkinButton btn_delete;
+        private CCWin.SkinControl.SkinButton btn_viewgrade;
     }
 }

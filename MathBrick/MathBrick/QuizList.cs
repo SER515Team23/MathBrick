@@ -154,5 +154,12 @@ namespace MathBrick
             subject = "";
             returnType = "";
         }
+
+        private void btn_viewgrade_Click(object sender, EventArgs e)
+        {
+            timer_quiz.Enabled = true;
+            ViewGrade gradepage = new ViewGrade();
+            gradepage.Show();
+        }
     }
 }
