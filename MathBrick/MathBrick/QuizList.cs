@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using CCWin;
 
 /* 
  * Author: Yu-Ting Tsao, Xinkai Wang
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 
 namespace MathBrick
 {
-    public partial class QuizList : Form
+    public partial class QuizList : Skin_Color
     {
         private string userID = "";
         private string userLevel = "";
@@ -152,6 +153,13 @@ namespace MathBrick
             level = "";
             subject = "";
             returnType = "";
+        }
+
+        private void btn_viewgrade_Click(object sender, EventArgs e)
+        {
+            timer_quiz.Enabled = true;
+            ViewGrade gradepage = new ViewGrade();
+            gradepage.Show();
         }
     }
 }
