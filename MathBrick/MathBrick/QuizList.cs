@@ -32,6 +32,22 @@ namespace MathBrick
             this.nameLabel.Text = currentUser.userName;
             int level = currentUser.authorizeLevel;
             this.levelLabel.Text = (level == 1 ? "Beginner" : level == 2? "Intermediate" : level == 3? "Advanced":"");
+            this.LoadMockQuizList();
+        }
+
+        /// <summary>
+        /// Current mockup quiz list items
+        /// </summary>
+        private void LoadMockQuizList()
+        {
+            User currentUser = DataBase.Instance.activeUser;
+            ListViewItem lvi = new ListViewItem();
+            lvi.Text = "";
+            lvi.SubItems.Add("11-21");
+            lvi.SubItems.Add("Quiz 1");
+            lvi.SubItems.Add(currentUser.authorizeLevel.ToString());
+            lvi.SubItems.Add("t01");
+            quizListView.Items.Add(lvi);
         }
 
         private void ConfirmButton_Click(object sender, System.EventArgs e)
@@ -107,8 +123,9 @@ namespace MathBrick
 
         private void HideAddEdit()
         {
-            btn_cancel.Hide();
-            btn_takeQuiz.Hide();
+            btn_delete.Hide();
+            addButton.Hide();
+            editButton.Hide();
         }
 
         private void Timer_quiz_Tick(object sender, EventArgs e)
@@ -164,17 +181,5 @@ namespace MathBrick
             subject = "";
             returnType = "";
         }
-    }
-
-    public class QuizListClass
-    {
-        public int Id { get; set; }
-        public int Level { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public DateTime DueDate { get; set; }
-        public String Title { get; set; }
-        public String Description { get; set; }
-        public String AssignedBy { get; set; }
-        public String Grade { get; set; }
     }
 }

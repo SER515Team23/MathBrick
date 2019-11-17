@@ -56,7 +56,27 @@ namespace MathBrick
             btn_add.Hide();
             btn_save.Hide();
             btn_delete.Hide();
-            btn_edit.Hide();
+            //btn_edit.Hide();
+            loadMockData();
+        }
+
+        private void loadMockData()
+        {
+            ListViewItem lvi = new ListViewItem();
+            lvi.Text = "";
+            lvi.SubItems.Add("2+3");
+            lvi.SubItems.Add("5");
+            listView1.Items.Add(lvi);
+            ListViewItem lvi1 = new ListViewItem();
+            lvi1.Text = "";
+            lvi1.SubItems.Add("4+5");
+            lvi1.SubItems.Add("9");
+            listView1.Items.Add(lvi1);
+            ListViewItem lvi2 = new ListViewItem();
+            lvi2.Text = "";
+            lvi2.SubItems.Add("12-5");
+            lvi2.SubItems.Add("7");
+            listView1.Items.Add(lvi2);
         }
 
         private void Btn_cancel_Click(object sender, EventArgs e)
