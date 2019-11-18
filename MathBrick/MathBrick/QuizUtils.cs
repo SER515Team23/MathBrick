@@ -65,6 +65,9 @@ namespace MathBrick
             Console.WriteLine("\nRetrieve specific ONE quiz: ");
             Quiz specificQuiz = QuizUtils.Instance.RetrieveOneQuiz(firstQuiz.uniqueID);
             PrintOutOneQuiz(specificQuiz);
+
+            Console.WriteLine("\nSee API to find put scores & edit quiz.");
+            QuizUtils.Instance.PutScoreToQuiz(firstQuiz.uniqueID, "joker007", 74);
         }
 
         // -----------------------EXAMPLE-----------------------
@@ -73,6 +76,19 @@ namespace MathBrick
         {
             quizzesDic.Add(myQuiz.uniqueID, myQuiz);
             File.WriteAllText(quizFileName, new JavaScriptSerializer().Serialize(quizzesDic));
+        }
+
+        public void EditQuiz(string uniqueID, Quiz changeQuiz)
+        {
+            if (quizzesDic.ContainsKey(uniqueID))
+            {
+                quizzesDic[uniqueID] = changeQuiz;
+                File.WriteAllText(quizFileName, new JavaScriptSerializer().Serialize(quizzesDic));
+            }
+            else
+            {
+                Console.WriteLine("Error! Cannot find the quiz ID: " + uniqueID);
+            }
         }
 
         public Quiz[] RetrieveQuizzes(int level = 0)
@@ -105,17 +121,18 @@ namespace MathBrick
             File.WriteAllText(quizFileName, new JavaScriptSerializer().Serialize(quizzesDic));
         }
 
-        private void PrintOutQuizDictionary()
+        public void PutScoreToQuiz(string quizUniqueID, string studentID, int score)
         {
-            Quiz[] q = quizzesDic.Values.ToArray();
-            foreach (Quiz quiz in q)
+            if (quizzesDic.ContainsKey(quizUniqueID))
             {
-                Console.WriteLine("Title: " + quiz.subject);
-                foreach (Question s in quiz.questions)
-                {
-                    Console.WriteLine("Question: " + s.title);
-                    Console.WriteLine("Answer: " + s.answer);
-                }
+                Quiz theQuiz = quizzesDic[quizUniqueID];
+                theQuiz.studentGrades[studentID] = score;
+                quizzesDic[quizUniqueID] = theQuiz;
+                File.WriteAllText(quizFileName, new JavaScriptSerializer().Serialize(quizzesDic));
+            }
+            else
+            {
+                Console.WriteLine("Error! Cannot find the quiz ID: " + quizUniqueID);
             }
         }
 
@@ -153,6 +170,21 @@ namespace MathBrick
             {
                 Console.WriteLine("Question: " + s.title);
                 Console.WriteLine("Answer: " + s.answer);
+            }
+            Console.WriteLine("gg: " + quiz.studentGrades.Count);
+        }
+
+        private void PrintOutQuizDictionary()
+        {
+            Quiz[] q = quizzesDic.Values.ToArray();
+            foreach (Quiz quiz in q)
+            {
+                Console.WriteLine("Title: " + quiz.subject);
+                foreach (Question s in quiz.questions)
+                {
+                    Console.WriteLine("Question: " + s.title);
+                    Console.WriteLine("Answer: " + s.answer);
+                }
             }
         }
 
