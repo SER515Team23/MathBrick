@@ -94,9 +94,9 @@ namespace MathBrick
         {
             foreach (ListViewItem lv in quizListView.SelectedItems)
             {
-                lv.Remove();
+                QuizUtils.Instance.DeleteAQuiz(lv.Tag.ToString());
             }
-            reOrder();
+            RefreshListview();
         }
 
         private void QuizList_FormClosed(object sender, FormClosedEventArgs e)
