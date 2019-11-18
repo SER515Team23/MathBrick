@@ -32,7 +32,7 @@ namespace MathBrick
 
         private void Btn_takeQuiz_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem lv in quizListView.SelectedItems)
+            foreach (ListViewItem lv in quizListView.SelectedItems)//take quiz button click
             {
                 QuizPage.isTakeQuiz = true;
                 QuizPage quizPage = new QuizPage(lv);
@@ -164,6 +164,16 @@ namespace MathBrick
                 lv.Remove();
             ShowQuiz();
             reOrder();
+        }
+        private void btn_viewgrade_Click(object sender, EventArgs e)
+        {
+            timer_quiz.Enabled = true;
+            foreach (ListViewItem lv in quizListView.SelectedItems)
+            {
+               
+                ViewGrade gradepage = new ViewGrade();
+                gradepage.Show();
+            }
         }
 
     }

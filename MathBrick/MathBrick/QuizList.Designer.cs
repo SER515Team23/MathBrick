@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.quizListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.userNameDescriptionLabel = new System.Windows.Forms.Label();
             this.levelDescriptionLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
@@ -92,6 +86,15 @@
             // 
             this.columnHeader5.Text = "Teacher ID";
             this.columnHeader5.Width = 77;
+            // 
+            this.btn_viewgrade = new CCWin.SkinControl.SkinButton();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.quizListView = new System.Windows.Forms.ListView();
+            this.SuspendLayout();
             // 
             // userNameDescriptionLabel
             // 
@@ -244,9 +247,75 @@
             this.btn_delete.UseVisualStyleBackColor = false;
             this.btn_delete.Click += new System.EventHandler(this.Btn_delete_Click);
             // 
+            // btn_viewgrade
+            // 
+            this.btn_viewgrade.BackColor = System.Drawing.Color.Transparent;
+            this.btn_viewgrade.BaseColor = System.Drawing.Color.Gainsboro;
+            this.btn_viewgrade.BorderColor = System.Drawing.Color.Silver;
+            this.btn_viewgrade.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_viewgrade.DownBack = null;
+            this.btn_viewgrade.DownBaseColor = System.Drawing.SystemColors.Control;
+            this.btn_viewgrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_viewgrade.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_viewgrade.Location = new System.Drawing.Point(262, 324);
+            this.btn_viewgrade.MouseBack = null;
+            this.btn_viewgrade.Name = "btn_viewgrade";
+            this.btn_viewgrade.NormlBack = null;
+            this.btn_viewgrade.Radius = 10;
+            this.btn_viewgrade.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_viewgrade.Size = new System.Drawing.Size(94, 29);
+            this.btn_viewgrade.TabIndex = 15;
+            this.btn_viewgrade.Text = "View Grade";
+            this.btn_viewgrade.UseVisualStyleBackColor = false;
+            this.btn_viewgrade.Click += new System.EventHandler(this.btn_viewgrade_Click);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "No.";
+            this.columnHeader1.Width = 40;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Due Date";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Subject";
+            this.columnHeader3.Width = 270;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Level";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Teacher ID";
+            this.columnHeader5.Width = 77;
+            // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Grade";
+            // 
+            // quizListView
+            // 
+            this.quizListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.quizListView.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quizListView.FullRowSelect = true;
+            this.quizListView.HideSelection = false;
+            this.quizListView.Location = new System.Drawing.Point(1, 103);
+            this.quizListView.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.quizListView.MultiSelect = false;
+            this.quizListView.Name = "quizListView";
+            this.quizListView.Size = new System.Drawing.Size(551, 204);
+            this.quizListView.TabIndex = 0;
+            this.quizListView.UseCompatibleStateImageBehavior = false;
+            this.quizListView.View = System.Windows.Forms.View.Details;
             // 
             // QuizList
             // 
@@ -255,7 +324,8 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(637, 399);
+            this.ClientSize = new System.Drawing.Size(637, 399);         
+            this.Controls.Add(this.btn_viewgrade);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_takeQuiz);
             this.Controls.Add(this.btn_cancel);
@@ -278,8 +348,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView quizListView;
         private System.Windows.Forms.Label userNameDescriptionLabel;
         private System.Windows.Forms.Label levelDescriptionLabel;
         private System.Windows.Forms.Label nameLabel;
@@ -288,13 +356,16 @@
         private CCWin.SkinControl.SkinButton editButton;
         private CCWin.SkinControl.SkinButton btn_cancel;
         private CCWin.SkinControl.SkinButton btn_takeQuiz;
+        private CCWin.SkinControl.SkinButton btn_viewgrade;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+
         private System.Windows.Forms.Timer timer_quiz;
         private CCWin.SkinControl.SkinButton btn_delete;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ListView quizListView;
     }
 }
