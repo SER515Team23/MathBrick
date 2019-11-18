@@ -127,7 +127,7 @@ namespace MathBrick
                 {
                     if (quiz.studentGrades.ContainsKey(DataBase.Instance.activeUser.userName))
                     {
-                        int grade;
+                        double grade;
                         quiz.studentGrades.TryGetValue(DataBase.Instance.activeUser.userName, out grade);
                         lvi.SubItems.Add(grade.ToString());
                     }

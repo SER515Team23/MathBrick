@@ -201,8 +201,6 @@ namespace MathBrick
             }
             else
             {
-                newQuiz.studentGrades.Add("b01", 100);
-                newQuiz.studentGrades.Add("i01", 95);
                 QuizUtils.Instance.StoreQuiz(newQuiz);
             }
         }
