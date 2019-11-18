@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CCWin;
+using MathBrick.Model;
 
 
 /* 
@@ -22,28 +23,42 @@ namespace MathBrick
         public static string question = "";
         public static string answer = "";
         public static string returnType = "";
+        public static bool isEdit = false;
         public static bool isTakeQuiz = false;
-        private bool isNew = true;
-        private string dueDate = "";
-        private string level = "";
-        private string subjet = "";
         private ListViewItem editItem = null;
 
-        public QuizPage(string inputDueDate, string inputSubject, string inputLevel, bool inputIsNew)
+        private Quiz quiz = null;
+
+        public QuizPage()
         {
             InitializeComponent();
-            dueDate = inputDueDate;
-            level = inputLevel;
-            subjet = inputSubject;
-            isNew = inputIsNew;
+        }
+
+        public QuizPage(ListViewItem lv)
+        {
+            InitializeComponent();
+            quiz = QuizUtils.Instance.RetrieveOneQuiz(lv.Tag.ToString());
         }
 
         private void QuizPage_Load(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            dateTimePicker_dueDate.Text = dueDate;
-            comboBox_level.Text = level;
-            textBox_subject.Text = subjet;
+            if (quiz != null)
+            {
+                dateTimePicker_dueDate.Text = quiz.date;
+                comboBox_level.Text = ChangeLevelToString(quiz.level);
+                textBox_subject.Text = quiz.subject;
+                foreach (Question q in quiz.questions)
+                {
+                    ListViewItem lvi = new ListViewItem();
+                    lvi.Text = "";
+                    lvi.SubItems.Add(q.title);
+                    lvi.SubItems.Add(q.answer);
+                    listView1.Items.Add(lvi);
+                    returnType = "";
+                }
+                reOrder();
+            }
             if (isTakeQuiz)
                 ChangeForTakeQuiz();
         }
@@ -81,7 +96,7 @@ namespace MathBrick
 
         private void Btn_cancel_Click(object sender, EventArgs e)
         {
-            QuizList.returnType = "cancel";
+            QuizList.hasReturn= true;
             Close();
         }
 
@@ -89,13 +104,8 @@ namespace MathBrick
         {
             if(CheckValid())
             {
-                QuizList.dueDate = dateTimePicker_dueDate.Text;
-                QuizList.subject = textBox_subject.Text;
-                QuizList.level = comboBox_level.Text;
-                if(isNew)
-                    QuizList.returnType = "add";
-                else
-                    QuizList.returnType = "edit";
+                SaveQuizToDatabase();
+                QuizList.hasReturn = true; 
                 Close();
             }
         }
@@ -192,6 +202,61 @@ namespace MathBrick
             answer = "";
             returnType = "";
             isTakeQuiz = false;
+            isEdit = false;
+        }
+
+        private void SaveQuizToDatabase()
+        {
+            List<Question> questionsList = new List<Question>();
+            foreach (ListViewItem lv in listView1.Items)
+            {
+                Question ques = new Question(lv.SubItems[1].Text, lv.SubItems[2].Text);
+                questionsList.Add(ques);
+            }
+            Quiz quiz = new Quiz(textBox_subject.Text, ChangeLevelToInt(comboBox_level.Text), dateTimePicker_dueDate.Text, DataBase.Instance.activeUser.userName, questionsList.ToArray());
+            QuizUtils.Instance.StoreQuiz(quiz);
+        }
+
+        private int ChangeLevelToInt(string levelString)
+        {
+            int levelInt;
+            switch(levelString)
+            {
+                case "Beginner":
+                    levelInt = 1;
+                    break;
+                case "Intermediate":
+                    levelInt = 2;
+                    break;
+                case "Advanced":
+                    levelInt = 3;
+                    break;
+                default:
+                    levelInt = -1;
+                    break;
+            }
+            return levelInt;
+        }
+
+        private string ChangeLevelToString(int levelInt)
+        {
+            string levelString;
+            switch (levelInt)
+            {
+                case 1:
+                    levelString = "Beginner";
+                    break;
+                case 2:
+                    levelString = "Intermediate";
+                    break;
+                case 3:
+                    levelString = "Advanced";
+                    break;
+                default:
+                    levelString = "Error";
+                    break;
+            }
+            return levelString;
         }
     }
 }

@@ -245,6 +245,7 @@
             // 
             // comboBox_level
             // 
+            this.comboBox_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_level.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_level.FormattingEnabled = true;
             this.comboBox_level.Items.AddRange(new object[] {
