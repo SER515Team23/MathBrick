@@ -87,7 +87,7 @@ namespace MathBrick
         
         private void Btn_cancel_Click(object sender, EventArgs e)
         {
-            QuizList.hasReturn= true;
+            QuizList.hasReturn = (DataBase.Instance.activeUser.authorizeLevel != 4);
             Close();
         }
 

@@ -28,17 +28,24 @@ namespace MathBrick
             this.nameLabel.Text = currentUser.userName;
             int level = currentUser.authorizeLevel;
             this.levelLabel.Text = (level == 1 ? "Beginner" : level == 2? "Intermediate" : level == 3? "Advanced":"");
-
         }    
 
         private void Btn_takeQuiz_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem lv in quizListView.SelectedItems)//take quiz button click
+            if (quizListView.SelectedItems[0].SubItems[5].Text.Equals(string.Empty))
             {
-                QuizPage.isTakeQuiz = true;
-                QuizPage quizPage = new QuizPage(lv);
-                quizPage.Show();
+                timer_quiz.Enabled = true;
+                foreach (ListViewItem lv in quizListView.SelectedItems)//take quiz button click
+                {
+                    QuizPage.isTakeQuiz = true;
+                    QuizPage quizPage = new QuizPage(lv);
+                    quizPage.Show();
+                }
             }
+            else
+            {
+                DialogResult result = MessageBox.Show("You have already taken this quiz!", "Quiz Already Taken", MessageBoxButtons.OK);
+            }           
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
