@@ -27,23 +27,8 @@ namespace MathBrick
             this.nameLabel.Text = currentUser.userName;
             int level = currentUser.authorizeLevel;
             this.levelLabel.Text = (level == 1 ? "Beginner" : level == 2? "Intermediate" : level == 3? "Advanced":"");
-            this.LoadMockQuizList();
-        }
 
-        /// <summary>
-        /// Current mockup quiz list items
-        /// </summary>
-        private void LoadMockQuizList()
-        {
-            User currentUser = DataBase.Instance.activeUser;
-            ListViewItem lvi = new ListViewItem();
-            lvi.Text = "";
-            lvi.SubItems.Add("11-21");
-            lvi.SubItems.Add("Quiz 1");
-            lvi.SubItems.Add(currentUser.authorizeLevel.ToString());
-            lvi.SubItems.Add("t01");
-            quizListView.Items.Add(lvi);
-        }
+        }    
 
         private void Btn_takeQuiz_Click(object sender, EventArgs e)
         {

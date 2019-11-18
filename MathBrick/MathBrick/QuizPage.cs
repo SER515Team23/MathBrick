@@ -26,6 +26,7 @@ namespace MathBrick
         public static bool isEdit = false;
         public static bool isTakeQuiz = false;
         private ListViewItem editItem = null;
+        private List<String> answerList = new List<string>();
 
         private Quiz quiz = null;
 
@@ -53,7 +54,16 @@ namespace MathBrick
                     ListViewItem lvi = new ListViewItem();
                     lvi.Text = "";
                     lvi.SubItems.Add(q.title);
-                    lvi.SubItems.Add(q.answer);
+                    if(DataBase.Instance.activeUser.authorizeLevel == 4)
+                    {
+                        lvi.SubItems.Add(q.answer);
+                    }
+                    else
+                    {
+                        lvi.SubItems.Add("");
+                        answerList.Add(q.answer);
+                    }
+                    
                     listView1.Items.Add(lvi);
                     returnType = "";
                 }
@@ -69,31 +79,11 @@ namespace MathBrick
             comboBox_level.Enabled = false;
             dateTimePicker_dueDate.Enabled = false;
             btn_add.Hide();
-            btn_save.Hide();
+            //btn_save.Hide();
             btn_delete.Hide();
             //btn_edit.Hide();
-            loadMockData();
         }
-
-        private void loadMockData()
-        {
-            ListViewItem lvi = new ListViewItem();
-            lvi.Text = "";
-            lvi.SubItems.Add("2+3");
-            lvi.SubItems.Add("5");
-            listView1.Items.Add(lvi);
-            ListViewItem lvi1 = new ListViewItem();
-            lvi1.Text = "";
-            lvi1.SubItems.Add("4+5");
-            lvi1.SubItems.Add("9");
-            listView1.Items.Add(lvi1);
-            ListViewItem lvi2 = new ListViewItem();
-            lvi2.Text = "";
-            lvi2.SubItems.Add("12-5");
-            lvi2.SubItems.Add("7");
-            listView1.Items.Add(lvi2);
-        }
-
+        
         private void Btn_cancel_Click(object sender, EventArgs e)
         {
             QuizList.hasReturn= true;
@@ -102,11 +92,20 @@ namespace MathBrick
 
         private void Btn_save_Click(object sender, EventArgs e)
         {
-            if(CheckValid())
+            if(DataBase.Instance.activeUser.authorizeLevel != 4)
             {
-                SaveQuizToDatabase();
-                QuizList.hasReturn = true; 
-                Close();
+                // student use save to submit quiz answer
+
+            }
+            else
+            {
+                // teacher use save to save quiz to database
+                if (CheckValid())
+                {
+                    SaveQuizToDatabase();
+                    QuizList.hasReturn = true;
+                    Close();
+                }
             }
         }
 
