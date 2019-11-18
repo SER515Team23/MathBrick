@@ -46,6 +46,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quizListView = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // userNameDescriptionLabel
@@ -254,7 +255,8 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5});
+            this.columnHeader5,
+            this.columnHeader6});
             this.quizListView.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quizListView.FullRowSelect = true;
             this.quizListView.HideSelection = false;
@@ -262,10 +264,14 @@
             this.quizListView.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.quizListView.MultiSelect = false;
             this.quizListView.Name = "quizListView";
-            this.quizListView.Size = new System.Drawing.Size(551, 204);
+            this.quizListView.Size = new System.Drawing.Size(611, 204);
             this.quizListView.TabIndex = 0;
             this.quizListView.UseCompatibleStateImageBehavior = false;
             this.quizListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Grade";
             // 
             // QuizList
             // 
@@ -274,7 +280,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(552, 368);
+            this.ClientSize = new System.Drawing.Size(612, 368);
             this.Controls.Add(this.btn_viewgrade);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_takeQuiz);
@@ -315,5 +321,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ListView quizListView;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
