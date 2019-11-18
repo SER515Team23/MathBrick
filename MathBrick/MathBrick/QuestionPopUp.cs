@@ -25,9 +25,10 @@ namespace MathBrick
         public QuestionPopUp(string inputQues, string inputAns, bool inputIsNew)
         {
             isNew = inputIsNew;
-            question = inputQues;
+            question = inputQues;       
             answer = inputAns;
             InitializeComponent();
+            this.textBox_question.Enabled = DataBase.Instance.activeUser.authorizeLevel == 4;
         }
         
         private void btn_cancel_Click_1(object sender, EventArgs e)

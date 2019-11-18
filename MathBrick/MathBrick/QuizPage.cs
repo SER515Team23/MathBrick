@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ using MathBrick.Model;
 
 
 /* 
- * Author: Xinkai Wang
+ * Author: Xinkai Wang, Bingrui Feng
  * Description: Use to show the quiz detail and could also used by teacher to create new quiz or edit old quiz.
 */
 
@@ -26,11 +27,13 @@ namespace MathBrick
         public static bool isEdit = false;
         public static bool isTakeQuiz = false;
         private ListViewItem editItem = null;
+        private List<String> answerList = new List<string>();
 
         private Quiz quiz = null;
+        private string quizId;
 
         public QuizPage()
-        {
+        {           
             InitializeComponent();
         }
 
@@ -38,6 +41,7 @@ namespace MathBrick
         {
             InitializeComponent();
             quiz = QuizUtils.Instance.RetrieveOneQuiz(lv.Tag.ToString());
+            quizId = lv.Tag.ToString();
         }
 
         private void QuizPage_Load(object sender, EventArgs e)
@@ -53,7 +57,16 @@ namespace MathBrick
                     ListViewItem lvi = new ListViewItem();
                     lvi.Text = "";
                     lvi.SubItems.Add(q.title);
-                    lvi.SubItems.Add(q.answer);
+                    if(DataBase.Instance.activeUser.authorizeLevel == 4)
+                    {
+                        lvi.SubItems.Add(q.answer);
+                    }
+                    else
+                    {
+                        lvi.SubItems.Add("");
+                        answerList.Add(q.answer);
+                    }
+                    
                     listView1.Items.Add(lvi);
                     returnType = "";
                 }
@@ -69,25 +82,45 @@ namespace MathBrick
             comboBox_level.Enabled = false;
             dateTimePicker_dueDate.Enabled = false;
             btn_add.Hide();
-            btn_save.Hide();
             btn_delete.Hide();
-            btn_edit.Hide();
-            
         }
-
+        
         private void Btn_cancel_Click(object sender, EventArgs e)
         {
-            QuizList.hasReturn= true;
+            QuizList.hasReturn = (DataBase.Instance.activeUser.authorizeLevel != 4);
             Close();
         }
 
         private void Btn_save_Click(object sender, EventArgs e)
         {
-            if(CheckValid())
+            if(DataBase.Instance.activeUser.authorizeLevel != 4)
             {
-                SaveQuizToDatabase();
-                QuizList.hasReturn = true; 
-                Close();
+                // student submit quiz and get grade
+                var count = listView1.Items.Count;
+                var correctCount = 0;
+                for(int i = 0; i < listView1.Items.Count; i++)
+                {
+                    if(listView1.Items[i].SubItems[2].Text.Equals(answerList[i]))
+                    {
+                        correctCount++;
+                    }
+                }
+                gradeLabel.ForeColor = Color.Red;
+                var score = (correctCount * 1.0 / count); 
+                gradeLabel.Text = score.ToString("P2", CultureInfo.InvariantCulture);
+                this.btn_save.Enabled = false;
+                this.btn_edit.Hide();
+                QuizUtils.Instance.PutScoreToQuiz(quizId, DataBase.Instance.activeUser.userName, score);
+            }
+            else
+            {
+                // teacher use save to save quiz to database
+                if (CheckValid())
+                {
+                    SaveQuizToDatabase();
+                    QuizList.hasReturn = true;
+                    Close();
+                }
             }
         }
 
