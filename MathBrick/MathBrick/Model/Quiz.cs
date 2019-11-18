@@ -8,7 +8,7 @@ namespace MathBrick.Model
 {
     class Quiz
     {
-        public string uniqueID { get; }
+        public string uniqueID { get; set; }
         public string subject { get; set; }
         public int level { get; set; }
         public string date { get; set; }
