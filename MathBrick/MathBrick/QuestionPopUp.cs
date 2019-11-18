@@ -28,7 +28,6 @@ namespace MathBrick
             question = inputQues;
             answer = inputAns;
             InitializeComponent();
-
         }
         
         private void btn_cancel_Click_1(object sender, EventArgs e)
