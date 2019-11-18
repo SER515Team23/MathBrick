@@ -288,6 +288,7 @@ namespace MathBrick
 
                 Calculation calculation = new Calculation(str);
                 Label label = new Label();
+                label.Text = "Expression: "+ str + "; Result: ";
                 if(str.Contains("^2"))
                     label.Text += calculation.QuadraticEquation();
                 else if(str.Contains("x"))

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Forms;
 using CCWin;
 using MathBrick.Model;
 
 /* 
- * Author: Yu-Ting Tsao, Xinkai Wang
+ * Author: Yu-Ting Tsao, Xinkai Wang, Bingrui Feng
  * Description: Students can see and choose their suitable quizzes here.
 */
 
@@ -17,17 +18,34 @@ namespace MathBrick
 
         public QuizList()
         {
-            InitializeComponent();
+            InitializeComponent();          
+            CreateMockQuizListView();
         }
+
+        private void CreateMockQuizListView()
+        {
+            User currentUser = DataBase.Instance.activeUser;
+            this.nameLabel.Text = currentUser.userName;
+            int level = currentUser.authorizeLevel;
+            this.levelLabel.Text = (level == 1 ? "Beginner" : level == 2? "Intermediate" : level == 3? "Advanced":"");
+        }    
 
         private void Btn_takeQuiz_Click(object sender, EventArgs e)
         {
-            foreach (ListViewItem lv in quizListView.SelectedItems)//take quiz button click
+            if (quizListView.SelectedItems[0].SubItems[5].Text.Equals(string.Empty))
             {
-                QuizPage.isTakeQuiz = true;
-                QuizPage quizPage = new QuizPage(lv);
-                quizPage.Show();
+                timer_quiz.Enabled = true;
+                foreach (ListViewItem lv in quizListView.SelectedItems)//take quiz button click
+                {
+                    QuizPage.isTakeQuiz = true;
+                    QuizPage quizPage = new QuizPage(lv);
+                    quizPage.Show();
+                }
             }
+            else
+            {
+                DialogResult result = MessageBox.Show("You have already taken this quiz!", "Quiz Already Taken", MessageBoxButtons.OK);
+            }           
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -109,6 +127,7 @@ namespace MathBrick
 
         private void ShowQuiz()
         {
+            User user = DataBase.Instance.activeUser; 
             int userLevel = DataBase.Instance.activeUser.authorizeLevel;
             Quiz[] Quizzes;
             if (userLevel == 4)
@@ -123,14 +142,13 @@ namespace MathBrick
                 lvi.SubItems.Add(quiz.subject);
                 lvi.SubItems.Add(ChangeLevelToString(quiz.level));
                 lvi.SubItems.Add(quiz.teacherID);
-                if (quiz.studentGrades != null)
+                if(quiz.studentGrades.TryGetValue(user.userName, out double grade))
                 {
-                    if (quiz.studentGrades.ContainsKey(DataBase.Instance.activeUser.userName))
-                    {
-                        double grade;
-                        quiz.studentGrades.TryGetValue(DataBase.Instance.activeUser.userName, out grade);
-                        lvi.SubItems.Add(grade.ToString());
-                    }
+                    lvi.SubItems.Add(grade.ToString("P2", CultureInfo.InvariantCulture));
+                }
+                else
+                {
+                    lvi.SubItems.Add("");
                 }
                 lvi.Tag = quiz.uniqueID;
                 quizListView.Items.Add(lvi);

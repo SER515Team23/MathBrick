@@ -16,7 +16,7 @@ namespace MathBrick
     {
         private static QuizUtils instance;
         private static string quizFileName = "QuizzesList.txt";
-        private Dictionary<string, Quiz> quizzesDic;
+        private Dictionary<string, Quiz> quizzesDic = new Dictionary<string, Quiz>();
 
         private QuizUtils()
         {
@@ -95,7 +95,7 @@ namespace MathBrick
         {
             if (level == 0)
             {
-                return quizzesDic.Values.ToArray();
+                return quizzesDic.Values.ToArray();             
             }
 
             List<Quiz> selectedQuizzes = new List<Quiz>();
@@ -121,7 +121,7 @@ namespace MathBrick
             File.WriteAllText(quizFileName, new JavaScriptSerializer().Serialize(quizzesDic));
         }
 
-        public void PutScoreToQuiz(string quizUniqueID, string studentID, int score)
+        public void PutScoreToQuiz(string quizUniqueID, string studentID, double score)
         {
             if (quizzesDic.ContainsKey(quizUniqueID))
             {
