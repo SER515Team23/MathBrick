@@ -46,6 +46,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quizListView = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // userNameDescriptionLabel
@@ -66,9 +67,9 @@
             this.levelDescriptionLabel.Location = new System.Drawing.Point(10, 79);
             this.levelDescriptionLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.levelDescriptionLabel.Name = "levelDescriptionLabel";
-            this.levelDescriptionLabel.Size = new System.Drawing.Size(108, 17);
+            this.levelDescriptionLabel.Size = new System.Drawing.Size(87, 17);
             this.levelDescriptionLabel.TabIndex = 2;
-            this.levelDescriptionLabel.Text = "Level of Student:";
+            this.levelDescriptionLabel.Text = "Level of User:";
             // 
             // nameLabel
             // 
@@ -85,7 +86,7 @@
             // 
             this.levelLabel.AutoSize = true;
             this.levelLabel.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.levelLabel.Location = new System.Drawing.Point(139, 79);
+            this.levelLabel.Location = new System.Drawing.Point(96, 79);
             this.levelLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.levelLabel.Name = "levelLabel";
             this.levelLabel.Size = new System.Drawing.Size(67, 17);
@@ -143,7 +144,7 @@
             this.btn_cancel.DownBack = null;
             this.btn_cancel.DownBaseColor = System.Drawing.SystemColors.ControlDark;
             this.btn_cancel.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(374, 324);
+            this.btn_cancel.Location = new System.Drawing.Point(434, 324);
             this.btn_cancel.MouseBack = null;
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.NormlBack = null;
@@ -164,7 +165,7 @@
             this.btn_takeQuiz.DownBack = null;
             this.btn_takeQuiz.DownBaseColor = System.Drawing.SystemColors.ControlDark;
             this.btn_takeQuiz.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_takeQuiz.Location = new System.Drawing.Point(464, 324);
+            this.btn_takeQuiz.Location = new System.Drawing.Point(524, 324);
             this.btn_takeQuiz.MouseBack = null;
             this.btn_takeQuiz.Name = "btn_takeQuiz";
             this.btn_takeQuiz.NormlBack = null;
@@ -174,7 +175,7 @@
             this.btn_takeQuiz.TabIndex = 10;
             this.btn_takeQuiz.Text = "Take Quiz";
             this.btn_takeQuiz.UseVisualStyleBackColor = false;
-            this.btn_takeQuiz.Click += new System.EventHandler(this.ConfirmButton_Click);
+            this.btn_takeQuiz.Click += new System.EventHandler(this.Btn_takeQuiz_Click);
             // 
             // timer_quiz
             // 
@@ -254,7 +255,8 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5});
+            this.columnHeader5,
+            this.columnHeader6});
             this.quizListView.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quizListView.FullRowSelect = true;
             this.quizListView.HideSelection = false;
@@ -262,10 +264,14 @@
             this.quizListView.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.quizListView.MultiSelect = false;
             this.quizListView.Name = "quizListView";
-            this.quizListView.Size = new System.Drawing.Size(551, 204);
+            this.quizListView.Size = new System.Drawing.Size(611, 204);
             this.quizListView.TabIndex = 0;
             this.quizListView.UseCompatibleStateImageBehavior = false;
             this.quizListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Grade";
             // 
             // QuizList
             // 
@@ -274,7 +280,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(552, 368);
+            this.ClientSize = new System.Drawing.Size(612, 368);
             this.Controls.Add(this.btn_viewgrade);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_takeQuiz);
@@ -315,5 +321,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ListView quizListView;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

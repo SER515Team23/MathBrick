@@ -19,8 +19,8 @@ namespace MathBrick
         public ViewGrade()
         {
             InitializeComponent();
-            subject = QuizList.subject;
-            level = QuizList.level;
+//            subject = QuizList.subject;
+//           level = QuizList.level;
            
             
         }
