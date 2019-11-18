@@ -19,7 +19,7 @@ namespace MathBrick
 
             // -----------------------EXAMPLE-----------------------
 
-            QuizUtils.Instance.ShowExampleForThisClass();
+            // QuizUtils.Instance.ShowExampleForThisClass();
 
             // -----------------------EXAMPLE-----------------------
         }
