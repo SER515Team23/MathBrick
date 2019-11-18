@@ -20,6 +20,7 @@ namespace MathBrick
 
         private string level = "";
         private string subject = "";
+        private string duedate = "";
         private Quiz quiz = null;
         private string quizId;
         public static string StudentID = "";
@@ -31,6 +32,7 @@ namespace MathBrick
             quizId = lv.Tag.ToString();
             subject = lv.SubItems[2].Text;
             level = lv.SubItems[3].Text;
+            duedate = lv.SubItems[1].Text;
         }
 
         private void ViewGrade_Load(object sender, EventArgs e)
@@ -38,6 +40,7 @@ namespace MathBrick
             FormBorderStyle = FormBorderStyle.FixedSingle;
             SubjectLabel.Text = subject;
             LevelLabel2.Text = level;
+            DueDateLabel.Text = duedate;
             foreach (String Key in quiz.studentGrades.Keys)
             {
                 ListViewItem lvi = new ListViewItem();

@@ -38,6 +38,8 @@ namespace MathBrick
             this.SubjectLabel = new CCWin.SkinControl.SkinLabel();
             this.LevelLabel2 = new CCWin.SkinControl.SkinLabel();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DueDate = new CCWin.SkinControl.SkinLabel();
+            this.DueDateLabel = new CCWin.SkinControl.SkinLabel();
             this.SuspendLayout();
             // 
             // SubjectLebel
@@ -59,7 +61,7 @@ namespace MathBrick
             this.LevelLabel.BorderColor = System.Drawing.Color.White;
             this.LevelLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LevelLabel.Font = new System.Drawing.Font("Calibri", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LevelLabel.Location = new System.Drawing.Point(386, 56);
+            this.LevelLabel.Location = new System.Drawing.Point(278, 56);
             this.LevelLabel.Name = "LevelLabel";
             this.LevelLabel.Size = new System.Drawing.Size(62, 26);
             this.LevelLabel.TabIndex = 1;
@@ -102,7 +104,7 @@ namespace MathBrick
             this.SubjectLabel.BackColor = System.Drawing.Color.SeaShell;
             this.SubjectLabel.BorderColor = System.Drawing.Color.White;
             this.SubjectLabel.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubjectLabel.Location = new System.Drawing.Point(207, 56);
+            this.SubjectLabel.Location = new System.Drawing.Point(149, 56);
             this.SubjectLabel.Name = "SubjectLabel";
             this.SubjectLabel.Size = new System.Drawing.Size(86, 26);
             this.SubjectLabel.TabIndex = 3;
@@ -114,7 +116,7 @@ namespace MathBrick
             this.LevelLabel2.BackColor = System.Drawing.Color.SeaShell;
             this.LevelLabel2.BorderColor = System.Drawing.Color.White;
             this.LevelLabel2.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LevelLabel2.Location = new System.Drawing.Point(529, 56);
+            this.LevelLabel2.Location = new System.Drawing.Point(373, 56);
             this.LevelLabel2.MaximumSize = new System.Drawing.Size(200, 30);
             this.LevelLabel2.Name = "LevelLabel2";
             this.LevelLabel2.Size = new System.Drawing.Size(96, 26);
@@ -126,6 +128,31 @@ namespace MathBrick
             this.columnHeader3.Text = "Grade";
             this.columnHeader3.Width = 375;
             // 
+            // DueDate
+            // 
+            this.DueDate.AutoSize = true;
+            this.DueDate.BackColor = System.Drawing.Color.SeaShell;
+            this.DueDate.BorderColor = System.Drawing.Color.White;
+            this.DueDate.Font = new System.Drawing.Font("Calibri", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DueDate.Location = new System.Drawing.Point(517, 56);
+            this.DueDate.Name = "DueDate";
+            this.DueDate.Size = new System.Drawing.Size(110, 26);
+            this.DueDate.TabIndex = 5;
+            this.DueDate.Text = "DueDate：";
+            // 
+            // DueDateLabel
+            // 
+            this.DueDateLabel.AutoSize = true;
+            this.DueDateLabel.BackColor = System.Drawing.Color.SeaShell;
+            this.DueDateLabel.BorderColor = System.Drawing.Color.White;
+            this.DueDateLabel.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DueDateLabel.Location = new System.Drawing.Point(633, 56);
+            this.DueDateLabel.MaximumSize = new System.Drawing.Size(200, 30);
+            this.DueDateLabel.Name = "DueDateLabel";
+            this.DueDateLabel.Size = new System.Drawing.Size(116, 26);
+            this.DueDateLabel.TabIndex = 6;
+            this.DueDateLabel.Text = "11/17/2019";
+            // 
             // ViewGrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -135,6 +162,8 @@ namespace MathBrick
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
             this.CaptionFont = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClientSize = new System.Drawing.Size(760, 520);
+            this.Controls.Add(this.DueDateLabel);
+            this.Controls.Add(this.DueDate);
             this.Controls.Add(this.LevelLabel2);
             this.Controls.Add(this.SubjectLabel);
             this.Controls.Add(this.GradeListView);
@@ -158,5 +187,7 @@ namespace MathBrick
         private CCWin.SkinControl.SkinLabel SubjectLabel;
         private CCWin.SkinControl.SkinLabel LevelLabel2;
         private ColumnHeader columnHeader3;
+        private CCWin.SkinControl.SkinLabel DueDate;
+        private CCWin.SkinControl.SkinLabel DueDateLabel;
     }
 }
