@@ -193,8 +193,18 @@ namespace MathBrick
                 Question ques = new Question(lv.SubItems[1].Text, lv.SubItems[2].Text);
                 questionsList.Add(ques);
             }
-            Quiz quiz = new Quiz(textBox_subject.Text, ChangeLevelToInt(comboBox_level.Text), dateTimePicker_dueDate.Text, DataBase.Instance.activeUser.userName, questionsList.ToArray());
-            QuizUtils.Instance.StoreQuiz(quiz);
+            Quiz newQuiz = new Quiz(textBox_subject.Text, ChangeLevelToInt(comboBox_level.Text), dateTimePicker_dueDate.Text, DataBase.Instance.activeUser.userName, questionsList.ToArray());
+            if (isEdit == true)
+            {
+                newQuiz.uniqueID = quiz.uniqueID;
+                QuizUtils.Instance.EditQuiz(quiz.uniqueID, newQuiz);
+            }
+            else
+            {
+                newQuiz.studentGrades.Add("b01", 100);
+                newQuiz.studentGrades.Add("i01", 95);
+                QuizUtils.Instance.StoreQuiz(newQuiz);
+            }
         }
 
         private int ChangeLevelToInt(string levelString)

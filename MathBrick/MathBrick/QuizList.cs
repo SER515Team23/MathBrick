@@ -61,6 +61,8 @@ namespace MathBrick
             List<int> studentLevelList = new List<int>{ 1, 2, 3 };
             if (studentLevelList.Contains(DataBase.Instance.activeUser.authorizeLevel))
                 HideAddEdit();
+            else
+                btn_takeQuiz.Hide();
             RefreshListview();
         }
 
@@ -76,8 +78,9 @@ namespace MathBrick
 
         private void HideAddEdit()
         {
-            btn_cancel.Hide();
-            btn_takeQuiz.Hide();
+            addButton.Hide();
+            editButton.Hide();
+            btn_delete.Hide();
         }
 
         private void Timer_quiz_Tick(object sender, EventArgs e)
@@ -120,6 +123,15 @@ namespace MathBrick
                 lvi.SubItems.Add(quiz.subject);
                 lvi.SubItems.Add(ChangeLevelToString(quiz.level));
                 lvi.SubItems.Add(quiz.teacherID);
+                if (quiz.studentGrades != null)
+                {
+                    if (quiz.studentGrades.ContainsKey(DataBase.Instance.activeUser.userName))
+                    {
+                        int grade;
+                        quiz.studentGrades.TryGetValue(DataBase.Instance.activeUser.userName, out grade);
+                        lvi.SubItems.Add(grade.ToString());
+                    }
+                }
                 lvi.Tag = quiz.uniqueID;
                 quizListView.Items.Add(lvi);
             }
