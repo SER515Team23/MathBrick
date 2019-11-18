@@ -15,6 +15,8 @@ namespace MathBrick.Model
         public string teacherID { get; set; }
         public Question[] questions { get; set; }
 
+        public Dictionary<string, int> studentGrades { get; set; }
+
         public Quiz(string subject, int level, string date, string teacherID, Question[] questions)
         {
             // Generate unique ID.
@@ -25,6 +27,7 @@ namespace MathBrick.Model
             this.date = date;
             this.teacherID = teacherID;
             this.questions = questions;
+            this.studentGrades = new Dictionary<string, int>();
         }
 
         public Quiz() { }
