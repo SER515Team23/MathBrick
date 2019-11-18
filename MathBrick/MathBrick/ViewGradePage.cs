@@ -13,20 +13,23 @@ namespace MathBrick
 {
     public partial class ViewGrade : Skin_Color
     {
-        private string dueDate = "";
+        
         private string level = "";
-        private string subjet = "";
+        private string subject = "";
         public ViewGrade()
         {
             InitializeComponent();
-            //dueDate = QuizUtils.Instance.;
-           // level = QuizList.level;
-            //subjet = QuizList.subject;
+            subject = QuizList.subject;
+            level = QuizList.level;
+           
+            
         }
 
         private void ViewGrade_Load(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            SubjectLabel.Text = subject;
+            LevelLabel2.Text = level;
         }
     }
 }

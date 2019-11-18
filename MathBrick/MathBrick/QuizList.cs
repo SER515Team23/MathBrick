@@ -160,6 +160,7 @@ namespace MathBrick
             timer_quiz.Enabled = true;
             foreach (ListViewItem lv in quizListView.SelectedItems)
             {
+               
                 ViewGrade gradepage = new ViewGrade();
                 gradepage.Show();
             }
