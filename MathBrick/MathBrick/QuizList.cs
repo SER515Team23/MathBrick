@@ -81,6 +81,7 @@ namespace MathBrick
             addButton.Hide();
             editButton.Hide();
             btn_delete.Hide();
+            btn_viewgrade.Hide();
         }
 
         private void Timer_quiz_Tick(object sender, EventArgs e)
