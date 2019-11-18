@@ -26,7 +26,7 @@ namespace MathBrick
 
         private void ConfirmButton_Click(object sender, System.EventArgs e)
         {
-            foreach (ListViewItem lv in quizListView.SelectedItems)
+            foreach (ListViewItem lv in quizListView.SelectedItems)//take quiz button click
             {
                 QuizPage.isTakeQuiz = true;
                 QuizPage quizPage = new QuizPage(lv.SubItems[1].Text, lv.SubItems[2].Text, lv.SubItems[3].Text, true);
@@ -153,6 +153,17 @@ namespace MathBrick
             level = "";
             subject = "";
             returnType = "";
+        }
+
+        private void btn_viewgrade_Click(object sender, EventArgs e)
+        {
+            timer_quiz.Enabled = true;
+            foreach (ListViewItem lv in quizListView.SelectedItems)
+            {
+               
+                ViewGrade gradepage = new ViewGrade();
+                gradepage.Show();
+            }
         }
     }
 }

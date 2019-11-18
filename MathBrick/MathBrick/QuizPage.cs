@@ -57,6 +57,7 @@ namespace MathBrick
             btn_save.Hide();
             btn_delete.Hide();
             btn_edit.Hide();
+            
         }
 
         private void Btn_cancel_Click(object sender, EventArgs e)
