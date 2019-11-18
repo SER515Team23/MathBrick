@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,9 +80,7 @@ namespace MathBrick
             comboBox_level.Enabled = false;
             dateTimePicker_dueDate.Enabled = false;
             btn_add.Hide();
-            //btn_save.Hide();
             btn_delete.Hide();
-            //btn_edit.Hide();
         }
         
         private void Btn_cancel_Click(object sender, EventArgs e)
@@ -94,8 +93,20 @@ namespace MathBrick
         {
             if(DataBase.Instance.activeUser.authorizeLevel != 4)
             {
-                // student use save to submit quiz answer
-
+                // student submit quiz and get grade
+                var count = listView1.Items.Count;
+                var correctCount = 0;
+                for(int i = 0; i < listView1.Items.Count; i++)
+                {
+                    if(listView1.Items[i].SubItems[2].Text.Equals(answerList[i]))
+                    {
+                        correctCount++;
+                    }
+                }
+                gradeLabel.ForeColor = Color.Red;                
+                gradeLabel.Text = (correctCount * 1.0 / count).ToString("P2", CultureInfo.InvariantCulture);
+                this.btn_save.Enabled = false;
+                this.btn_edit.Hide();
             }
             else
             {
