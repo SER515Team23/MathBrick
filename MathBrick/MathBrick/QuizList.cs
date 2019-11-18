@@ -6,7 +6,7 @@ using CCWin;
 using MathBrick.Model;
 
 /* 
- * Author: Yu-Ting Tsao, Xinkai Wang, Bingrui Feng
+ * Author: Yu-Ting Tsao, Xinkai Wang, Bingrui Feng,Huijing Liang
  * Description: Students can see and choose their suitable quizzes here.
 */
 
@@ -99,6 +99,7 @@ namespace MathBrick
             addButton.Hide();
             editButton.Hide();
             btn_delete.Hide();
+            btn_viewgrade.Hide();
         }
 
         private void Timer_quiz_Tick(object sender, EventArgs e)
@@ -190,8 +191,8 @@ namespace MathBrick
             timer_quiz.Enabled = true;
             foreach (ListViewItem lv in quizListView.SelectedItems)
             {
-               
-                ViewGrade gradepage = new ViewGrade();
+
+                ViewGrade gradepage = new ViewGrade(lv);
                 gradepage.Show();
             }
         }

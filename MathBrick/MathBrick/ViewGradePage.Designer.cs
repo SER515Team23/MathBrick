@@ -30,11 +30,6 @@ namespace MathBrick
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
             this.SubjectLebel = new CCWin.SkinControl.SkinLabel();
             this.LevelLabel = new CCWin.SkinControl.SkinLabel();
             this.GradeListView = new CCWin.SkinControl.SkinListView();
@@ -42,6 +37,7 @@ namespace MathBrick
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SubjectLabel = new CCWin.SkinControl.SkinLabel();
             this.LevelLabel2 = new CCWin.SkinControl.SkinLabel();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // SubjectLebel
@@ -74,19 +70,11 @@ namespace MathBrick
             this.GradeListView.BackColor = System.Drawing.Color.FloralWhite;
             this.GradeListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.GradeListView.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GradeListView.HeadColor = System.Drawing.Color.WhiteSmoke;
             this.GradeListView.HideSelection = false;
-            listViewItem1.Checked = true;
-            listViewItem1.StateImageIndex = 1;
-            listViewItem1.Tag = "";
-            this.GradeListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5});
             this.GradeListView.Location = new System.Drawing.Point(1, 105);
             this.GradeListView.Name = "GradeListView";
             this.GradeListView.OwnerDraw = true;
@@ -100,12 +88,12 @@ namespace MathBrick
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Student\'s Name";
-            this.columnHeader1.Width = 379;
+            this.columnHeader1.Text = "#";
+            this.columnHeader1.Width = 30;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Grade";
+            this.columnHeader2.Text = "StudentID";
             this.columnHeader2.Width = 375;
             // 
             // SubjectLabel
@@ -132,6 +120,11 @@ namespace MathBrick
             this.LevelLabel2.Size = new System.Drawing.Size(96, 26);
             this.LevelLabel2.TabIndex = 4;
             this.LevelLabel2.Text = "Advanced";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Grade";
+            this.columnHeader3.Width = 375;
             // 
             // ViewGrade
             // 
@@ -164,5 +157,6 @@ namespace MathBrick
         private ColumnHeader columnHeader2;
         private CCWin.SkinControl.SkinLabel SubjectLabel;
         private CCWin.SkinControl.SkinLabel LevelLabel2;
+        private ColumnHeader columnHeader3;
     }
 }
