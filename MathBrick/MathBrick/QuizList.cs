@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Forms;
 using CCWin;
 using MathBrick.Model;
@@ -17,7 +18,7 @@ namespace MathBrick
 
         public QuizList()
         {
-            InitializeComponent();
+            InitializeComponent();          
             CreateMockQuizListView();
         }
 
@@ -117,6 +118,7 @@ namespace MathBrick
 
         private void ShowQuiz()
         {
+            User user = DataBase.Instance.activeUser; 
             int userLevel = DataBase.Instance.activeUser.authorizeLevel;
             Quiz[] Quizzes;
             if (userLevel == 4)
@@ -131,6 +133,14 @@ namespace MathBrick
                 lvi.SubItems.Add(quiz.subject);
                 lvi.SubItems.Add(ChangeLevelToString(quiz.level));
                 lvi.SubItems.Add(quiz.teacherID);
+                if(quiz.studentGrades.TryGetValue(user.userName, out double grade))
+                {
+                    lvi.SubItems.Add(grade.ToString("P2", CultureInfo.InvariantCulture));
+                }
+                else
+                {
+                    lvi.SubItems.Add("");
+                }
                 lvi.Tag = quiz.uniqueID;
                 quizListView.Items.Add(lvi);
             }

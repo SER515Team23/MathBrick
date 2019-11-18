@@ -13,7 +13,7 @@ using MathBrick.Model;
 
 
 /* 
- * Author: Xinkai Wang
+ * Author: Xinkai Wang, Bingrui Feng
  * Description: Use to show the quiz detail and could also used by teacher to create new quiz or edit old quiz.
 */
 
@@ -30,9 +30,10 @@ namespace MathBrick
         private List<String> answerList = new List<string>();
 
         private Quiz quiz = null;
+        private string quizId;
 
         public QuizPage()
-        {
+        {           
             InitializeComponent();
         }
 
@@ -40,6 +41,7 @@ namespace MathBrick
         {
             InitializeComponent();
             quiz = QuizUtils.Instance.RetrieveOneQuiz(lv.Tag.ToString());
+            quizId = lv.Tag.ToString();
         }
 
         private void QuizPage_Load(object sender, EventArgs e)
@@ -103,10 +105,12 @@ namespace MathBrick
                         correctCount++;
                     }
                 }
-                gradeLabel.ForeColor = Color.Red;                
-                gradeLabel.Text = (correctCount * 1.0 / count).ToString("P2", CultureInfo.InvariantCulture);
+                gradeLabel.ForeColor = Color.Red;
+                var score = (correctCount * 1.0 / count); 
+                gradeLabel.Text = score.ToString("P2", CultureInfo.InvariantCulture);
                 this.btn_save.Enabled = false;
                 this.btn_edit.Hide();
+                QuizUtils.Instance.PutScoreToQuiz(quizId, DataBase.Instance.activeUser.userName, score);
             }
             else
             {
