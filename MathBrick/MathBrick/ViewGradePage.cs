@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,7 +57,7 @@ namespace MathBrick
                 ListViewItem lvi = new ListViewItem();
                 //lvi.Text = "";
                 lvi.SubItems.Add(Key);
-                lvi.SubItems.Add(quiz.studentGrades[Key].ToString());
+                lvi.SubItems.Add(quiz.studentGrades[Key].ToString("P2", CultureInfo.InvariantCulture));
                 GradeListView.Items.Add(lvi);
             }
             reOrder();
