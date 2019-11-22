@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,15 @@ namespace MathBrick
             level = lv.SubItems[3].Text;
             duedate = lv.SubItems[1].Text;
         }
+        private void reOrder()
+        {
+            int order = 1;
+            foreach (ListViewItem lv in GradeListView.Items)
+            {
+                lv.Text = order.ToString();
+                order++;
+            }
+        }
 
         private void ViewGrade_Load(object sender, EventArgs e)
         {
@@ -41,14 +51,16 @@ namespace MathBrick
             SubjectLabel.Text = subject;
             LevelLabel2.Text = level;
             DueDateLabel.Text = duedate;
+          
             foreach (String Key in quiz.studentGrades.Keys)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.Text = "";
+                //lvi.Text = "";
                 lvi.SubItems.Add(Key);
-                lvi.SubItems.Add(quiz.studentGrades[Key].ToString());
+                lvi.SubItems.Add(quiz.studentGrades[Key].ToString("P2", CultureInfo.InvariantCulture));
                 GradeListView.Items.Add(lvi);
             }
+            reOrder();
         }
     }
 }
