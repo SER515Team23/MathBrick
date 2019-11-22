@@ -72,6 +72,11 @@ namespace MathBrick
                 }
                 reOrder();
             }
+            if(DataBase.Instance.activeUser.authorizeLevel == 4)
+            {
+                this.gradeLabel.Hide();
+                this.label5.Hide();
+            }
             if (isTakeQuiz)
                 ChangeForTakeQuiz();
         }
