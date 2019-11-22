@@ -55,7 +55,7 @@ namespace MathBrick
             foreach (String Key in quiz.studentGrades.Keys)
             {
                 ListViewItem lvi = new ListViewItem();
-                //lvi.Text = "";
+                lvi.Text = "";
                 lvi.SubItems.Add(Key);
                 lvi.SubItems.Add(quiz.studentGrades[Key].ToString("P2", CultureInfo.InvariantCulture));
                 GradeListView.Items.Add(lvi);
