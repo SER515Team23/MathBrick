@@ -15,6 +15,7 @@ namespace MathBrick
         private string intermediateActivateCode = "6666";
         private string advancedActivateCode = "7777";
         private string teacherActivateCode = "9527";
+        private string adminActivateCode = "admin";
 
         public SignUp()
         {
@@ -54,6 +55,10 @@ namespace MathBrick
             {
                 User teacher = new User { userName = userName, password = password, authorizeLevel = 4, isLogin = false };
                 this.AddUser(teacher);
+            } else if (activateCode == adminActivateCode)
+            {
+                User admin = new User { userName = userName, password = password, authorizeLevel = 5, isLogin = false };
+                this.AddUser(admin);
             }
             else
             {
