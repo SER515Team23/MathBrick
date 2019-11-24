@@ -259,6 +259,7 @@ namespace MathBrick
             this.MinimumSize = new System.Drawing.Size(500, 100);
             this.Name = "SignIn";
             this.Text = "MathBrick";
+            this.VisibleChanged += new System.EventHandler(this.SignIn_VisibleChanged);
             this.welcomePanel.ResumeLayout(false);
             this.welcomePanel.PerformLayout();
             this.ResumeLayout(false);
