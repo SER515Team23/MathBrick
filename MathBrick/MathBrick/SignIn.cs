@@ -61,6 +61,14 @@ namespace MathBrick
                 this.Hide();
                 main.Show();
             }
+            else if (userName == "admin" && password == "admin")
+            {
+                User admin = new User { userName = userName, password = password, authorizeLevel = 5, isLogin = true };
+                DataBase.Instance.activeUser = admin;
+                HomePage main = new HomePage();
+                this.Hide();
+                main.Show();
+            }
             // ------------- This only exists during development stage. -------------
             else if (DataBase.Instance.UserLogin(userName, password))
             {

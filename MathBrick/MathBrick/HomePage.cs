@@ -247,6 +247,12 @@ namespace MathBrick
                     Console.Out.WriteLine("Login as: " + "Teacher");
                     sideTabControl.TabPages.RemoveByKey("BasicBox");
                     sideTabControl.TabPages.RemoveByKey("IntermediateBox");
+                    manageButton.Hide();
+                    break;
+                case 5:
+                    Console.Out.WriteLine("Login as: " + "Admin");
+                    sideTabControl.TabPages.RemoveByKey("BasicBox");
+                    sideTabControl.TabPages.RemoveByKey("IntermediateBox");
                     break;
             }
         }
