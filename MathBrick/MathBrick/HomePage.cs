@@ -246,6 +246,9 @@ namespace MathBrick
                 case 3:
                     manageButton.Hide();
                     break;
+                case 4:
+                    manageButton.Hide();
+                    break;
             }
         }
 
