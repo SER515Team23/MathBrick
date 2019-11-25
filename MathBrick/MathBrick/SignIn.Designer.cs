@@ -22,15 +22,14 @@ namespace MathBrick
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
             this.welcomePanel = new CCWin.SkinControl.SkinPanel();
-            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
+            this.passwordTextBox = new CCWin.SkinControl.SkinTextBox();
+            this.userNameTextBox = new CCWin.SkinControl.SkinTextBox();
             this.fooLabel = new System.Windows.Forms.Label();
             this.fogetPasswordButton = new CCWin.SkinControl.SkinButton();
             this.signUpButton = new CCWin.SkinControl.SkinButton();
             this.signInButton = new CCWin.SkinControl.SkinButton();
             this.passwordLabel = new CCWin.SkinControl.SkinLabel();
             this.userNameLabel = new CCWin.SkinControl.SkinLabel();
-            this.userNameTextBox = new CCWin.SkinControl.SkinTextBox();
-            this.passwordTextBox = new CCWin.SkinControl.SkinTextBox();
             this.welcomePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +40,6 @@ namespace MathBrick
             this.welcomePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.welcomePanel.Controls.Add(this.passwordTextBox);
             this.welcomePanel.Controls.Add(this.userNameTextBox);
-            this.welcomePanel.Controls.Add(this.skinTextBox1);
             this.welcomePanel.Controls.Add(this.fooLabel);
             this.welcomePanel.Controls.Add(this.fogetPasswordButton);
             this.welcomePanel.Controls.Add(this.signUpButton);
@@ -58,49 +56,90 @@ namespace MathBrick
             this.welcomePanel.Size = new System.Drawing.Size(586, 351);
             this.welcomePanel.TabIndex = 0;
             // 
-            // skinTextBox1
+            // passwordTextBox
             // 
-            this.skinTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox1.DownBack = null;
-            this.skinTextBox1.Icon = null;
-            this.skinTextBox1.IconIsButton = false;
-            this.skinTextBox1.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.IsPasswordChat = '\0';
-            this.skinTextBox1.IsSystemPasswordChar = false;
-            this.skinTextBox1.Lines = new string[] {
-        "skinTextBox1"};
-            this.skinTextBox1.Location = new System.Drawing.Point(357, 271);
-            this.skinTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox1.MaxLength = 32767;
-            this.skinTextBox1.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox1.MouseBack = null;
-            this.skinTextBox1.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.Multiline = false;
-            this.skinTextBox1.Name = "skinTextBox1";
-            this.skinTextBox1.NormlBack = null;
-            this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox1.ReadOnly = false;
-            this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox1.Size = new System.Drawing.Size(185, 28);
-            // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.passwordTextBox.DownBack = null;
+            this.passwordTextBox.Icon = null;
+            this.passwordTextBox.IconIsButton = false;
+            this.passwordTextBox.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.passwordTextBox.IsPasswordChat = '●';
+            this.passwordTextBox.IsSystemPasswordChar = false;
+            this.passwordTextBox.Lines = new string[0];
+            this.passwordTextBox.Location = new System.Drawing.Point(260, 87);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.passwordTextBox.MaxLength = 32767;
+            this.passwordTextBox.MinimumSize = new System.Drawing.Size(28, 28);
+            this.passwordTextBox.MouseBack = null;
+            this.passwordTextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.passwordTextBox.Multiline = true;
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.NormlBack = null;
+            this.passwordTextBox.Padding = new System.Windows.Forms.Padding(5);
+            this.passwordTextBox.ReadOnly = false;
+            this.passwordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.passwordTextBox.Size = new System.Drawing.Size(194, 35);
             // 
             // 
-            this.skinTextBox1.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox1.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox1.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
-            this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox1.SkinTxt.Name = "BaseText";
-            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(175, 18);
-            this.skinTextBox1.SkinTxt.TabIndex = 0;
-            this.skinTextBox1.SkinTxt.Text = "skinTextBox1";
-            this.skinTextBox1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.SkinTxt.WaterText = "";
-            this.skinTextBox1.TabIndex = 10;
-            this.skinTextBox1.Text = "skinTextBox1";
-            this.skinTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.WaterText = "";
-            this.skinTextBox1.WordWrap = true;
+            // 
+            this.passwordTextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordTextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.passwordTextBox.SkinTxt.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.passwordTextBox.SkinTxt.Multiline = true;
+            this.passwordTextBox.SkinTxt.Name = "BaseText";
+            this.passwordTextBox.SkinTxt.PasswordChar = '●';
+            this.passwordTextBox.SkinTxt.Size = new System.Drawing.Size(184, 25);
+            this.passwordTextBox.SkinTxt.TabIndex = 0;
+            this.passwordTextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.passwordTextBox.SkinTxt.WaterText = "";
+            this.passwordTextBox.TabIndex = 12;
+            this.passwordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.passwordTextBox.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.passwordTextBox.WaterText = "";
+            this.passwordTextBox.WordWrap = true;
+            // 
+            // userNameTextBox
+            // 
+            this.userNameTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.userNameTextBox.DownBack = null;
+            this.userNameTextBox.Icon = null;
+            this.userNameTextBox.IconIsButton = false;
+            this.userNameTextBox.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.userNameTextBox.IsPasswordChat = '\0';
+            this.userNameTextBox.IsSystemPasswordChar = false;
+            this.userNameTextBox.Lines = new string[0];
+            this.userNameTextBox.Location = new System.Drawing.Point(260, 24);
+            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.userNameTextBox.MaxLength = 32767;
+            this.userNameTextBox.MinimumSize = new System.Drawing.Size(28, 28);
+            this.userNameTextBox.MouseBack = null;
+            this.userNameTextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.userNameTextBox.Multiline = true;
+            this.userNameTextBox.Name = "userNameTextBox";
+            this.userNameTextBox.NormlBack = null;
+            this.userNameTextBox.Padding = new System.Windows.Forms.Padding(5);
+            this.userNameTextBox.ReadOnly = false;
+            this.userNameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.userNameTextBox.Size = new System.Drawing.Size(194, 35);
+            // 
+            // 
+            // 
+            this.userNameTextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userNameTextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userNameTextBox.SkinTxt.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameTextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.userNameTextBox.SkinTxt.Multiline = true;
+            this.userNameTextBox.SkinTxt.Name = "BaseText";
+            this.userNameTextBox.SkinTxt.Size = new System.Drawing.Size(184, 25);
+            this.userNameTextBox.SkinTxt.TabIndex = 0;
+            this.userNameTextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.userNameTextBox.SkinTxt.WaterText = "";
+            this.userNameTextBox.TabIndex = 11;
+            this.userNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.userNameTextBox.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.userNameTextBox.WaterText = "";
+            this.userNameTextBox.WordWrap = true;
             // 
             // fooLabel
             // 
@@ -202,91 +241,6 @@ namespace MathBrick
             this.userNameLabel.TabIndex = 0;
             this.userNameLabel.Text = "Username:";
             // 
-            // userNameTextBox
-            // 
-            this.userNameTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.userNameTextBox.DownBack = null;
-            this.userNameTextBox.Icon = null;
-            this.userNameTextBox.IconIsButton = false;
-            this.userNameTextBox.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.userNameTextBox.IsPasswordChat = '\0';
-            this.userNameTextBox.IsSystemPasswordChar = false;
-            this.userNameTextBox.Lines = new string[0];
-            this.userNameTextBox.Location = new System.Drawing.Point(260, 24);
-            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.userNameTextBox.MaxLength = 32767;
-            this.userNameTextBox.MinimumSize = new System.Drawing.Size(28, 28);
-            this.userNameTextBox.MouseBack = null;
-            this.userNameTextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.userNameTextBox.Multiline = true;
-            this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.NormlBack = null;
-            this.userNameTextBox.Padding = new System.Windows.Forms.Padding(5);
-            this.userNameTextBox.ReadOnly = false;
-            this.userNameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.userNameTextBox.Size = new System.Drawing.Size(194, 35);
-            // 
-            // 
-            // 
-            this.userNameTextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userNameTextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userNameTextBox.SkinTxt.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameTextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.userNameTextBox.SkinTxt.Multiline = true;
-            this.userNameTextBox.SkinTxt.Name = "BaseText";
-            this.userNameTextBox.SkinTxt.Size = new System.Drawing.Size(184, 25);
-            this.userNameTextBox.SkinTxt.TabIndex = 0;
-            this.userNameTextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.userNameTextBox.SkinTxt.WaterText = "";
-            this.userNameTextBox.TabIndex = 11;
-            this.userNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.userNameTextBox.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.userNameTextBox.WaterText = "";
-            this.userNameTextBox.WordWrap = true;
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.passwordTextBox.DownBack = null;
-            this.passwordTextBox.Icon = null;
-            this.passwordTextBox.IconIsButton = false;
-            this.passwordTextBox.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.passwordTextBox.IsPasswordChat = '●';
-            this.passwordTextBox.IsSystemPasswordChar = false;
-            this.passwordTextBox.Lines = new string[0];
-            this.passwordTextBox.Location = new System.Drawing.Point(260, 87);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.passwordTextBox.MaxLength = 32767;
-            this.passwordTextBox.MinimumSize = new System.Drawing.Size(28, 28);
-            this.passwordTextBox.MouseBack = null;
-            this.passwordTextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.passwordTextBox.Multiline = true;
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.NormlBack = null;
-            this.passwordTextBox.Padding = new System.Windows.Forms.Padding(5);
-            this.passwordTextBox.ReadOnly = false;
-            this.passwordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.passwordTextBox.Size = new System.Drawing.Size(194, 35);
-            // 
-            // 
-            // 
-            this.passwordTextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordTextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passwordTextBox.SkinTxt.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.passwordTextBox.SkinTxt.Multiline = true;
-            this.passwordTextBox.SkinTxt.Name = "BaseText";
-            this.passwordTextBox.SkinTxt.PasswordChar = '●';
-            this.passwordTextBox.SkinTxt.Size = new System.Drawing.Size(184, 25);
-            this.passwordTextBox.SkinTxt.TabIndex = 0;
-            this.passwordTextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.passwordTextBox.SkinTxt.WaterText = "";
-            this.passwordTextBox.TabIndex = 12;
-            this.passwordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.passwordTextBox.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.passwordTextBox.WaterText = "";
-            this.passwordTextBox.WordWrap = true;
-            // 
             // SignIn
             // 
             this.AcceptButton = this.signInButton;
@@ -318,7 +272,6 @@ namespace MathBrick
         private CCWin.SkinControl.SkinButton signUpButton;
         private CCWin.SkinControl.SkinButton signInButton;
         private Label fooLabel;
-        private CCWin.SkinControl.SkinTextBox skinTextBox1;
         private CCWin.SkinControl.SkinTextBox passwordTextBox;
         private CCWin.SkinControl.SkinTextBox userNameTextBox;
     }
