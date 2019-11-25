@@ -16,6 +16,7 @@ namespace MathBrick
     public partial class HomePage : Skin_Color
     {
         private bool isLogOut = false;
+        private SignIn theSignIn = null;
 
         Control moveBtn;
         public static Point startingPoint = new Point(50, 50);
@@ -23,9 +24,17 @@ namespace MathBrick
         {
             InitializeComponent();
             AddEventForDragDrop();
-            sideTabControl.SelectedIndex = 0;
             CustomizeTabControl();
             isLogOut = false;
+        }
+
+        public HomePage(SignIn inputSignInForm)
+        {
+            InitializeComponent();
+            AddEventForDragDrop();
+            CustomizeTabControl();
+            isLogOut = false;
+            theSignIn = inputSignInForm;
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -50,19 +59,7 @@ namespace MathBrick
         /// </summary>
         private void AddEventForDragDrop()
         {
-            foreach (Button button in this.NumberBox.Controls)
-            {
-                button.Click += new EventHandler(ClickToDuplicate);
-            }
-            foreach (Button button in this.BasicBox.Controls)
-            {
-                button.Click += new EventHandler(ClickToDuplicate);
-            }
-            foreach (Button button in this.IntermediateBox.Controls)
-            {
-                button.Click += new EventHandler(ClickToDuplicate);
-            }
-            foreach (Button button in this.AdvancedBox.Controls)
+            foreach (Button button in this.GroupBox_operator.Controls)
             {
                 button.Click += new EventHandler(ClickToDuplicate);
             }
@@ -213,8 +210,7 @@ namespace MathBrick
             isLogOut = true;
             DataBase.Instance.UserLogout();
             this.Close();
-            SignIn signIn = new SignIn();
-            signIn.Show();
+            theSignIn.Show();
         }
 
 
@@ -227,21 +223,31 @@ namespace MathBrick
                     break;
                 case 1:
                     Console.Out.WriteLine("Login as: " + "Beginner");
-                    sideTabControl.TabPages.RemoveByKey("IntermediateBox");
-                    sideTabControl.TabPages.RemoveByKey("AdvancedBox");
+                    btn_multi.Hide();
+                    btn_divide.Hide();
+                    btn_leftBracket.Hide();
+                    btn_rightBracket.Hide();
+                    btn_x.Hide();
+                    btn_equation.Hide();
+                    btn_power.Hide();
+                    Point addLocation = new Point(18, 218);
+                    Point subLocation = new Point(140, 218);
+                    btn_add.Location = addLocation;
+                    btn_subtrac.Location = subLocation;
                     manageButton.Hide();
                     break;
                 case 2:
                     Console.Out.WriteLine("Login as: " + "Intermediate");
-                    sideTabControl.TabPages.RemoveByKey("AdvancedBox");
+                    btn_power.Hide();
+                    btn_equation.Hide();
+                    btn_x.Hide();
                     manageButton.Hide();
                     break;
                 case 3:
-                    Console.Out.WriteLine("Login as: " + "Advanced");
                     manageButton.Hide();
                     break;
                 case 4:
-                    Console.Out.WriteLine("Login as: " + "Teacher");
+                    manageButton.Hide();
                     break;
             }
         }
@@ -283,6 +289,7 @@ namespace MathBrick
 
                 Calculation calculation = new Calculation(str);
                 Label label = new Label();
+                label.Text = "Expression: "+ str + "; Result: ";
                 if(str.Contains("^2"))
                     label.Text += calculation.QuadraticEquation();
                 else if(str.Contains("x"))

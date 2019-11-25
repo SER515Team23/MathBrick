@@ -35,31 +35,26 @@ namespace MathBrick
             this.resultButton = new CCWin.SkinControl.SkinButton();
             this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.sideTabControl = new CCWin.SkinControl.SkinTabControl();
-            this.AdvancedBox = new CCWin.SkinControl.SkinTabPage();
-            this.squareButton = new CCWin.SkinControl.SkinButton();
-            this.equationButton = new CCWin.SkinControl.SkinButton();
-            this.bButton = new CCWin.SkinControl.SkinButton();
-            this.aButton = new CCWin.SkinControl.SkinButton();
-            this.NumberBox = new CCWin.SkinControl.SkinTabPage();
+            this.GroupBox_operator = new CCWin.SkinControl.SkinGroupBox();
+            this.btn_power = new CCWin.SkinControl.SkinButton();
+            this.btn_rightBracket = new CCWin.SkinControl.SkinButton();
+            this.btn_equation = new CCWin.SkinControl.SkinButton();
             this.skinButton10 = new CCWin.SkinControl.SkinButton();
+            this.btn_leftBracket = new CCWin.SkinControl.SkinButton();
+            this.btn_x = new CCWin.SkinControl.SkinButton();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
-            this.skinButton2 = new CCWin.SkinControl.SkinButton();
+            this.btn_divide = new CCWin.SkinControl.SkinButton();
             this.skinButton9 = new CCWin.SkinControl.SkinButton();
-            this.skinButton3 = new CCWin.SkinControl.SkinButton();
+            this.btn_multi = new CCWin.SkinControl.SkinButton();
+            this.skinButton2 = new CCWin.SkinControl.SkinButton();
+            this.btn_subtrac = new CCWin.SkinControl.SkinButton();
             this.skinButton8 = new CCWin.SkinControl.SkinButton();
-            this.skinButton4 = new CCWin.SkinControl.SkinButton();
+            this.btn_add = new CCWin.SkinControl.SkinButton();
+            this.skinButton3 = new CCWin.SkinControl.SkinButton();
             this.skinButton7 = new CCWin.SkinControl.SkinButton();
+            this.skinButton4 = new CCWin.SkinControl.SkinButton();
             this.skinButton6 = new CCWin.SkinControl.SkinButton();
             this.skinButton5 = new CCWin.SkinControl.SkinButton();
-            this.IntermediateBox = new CCWin.SkinControl.SkinTabPage();
-            this.closeParenthesisButton = new CCWin.SkinControl.SkinButton();
-            this.multiplyButton = new CCWin.SkinControl.SkinButton();
-            this.divideButton = new CCWin.SkinControl.SkinButton();
-            this.openParenthesisButton = new CCWin.SkinControl.SkinButton();
-            this.BasicBox = new CCWin.SkinControl.SkinTabPage();
-            this.minusButton = new CCWin.SkinControl.SkinButton();
-            this.plusButton = new CCWin.SkinControl.SkinButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.logoutButton = new CCWin.SkinControl.SkinButton();
@@ -78,11 +73,7 @@ namespace MathBrick
             this.skinPanel2.SuspendLayout();
             this.skinGroupBox4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.sideTabControl.SuspendLayout();
-            this.AdvancedBox.SuspendLayout();
-            this.NumberBox.SuspendLayout();
-            this.IntermediateBox.SuspendLayout();
-            this.BasicBox.SuspendLayout();
+            this.GroupBox_operator.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,13 +86,13 @@ namespace MathBrick
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(8, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1114, 582);
+            this.panel1.Size = new System.Drawing.Size(1233, 613);
             this.panel1.TabIndex = 0;
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(169, 122);
+            this.splitContainer1.Location = new System.Drawing.Point(201, 122);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -112,8 +103,8 @@ namespace MathBrick
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel5);
-            this.splitContainer1.Size = new System.Drawing.Size(745, 460);
-            this.splitContainer1.SplitterDistance = 329;
+            this.splitContainer1.Size = new System.Drawing.Size(832, 491);
+            this.splitContainer1.SplitterDistance = 330;
             this.splitContainer1.TabIndex = 3;
             // 
             // panel6
@@ -122,7 +113,7 @@ namespace MathBrick
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(745, 329);
+            this.panel6.Size = new System.Drawing.Size(832, 330);
             this.panel6.TabIndex = 4;
             // 
             // skinGroupBox1
@@ -136,7 +127,7 @@ namespace MathBrick
             this.skinGroupBox1.Name = "skinGroupBox1";
             this.skinGroupBox1.RectBackColor = System.Drawing.Color.White;
             this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox1.Size = new System.Drawing.Size(745, 329);
+            this.skinGroupBox1.Size = new System.Drawing.Size(832, 330);
             this.skinGroupBox1.TabIndex = 5;
             this.skinGroupBox1.TabStop = false;
             this.skinGroupBox1.Text = "Canvas";
@@ -150,7 +141,7 @@ namespace MathBrick
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(745, 127);
+            this.panel5.Size = new System.Drawing.Size(832, 157);
             this.panel5.TabIndex = 3;
             // 
             // skinGroupBox3
@@ -165,7 +156,7 @@ namespace MathBrick
             this.skinGroupBox3.Name = "skinGroupBox3";
             this.skinGroupBox3.RectBackColor = System.Drawing.Color.WhiteSmoke;
             this.skinGroupBox3.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox3.Size = new System.Drawing.Size(745, 127);
+            this.skinGroupBox3.Size = new System.Drawing.Size(832, 157);
             this.skinGroupBox3.TabIndex = 6;
             this.skinGroupBox3.TabStop = false;
             this.skinGroupBox3.Text = "Result";
@@ -187,7 +178,7 @@ namespace MathBrick
             this.Resut_Listbox.Name = "Resut_Listbox";
             this.Resut_Listbox.RowBackColor2 = System.Drawing.Color.White;
             this.Resut_Listbox.SelectedColor = System.Drawing.Color.White;
-            this.Resut_Listbox.Size = new System.Drawing.Size(739, 101);
+            this.Resut_Listbox.Size = new System.Drawing.Size(826, 131);
             this.Resut_Listbox.TabIndex = 6;
             // 
             // panel4
@@ -195,16 +186,13 @@ namespace MathBrick
             this.panel4.Controls.Add(this.skinPanel2);
             this.panel4.Controls.Add(this.skinGroupBox2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(914, 122);
+            this.panel4.Location = new System.Drawing.Point(1033, 122);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 460);
+            this.panel4.Size = new System.Drawing.Size(200, 491);
             this.panel4.TabIndex = 2;
             // 
             // skinPanel2
             // 
-            this.skinPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.skinPanel2.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel2.Controls.Add(this.skinGroupBox4);
             this.skinPanel2.ControlState = CCWin.SkinClass.ControlState.Normal;
@@ -213,7 +201,7 @@ namespace MathBrick
             this.skinPanel2.MouseBack = null;
             this.skinPanel2.Name = "skinPanel2";
             this.skinPanel2.NormlBack = null;
-            this.skinPanel2.Size = new System.Drawing.Size(188, 80);
+            this.skinPanel2.Size = new System.Drawing.Size(188, 111);
             this.skinPanel2.TabIndex = 15;
             // 
             // skinGroupBox4
@@ -229,7 +217,7 @@ namespace MathBrick
             this.skinGroupBox4.Name = "skinGroupBox4";
             this.skinGroupBox4.RectBackColor = System.Drawing.Color.WhiteSmoke;
             this.skinGroupBox4.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox4.Size = new System.Drawing.Size(188, 80);
+            this.skinGroupBox4.Size = new System.Drawing.Size(188, 111);
             this.skinGroupBox4.TabIndex = 6;
             this.skinGroupBox4.TabStop = false;
             this.skinGroupBox4.Text = "Canvas Control";
@@ -245,7 +233,7 @@ namespace MathBrick
             this.clearButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.clearButton.DownBack = null;
             this.clearButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(112, 36);
+            this.clearButton.Location = new System.Drawing.Point(107, 36);
             this.clearButton.MouseBack = null;
             this.clearButton.Name = "clearButton";
             this.clearButton.NormlBack = null;
@@ -265,7 +253,7 @@ namespace MathBrick
             this.resultButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.resultButton.DownBack = null;
             this.resultButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultButton.Location = new System.Drawing.Point(16, 36);
+            this.resultButton.Location = new System.Drawing.Point(13, 36);
             this.resultButton.MouseBack = null;
             this.resultButton.Name = "resultButton";
             this.resultButton.NormlBack = null;
@@ -284,11 +272,11 @@ namespace MathBrick
             this.skinGroupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.skinGroupBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinGroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox2.Location = new System.Drawing.Point(0, 112);
+            this.skinGroupBox2.Location = new System.Drawing.Point(0, 117);
             this.skinGroupBox2.Name = "skinGroupBox2";
             this.skinGroupBox2.RectBackColor = System.Drawing.Color.WhiteSmoke;
             this.skinGroupBox2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox2.Size = new System.Drawing.Size(200, 348);
+            this.skinGroupBox2.Size = new System.Drawing.Size(200, 374);
             this.skinGroupBox2.TabIndex = 5;
             this.skinGroupBox2.TabStop = false;
             this.skinGroupBox2.Text = "Message";
@@ -298,158 +286,105 @@ namespace MathBrick
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.sideTabControl);
+            this.panel3.Controls.Add(this.GroupBox_operator);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 122);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(169, 460);
+            this.panel3.Size = new System.Drawing.Size(201, 491);
             this.panel3.TabIndex = 1;
             // 
-            // sideTabControl
+            // GroupBox_operator
             // 
-            this.sideTabControl.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
-            this.sideTabControl.ArrowBaseColor = System.Drawing.Color.Gainsboro;
-            this.sideTabControl.ArrowBorderColor = System.Drawing.Color.Silver;
-            this.sideTabControl.ArrowColor = System.Drawing.Color.DarkGray;
-            this.sideTabControl.BackColor = System.Drawing.Color.Silver;
-            this.sideTabControl.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.sideTabControl.Controls.Add(this.BasicBox);
-            this.sideTabControl.Controls.Add(this.AdvancedBox);
-            this.sideTabControl.Controls.Add(this.NumberBox);
-            this.sideTabControl.Controls.Add(this.IntermediateBox);
-            this.sideTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideTabControl.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sideTabControl.HeadBack = null;
-            this.sideTabControl.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.sideTabControl.ItemSize = new System.Drawing.Size(70, 36);
-            this.sideTabControl.Location = new System.Drawing.Point(0, 0);
-            this.sideTabControl.Name = "sideTabControl";
-            this.sideTabControl.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("sideTabControl.PageArrowDown")));
-            this.sideTabControl.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("sideTabControl.PageArrowHover")));
-            this.sideTabControl.PageBaseColor = System.Drawing.Color.LightGray;
-            this.sideTabControl.PageBorderColor = System.Drawing.Color.Gainsboro;
-            this.sideTabControl.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("sideTabControl.PageCloseHover")));
-            this.sideTabControl.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("sideTabControl.PageCloseNormal")));
-            this.sideTabControl.PageDown = ((System.Drawing.Image)(resources.GetObject("sideTabControl.PageDown")));
-            this.sideTabControl.PageHover = ((System.Drawing.Image)(resources.GetObject("sideTabControl.PageHover")));
-            this.sideTabControl.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
-            this.sideTabControl.PageNorml = null;
-            this.sideTabControl.SelectedIndex = 0;
-            this.sideTabControl.Size = new System.Drawing.Size(169, 460);
-            this.sideTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.sideTabControl.TabIndex = 18;
+            this.GroupBox_operator.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox_operator.BorderColor = System.Drawing.Color.DarkGray;
+            this.GroupBox_operator.Controls.Add(this.btn_multi);
+            this.GroupBox_operator.Controls.Add(this.btn_power);
+            this.GroupBox_operator.Controls.Add(this.btn_rightBracket);
+            this.GroupBox_operator.Controls.Add(this.btn_equation);
+            this.GroupBox_operator.Controls.Add(this.skinButton10);
+            this.GroupBox_operator.Controls.Add(this.btn_leftBracket);
+            this.GroupBox_operator.Controls.Add(this.btn_x);
+            this.GroupBox_operator.Controls.Add(this.skinButton1);
+            this.GroupBox_operator.Controls.Add(this.btn_divide);
+            this.GroupBox_operator.Controls.Add(this.skinButton9);
+            this.GroupBox_operator.Controls.Add(this.skinButton2);
+            this.GroupBox_operator.Controls.Add(this.btn_subtrac);
+            this.GroupBox_operator.Controls.Add(this.skinButton8);
+            this.GroupBox_operator.Controls.Add(this.btn_add);
+            this.GroupBox_operator.Controls.Add(this.skinButton3);
+            this.GroupBox_operator.Controls.Add(this.skinButton7);
+            this.GroupBox_operator.Controls.Add(this.skinButton4);
+            this.GroupBox_operator.Controls.Add(this.skinButton6);
+            this.GroupBox_operator.Controls.Add(this.skinButton5);
+            this.GroupBox_operator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GroupBox_operator.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox_operator.ForeColor = System.Drawing.Color.Black;
+            this.GroupBox_operator.Location = new System.Drawing.Point(0, 0);
+            this.GroupBox_operator.Name = "GroupBox_operator";
+            this.GroupBox_operator.RectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.GroupBox_operator.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.GroupBox_operator.Size = new System.Drawing.Size(201, 491);
+            this.GroupBox_operator.TabIndex = 6;
+            this.GroupBox_operator.TabStop = false;
+            this.GroupBox_operator.Text = "Number & Operator";
+            this.GroupBox_operator.TitleBorderColor = System.Drawing.Color.DarkGray;
+            this.GroupBox_operator.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.GroupBox_operator.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // AdvancedBox
+            // btn_power
             // 
-            this.AdvancedBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AdvancedBox.Controls.Add(this.squareButton);
-            this.AdvancedBox.Controls.Add(this.equationButton);
-            this.AdvancedBox.Controls.Add(this.bButton);
-            this.AdvancedBox.Controls.Add(this.aButton);
-            this.AdvancedBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdvancedBox.Location = new System.Drawing.Point(0, 36);
-            this.AdvancedBox.Name = "AdvancedBox";
-            this.AdvancedBox.Size = new System.Drawing.Size(169, 424);
-            this.AdvancedBox.TabIndex = 3;
-            this.AdvancedBox.TabItemImage = null;
-            this.AdvancedBox.Text = "Advanced";
+            this.btn_power.BackColor = System.Drawing.Color.Transparent;
+            this.btn_power.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_power.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_power.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_power.DownBack = null;
+            this.btn_power.Location = new System.Drawing.Point(79, 423);
+            this.btn_power.MouseBack = null;
+            this.btn_power.Name = "btn_power";
+            this.btn_power.NormlBack = null;
+            this.btn_power.Radius = 10;
+            this.btn_power.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_power.Size = new System.Drawing.Size(40, 40);
+            this.btn_power.TabIndex = 19;
+            this.btn_power.Text = "^2";
+            this.btn_power.UseVisualStyleBackColor = false;
             // 
-            // squareButton
+            // btn_rightBracket
             // 
-            this.squareButton.BackColor = System.Drawing.Color.Transparent;
-            this.squareButton.BaseColor = System.Drawing.Color.LightGray;
-            this.squareButton.BorderColor = System.Drawing.Color.DimGray;
-            this.squareButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.squareButton.DownBack = null;
-            this.squareButton.Location = new System.Drawing.Point(106, 120);
-            this.squareButton.MouseBack = null;
-            this.squareButton.Name = "squareButton";
-            this.squareButton.NormlBack = null;
-            this.squareButton.Radius = 10;
-            this.squareButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.squareButton.Size = new System.Drawing.Size(40, 40);
-            this.squareButton.TabIndex = 19;
-            this.squareButton.Text = "^2";
-            this.squareButton.UseVisualStyleBackColor = false;
+            this.btn_rightBracket.BackColor = System.Drawing.Color.Transparent;
+            this.btn_rightBracket.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_rightBracket.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_rightBracket.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_rightBracket.DownBack = null;
+            this.btn_rightBracket.Location = new System.Drawing.Point(140, 357);
+            this.btn_rightBracket.MouseBack = null;
+            this.btn_rightBracket.Name = "btn_rightBracket";
+            this.btn_rightBracket.NormlBack = null;
+            this.btn_rightBracket.Radius = 10;
+            this.btn_rightBracket.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_rightBracket.Size = new System.Drawing.Size(40, 40);
+            this.btn_rightBracket.TabIndex = 25;
+            this.btn_rightBracket.Text = ")";
+            this.btn_rightBracket.UseVisualStyleBackColor = false;
             // 
-            // equationButton
+            // btn_equation
             // 
-            this.equationButton.BackColor = System.Drawing.Color.Transparent;
-            this.equationButton.BaseColor = System.Drawing.Color.LightGray;
-            this.equationButton.BorderColor = System.Drawing.Color.DimGray;
-            this.equationButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.equationButton.DownBack = null;
-            this.equationButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.equationButton.Location = new System.Drawing.Point(16, 120);
-            this.equationButton.MouseBack = null;
-            this.equationButton.Name = "equationButton";
-            this.equationButton.NormlBack = null;
-            this.equationButton.Radius = 10;
-            this.equationButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.equationButton.Size = new System.Drawing.Size(40, 40);
-            this.equationButton.TabIndex = 16;
-            this.equationButton.Text = "=";
-            this.equationButton.UseVisualStyleBackColor = false;
-            // 
-            // bButton
-            // 
-            this.bButton.BackColor = System.Drawing.Color.Transparent;
-            this.bButton.BaseColor = System.Drawing.Color.LightGray;
-            this.bButton.BorderColor = System.Drawing.Color.DimGray;
-            this.bButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.bButton.DownBack = null;
-            this.bButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bButton.Location = new System.Drawing.Point(106, 33);
-            this.bButton.MouseBack = null;
-            this.bButton.Name = "bButton";
-            this.bButton.NormlBack = null;
-            this.bButton.Radius = 10;
-            this.bButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.bButton.Size = new System.Drawing.Size(40, 40);
-            this.bButton.TabIndex = 15;
-            this.bButton.Text = "y";
-            this.bButton.UseVisualStyleBackColor = false;
-            // 
-            // aButton
-            // 
-            this.aButton.BackColor = System.Drawing.Color.Transparent;
-            this.aButton.BaseColor = System.Drawing.Color.LightGray;
-            this.aButton.BorderColor = System.Drawing.Color.DimGray;
-            this.aButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.aButton.DownBack = null;
-            this.aButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aButton.Location = new System.Drawing.Point(16, 33);
-            this.aButton.MouseBack = null;
-            this.aButton.Name = "aButton";
-            this.aButton.NormlBack = null;
-            this.aButton.Radius = 10;
-            this.aButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.aButton.Size = new System.Drawing.Size(40, 40);
-            this.aButton.TabIndex = 14;
-            this.aButton.Text = "x";
-            this.aButton.UseVisualStyleBackColor = false;
-            // 
-            // NumberBox
-            // 
-            this.NumberBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.NumberBox.Controls.Add(this.skinButton10);
-            this.NumberBox.Controls.Add(this.skinButton1);
-            this.NumberBox.Controls.Add(this.skinButton2);
-            this.NumberBox.Controls.Add(this.skinButton9);
-            this.NumberBox.Controls.Add(this.skinButton3);
-            this.NumberBox.Controls.Add(this.skinButton8);
-            this.NumberBox.Controls.Add(this.skinButton4);
-            this.NumberBox.Controls.Add(this.skinButton7);
-            this.NumberBox.Controls.Add(this.skinButton6);
-            this.NumberBox.Controls.Add(this.skinButton5);
-            this.NumberBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NumberBox.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberBox.Location = new System.Drawing.Point(0, 36);
-            this.NumberBox.Name = "NumberBox";
-            this.NumberBox.Size = new System.Drawing.Size(169, 424);
-            this.NumberBox.TabIndex = 0;
-            this.NumberBox.TabItemImage = null;
-            this.NumberBox.Text = "Numbers";
+            this.btn_equation.BackColor = System.Drawing.Color.Transparent;
+            this.btn_equation.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_equation.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_equation.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_equation.DownBack = null;
+            this.btn_equation.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_equation.Location = new System.Drawing.Point(140, 423);
+            this.btn_equation.MouseBack = null;
+            this.btn_equation.Name = "btn_equation";
+            this.btn_equation.NormlBack = null;
+            this.btn_equation.Radius = 10;
+            this.btn_equation.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_equation.Size = new System.Drawing.Size(40, 40);
+            this.btn_equation.TabIndex = 16;
+            this.btn_equation.Text = "=";
+            this.btn_equation.UseVisualStyleBackColor = false;
             // 
             // skinButton10
             // 
@@ -459,7 +394,7 @@ namespace MathBrick
             this.skinButton10.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton10.DownBack = null;
             this.skinButton10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton10.Location = new System.Drawing.Point(106, 293);
+            this.skinButton10.Location = new System.Drawing.Point(79, 218);
             this.skinButton10.MouseBack = null;
             this.skinButton10.Name = "skinButton10";
             this.skinButton10.NormlBack = null;
@@ -470,6 +405,44 @@ namespace MathBrick
             this.skinButton10.Text = "0";
             this.skinButton10.UseVisualStyleBackColor = false;
             // 
+            // btn_leftBracket
+            // 
+            this.btn_leftBracket.BackColor = System.Drawing.Color.Transparent;
+            this.btn_leftBracket.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_leftBracket.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_leftBracket.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_leftBracket.DownBack = null;
+            this.btn_leftBracket.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_leftBracket.Location = new System.Drawing.Point(79, 357);
+            this.btn_leftBracket.MouseBack = null;
+            this.btn_leftBracket.Name = "btn_leftBracket";
+            this.btn_leftBracket.NormlBack = null;
+            this.btn_leftBracket.Radius = 10;
+            this.btn_leftBracket.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_leftBracket.Size = new System.Drawing.Size(40, 40);
+            this.btn_leftBracket.TabIndex = 24;
+            this.btn_leftBracket.Text = "(";
+            this.btn_leftBracket.UseVisualStyleBackColor = false;
+            // 
+            // btn_x
+            // 
+            this.btn_x.BackColor = System.Drawing.Color.Transparent;
+            this.btn_x.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_x.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_x.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_x.DownBack = null;
+            this.btn_x.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_x.Location = new System.Drawing.Point(18, 423);
+            this.btn_x.MouseBack = null;
+            this.btn_x.Name = "btn_x";
+            this.btn_x.NormlBack = null;
+            this.btn_x.Radius = 10;
+            this.btn_x.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_x.Size = new System.Drawing.Size(40, 40);
+            this.btn_x.TabIndex = 14;
+            this.btn_x.Text = "x";
+            this.btn_x.UseVisualStyleBackColor = false;
+            // 
             // skinButton1
             // 
             this.skinButton1.BackColor = System.Drawing.Color.Transparent;
@@ -478,7 +451,7 @@ namespace MathBrick
             this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton1.DownBack = null;
             this.skinButton1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton1.Location = new System.Drawing.Point(16, 33);
+            this.skinButton1.Location = new System.Drawing.Point(18, 43);
             this.skinButton1.MouseBack = null;
             this.skinButton1.Name = "skinButton1";
             this.skinButton1.NormlBack = null;
@@ -489,24 +462,24 @@ namespace MathBrick
             this.skinButton1.Text = "1";
             this.skinButton1.UseVisualStyleBackColor = false;
             // 
-            // skinButton2
+            // btn_divide
             // 
-            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton2.BaseColor = System.Drawing.Color.LightGray;
-            this.skinButton2.BorderColor = System.Drawing.Color.DimGray;
-            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton2.DownBack = null;
-            this.skinButton2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton2.Location = new System.Drawing.Point(106, 33);
-            this.skinButton2.MouseBack = null;
-            this.skinButton2.Name = "skinButton2";
-            this.skinButton2.NormlBack = null;
-            this.skinButton2.Radius = 10;
-            this.skinButton2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton2.Size = new System.Drawing.Size(40, 40);
-            this.skinButton2.TabIndex = 1;
-            this.skinButton2.Text = "2";
-            this.skinButton2.UseVisualStyleBackColor = false;
+            this.btn_divide.BackColor = System.Drawing.Color.Transparent;
+            this.btn_divide.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_divide.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_divide.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_divide.DownBack = null;
+            this.btn_divide.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_divide.Location = new System.Drawing.Point(18, 357);
+            this.btn_divide.MouseBack = null;
+            this.btn_divide.Name = "btn_divide";
+            this.btn_divide.NormlBack = null;
+            this.btn_divide.Radius = 10;
+            this.btn_divide.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_divide.Size = new System.Drawing.Size(40, 40);
+            this.btn_divide.TabIndex = 23;
+            this.btn_divide.Text = "/";
+            this.btn_divide.UseVisualStyleBackColor = false;
             // 
             // skinButton9
             // 
@@ -516,7 +489,7 @@ namespace MathBrick
             this.skinButton9.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton9.DownBack = null;
             this.skinButton9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton9.Location = new System.Drawing.Point(16, 293);
+            this.skinButton9.Location = new System.Drawing.Point(140, 160);
             this.skinButton9.MouseBack = null;
             this.skinButton9.Name = "skinButton9";
             this.skinButton9.NormlBack = null;
@@ -527,24 +500,62 @@ namespace MathBrick
             this.skinButton9.Text = "9";
             this.skinButton9.UseVisualStyleBackColor = false;
             // 
-            // skinButton3
+            // btn_multi
             // 
-            this.skinButton3.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton3.BaseColor = System.Drawing.Color.LightGray;
-            this.skinButton3.BorderColor = System.Drawing.Color.DimGray;
-            this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton3.DownBack = null;
-            this.skinButton3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton3.Location = new System.Drawing.Point(16, 101);
-            this.skinButton3.MouseBack = null;
-            this.skinButton3.Name = "skinButton3";
-            this.skinButton3.NormlBack = null;
-            this.skinButton3.Radius = 10;
-            this.skinButton3.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton3.Size = new System.Drawing.Size(40, 40);
-            this.skinButton3.TabIndex = 2;
-            this.skinButton3.Text = "3";
-            this.skinButton3.UseVisualStyleBackColor = false;
+            this.btn_multi.BackColor = System.Drawing.Color.Transparent;
+            this.btn_multi.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_multi.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_multi.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_multi.DownBack = null;
+            this.btn_multi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_multi.Location = new System.Drawing.Point(140, 292);
+            this.btn_multi.MouseBack = null;
+            this.btn_multi.Name = "btn_multi";
+            this.btn_multi.NormlBack = null;
+            this.btn_multi.Radius = 10;
+            this.btn_multi.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_multi.Size = new System.Drawing.Size(40, 40);
+            this.btn_multi.TabIndex = 22;
+            this.btn_multi.Text = "*";
+            this.btn_multi.UseVisualStyleBackColor = false;
+            // 
+            // skinButton2
+            // 
+            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton2.BaseColor = System.Drawing.Color.LightGray;
+            this.skinButton2.BorderColor = System.Drawing.Color.DimGray;
+            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton2.DownBack = null;
+            this.skinButton2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton2.Location = new System.Drawing.Point(79, 43);
+            this.skinButton2.MouseBack = null;
+            this.skinButton2.Name = "skinButton2";
+            this.skinButton2.NormlBack = null;
+            this.skinButton2.Radius = 10;
+            this.skinButton2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton2.Size = new System.Drawing.Size(40, 40);
+            this.skinButton2.TabIndex = 1;
+            this.skinButton2.Text = "2";
+            this.skinButton2.UseVisualStyleBackColor = false;
+            // 
+            // btn_subtrac
+            // 
+            this.btn_subtrac.BackColor = System.Drawing.Color.Transparent;
+            this.btn_subtrac.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_subtrac.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_subtrac.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_subtrac.DownBack = null;
+            this.btn_subtrac.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_subtrac.Location = new System.Drawing.Point(79, 292);
+            this.btn_subtrac.MouseBack = null;
+            this.btn_subtrac.Name = "btn_subtrac";
+            this.btn_subtrac.NormlBack = null;
+            this.btn_subtrac.Radius = 10;
+            this.btn_subtrac.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_subtrac.Size = new System.Drawing.Size(40, 40);
+            this.btn_subtrac.TabIndex = 21;
+            this.btn_subtrac.Text = "-";
+            this.btn_subtrac.UseVisualStyleBackColor = false;
             // 
             // skinButton8
             // 
@@ -554,7 +565,7 @@ namespace MathBrick
             this.skinButton8.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton8.DownBack = null;
             this.skinButton8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton8.Location = new System.Drawing.Point(106, 227);
+            this.skinButton8.Location = new System.Drawing.Point(79, 160);
             this.skinButton8.MouseBack = null;
             this.skinButton8.Name = "skinButton8";
             this.skinButton8.NormlBack = null;
@@ -565,24 +576,43 @@ namespace MathBrick
             this.skinButton8.Text = "8";
             this.skinButton8.UseVisualStyleBackColor = false;
             // 
-            // skinButton4
+            // btn_add
             // 
-            this.skinButton4.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton4.BaseColor = System.Drawing.Color.LightGray;
-            this.skinButton4.BorderColor = System.Drawing.Color.DimGray;
-            this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton4.DownBack = null;
-            this.skinButton4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton4.Location = new System.Drawing.Point(106, 101);
-            this.skinButton4.MouseBack = null;
-            this.skinButton4.Name = "skinButton4";
-            this.skinButton4.NormlBack = null;
-            this.skinButton4.Radius = 10;
-            this.skinButton4.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinButton4.Size = new System.Drawing.Size(40, 40);
-            this.skinButton4.TabIndex = 3;
-            this.skinButton4.Text = "4";
-            this.skinButton4.UseVisualStyleBackColor = false;
+            this.btn_add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_add.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_add.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_add.DownBack = null;
+            this.btn_add.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(18, 292);
+            this.btn_add.MouseBack = null;
+            this.btn_add.Name = "btn_add";
+            this.btn_add.NormlBack = null;
+            this.btn_add.Radius = 10;
+            this.btn_add.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_add.Size = new System.Drawing.Size(40, 40);
+            this.btn_add.TabIndex = 20;
+            this.btn_add.Text = "+";
+            this.btn_add.UseVisualStyleBackColor = false;
+            // 
+            // skinButton3
+            // 
+            this.skinButton3.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton3.BaseColor = System.Drawing.Color.LightGray;
+            this.skinButton3.BorderColor = System.Drawing.Color.DimGray;
+            this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton3.DownBack = null;
+            this.skinButton3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton3.Location = new System.Drawing.Point(140, 43);
+            this.skinButton3.MouseBack = null;
+            this.skinButton3.Name = "skinButton3";
+            this.skinButton3.NormlBack = null;
+            this.skinButton3.Radius = 10;
+            this.skinButton3.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton3.Size = new System.Drawing.Size(40, 40);
+            this.skinButton3.TabIndex = 2;
+            this.skinButton3.Text = "3";
+            this.skinButton3.UseVisualStyleBackColor = false;
             // 
             // skinButton7
             // 
@@ -592,7 +622,7 @@ namespace MathBrick
             this.skinButton7.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton7.DownBack = null;
             this.skinButton7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton7.Location = new System.Drawing.Point(16, 227);
+            this.skinButton7.Location = new System.Drawing.Point(18, 160);
             this.skinButton7.MouseBack = null;
             this.skinButton7.Name = "skinButton7";
             this.skinButton7.NormlBack = null;
@@ -603,6 +633,25 @@ namespace MathBrick
             this.skinButton7.Text = "7";
             this.skinButton7.UseVisualStyleBackColor = false;
             // 
+            // skinButton4
+            // 
+            this.skinButton4.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton4.BaseColor = System.Drawing.Color.LightGray;
+            this.skinButton4.BorderColor = System.Drawing.Color.DimGray;
+            this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton4.DownBack = null;
+            this.skinButton4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinButton4.Location = new System.Drawing.Point(18, 101);
+            this.skinButton4.MouseBack = null;
+            this.skinButton4.Name = "skinButton4";
+            this.skinButton4.NormlBack = null;
+            this.skinButton4.Radius = 10;
+            this.skinButton4.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton4.Size = new System.Drawing.Size(40, 40);
+            this.skinButton4.TabIndex = 3;
+            this.skinButton4.Text = "4";
+            this.skinButton4.UseVisualStyleBackColor = false;
+            // 
             // skinButton6
             // 
             this.skinButton6.BackColor = System.Drawing.Color.Transparent;
@@ -611,7 +660,7 @@ namespace MathBrick
             this.skinButton6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton6.DownBack = null;
             this.skinButton6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton6.Location = new System.Drawing.Point(106, 166);
+            this.skinButton6.Location = new System.Drawing.Point(140, 101);
             this.skinButton6.MouseBack = null;
             this.skinButton6.Name = "skinButton6";
             this.skinButton6.NormlBack = null;
@@ -630,7 +679,7 @@ namespace MathBrick
             this.skinButton5.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinButton5.DownBack = null;
             this.skinButton5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinButton5.Location = new System.Drawing.Point(16, 166);
+            this.skinButton5.Location = new System.Drawing.Point(79, 101);
             this.skinButton5.MouseBack = null;
             this.skinButton5.Name = "skinButton5";
             this.skinButton5.NormlBack = null;
@@ -640,149 +689,6 @@ namespace MathBrick
             this.skinButton5.TabIndex = 4;
             this.skinButton5.Text = "5";
             this.skinButton5.UseVisualStyleBackColor = false;
-            // 
-            // IntermediateBox
-            // 
-            this.IntermediateBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.IntermediateBox.Controls.Add(this.closeParenthesisButton);
-            this.IntermediateBox.Controls.Add(this.multiplyButton);
-            this.IntermediateBox.Controls.Add(this.divideButton);
-            this.IntermediateBox.Controls.Add(this.openParenthesisButton);
-            this.IntermediateBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.IntermediateBox.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntermediateBox.Location = new System.Drawing.Point(0, 36);
-            this.IntermediateBox.Name = "IntermediateBox";
-            this.IntermediateBox.Size = new System.Drawing.Size(169, 424);
-            this.IntermediateBox.TabIndex = 2;
-            this.IntermediateBox.TabItemImage = null;
-            this.IntermediateBox.Text = "Middle";
-            // 
-            // closeParenthesisButton
-            // 
-            this.closeParenthesisButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeParenthesisButton.BaseColor = System.Drawing.Color.LightGray;
-            this.closeParenthesisButton.BorderColor = System.Drawing.Color.DimGray;
-            this.closeParenthesisButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.closeParenthesisButton.DownBack = null;
-            this.closeParenthesisButton.Location = new System.Drawing.Point(106, 115);
-            this.closeParenthesisButton.MouseBack = null;
-            this.closeParenthesisButton.Name = "closeParenthesisButton";
-            this.closeParenthesisButton.NormlBack = null;
-            this.closeParenthesisButton.Radius = 10;
-            this.closeParenthesisButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.closeParenthesisButton.Size = new System.Drawing.Size(40, 40);
-            this.closeParenthesisButton.TabIndex = 17;
-            this.closeParenthesisButton.Text = ")";
-            this.closeParenthesisButton.UseVisualStyleBackColor = false;
-            // 
-            // multiplyButton
-            // 
-            this.multiplyButton.BackColor = System.Drawing.Color.Transparent;
-            this.multiplyButton.BaseColor = System.Drawing.Color.LightGray;
-            this.multiplyButton.BorderColor = System.Drawing.Color.DimGray;
-            this.multiplyButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.multiplyButton.DownBack = null;
-            this.multiplyButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.multiplyButton.Location = new System.Drawing.Point(16, 33);
-            this.multiplyButton.MouseBack = null;
-            this.multiplyButton.Name = "multiplyButton";
-            this.multiplyButton.NormlBack = null;
-            this.multiplyButton.Radius = 10;
-            this.multiplyButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.multiplyButton.Size = new System.Drawing.Size(40, 40);
-            this.multiplyButton.TabIndex = 13;
-            this.multiplyButton.Text = "*";
-            this.multiplyButton.UseVisualStyleBackColor = false;
-            // 
-            // divideButton
-            // 
-            this.divideButton.BackColor = System.Drawing.Color.Transparent;
-            this.divideButton.BaseColor = System.Drawing.Color.LightGray;
-            this.divideButton.BorderColor = System.Drawing.Color.DimGray;
-            this.divideButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.divideButton.DownBack = null;
-            this.divideButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.divideButton.Location = new System.Drawing.Point(106, 33);
-            this.divideButton.MouseBack = null;
-            this.divideButton.Name = "divideButton";
-            this.divideButton.NormlBack = null;
-            this.divideButton.Radius = 10;
-            this.divideButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.divideButton.Size = new System.Drawing.Size(40, 40);
-            this.divideButton.TabIndex = 14;
-            this.divideButton.Text = "/";
-            this.divideButton.UseVisualStyleBackColor = false;
-            // 
-            // openParenthesisButton
-            // 
-            this.openParenthesisButton.BackColor = System.Drawing.Color.Transparent;
-            this.openParenthesisButton.BaseColor = System.Drawing.Color.LightGray;
-            this.openParenthesisButton.BorderColor = System.Drawing.Color.DimGray;
-            this.openParenthesisButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.openParenthesisButton.DownBack = null;
-            this.openParenthesisButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openParenthesisButton.Location = new System.Drawing.Point(16, 115);
-            this.openParenthesisButton.MouseBack = null;
-            this.openParenthesisButton.Name = "openParenthesisButton";
-            this.openParenthesisButton.NormlBack = null;
-            this.openParenthesisButton.Radius = 10;
-            this.openParenthesisButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.openParenthesisButton.Size = new System.Drawing.Size(40, 40);
-            this.openParenthesisButton.TabIndex = 16;
-            this.openParenthesisButton.Text = "(";
-            this.openParenthesisButton.UseVisualStyleBackColor = false;
-            // 
-            // BasicBox
-            // 
-            this.BasicBox.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BasicBox.Controls.Add(this.minusButton);
-            this.BasicBox.Controls.Add(this.plusButton);
-            this.BasicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BasicBox.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BasicBox.Location = new System.Drawing.Point(0, 36);
-            this.BasicBox.Name = "BasicBox";
-            this.BasicBox.Size = new System.Drawing.Size(169, 424);
-            this.BasicBox.TabIndex = 1;
-            this.BasicBox.TabItemImage = null;
-            this.BasicBox.Text = "Basic";
-            // 
-            // minusButton
-            // 
-            this.minusButton.BackColor = System.Drawing.Color.Transparent;
-            this.minusButton.BaseColor = System.Drawing.Color.LightGray;
-            this.minusButton.BorderColor = System.Drawing.Color.DimGray;
-            this.minusButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.minusButton.DownBack = null;
-            this.minusButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minusButton.Location = new System.Drawing.Point(106, 33);
-            this.minusButton.MouseBack = null;
-            this.minusButton.Name = "minusButton";
-            this.minusButton.NormlBack = null;
-            this.minusButton.Radius = 10;
-            this.minusButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.minusButton.Size = new System.Drawing.Size(40, 40);
-            this.minusButton.TabIndex = 12;
-            this.minusButton.Text = "-";
-            this.minusButton.UseVisualStyleBackColor = false;
-            // 
-            // plusButton
-            // 
-            this.plusButton.BackColor = System.Drawing.Color.Transparent;
-            this.plusButton.BaseColor = System.Drawing.Color.LightGray;
-            this.plusButton.BorderColor = System.Drawing.Color.DimGray;
-            this.plusButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.plusButton.DownBack = null;
-            this.plusButton.Font = new System.Drawing.Font("Calibri", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusButton.Location = new System.Drawing.Point(16, 33);
-            this.plusButton.MouseBack = null;
-            this.plusButton.Name = "plusButton";
-            this.plusButton.NormlBack = null;
-            this.plusButton.Radius = 10;
-            this.plusButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.plusButton.Size = new System.Drawing.Size(40, 40);
-            this.plusButton.TabIndex = 11;
-            this.plusButton.Text = "+";
-            this.plusButton.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -795,7 +701,7 @@ namespace MathBrick
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1114, 122);
+            this.panel2.Size = new System.Drawing.Size(1233, 122);
             this.panel2.TabIndex = 0;
             // 
             // skinPanel1
@@ -820,7 +726,7 @@ namespace MathBrick
             this.logoutButton.DownBack = null;
             this.logoutButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.logoutButton.Location = new System.Drawing.Point(1028, 67);
+            this.logoutButton.Location = new System.Drawing.Point(1147, 67);
             this.logoutButton.MouseBack = null;
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.NormlBack = null;
@@ -842,7 +748,7 @@ namespace MathBrick
             this.manageButton.DownBack = null;
             this.manageButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.manageButton.Location = new System.Drawing.Point(1028, 12);
+            this.manageButton.Location = new System.Drawing.Point(1147, 12);
             this.manageButton.MouseBack = null;
             this.manageButton.Name = "manageButton";
             this.manageButton.NormlBack = null;
@@ -886,7 +792,7 @@ namespace MathBrick
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CaptionBackColorBottom = System.Drawing.Color.Silver;
             this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(1130, 629);
+            this.ClientSize = new System.Drawing.Size(1249, 660);
             this.Controls.Add(this.panel1);
             this.Name = "HomePage";
             this.Text = "MathBrick";
@@ -904,11 +810,7 @@ namespace MathBrick
             this.skinPanel2.ResumeLayout(false);
             this.skinGroupBox4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.sideTabControl.ResumeLayout(false);
-            this.AdvancedBox.ResumeLayout(false);
-            this.NumberBox.ResumeLayout(false);
-            this.IntermediateBox.ResumeLayout(false);
-            this.BasicBox.ResumeLayout(false);
+            this.GroupBox_operator.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -925,8 +827,6 @@ namespace MathBrick
         private CCWin.SkinControl.SkinGroupBox skinGroupBox3;
         private CCWin.SkinControl.SkinListBox Resut_Listbox;
         private System.Windows.Forms.Panel panel6;
-        private CCWin.SkinControl.SkinTabControl sideTabControl;
-        private CCWin.SkinControl.SkinTabPage NumberBox;
         private CCWin.SkinControl.SkinButton skinButton10;
         private CCWin.SkinControl.SkinButton skinButton1;
         private CCWin.SkinControl.SkinButton skinButton2;
@@ -937,29 +837,26 @@ namespace MathBrick
         private CCWin.SkinControl.SkinButton skinButton7;
         private CCWin.SkinControl.SkinButton skinButton6;
         private CCWin.SkinControl.SkinButton skinButton5;
-        private CCWin.SkinControl.SkinTabPage AdvancedBox;
-        private CCWin.SkinControl.SkinButton squareButton;
-        private CCWin.SkinControl.SkinButton equationButton;
-        private CCWin.SkinControl.SkinButton bButton;
-        private CCWin.SkinControl.SkinButton aButton;
-        private CCWin.SkinControl.SkinTabPage IntermediateBox;
-        private CCWin.SkinControl.SkinButton closeParenthesisButton;
-        private CCWin.SkinControl.SkinButton multiplyButton;
-        private CCWin.SkinControl.SkinButton divideButton;
-        private CCWin.SkinControl.SkinButton openParenthesisButton;
-        private CCWin.SkinControl.SkinTabPage BasicBox;
-        private CCWin.SkinControl.SkinButton minusButton;
-        private CCWin.SkinControl.SkinButton plusButton;
+        private CCWin.SkinControl.SkinButton btn_power;
+        private CCWin.SkinControl.SkinButton btn_equation;
+        private CCWin.SkinControl.SkinButton btn_x;
         private CCWin.SkinControl.SkinButton quizButton;
         private CCWin.SkinControl.SkinButton logoutButton;
         private CCWin.SkinControl.SkinButton manageButton;
         private CCWin.SkinControl.SkinButton resultButton;
         private CCWin.SkinControl.SkinButton clearButton;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox1;
-        private System.Windows.Forms.Panel panel4;
         private CCWin.SkinControl.SkinPanel skinPanel2;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox2;
         private CCWin.SkinControl.SkinPanel skinPanel1;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox4;
+        private CCWin.SkinControl.SkinButton btn_rightBracket;
+        private CCWin.SkinControl.SkinButton btn_leftBracket;
+        private CCWin.SkinControl.SkinButton btn_divide;
+        private CCWin.SkinControl.SkinButton btn_multi;
+        private CCWin.SkinControl.SkinButton btn_subtrac;
+        private CCWin.SkinControl.SkinButton btn_add;
+        private CCWin.SkinControl.SkinGroupBox GroupBox_operator;
+        private System.Windows.Forms.Panel panel4;
+        private CCWin.SkinControl.SkinGroupBox skinGroupBox2;
     }
 }

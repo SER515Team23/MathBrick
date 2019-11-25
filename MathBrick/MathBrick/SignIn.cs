@@ -16,6 +16,12 @@ namespace MathBrick
             InitializeComponent();
             this.KeyPreview = true;
             this.KeyDown += PasswordTextBoxKeyDown;
+
+            // -----------------------EXAMPLE-----------------------
+
+            // QuizUtils.Instance.ShowExampleForThisClass();
+
+            // -----------------------EXAMPLE-----------------------
         }
 
         private void SignInClick(object sender, EventArgs e)
@@ -28,14 +34,14 @@ namespace MathBrick
             {
                 User teacher = new User { userName = userName, password = password, authorizeLevel = 4, isLogin = true };
                 DataBase.Instance.activeUser = teacher;
-                HomePage main = new HomePage();
+                HomePage main = new HomePage(this);
                 this.Hide();
                 main.Show();
             } else if (userName == "b01" && password == "123")
             {
                 User beginner = new User { userName = userName, password = password, authorizeLevel = 1, isLogin = true };
                 DataBase.Instance.activeUser = beginner;
-                HomePage main = new HomePage();
+                HomePage main = new HomePage(this);
                 this.Hide();
                 main.Show();
             }
@@ -43,7 +49,7 @@ namespace MathBrick
             {
                 User intermediate = new User { userName = userName, password = password, authorizeLevel = 2, isLogin = true };
                 DataBase.Instance.activeUser = intermediate;
-                HomePage main = new HomePage();
+                HomePage main = new HomePage(this);
                 this.Hide();
                 main.Show();
             }
@@ -51,6 +57,14 @@ namespace MathBrick
             {
                 User advanced = new User { userName = userName, password = password, authorizeLevel = 3, isLogin = true };
                 DataBase.Instance.activeUser = advanced;
+                HomePage main = new HomePage(this);
+                this.Hide();
+                main.Show();
+            }
+            else if (userName == "admin" && password == "admin")
+            {
+                User admin = new User { userName = userName, password = password, authorizeLevel = 5, isLogin = true };
+                DataBase.Instance.activeUser = admin;
                 HomePage main = new HomePage();
                 this.Hide();
                 main.Show();
@@ -58,7 +72,7 @@ namespace MathBrick
             // ------------- This only exists during development stage. -------------
             else if (DataBase.Instance.UserLogin(userName, password))
             {
-                HomePage main = new HomePage();
+                HomePage main = new HomePage(this);
                 this.Hide();
                 main.Show();
             }
@@ -81,6 +95,12 @@ namespace MathBrick
             {
                 signInButton.PerformClick();
             }
+        }
+
+        private void SignIn_VisibleChanged(object sender, EventArgs e)
+        {
+            userNameTextBox.Text = "";
+            passwordTextBox.Text = "";
         }
     }
 }
