@@ -24,16 +24,9 @@ namespace MathBrick
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.skinGroupBox3 = new CCWin.SkinControl.SkinGroupBox();
-            this.Resut_Listbox = new CCWin.SkinControl.SkinListBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
-            this.skinGroupBox4 = new CCWin.SkinControl.SkinGroupBox();
-            this.clearButton = new CCWin.SkinControl.SkinButton();
-            this.resultButton = new CCWin.SkinControl.SkinButton();
-            this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.GroupBox_operator = new CCWin.SkinControl.SkinGroupBox();
             this.btn_multi = new CCWin.SkinControl.SkinButton();
@@ -61,6 +54,12 @@ namespace MathBrick
             this.manageButton = new CCWin.SkinControl.SkinButton();
             this.quizButton = new CCWin.SkinControl.SkinButton();
             this.blockMoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
+            this.resultButton = new CCWin.SkinControl.SkinButton();
+            this.clearButton = new CCWin.SkinControl.SkinButton();
+            this.skinGroupBox4 = new CCWin.SkinControl.SkinGroupBox();
+            this.skinGroupBox3 = new CCWin.SkinControl.SkinGroupBox();
+            this.Resut_Listbox = new CCWin.SkinControl.SkinListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -68,19 +67,18 @@ namespace MathBrick
             this.splitContainer1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.skinGroupBox3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.skinPanel2.SuspendLayout();
-            this.skinGroupBox4.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.GroupBox_operator.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.skinGroupBox4.SuspendLayout();
+            this.skinGroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.splitContainer1);
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -103,7 +101,7 @@ namespace MathBrick
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel5);
-            this.splitContainer1.Size = new System.Drawing.Size(832, 536);
+            this.splitContainer1.Size = new System.Drawing.Size(1032, 536);
             this.splitContainer1.SplitterDistance = 360;
             this.splitContainer1.TabIndex = 3;
             // 
@@ -113,176 +111,36 @@ namespace MathBrick
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(832, 360);
+            this.panel6.Size = new System.Drawing.Size(1032, 360);
             this.panel6.TabIndex = 4;
-            // 
-            // skinGroupBox1
-            // 
-            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox1.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinGroupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinGroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.skinGroupBox1.Name = "skinGroupBox1";
-            this.skinGroupBox1.RectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox1.Size = new System.Drawing.Size(832, 360);
-            this.skinGroupBox1.TabIndex = 5;
-            this.skinGroupBox1.TabStop = false;
-            this.skinGroupBox1.Text = "Canvas";
-            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.skinGroupBox3);
+            this.panel5.Controls.Add(this.panel8);
+            this.panel5.Controls.Add(this.panel7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(832, 172);
+            this.panel5.Size = new System.Drawing.Size(1032, 172);
             this.panel5.TabIndex = 3;
             // 
-            // skinGroupBox3
+            // panel8
             // 
-            this.skinGroupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox3.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox3.Controls.Add(this.Resut_Listbox);
-            this.skinGroupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinGroupBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinGroupBox3.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox3.Location = new System.Drawing.Point(0, 0);
-            this.skinGroupBox3.Name = "skinGroupBox3";
-            this.skinGroupBox3.RectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox3.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox3.Size = new System.Drawing.Size(832, 172);
-            this.skinGroupBox3.TabIndex = 6;
-            this.skinGroupBox3.TabStop = false;
-            this.skinGroupBox3.Text = "Result";
-            this.skinGroupBox3.TitleBorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox3.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox3.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel8.Controls.Add(this.skinGroupBox3);
+            this.panel8.Location = new System.Drawing.Point(161, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(871, 169);
+            this.panel8.TabIndex = 5;
             // 
-            // Resut_Listbox
+            // panel7
             // 
-            this.Resut_Listbox.Back = null;
-            this.Resut_Listbox.BackColor = System.Drawing.Color.White;
-            this.Resut_Listbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Resut_Listbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Resut_Listbox.FormattingEnabled = true;
-            this.Resut_Listbox.ItemHeight = 18;
-            this.Resut_Listbox.Location = new System.Drawing.Point(3, 23);
-            this.Resut_Listbox.Margin = new System.Windows.Forms.Padding(0);
-            this.Resut_Listbox.MouseColor = System.Drawing.Color.White;
-            this.Resut_Listbox.Name = "Resut_Listbox";
-            this.Resut_Listbox.RowBackColor2 = System.Drawing.Color.White;
-            this.Resut_Listbox.SelectedColor = System.Drawing.Color.White;
-            this.Resut_Listbox.Size = new System.Drawing.Size(826, 146);
-            this.Resut_Listbox.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.skinPanel2);
-            this.panel4.Controls.Add(this.skinGroupBox2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1033, 132);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 536);
-            this.panel4.TabIndex = 2;
-            // 
-            // skinPanel2
-            // 
-            this.skinPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel2.Controls.Add(this.skinGroupBox4);
-            this.skinPanel2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel2.DownBack = null;
-            this.skinPanel2.Location = new System.Drawing.Point(6, 0);
-            this.skinPanel2.MouseBack = null;
-            this.skinPanel2.Name = "skinPanel2";
-            this.skinPanel2.NormlBack = null;
-            this.skinPanel2.Size = new System.Drawing.Size(188, 120);
-            this.skinPanel2.TabIndex = 15;
-            // 
-            // skinGroupBox4
-            // 
-            this.skinGroupBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox4.BorderColor = System.Drawing.Color.Silver;
-            this.skinGroupBox4.Controls.Add(this.clearButton);
-            this.skinGroupBox4.Controls.Add(this.resultButton);
-            this.skinGroupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinGroupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinGroupBox4.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox4.Location = new System.Drawing.Point(0, 0);
-            this.skinGroupBox4.Name = "skinGroupBox4";
-            this.skinGroupBox4.RectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox4.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox4.Size = new System.Drawing.Size(188, 120);
-            this.skinGroupBox4.TabIndex = 6;
-            this.skinGroupBox4.TabStop = false;
-            this.skinGroupBox4.Text = "Canvas Control";
-            this.skinGroupBox4.TitleBorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox4.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox4.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
-            // clearButton
-            // 
-            this.clearButton.BackColor = System.Drawing.Color.Transparent;
-            this.clearButton.BaseColor = System.Drawing.Color.LightGray;
-            this.clearButton.BorderColor = System.Drawing.Color.DimGray;
-            this.clearButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.clearButton.DownBack = null;
-            this.clearButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(107, 39);
-            this.clearButton.MouseBack = null;
-            this.clearButton.Name = "clearButton";
-            this.clearButton.NormlBack = null;
-            this.clearButton.Radius = 10;
-            this.clearButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.clearButton.Size = new System.Drawing.Size(70, 38);
-            this.clearButton.TabIndex = 12;
-            this.clearButton.Text = "Clear";
-            this.clearButton.UseVisualStyleBackColor = false;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click_1);
-            // 
-            // resultButton
-            // 
-            this.resultButton.BackColor = System.Drawing.Color.Transparent;
-            this.resultButton.BaseColor = System.Drawing.Color.LightGray;
-            this.resultButton.BorderColor = System.Drawing.Color.DimGray;
-            this.resultButton.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.resultButton.DownBack = null;
-            this.resultButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultButton.Location = new System.Drawing.Point(13, 39);
-            this.resultButton.MouseBack = null;
-            this.resultButton.Name = "resultButton";
-            this.resultButton.NormlBack = null;
-            this.resultButton.Radius = 10;
-            this.resultButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.resultButton.Size = new System.Drawing.Size(70, 38);
-            this.resultButton.TabIndex = 14;
-            this.resultButton.Text = "Result";
-            this.resultButton.UseVisualStyleBackColor = false;
-            this.resultButton.Click += new System.EventHandler(this.resultButton_Click_1);
-            // 
-            // skinGroupBox2
-            // 
-            this.skinGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox2.BorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.skinGroupBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skinGroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox2.Location = new System.Drawing.Point(0, 131);
-            this.skinGroupBox2.Name = "skinGroupBox2";
-            this.skinGroupBox2.RectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox2.Size = new System.Drawing.Size(200, 405);
-            this.skinGroupBox2.TabIndex = 5;
-            this.skinGroupBox2.TabStop = false;
-            this.skinGroupBox2.Text = "Message";
-            this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.DarkGray;
-            this.skinGroupBox2.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
-            this.skinGroupBox2.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel7.Controls.Add(this.skinGroupBox4);
+            this.panel7.Location = new System.Drawing.Point(6, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(149, 166);
+            this.panel7.TabIndex = 4;
             // 
             // panel3
             // 
@@ -726,7 +584,7 @@ namespace MathBrick
             this.logoutButton.DownBack = null;
             this.logoutButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.logoutButton.Location = new System.Drawing.Point(1147, 73);
+            this.logoutButton.Location = new System.Drawing.Point(1138, 83);
             this.logoutButton.MouseBack = null;
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.NormlBack = null;
@@ -748,7 +606,7 @@ namespace MathBrick
             this.manageButton.DownBack = null;
             this.manageButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.manageButton.Location = new System.Drawing.Point(1147, 13);
+            this.manageButton.Location = new System.Drawing.Point(1138, 30);
             this.manageButton.MouseBack = null;
             this.manageButton.Name = "manageButton";
             this.manageButton.NormlBack = null;
@@ -769,7 +627,7 @@ namespace MathBrick
             this.quizButton.DownBack = null;
             this.quizButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quizButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.quizButton.Location = new System.Drawing.Point(16, 83);
+            this.quizButton.Location = new System.Drawing.Point(18, 83);
             this.quizButton.MouseBack = null;
             this.quizButton.Name = "quizButton";
             this.quizButton.NormlBack = null;
@@ -785,6 +643,124 @@ namespace MathBrick
             // 
             this.blockMoveTimer.Interval = 10;
             this.blockMoveTimer.Tick += new System.EventHandler(this.BlockMoveTimer_Tick);
+            // 
+            // skinGroupBox1
+            // 
+            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinGroupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinGroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.skinGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.skinGroupBox1.Name = "skinGroupBox1";
+            this.skinGroupBox1.RectBackColor = System.Drawing.Color.White;
+            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox1.Size = new System.Drawing.Size(1032, 360);
+            this.skinGroupBox1.TabIndex = 5;
+            this.skinGroupBox1.TabStop = false;
+            this.skinGroupBox1.Text = "Canvas";
+            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // resultButton
+            // 
+            this.resultButton.BackColor = System.Drawing.Color.Transparent;
+            this.resultButton.BaseColor = System.Drawing.Color.LightGray;
+            this.resultButton.BorderColor = System.Drawing.Color.DimGray;
+            this.resultButton.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.resultButton.DownBack = null;
+            this.resultButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultButton.Location = new System.Drawing.Point(39, 50);
+            this.resultButton.MouseBack = null;
+            this.resultButton.Name = "resultButton";
+            this.resultButton.NormlBack = null;
+            this.resultButton.Radius = 10;
+            this.resultButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.resultButton.Size = new System.Drawing.Size(70, 38);
+            this.resultButton.TabIndex = 14;
+            this.resultButton.Text = "Result";
+            this.resultButton.UseVisualStyleBackColor = false;
+            this.resultButton.Click += new System.EventHandler(this.resultButton_Click);
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.Transparent;
+            this.clearButton.BaseColor = System.Drawing.Color.LightGray;
+            this.clearButton.BorderColor = System.Drawing.Color.DimGray;
+            this.clearButton.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.clearButton.DownBack = null;
+            this.clearButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.Location = new System.Drawing.Point(39, 108);
+            this.clearButton.MouseBack = null;
+            this.clearButton.Name = "clearButton";
+            this.clearButton.NormlBack = null;
+            this.clearButton.Radius = 10;
+            this.clearButton.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.clearButton.Size = new System.Drawing.Size(70, 38);
+            this.clearButton.TabIndex = 12;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // skinGroupBox4
+            // 
+            this.skinGroupBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox4.BorderColor = System.Drawing.Color.Silver;
+            this.skinGroupBox4.Controls.Add(this.clearButton);
+            this.skinGroupBox4.Controls.Add(this.resultButton);
+            this.skinGroupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinGroupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinGroupBox4.ForeColor = System.Drawing.Color.Black;
+            this.skinGroupBox4.Location = new System.Drawing.Point(0, 0);
+            this.skinGroupBox4.Name = "skinGroupBox4";
+            this.skinGroupBox4.RectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox4.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox4.Size = new System.Drawing.Size(149, 166);
+            this.skinGroupBox4.TabIndex = 9;
+            this.skinGroupBox4.TabStop = false;
+            this.skinGroupBox4.Text = "Canvas Control";
+            this.skinGroupBox4.TitleBorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox4.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox4.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // skinGroupBox3
+            // 
+            this.skinGroupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox3.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox3.Controls.Add(this.Resut_Listbox);
+            this.skinGroupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinGroupBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinGroupBox3.ForeColor = System.Drawing.Color.Black;
+            this.skinGroupBox3.Location = new System.Drawing.Point(0, 0);
+            this.skinGroupBox3.Name = "skinGroupBox3";
+            this.skinGroupBox3.RectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox3.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox3.Size = new System.Drawing.Size(871, 169);
+            this.skinGroupBox3.TabIndex = 10;
+            this.skinGroupBox3.TabStop = false;
+            this.skinGroupBox3.Text = "Result";
+            this.skinGroupBox3.TitleBorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox3.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
+            this.skinGroupBox3.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // Resut_Listbox
+            // 
+            this.Resut_Listbox.Back = null;
+            this.Resut_Listbox.BackColor = System.Drawing.Color.White;
+            this.Resut_Listbox.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.Resut_Listbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Resut_Listbox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Resut_Listbox.FormattingEnabled = true;
+            this.Resut_Listbox.ItemHeight = 18;
+            this.Resut_Listbox.Location = new System.Drawing.Point(3, 23);
+            this.Resut_Listbox.Margin = new System.Windows.Forms.Padding(0);
+            this.Resut_Listbox.MouseColor = System.Drawing.Color.White;
+            this.Resut_Listbox.Name = "Resut_Listbox";
+            this.Resut_Listbox.RowBackColor2 = System.Drawing.Color.White;
+            this.Resut_Listbox.SelectedColor = System.Drawing.Color.White;
+            this.Resut_Listbox.Size = new System.Drawing.Size(865, 143);
+            this.Resut_Listbox.TabIndex = 6;
             // 
             // HomePage
             // 
@@ -805,13 +781,13 @@ namespace MathBrick
             this.splitContainer1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.skinGroupBox3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.skinPanel2.ResumeLayout(false);
-            this.skinGroupBox4.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.GroupBox_operator.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.skinGroupBox4.ResumeLayout(false);
+            this.skinGroupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -823,9 +799,6 @@ namespace MathBrick
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer blockMoveTimer;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Panel panel5;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox3;
-        private CCWin.SkinControl.SkinListBox Resut_Listbox;
         private System.Windows.Forms.Panel panel6;
         private CCWin.SkinControl.SkinButton skinButton10;
         private CCWin.SkinControl.SkinButton skinButton1;
@@ -843,12 +816,7 @@ namespace MathBrick
         private CCWin.SkinControl.SkinButton quizButton;
         private CCWin.SkinControl.SkinButton logoutButton;
         private CCWin.SkinControl.SkinButton manageButton;
-        private CCWin.SkinControl.SkinButton resultButton;
-        private CCWin.SkinControl.SkinButton clearButton;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox1;
-        private CCWin.SkinControl.SkinPanel skinPanel2;
         private CCWin.SkinControl.SkinPanel skinPanel1;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox4;
         private CCWin.SkinControl.SkinButton btn_rightBracket;
         private CCWin.SkinControl.SkinButton btn_leftBracket;
         private CCWin.SkinControl.SkinButton btn_divide;
@@ -856,7 +824,14 @@ namespace MathBrick
         private CCWin.SkinControl.SkinButton btn_subtrac;
         private CCWin.SkinControl.SkinButton btn_add;
         private CCWin.SkinControl.SkinGroupBox GroupBox_operator;
-        private System.Windows.Forms.Panel panel4;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private CCWin.SkinControl.SkinGroupBox skinGroupBox1;
+        private CCWin.SkinControl.SkinGroupBox skinGroupBox4;
+        private CCWin.SkinControl.SkinButton clearButton;
+        private CCWin.SkinControl.SkinButton resultButton;
+        private CCWin.SkinControl.SkinGroupBox skinGroupBox3;
+        private CCWin.SkinControl.SkinListBox Resut_Listbox;
     }
 }
