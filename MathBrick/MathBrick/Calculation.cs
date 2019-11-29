@@ -14,7 +14,7 @@ namespace MathBrick
     /// <summary>
     /// Pass arguments when creating an instance
     /// </summary>
-    class Calculation
+    public class Calculation
     {
         private string inputString1 = "";
         private string inputString2 = "";
