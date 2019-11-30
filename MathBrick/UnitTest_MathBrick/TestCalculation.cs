@@ -40,5 +40,52 @@ namespace UnitTest_MathBrick
             MathBrick.Calculation theCalcul = new MathBrick.Calculation("9/0");
             Assert.IsTrue(double.IsInfinity(Convert.ToDouble(theCalcul.Calculate())));
         }
+
+        [TestMethod]
+        public void TestLinearEquation()
+        {
+            MathBrick.Calculation theCalcul = new MathBrick.Calculation("3x+9=12");
+            Assert.AreEqual("x=1", theCalcul.LinearEquation());
+        }
+
+        [TestMethod]
+        public void TestLinearEquation_Nosolution()
+        {
+            MathBrick.Calculation theCalcul = new MathBrick.Calculation("3x=3x");
+            Assert.AreEqual("No Solution!", theCalcul.LinearEquation());
+        }
+
+        [TestMethod]
+        public void TestLinearEquation_Error()
+        {
+            MathBrick.Calculation theCalcul = new MathBrick.Calculation("3x*2=3x");
+            Assert.AreEqual("error", theCalcul.LinearEquation());
+        }
+
+        [TestMethod]
+        public void TestQuadraticEquation()
+        {
+            MathBrick.Calculation theCalcul = new MathBrick.Calculation("x^2-2x-3=0");
+            Assert.AreEqual("x1=3    x2=-1", theCalcul.QuadraticEquation());
+        }
+
+        [TestMethod]
+        public void TestQuadraticEquation_SameSolution()
+        {
+            MathBrick.Calculation theCalcul = new MathBrick.Calculation("x^2+4x+4=0");
+            Assert.AreEqual("x1=-2    x2=-2", theCalcul.QuadraticEquation());
+        }
+
+        public void TestQuadraticEquation_NoSolution()
+        {
+            MathBrick.Calculation theCalcul = new MathBrick.Calculation("x^2-x+9=0");
+            Assert.AreEqual("No Solution!", theCalcul.QuadraticEquation());
+        }
+
+        public void TestQuadraticEquation_Error()
+        {
+            MathBrick.Calculation theCalcul = new MathBrick.Calculation("x^2*x-x+9=0");
+            Assert.AreEqual("error", theCalcul.QuadraticEquation());
+        }
     }
 }
