@@ -36,6 +36,7 @@ namespace MathBrick
             this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.GroupBox_operator = new CCWin.SkinControl.SkinGroupBox();
+            this.btn_multi = new CCWin.SkinControl.SkinButton();
             this.btn_power = new CCWin.SkinControl.SkinButton();
             this.btn_rightBracket = new CCWin.SkinControl.SkinButton();
             this.btn_equation = new CCWin.SkinControl.SkinButton();
@@ -45,7 +46,6 @@ namespace MathBrick
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.btn_divide = new CCWin.SkinControl.SkinButton();
             this.skinButton9 = new CCWin.SkinControl.SkinButton();
-            this.btn_multi = new CCWin.SkinControl.SkinButton();
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.btn_subtrac = new CCWin.SkinControl.SkinButton();
             this.skinButton8 = new CCWin.SkinControl.SkinButton();
@@ -61,12 +61,14 @@ namespace MathBrick
             this.manageButton = new CCWin.SkinControl.SkinButton();
             this.quizButton = new CCWin.SkinControl.SkinButton();
             this.blockMoveTimer = new System.Windows.Forms.Timer(this.components);
+            this.Canvas = new CCWin.SkinControl.SkinPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.skinGroupBox1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.skinGroupBox3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -120,6 +122,7 @@ namespace MathBrick
             // 
             this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.skinGroupBox1.BorderColor = System.Drawing.Color.DarkGray;
+            this.skinGroupBox1.Controls.Add(this.Canvas);
             this.skinGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinGroupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skinGroupBox1.ForeColor = System.Drawing.Color.Black;
@@ -331,6 +334,25 @@ namespace MathBrick
             this.GroupBox_operator.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
             this.GroupBox_operator.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
             // 
+            // btn_multi
+            // 
+            this.btn_multi.BackColor = System.Drawing.Color.Transparent;
+            this.btn_multi.BaseColor = System.Drawing.Color.LightGray;
+            this.btn_multi.BorderColor = System.Drawing.Color.DimGray;
+            this.btn_multi.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btn_multi.DownBack = null;
+            this.btn_multi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_multi.Location = new System.Drawing.Point(140, 292);
+            this.btn_multi.MouseBack = null;
+            this.btn_multi.Name = "btn_multi";
+            this.btn_multi.NormlBack = null;
+            this.btn_multi.Radius = 10;
+            this.btn_multi.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btn_multi.Size = new System.Drawing.Size(40, 40);
+            this.btn_multi.TabIndex = 22;
+            this.btn_multi.Text = "*";
+            this.btn_multi.UseVisualStyleBackColor = false;
+            // 
             // btn_power
             // 
             this.btn_power.BackColor = System.Drawing.Color.Transparent;
@@ -499,25 +521,6 @@ namespace MathBrick
             this.skinButton9.TabIndex = 8;
             this.skinButton9.Text = "9";
             this.skinButton9.UseVisualStyleBackColor = false;
-            // 
-            // btn_multi
-            // 
-            this.btn_multi.BackColor = System.Drawing.Color.Transparent;
-            this.btn_multi.BaseColor = System.Drawing.Color.LightGray;
-            this.btn_multi.BorderColor = System.Drawing.Color.DimGray;
-            this.btn_multi.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btn_multi.DownBack = null;
-            this.btn_multi.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_multi.Location = new System.Drawing.Point(140, 292);
-            this.btn_multi.MouseBack = null;
-            this.btn_multi.Name = "btn_multi";
-            this.btn_multi.NormlBack = null;
-            this.btn_multi.Radius = 10;
-            this.btn_multi.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btn_multi.Size = new System.Drawing.Size(40, 40);
-            this.btn_multi.TabIndex = 22;
-            this.btn_multi.Text = "*";
-            this.btn_multi.UseVisualStyleBackColor = false;
             // 
             // skinButton2
             // 
@@ -786,6 +789,21 @@ namespace MathBrick
             this.blockMoveTimer.Interval = 10;
             this.blockMoveTimer.Tick += new System.EventHandler(this.BlockMoveTimer_Tick);
             // 
+            // Canvas
+            // 
+            this.Canvas.BackColor = System.Drawing.Color.Transparent;
+            this.Canvas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Canvas.BackgroundImage")));
+            this.Canvas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Canvas.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.Canvas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Canvas.DownBack = null;
+            this.Canvas.Location = new System.Drawing.Point(3, 23);
+            this.Canvas.MouseBack = null;
+            this.Canvas.Name = "Canvas";
+            this.Canvas.NormlBack = null;
+            this.Canvas.Size = new System.Drawing.Size(826, 304);
+            this.Canvas.TabIndex = 0;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -804,6 +822,7 @@ namespace MathBrick
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.skinGroupBox1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.skinGroupBox3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -858,5 +877,6 @@ namespace MathBrick
         private CCWin.SkinControl.SkinGroupBox GroupBox_operator;
         private System.Windows.Forms.Panel panel4;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox2;
+        private CCWin.SkinControl.SkinPanel Canvas;
     }
 }
