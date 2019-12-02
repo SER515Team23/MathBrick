@@ -12,7 +12,7 @@ using System.Web.Script.Serialization;
 
 namespace MathBrick
 {
-    class QuizUtils
+    public class QuizUtils
     {
         private static QuizUtils instance;
         private static string quizFileName = "QuizzesList.txt";
@@ -112,7 +112,11 @@ namespace MathBrick
 
         public Quiz RetrieveOneQuiz(string uniqueID)
         {
-            return quizzesDic[uniqueID];
+            if (quizzesDic.ContainsKey(uniqueID))
+            {
+                return quizzesDic[uniqueID];
+            }
+            return null;
         }
 
         public void DeleteAQuiz(string uniqueID)
