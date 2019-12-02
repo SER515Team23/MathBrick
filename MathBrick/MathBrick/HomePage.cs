@@ -230,8 +230,8 @@ namespace MathBrick
                     btn_x.Hide();
                     btn_equation.Hide();
                     btn_power.Hide();
-                    Point addLocation = new Point(18, 218);
-                    Point subLocation = new Point(140, 218);
+                    Point addLocation = new Point(skinButton7.Location.X, skinButton10.Location.Y);
+                    Point subLocation = new Point(skinButton9.Location.X, skinButton10.Location.Y);
                     btn_add.Location = addLocation;
                     btn_subtrac.Location = subLocation;
                     manageButton.Hide();
@@ -263,13 +263,12 @@ namespace MathBrick
             moveBtn.Location = this.skinGroupBox1.PointToClient(new Point(MousePosition.X - moveBtn.Size.Width / 2, MousePosition.Y - moveBtn.Size.Height / 2));
         }
 
-
-        private void clearButton_Click_1(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
             this.skinGroupBox1.Controls.Clear();
         }
 
-        private void resultButton_Click_1(object sender, EventArgs e)
+        private void resultButton_Click(object sender, EventArgs e)
         {
             if (this.skinGroupBox1.Controls.Count > 0)
             {
