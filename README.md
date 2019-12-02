@@ -24,12 +24,12 @@ Unzip the zip folder named "Delievery.zip" which contains the main application a
 #### Step 2
 Double click the main application named "MathBrick" to show the app entrance login page.
 #### Step 3
-Use the accounts information below provided only at development stage.
-Beginner: b01 password: 123
-Intermediate: i01 password: 123
-Advanced: a01 password: 123
-Teacher: t01 password: 123
-Admin: admin password: admin
+Use the accounts information below provided only at development stage.<br>
+Beginner: *b01* password: *123*<br>
+Intermediate: *i01* password: *123*<br>
+Advanced: *a01* password: *123*<br>
+Teacher: *t01* password: *123*<br>
+Admin: *admin* password: *admin*
 
 #### Step 4
 Enjoy your journey in learning Math with our MathBrick!!
