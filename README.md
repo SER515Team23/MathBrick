@@ -24,7 +24,13 @@ Unzip the zip folder named "Delievery.zip" which contains the main application a
 #### Step 2
 Double click the main application named "MathBrick" to show the app entrance login page.
 #### Step 3
-Use the accounts information in login page provided only at develop stage.
+Use the accounts information below provided only at development stage.
+Beginner: b01 password: 123
+Intermediate: i01 password: 123
+Advanced: a01 password: 123
+Teacher: t01 password: 123
+Admin: admin password: admin
+
 #### Step 4
 Enjoy your journey in learning Math with our MathBrick!!
 
@@ -36,4 +42,5 @@ Google Drive: https://reurl.cc/Zn7xAA
 * 2019/09/13 Initial user stories create
 * 2019/10/01 Second Sprint Scrum Master --> Yu-Ting Tsao
 * 2019/11/05 Third Sprint Scrum Master --> Xinkai Wang
+* 2019/11/25 Fourth Sprint Scrum Master --> Huijing Liang
 
