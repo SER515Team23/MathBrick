@@ -14,6 +14,7 @@ Team Members:
 ### YouTube Tutorial & Presentation
 Delievery 2: https://youtu.be/cGctr-Yv5n8 <br>
 Delievery 3: https://youtu.be/uzDzU8iHArg
+Delievery 4: 
 
 ### How to run?
 * Platform: Windows Forms Application
@@ -30,6 +31,13 @@ Intermediate: *i01* password: *123*<br>
 Advanced: *a01* password: *123*<br>
 Teacher: *t01* password: *123*<br>
 Admin: *admin* password: *admin*
+
+If you want sign up new user, there are the activate code:
+Beginner: 0000
+intermediate: 6666
+advanced: 7777
+teacher: 9527
+admin: admin
 
 #### Step 4
 Enjoy your journey in learning Math with our MathBrick!!
