@@ -22,12 +22,12 @@ namespace MathBrick
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
             this.welcomePanel = new CCWin.SkinControl.SkinPanel();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.passwordTextBox = new CCWin.SkinControl.SkinTextBox();
             this.userNameTextBox = new CCWin.SkinControl.SkinTextBox();
             this.signUpButton = new CCWin.SkinControl.SkinButton();
             this.signInButton = new CCWin.SkinControl.SkinButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
             this.welcomePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,30 @@ namespace MathBrick
             this.welcomePanel.NormlBack = null;
             this.welcomePanel.Size = new System.Drawing.Size(684, 493);
             this.welcomePanel.TabIndex = 0;
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.ForeColor = System.Drawing.Color.White;
+            this.passwordLabel.Location = new System.Drawing.Point(121, 206);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(117, 26);
+            this.passwordLabel.TabIndex = 14;
+            this.passwordLabel.Text = "Password：";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(121, 130);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 26);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Username：";
             // 
             // passwordTextBox
             // 
@@ -182,30 +206,6 @@ namespace MathBrick
             this.signInButton.UseVisualStyleBackColor = false;
             this.signInButton.Click += new System.EventHandler(this.SignInClick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(121, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 26);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Username：";
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
-            this.passwordLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.ForeColor = System.Drawing.Color.White;
-            this.passwordLabel.Location = new System.Drawing.Point(121, 206);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(117, 26);
-            this.passwordLabel.TabIndex = 14;
-            this.passwordLabel.Text = "Password：";
-            // 
             // SignIn
             // 
             this.AcceptButton = this.signInButton;
@@ -215,6 +215,7 @@ namespace MathBrick
             this.CaptionBackColorTop = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(700, 540);
             this.Controls.Add(this.welcomePanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(700, 8000);

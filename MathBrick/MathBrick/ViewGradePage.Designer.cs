@@ -30,6 +30,7 @@ namespace MathBrick
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewGrade));
             this.SubjectLebel = new CCWin.SkinControl.SkinLabel();
             this.LevelLabel = new CCWin.SkinControl.SkinLabel();
             this.GradeListView = new CCWin.SkinControl.SkinListView();
@@ -169,6 +170,7 @@ namespace MathBrick
             this.Controls.Add(this.GradeListView);
             this.Controls.Add(this.LevelLabel);
             this.Controls.Add(this.SubjectLebel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewGrade";
             this.Text = "ViewGrade";
             this.Load += new System.EventHandler(this.ViewGrade_Load);

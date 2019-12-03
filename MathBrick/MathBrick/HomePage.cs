@@ -158,19 +158,19 @@ namespace MathBrick
         {
             var btn = new CCWin.SkinControl.SkinButton();
             btn.BackColor = System.Drawing.Color.Transparent;
-            btn.BaseColor = System.Drawing.Color.LightGray;
-            btn.BorderColor = System.Drawing.Color.DimGray;
+            btn.BaseColor = System.Drawing.Color.Ivory;
+            btn.BorderColor = System.Drawing.Color.DarkOliveGreen;
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
             btn.Radius = 5;
             btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
 
             // Update to the new size of block
-            btn.Size = new System.Drawing.Size(35, 35);
+            btn.Size = new System.Drawing.Size(40, 40);
             btn.UseVisualStyleBackColor = false;
             btn.Location = startingPoint;
             btn.Text = text;
             btn.Anchor = AnchorStyles.Left | AnchorStyles.Top; 
-            startingPoint.X += 35;
+            startingPoint.X += 40;
 
             return btn;
         }

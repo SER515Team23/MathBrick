@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuizPage));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_subject = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -121,8 +122,8 @@
             // btn_add
             // 
             this.btn_add.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_add.BorderColor = System.Drawing.Color.Silver;
+            this.btn_add.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_add.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_add.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_add.DownBack = null;
             this.btn_add.DownBaseColor = System.Drawing.SystemColors.Control;
@@ -142,8 +143,8 @@
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_delete.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_delete.BorderColor = System.Drawing.Color.Silver;
+            this.btn_delete.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_delete.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_delete.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_delete.DownBack = null;
             this.btn_delete.DownBaseColor = System.Drawing.SystemColors.Control;
@@ -163,8 +164,8 @@
             // btn_save
             // 
             this.btn_save.BackColor = System.Drawing.Color.Transparent;
-            this.btn_save.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_save.BorderColor = System.Drawing.Color.Silver;
+            this.btn_save.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_save.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_save.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_save.DownBack = null;
             this.btn_save.DownBaseColor = System.Drawing.SystemColors.Control;
@@ -184,8 +185,8 @@
             // btn_cancel
             // 
             this.btn_cancel.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cancel.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_cancel.BorderColor = System.Drawing.Color.Silver;
+            this.btn_cancel.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_cancel.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_cancel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_cancel.DownBack = null;
             this.btn_cancel.DownBaseColor = System.Drawing.SystemColors.Control;
@@ -219,8 +220,8 @@
             // btn_edit
             // 
             this.btn_edit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_edit.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_edit.BorderColor = System.Drawing.Color.Silver;
+            this.btn_edit.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_edit.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_edit.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_edit.DownBack = null;
             this.btn_edit.DownBaseColor = System.Drawing.SystemColors.Control;
@@ -303,6 +304,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_subject);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "QuizPage";
             this.Text = "QuizPage";

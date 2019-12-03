@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionPopUp));
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.btn_save = new CCWin.SkinControl.SkinButton();
             this.btn_cancel = new CCWin.SkinControl.SkinButton();
@@ -61,8 +62,8 @@
             // btn_save
             // 
             this.btn_save.BackColor = System.Drawing.Color.Transparent;
-            this.btn_save.BaseColor = System.Drawing.Color.PeachPuff;
-            this.btn_save.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_save.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_save.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_save.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_save.DownBack = null;
             this.btn_save.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,8 +83,8 @@
             // btn_cancel
             // 
             this.btn_cancel.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cancel.BaseColor = System.Drawing.Color.PeachPuff;
-            this.btn_cancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_cancel.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_cancel.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_cancel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_cancel.DownBack = null;
             this.btn_cancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,6 +149,7 @@
             this.CaptionBackColorTop = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(580, 287);
             this.Controls.Add(this.skinPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "QuestionPopUp";
             this.Text = "Question";

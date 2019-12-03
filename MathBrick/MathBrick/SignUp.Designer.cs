@@ -20,14 +20,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
+            this.activecodeLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
             this.quitButton = new CCWin.SkinControl.SkinButton();
             this.signinButton = new CCWin.SkinControl.SkinButton();
             this.activateCodeTextBox = new CCWin.SkinControl.SkinTextBox();
             this.passwordTextBox = new CCWin.SkinControl.SkinTextBox();
             this.usernameTextBox = new CCWin.SkinControl.SkinTextBox();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.activecodeLabel = new System.Windows.Forms.Label();
             this.skinPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,39 @@
             this.skinPanel1.NormlBack = null;
             this.skinPanel1.Size = new System.Drawing.Size(574, 405);
             this.skinPanel1.TabIndex = 0;
+            // 
+            // activecodeLabel
+            // 
+            this.activecodeLabel.AutoSize = true;
+            this.activecodeLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activecodeLabel.ForeColor = System.Drawing.Color.White;
+            this.activecodeLabel.Location = new System.Drawing.Point(91, 180);
+            this.activecodeLabel.Name = "activecodeLabel";
+            this.activecodeLabel.Size = new System.Drawing.Size(122, 26);
+            this.activecodeLabel.TabIndex = 11;
+            this.activecodeLabel.Text = "Active Code:";
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.ForeColor = System.Drawing.Color.White;
+            this.passwordLabel.Location = new System.Drawing.Point(91, 120);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(100, 26);
+            this.passwordLabel.TabIndex = 10;
+            this.passwordLabel.Text = "Password:";
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.ForeColor = System.Drawing.Color.White;
+            this.usernameLabel.Location = new System.Drawing.Point(91, 64);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(110, 26);
+            this.usernameLabel.TabIndex = 9;
+            this.usernameLabel.Text = "UserName:";
             // 
             // quitButton
             // 
@@ -217,39 +250,6 @@
             this.usernameTextBox.WaterText = "";
             this.usernameTextBox.WordWrap = true;
             // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.ForeColor = System.Drawing.Color.White;
-            this.usernameLabel.Location = new System.Drawing.Point(91, 64);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(110, 26);
-            this.usernameLabel.TabIndex = 9;
-            this.usernameLabel.Text = "UserName:";
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.ForeColor = System.Drawing.Color.White;
-            this.passwordLabel.Location = new System.Drawing.Point(91, 120);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(100, 26);
-            this.passwordLabel.TabIndex = 10;
-            this.passwordLabel.Text = "Password:";
-            // 
-            // activecodeLabel
-            // 
-            this.activecodeLabel.AutoSize = true;
-            this.activecodeLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activecodeLabel.ForeColor = System.Drawing.Color.White;
-            this.activecodeLabel.Location = new System.Drawing.Point(91, 180);
-            this.activecodeLabel.Name = "activecodeLabel";
-            this.activecodeLabel.Size = new System.Drawing.Size(122, 26);
-            this.activecodeLabel.TabIndex = 11;
-            this.activecodeLabel.Text = "Active Code:";
-            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -258,6 +258,7 @@
             this.CaptionBackColorTop = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(590, 452);
             this.Controls.Add(this.skinPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUp";
             this.Text = "MATHBRICK";
             this.skinPanel1.ResumeLayout(false);
