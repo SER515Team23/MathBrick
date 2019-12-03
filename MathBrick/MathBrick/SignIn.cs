@@ -65,7 +65,7 @@ namespace MathBrick
             {
                 User admin = new User { userName = userName, password = password, authorizeLevel = 5, isLogin = true };
                 DataBase.Instance.activeUser = admin;
-                HomePage main = new HomePage();
+                HomePage main = new HomePage(this);
                 this.Hide();
                 main.Show();
             }
