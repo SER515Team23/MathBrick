@@ -7,7 +7,7 @@
 
 namespace MathBrick
 {
-    class User: IEquatable<User>
+    public class User: IEquatable<User>
     {
         public string userName { get; set; }
         public string password { get; set; }

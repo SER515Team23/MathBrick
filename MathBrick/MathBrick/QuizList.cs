@@ -27,6 +27,10 @@ namespace MathBrick
             User currentUser = DataBase.Instance.activeUser;
             this.nameLabel.Text = currentUser.userName;
             int level = currentUser.authorizeLevel;
+            if (level == 4)
+            {
+                this.columnHeader6.Dispose();
+            }
             this.levelLabel.Text = (level == 1 ? "Beginner" : level == 2? "Intermediate" : level == 3? "Advanced":"");
         }    
 
