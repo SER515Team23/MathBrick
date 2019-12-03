@@ -25,6 +25,7 @@ namespace MathBrick
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel6 = new System.Windows.Forms.Panel();
             this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
+            this.Canvas = new CCWin.SkinControl.SkinPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.skinGroupBox3 = new CCWin.SkinControl.SkinGroupBox();
             this.Resut_Listbox = new CCWin.SkinControl.SkinListBox();
@@ -61,7 +62,6 @@ namespace MathBrick
             this.manageButton = new CCWin.SkinControl.SkinButton();
             this.quizButton = new CCWin.SkinControl.SkinButton();
             this.blockMoveTimer = new System.Windows.Forms.Timer(this.components);
-            this.Canvas = new CCWin.SkinControl.SkinPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -137,6 +137,21 @@ namespace MathBrick
             this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.DarkGray;
             this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.WhiteSmoke;
             this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // Canvas
+            // 
+            this.Canvas.BackColor = System.Drawing.Color.Transparent;
+            this.Canvas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Canvas.BackgroundImage")));
+            this.Canvas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Canvas.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.Canvas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Canvas.DownBack = null;
+            this.Canvas.Location = new System.Drawing.Point(3, 23);
+            this.Canvas.MouseBack = null;
+            this.Canvas.Name = "Canvas";
+            this.Canvas.NormlBack = null;
+            this.Canvas.Size = new System.Drawing.Size(826, 304);
+            this.Canvas.TabIndex = 0;
             // 
             // panel5
             // 
@@ -789,27 +804,12 @@ namespace MathBrick
             this.blockMoveTimer.Interval = 10;
             this.blockMoveTimer.Tick += new System.EventHandler(this.BlockMoveTimer_Tick);
             // 
-            // Canvas
-            // 
-            this.Canvas.BackColor = System.Drawing.Color.Transparent;
-            this.Canvas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Canvas.BackgroundImage")));
-            this.Canvas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Canvas.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.Canvas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Canvas.DownBack = null;
-            this.Canvas.Location = new System.Drawing.Point(3, 23);
-            this.Canvas.MouseBack = null;
-            this.Canvas.Name = "Canvas";
-            this.Canvas.NormlBack = null;
-            this.Canvas.Size = new System.Drawing.Size(826, 304);
-            this.Canvas.TabIndex = 0;
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CaptionBackColorBottom = System.Drawing.Color.Silver;
-            this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
+            this.CaptionBackColorBottom = System.Drawing.Color.DarkOliveGreen;
+            this.CaptionBackColorTop = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1249, 660);
             this.Controls.Add(this.panel1);
             this.Name = "HomePage";
