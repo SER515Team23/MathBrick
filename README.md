@@ -13,8 +13,8 @@ Team Members:
 
 ### YouTube Tutorial & Presentation
 Delievery 2: https://youtu.be/cGctr-Yv5n8 <br>
-Delievery 3: https://youtu.be/uzDzU8iHArg
-Delievery 4: 
+Delievery 3: https://youtu.be/uzDzU8iHArg <br>
+Delievery 4: https://youtu.be/jVj1Hnb5LF8
 
 ### How to run?
 * Platform: Windows Forms Application
@@ -25,19 +25,20 @@ Unzip the zip folder named "Delievery.zip" which contains the main application a
 #### Step 2
 Double click the main application named "MathBrick" to show the app entrance login page.
 #### Step 3
-Use the accounts information below provided only at development stage.<br>
+##### Use the accounts information below provided only at development stage.<br>
 Beginner: *b01* password: *123*<br>
 Intermediate: *i01* password: *123*<br>
 Advanced: *a01* password: *123*<br>
 Teacher: *t01* password: *123*<br>
 Admin: *admin* password: *admin*
 
-If you want sign up new user, there are the activate code:
-Beginner: 0000
-intermediate: 6666
-advanced: 7777
-teacher: 9527
-admin: admin
+If you want sign up new user:<br>
+##### SIGNUP Activate Code:<br>
+Beginner: *0000*<br>
+Intermediate: *6666*<br>
+Advanced: *7777*<br>
+Teacher: *9527*<br>
+Admin: *admin*<br>
 
 #### Step 4
 Enjoy your journey in learning Math with our MathBrick!!
