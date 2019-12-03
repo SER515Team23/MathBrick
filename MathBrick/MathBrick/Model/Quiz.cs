@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathBrick.Model
 {
-    class Quiz
+    public class Quiz
     {
         public string uniqueID { get; set; }
         public string subject { get; set; }

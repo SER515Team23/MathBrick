@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuizPage));
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_subject = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 61);
+            this.label1.Location = new System.Drawing.Point(63, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 0;
@@ -63,7 +64,7 @@
             // textBox_subject
             // 
             this.textBox_subject.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_subject.Location = new System.Drawing.Point(145, 61);
+            this.textBox_subject.Location = new System.Drawing.Point(145, 56);
             this.textBox_subject.Name = "textBox_subject";
             this.textBox_subject.Size = new System.Drawing.Size(454, 32);
             this.textBox_subject.TabIndex = 1;
@@ -72,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(631, 101);
+            this.label2.Location = new System.Drawing.Point(631, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 24);
             this.label2.TabIndex = 2;
@@ -82,7 +83,7 @@
             // 
             this.dateTimePicker_dueDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_dueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_dueDate.Location = new System.Drawing.Point(694, 101);
+            this.dateTimePicker_dueDate.Location = new System.Drawing.Point(694, 93);
             this.dateTimePicker_dueDate.Name = "dateTimePicker_dueDate";
             this.dateTimePicker_dueDate.Size = new System.Drawing.Size(206, 27);
             this.dateTimePicker_dueDate.TabIndex = 3;
@@ -96,10 +97,10 @@
             this.listView1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(67, 144);
+            this.listView1.Location = new System.Drawing.Point(67, 133);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(833, 378);
+            this.listView1.Size = new System.Drawing.Size(833, 349);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -121,19 +122,19 @@
             // btn_add
             // 
             this.btn_add.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_add.BorderColor = System.Drawing.Color.Silver;
+            this.btn_add.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_add.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_add.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_add.DownBack = null;
             this.btn_add.DownBaseColor = System.Drawing.SystemColors.Control;
             this.btn_add.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(67, 588);
+            this.btn_add.Location = new System.Drawing.Point(67, 543);
             this.btn_add.MouseBack = null;
             this.btn_add.Name = "btn_add";
             this.btn_add.NormlBack = null;
             this.btn_add.Radius = 10;
             this.btn_add.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btn_add.Size = new System.Drawing.Size(81, 36);
+            this.btn_add.Size = new System.Drawing.Size(81, 33);
             this.btn_add.TabIndex = 5;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = false;
@@ -142,19 +143,19 @@
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_delete.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_delete.BorderColor = System.Drawing.Color.Silver;
+            this.btn_delete.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_delete.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_delete.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_delete.DownBack = null;
             this.btn_delete.DownBaseColor = System.Drawing.SystemColors.Control;
             this.btn_delete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(165, 588);
+            this.btn_delete.Location = new System.Drawing.Point(165, 543);
             this.btn_delete.MouseBack = null;
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.NormlBack = null;
             this.btn_delete.Radius = 10;
             this.btn_delete.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btn_delete.Size = new System.Drawing.Size(81, 36);
+            this.btn_delete.Size = new System.Drawing.Size(81, 33);
             this.btn_delete.TabIndex = 6;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = false;
@@ -163,19 +164,19 @@
             // btn_save
             // 
             this.btn_save.BackColor = System.Drawing.Color.Transparent;
-            this.btn_save.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_save.BorderColor = System.Drawing.Color.Silver;
+            this.btn_save.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_save.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_save.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_save.DownBack = null;
             this.btn_save.DownBaseColor = System.Drawing.SystemColors.Control;
             this.btn_save.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.Location = new System.Drawing.Point(819, 588);
+            this.btn_save.Location = new System.Drawing.Point(819, 543);
             this.btn_save.MouseBack = null;
             this.btn_save.Name = "btn_save";
             this.btn_save.NormlBack = null;
             this.btn_save.Radius = 10;
             this.btn_save.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btn_save.Size = new System.Drawing.Size(81, 36);
+            this.btn_save.Size = new System.Drawing.Size(81, 33);
             this.btn_save.TabIndex = 7;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
@@ -184,19 +185,19 @@
             // btn_cancel
             // 
             this.btn_cancel.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cancel.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_cancel.BorderColor = System.Drawing.Color.Silver;
+            this.btn_cancel.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_cancel.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_cancel.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_cancel.DownBack = null;
             this.btn_cancel.DownBaseColor = System.Drawing.SystemColors.Control;
             this.btn_cancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(719, 588);
+            this.btn_cancel.Location = new System.Drawing.Point(719, 543);
             this.btn_cancel.MouseBack = null;
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.NormlBack = null;
             this.btn_cancel.Radius = 10;
             this.btn_cancel.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btn_cancel.Size = new System.Drawing.Size(81, 36);
+            this.btn_cancel.Size = new System.Drawing.Size(81, 33);
             this.btn_cancel.TabIndex = 8;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = false;
@@ -206,7 +207,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 104);
+            this.label3.Location = new System.Drawing.Point(63, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 24);
             this.label3.TabIndex = 9;
@@ -219,19 +220,19 @@
             // btn_edit
             // 
             this.btn_edit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_edit.BaseColor = System.Drawing.Color.Gainsboro;
-            this.btn_edit.BorderColor = System.Drawing.Color.Silver;
+            this.btn_edit.BaseColor = System.Drawing.Color.Ivory;
+            this.btn_edit.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_edit.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btn_edit.DownBack = null;
             this.btn_edit.DownBaseColor = System.Drawing.SystemColors.Control;
             this.btn_edit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Location = new System.Drawing.Point(263, 588);
+            this.btn_edit.Location = new System.Drawing.Point(263, 543);
             this.btn_edit.MouseBack = null;
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.NormlBack = null;
             this.btn_edit.Radius = 10;
             this.btn_edit.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btn_edit.Size = new System.Drawing.Size(81, 36);
+            this.btn_edit.Size = new System.Drawing.Size(81, 33);
             this.btn_edit.TabIndex = 10;
             this.btn_edit.Text = "Edit";
             this.btn_edit.UseVisualStyleBackColor = false;
@@ -241,7 +242,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(631, 61);
+            this.label4.Location = new System.Drawing.Point(631, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 24);
             this.label4.TabIndex = 11;
@@ -256,7 +257,7 @@
             "Beginner",
             "Intermediate",
             "Advanced"});
-            this.comboBox_level.Location = new System.Drawing.Point(694, 57);
+            this.comboBox_level.Location = new System.Drawing.Point(694, 53);
             this.comboBox_level.Name = "comboBox_level";
             this.comboBox_level.Size = new System.Drawing.Size(206, 32);
             this.comboBox_level.TabIndex = 13;
@@ -265,7 +266,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(746, 536);
+            this.label5.Location = new System.Drawing.Point(746, 495);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 24);
             this.label5.TabIndex = 14;
@@ -275,19 +276,19 @@
             // 
             this.gradeLabel.AutoSize = true;
             this.gradeLabel.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gradeLabel.Location = new System.Drawing.Point(823, 536);
+            this.gradeLabel.Location = new System.Drawing.Point(823, 495);
             this.gradeLabel.Name = "gradeLabel";
             this.gradeLabel.Size = new System.Drawing.Size(0, 24);
             this.gradeLabel.TabIndex = 15;
             // 
             // QuizPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.CaptionBackColorBottom = System.Drawing.Color.Silver;
-            this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(963, 646);
+            this.CaptionBackColorBottom = System.Drawing.Color.DarkOliveGreen;
+            this.CaptionBackColorTop = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(963, 596);
             this.Controls.Add(this.gradeLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox_level);
@@ -303,6 +304,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_subject);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "QuizPage";
             this.Text = "QuizPage";

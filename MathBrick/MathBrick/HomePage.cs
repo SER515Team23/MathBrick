@@ -80,12 +80,12 @@ namespace MathBrick
 
             btn.Controls.Add(deleteIcon);
             deleteIcon.Click += new EventHandler(TriggerDeleteEvent);
-            this.skinGroupBox1.Controls.Add(btn);               
-            this.skinGroupBox1.AllowDrop = true;
+            this.Canvas.Controls.Add(btn);               
+            this.Canvas.AllowDrop = true;
 
             btn.MouseDown += new MouseEventHandler(DragBlockMouseDown);
-            this.skinGroupBox1.DragOver += new DragEventHandler(BlockDropOver);
-            this.skinGroupBox1.DragDrop += new DragEventHandler(BlockDragDrop);        
+            this.Canvas.DragOver += new DragEventHandler(BlockDropOver);
+            this.Canvas.DragDrop += new DragEventHandler(BlockDragDrop);        
         }
 
         /// <summary>
@@ -99,9 +99,9 @@ namespace MathBrick
             DialogResult result = MessageBox.Show("Delete this block?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (result == DialogResult.OK)
             {
-                if (this.skinGroupBox1.Controls.Contains(control.Parent))
+                if (this.Canvas.Controls.Contains(control.Parent))
                 {
-                    this.skinGroupBox1.Controls.Remove(control.Parent);
+                    this.Canvas.Controls.Remove(control.Parent);
                 }
             }
         }
@@ -132,8 +132,8 @@ namespace MathBrick
             Control control = e.Data.GetData(e.Data.GetFormats()[0]) as Control;
             if (control != null)
             {
-                control.Location = this.skinGroupBox1.PointToClient(new Point(e.X - control.Size.Width/2, e.Y - control.Size.Height/2));
-                this.skinGroupBox1.Controls.Add(control);
+                control.Location = this.Canvas.PointToClient(new Point(e.X - control.Size.Width/2, e.Y - control.Size.Height/2));
+                this.Canvas.Controls.Add(control);
                 blockMoveTimer.Enabled = false;
             }
         }
@@ -158,19 +158,19 @@ namespace MathBrick
         {
             var btn = new CCWin.SkinControl.SkinButton();
             btn.BackColor = System.Drawing.Color.Transparent;
-            btn.BaseColor = System.Drawing.Color.LightGray;
-            btn.BorderColor = System.Drawing.Color.DimGray;
+            btn.BaseColor = System.Drawing.Color.Ivory;
+            btn.BorderColor = System.Drawing.Color.DarkOliveGreen;
             btn.ControlState = CCWin.SkinClass.ControlState.Normal;
             btn.Radius = 5;
             btn.RoundStyle = CCWin.SkinClass.RoundStyle.All;
 
             // Update to the new size of block
-            btn.Size = new System.Drawing.Size(35, 35);
+            btn.Size = new System.Drawing.Size(40, 40);
             btn.UseVisualStyleBackColor = false;
             btn.Location = startingPoint;
             btn.Text = text;
             btn.Anchor = AnchorStyles.Left | AnchorStyles.Top; 
-            startingPoint.X += 35;
+            startingPoint.X += 40;
 
             return btn;
         }
@@ -230,8 +230,8 @@ namespace MathBrick
                     btn_x.Hide();
                     btn_equation.Hide();
                     btn_power.Hide();
-                    Point addLocation = new Point(18, 218);
-                    Point subLocation = new Point(140, 218);
+                    Point addLocation = new Point(skinButton7.Location.X, skinButton10.Location.Y);
+                    Point subLocation = new Point(skinButton9.Location.X, skinButton10.Location.Y);
                     btn_add.Location = addLocation;
                     btn_subtrac.Location = subLocation;
                     manageButton.Hide();
@@ -260,21 +260,20 @@ namespace MathBrick
 
         private void BlockMoveTimer_Tick(object sender, EventArgs e)
         {
-            moveBtn.Location = this.skinGroupBox1.PointToClient(new Point(MousePosition.X - moveBtn.Size.Width / 2, MousePosition.Y - moveBtn.Size.Height / 2));
+            moveBtn.Location = this.Canvas.PointToClient(new Point(MousePosition.X - moveBtn.Size.Width / 2, MousePosition.Y - moveBtn.Size.Height / 2));
         }
 
-
-        private void clearButton_Click_1(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
-            this.skinGroupBox1.Controls.Clear();
+            this.Canvas.Controls.Clear();
         }
 
-        private void resultButton_Click_1(object sender, EventArgs e)
+        private void resultButton_Click(object sender, EventArgs e)
         {
-            if (this.skinGroupBox1.Controls.Count > 0)
+            if (this.Canvas.Controls.Count > 0)
             {
                 SortedList<int, string> sortedList = new SortedList<int, string>();
-                foreach (Control control in this.skinGroupBox1.Controls)
+                foreach (Control control in this.Canvas.Controls)
                 {
                     if (control.GetType().BaseType == typeof(Button))
                     {

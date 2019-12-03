@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagePage));
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.confirmButton = new CCWin.SkinControl.SkinButton();
             this.returnButton = new CCWin.SkinControl.SkinButton();
@@ -40,7 +41,7 @@
             // 
             // skinPanel1
             // 
-            this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.skinPanel1.Controls.Add(this.confirmButton);
             this.skinPanel1.Controls.Add(this.returnButton);
             this.skinPanel1.Controls.Add(this.actComboBox);
@@ -59,8 +60,8 @@
             // confirmButton
             // 
             this.confirmButton.BackColor = System.Drawing.Color.Transparent;
-            this.confirmButton.BaseColor = System.Drawing.Color.PeachPuff;
-            this.confirmButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.confirmButton.BaseColor = System.Drawing.Color.Ivory;
+            this.confirmButton.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.confirmButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.confirmButton.DownBack = null;
             this.confirmButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,8 +81,8 @@
             // returnButton
             // 
             this.returnButton.BackColor = System.Drawing.Color.Transparent;
-            this.returnButton.BaseColor = System.Drawing.Color.PeachPuff;
-            this.returnButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.returnButton.BaseColor = System.Drawing.Color.Ivory;
+            this.returnButton.BorderColor = System.Drawing.Color.DarkOliveGreen;
             this.returnButton.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.returnButton.DownBack = null;
             this.returnButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,7 +101,7 @@
             // 
             // actComboBox
             // 
-            this.actComboBox.BaseColor = System.Drawing.Color.PeachPuff;
+            this.actComboBox.BaseColor = System.Drawing.Color.Ivory;
             this.actComboBox.BorderColor = System.Drawing.Color.Silver;
             this.actComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.actComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -136,10 +137,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CaptionBackColorBottom = System.Drawing.Color.Silver;
-            this.CaptionBackColorTop = System.Drawing.Color.PeachPuff;
+            this.CaptionBackColorBottom = System.Drawing.Color.DarkOliveGreen;
+            this.CaptionBackColorTop = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(565, 364);
             this.Controls.Add(this.skinPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.Name = "ManagePage";
             this.Text = "Administrator";
